@@ -1,0 +1,2328 @@
+/* =========================================================
+   CIVICAI — NEW COMPLAINT PAGE
+   ========================================================= */
+
+/* =========================================================
+   PAGE BASE
+   ========================================================= */
+
+.civicai-new-complaint-page {
+  overflow: hidden;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.civicai-complaint-hero {
+  position: relative;
+  padding: 34px 0 16px;
+}
+
+.civicai-complaint-hero-inner {
+  position: relative;
+  min-height: 92px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.civicai-complaint-heading {
+  position: relative;
+  z-index: 3;
+}
+
+.civicai-complaint-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 7px;
+
+  color: var(--civicai-primary);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.civicai-complaint-heading h1 {
+  margin: 0;
+
+  color: var(--civicai-text-primary);
+
+  font-size: clamp(27px, 3vw, 34px);
+  line-height: 1.15;
+  font-weight: 750;
+}
+
+.civicai-complaint-heading p {
+  margin-top: 5px;
+
+  color: var(--civicai-text-secondary);
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   HERO SKYLINE
+   ========================================================= */
+
+.civicai-complaint-hero-art {
+  position: absolute;
+
+  right: 120px;
+  bottom: -2px;
+
+  width: 390px;
+  height: 105px;
+
+  pointer-events: none;
+
+  opacity: 0.55;
+}
+
+.civicai-skyline {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 80px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  gap: 7px;
+}
+
+.skyline-building {
+  display: block;
+
+  width: 32px;
+
+  border-radius: 4px 4px 0 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(213, 224, 255, 0.9),
+    rgba(232, 239, 255, 0.35)
+  );
+}
+
+.skyline-building-one {
+  height: 42px;
+}
+
+.skyline-building-two {
+  height: 62px;
+  width: 39px;
+}
+
+.skyline-building-three {
+  height: 78px;
+  width: 45px;
+}
+
+.skyline-building-four {
+  height: 52px;
+  width: 34px;
+}
+
+.skyline-building-five {
+  height: 68px;
+  width: 40px;
+}
+
+.civicai-skyline-sun {
+  position: absolute;
+
+  top: 4px;
+  right: 65px;
+
+  width: 25px;
+  height: 25px;
+
+  border-radius: 50%;
+
+  background: rgba(245, 158, 11, 0.28);
+}
+
+/* =========================================================
+   HELP CARD
+   ========================================================= */
+
+.civicai-help-card {
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  min-width: 165px;
+
+  padding: 10px 14px;
+
+  background: var(--civicai-glass-strong);
+
+  border: 1px solid var(--civicai-glass-border);
+
+  border-radius: var(--civicai-radius-md);
+
+  box-shadow: var(--civicai-shadow-xs);
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform var(--civicai-transition),
+    box-shadow var(--civicai-transition);
+}
+
+.civicai-help-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--civicai-shadow-sm);
+}
+
+.civicai-help-icon {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  color: var(--civicai-primary);
+
+  background: #f0edff;
+}
+
+.civicai-help-card strong,
+.civicai-help-card small {
+  display: block;
+}
+
+.civicai-help-card strong {
+  color: var(--civicai-text-primary);
+  font-size: 11px;
+}
+
+.civicai-help-card small {
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+  font-size: 10px;
+}
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+.civicai-progress-section {
+  padding: 2px 0 18px;
+}
+
+.civicai-progress-panel {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  padding: 18px 20px;
+
+  background: var(--civicai-glass-background);
+
+  border: 1px solid var(--civicai-glass-border);
+
+  border-radius: var(--civicai-radius-lg);
+
+  box-shadow: var(--civicai-shadow-xs);
+
+  backdrop-filter: blur(14px);
+}
+
+.civicai-progress-line {
+  position: absolute;
+
+  top: 31px;
+  left: 9%;
+  right: 9%;
+
+  height: 1px;
+
+  background: #d9def2;
+
+  z-index: 0;
+}
+
+.civicai-progress-step {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.civicai-progress-number {
+  width: 29px;
+  height: 29px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 7px;
+
+  border-radius: 50%;
+
+  color: var(--civicai-text-muted);
+
+  background: #f0f2f8;
+
+  border: 1px solid #e0e4f0;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.civicai-progress-step.active .civicai-progress-number {
+  color: #fff;
+
+  background: linear-gradient(
+    135deg,
+    var(--civicai-primary),
+    var(--civicai-blue)
+  );
+
+  border-color: var(--civicai-primary);
+
+  box-shadow: 0 5px 14px rgba(81, 70, 229, 0.2);
+}
+
+.civicai-progress-step strong {
+  color: var(--civicai-text-primary);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.civicai-progress-step small {
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 9px;
+}
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+
+.civicai-complaint-workspace {
+  padding: 0 0 28px;
+}
+
+.civicai-complaint-layout {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1.65fr) minmax(300px, 0.95fr);
+
+  align-items: start;
+
+  gap: 20px;
+}
+
+.civicai-complaint-main-column,
+.civicai-complaint-sidebar {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+/* =========================================================
+   GENERAL CARD
+   ========================================================= */
+
+.civicai-complaint-card,
+.civicai-ai-prediction-card,
+.civicai-info-card {
+  background: var(--civicai-glass-background);
+
+  border: 1px solid var(--civicai-glass-border);
+
+  border-radius: var(--civicai-radius-lg);
+
+  box-shadow: var(--civicai-shadow-xs);
+
+  backdrop-filter: blur(14px);
+}
+
+.civicai-complaint-card {
+  padding: 18px;
+}
+
+.civicai-card-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.civicai-card-icon {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+}
+
+.civicai-icon-purple {
+  color: var(--civicai-primary);
+  background: #f0edff;
+}
+
+.civicai-card-heading h2 {
+  color: var(--civicai-text-primary);
+
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 750;
+}
+
+.civicai-card-heading h2 small {
+  color: var(--civicai-text-muted);
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.civicai-card-heading p {
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.civicai-form-group {
+  position: relative;
+}
+
+.civicai-form-group label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--civicai-text-primary);
+
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.civicai-complaint-textarea,
+.civicai-additional-textarea,
+.civicai-form-group input {
+  width: 100%;
+
+  color: var(--civicai-text-primary);
+
+  background: rgba(255, 255, 255, 0.72);
+
+  border: 1px solid var(--civicai-border);
+
+  border-radius: 7px;
+
+  outline: none;
+
+  transition:
+    border-color var(--civicai-transition),
+    box-shadow var(--civicai-transition);
+}
+
+.civicai-complaint-textarea {
+  min-height: 108px;
+
+  padding: 13px;
+
+  resize: vertical;
+
+  font-size: 11px;
+}
+
+.civicai-additional-textarea {
+  min-height: 98px;
+
+  padding: 13px;
+
+  resize: vertical;
+
+  font-size: 11px;
+}
+
+.civicai-form-group input {
+  height: 39px;
+
+  padding: 0 12px;
+
+  font-size: 11px;
+}
+
+.civicai-complaint-textarea:focus,
+.civicai-additional-textarea:focus,
+.civicai-form-group input:focus {
+  border-color: rgba(81, 70, 229, 0.45);
+
+  box-shadow: 0 0 0 3px rgba(81, 70, 229, 0.07);
+}
+
+.civicai-complaint-textarea::placeholder,
+.civicai-additional-textarea::placeholder,
+.civicai-form-group input::placeholder {
+  color: #8993ad;
+}
+
+.civicai-character-count {
+  position: absolute;
+
+  right: 9px;
+  bottom: 8px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 8px;
+}
+
+/* =========================================================
+   VOICE
+   ========================================================= */
+
+.civicai-voice-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 15px;
+}
+
+.civicai-voice-row strong,
+.civicai-voice-row span {
+  display: block;
+}
+
+.civicai-voice-row strong {
+  color: var(--civicai-text-primary);
+  font-size: 10px;
+}
+
+.civicai-voice-row span {
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 9px;
+}
+
+.civicai-record-button {
+  min-height: 34px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 0 14px;
+
+  color: #fff;
+
+  border-radius: 7px;
+
+  background: linear-gradient(
+    135deg,
+    var(--civicai-primary),
+    var(--civicai-blue)
+  );
+
+  box-shadow: 0 6px 15px rgba(81, 70, 229, 0.16);
+
+  font-size: 10px;
+  font-weight: 650;
+
+  transition:
+    transform var(--civicai-transition),
+    box-shadow var(--civicai-transition);
+}
+
+.civicai-record-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(81, 70, 229, 0.22);
+}
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.civicai-location-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 9px;
+
+  margin-bottom: 13px;
+}
+
+.civicai-location-button {
+  min-height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  border: 1px solid var(--civicai-border);
+
+  border-radius: 7px;
+
+  color: var(--civicai-text-secondary);
+
+  background: rgba(255, 255, 255, 0.65);
+
+  font-size: 9px;
+  font-weight: 600;
+
+  transition:
+    border-color var(--civicai-transition),
+    color var(--civicai-transition),
+    background var(--civicai-transition);
+}
+
+.civicai-location-button:hover,
+.civicai-location-button.active {
+  color: var(--civicai-primary);
+
+  border-color: rgba(81, 70, 229, 0.35);
+
+  background: #f7f5ff;
+}
+
+/* =========================================================
+   CATEGORY GRID — COMPACT HORIZONTAL STYLE
+   ========================================================= */
+
+.civicai-category-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 8px;
+}
+
+/* =========================================================
+   CATEGORY ITEM
+   ========================================================= */
+
+.civicai-category-item {
+  position: relative;
+
+  min-height: 48px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 8px;
+
+  padding: 7px 10px;
+
+  border: 1px solid var(--civicai-border);
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.65);
+
+  text-align: left;
+
+  transition:
+    transform var(--civicai-transition),
+    border-color var(--civicai-transition),
+    box-shadow var(--civicai-transition),
+    background var(--civicai-transition);
+}
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.civicai-category-item:hover {
+  transform: translateY(-1px);
+
+  border-color: rgba(81, 70, 229, 0.28);
+
+  background: #ffffff;
+
+  box-shadow: var(--civicai-shadow-xs);
+}
+
+/* =========================================================
+   SELECTED
+   ========================================================= */
+
+.civicai-category-item.selected {
+  border-color: var(--civicai-primary);
+
+  background: #faf9ff;
+
+  box-shadow: 0 0 0 1px rgba(81, 70, 229, 0.1);
+}
+
+/* =========================================================
+   CATEGORY ICON
+   ========================================================= */
+
+.civicai-category-icon {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   CATEGORY COLORS
+   ========================================================= */
+
+.civicai-category-purple {
+  color: #6747e9;
+  background: #f0edff;
+}
+
+.civicai-category-blue {
+  color: #3b82f6;
+  background: #edf5ff;
+}
+
+.civicai-category-orange {
+  color: #f59e0b;
+  background: #fff5e8;
+}
+
+.civicai-category-yellow {
+  color: #f28b20;
+  background: #fff7e8;
+}
+
+.civicai-category-green {
+  color: #10b981;
+  background: #e9faf3;
+}
+
+.civicai-category-cyan {
+  color: #06b6d4;
+  background: #e8fafd;
+}
+
+.civicai-category-red {
+  color: #e45a67;
+  background: #fff0f2;
+}
+
+.civicai-category-pink {
+  color: #ec4899;
+  background: #fff0f7;
+}
+
+.civicai-category-gray {
+  color: #667085;
+  background: #f0f2f6;
+}
+
+/* =========================================================
+   CATEGORY TEXT
+   ========================================================= */
+
+.civicai-category-item strong {
+  display: block;
+
+  min-width: 0;
+
+  color: var(--civicai-text-primary);
+
+  font-size: 8px;
+  line-height: 1.25;
+
+  font-weight: 650;
+
+  text-align: left;
+
+  white-space: normal;
+}
+
+/* =========================================================
+   SELECTED CHECK
+   ========================================================= */
+
+.civicai-selected-check {
+  position: absolute;
+
+  top: -6px;
+  right: -6px;
+
+  width: 17px;
+  height: 17px;
+
+  display: grid;
+  place-items: center;
+
+  color: #fff;
+
+  border-radius: 50%;
+
+  background: var(--civicai-primary);
+
+  font-size: 7px;
+
+  box-shadow: 0 2px 5px rgba(81, 70, 229, 0.18);
+}
+
+/* =========================================================
+   FILE UPLOAD
+   ========================================================= */
+
+.civicai-upload-area {
+  position: relative;
+
+  min-height: 115px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  padding: 18px;
+
+  border: 1.5px dashed #d7dced;
+  border-radius: 9px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(248, 250, 255, 0.75),
+    rgba(255, 255, 255, 0.55)
+  );
+
+  cursor: pointer;
+
+  transition:
+    border-color var(--civicai-transition),
+    background var(--civicai-transition),
+    box-shadow var(--civicai-transition),
+    transform var(--civicai-transition);
+}
+
+/* Hover */
+
+.civicai-upload-area:hover {
+  border-color: rgba(81, 70, 229, 0.45);
+
+  background: #faf9ff;
+
+  box-shadow: 0 8px 20px rgba(81, 70, 229, 0.06);
+}
+
+/* Dragging state */
+
+.civicai-upload-area.civicai-drag-active {
+  border-color: var(--civicai-primary);
+
+  background: linear-gradient(180deg, #f4f2ff, #fafaff);
+
+  box-shadow: 0 0 0 3px rgba(81, 70, 229, 0.08);
+
+  transform: scale(1.005);
+}
+
+/* Actual input */
+
+.civicai-file-input {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+/* Upload icon */
+
+.civicai-upload-icon {
+  width: 32px;
+  height: 32px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--civicai-text-muted);
+
+  border-radius: 50%;
+
+  background: #edf0f8;
+
+  font-size: 13px;
+
+  transition:
+    color var(--civicai-transition),
+    background var(--civicai-transition);
+}
+
+.civicai-upload-area:hover .civicai-upload-icon,
+.civicai-upload-area.civicai-drag-active .civicai-upload-icon {
+  color: var(--civicai-primary);
+
+  background: #eeebff;
+}
+
+/* Upload text */
+
+.civicai-upload-area p {
+  color: var(--civicai-text-secondary);
+
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.civicai-upload-area > span:not(.civicai-upload-icon) {
+  color: var(--civicai-text-muted);
+
+  font-size: 8px;
+}
+
+/* Choose files button */
+
+.civicai-upload-button {
+  min-height: 28px;
+
+  padding: 0 14px;
+
+  color: #fff;
+
+  border-radius: 6px;
+
+  background: linear-gradient(
+    135deg,
+    var(--civicai-primary),
+    var(--civicai-blue)
+  );
+
+  box-shadow: 0 5px 12px rgba(81, 70, 229, 0.16);
+
+  font-size: 9px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    transform var(--civicai-transition),
+    box-shadow var(--civicai-transition);
+}
+
+.civicai-upload-button:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 8px 17px rgba(81, 70, 229, 0.22);
+}
+
+/* =========================================================
+   SELECTED FILES
+   ========================================================= */
+
+.civicai-selected-files {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+
+  margin-top: 9px;
+}
+
+.civicai-selected-file {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 7px 9px;
+
+  border: 1px solid var(--civicai-border-light);
+
+  border-radius: 7px;
+
+  background: #fafbff;
+}
+
+.civicai-selected-file-icon {
+  width: 28px;
+  height: 28px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  color: var(--civicai-primary);
+
+  border-radius: 6px;
+
+  background: #f0edff;
+
+  font-size: 11px;
+}
+
+.civicai-selected-file-info {
+  min-width: 0;
+
+  flex: 1;
+}
+
+.civicai-selected-file-name {
+  display: block;
+
+  overflow: hidden;
+
+  color: var(--civicai-text-primary);
+
+  font-size: 9px;
+  font-weight: 600;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.civicai-selected-file-size {
+  display: block;
+
+  margin-top: 1px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 7px;
+}
+
+.civicai-remove-file {
+  width: 24px;
+  height: 24px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  color: var(--civicai-text-muted);
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  font-size: 9px;
+
+  transition:
+    color var(--civicai-transition),
+    background var(--civicai-transition);
+}
+
+.civicai-remove-file:hover {
+  color: #e45a67;
+
+  background: #fff0f2;
+}
+
+/* Error message */
+
+.civicai-upload-error {
+  margin-top: 6px;
+
+  color: #e45a67;
+
+  font-size: 8px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   FORM ACTIONS
+   ========================================================= */
+
+.civicai-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 14px;
+}
+
+.civicai-cancel-button {
+  min-height: 32px;
+
+  padding: 0 13px;
+
+  color: var(--civicai-text-secondary);
+
+  border: 1px solid var(--civicai-border);
+
+  border-radius: 7px;
+
+  background: #fff;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.civicai-primary-button {
+  min-height: 34px;
+
+  padding: 0 15px;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   SIDEBAR — AI PREDICTION
+   ========================================================= */
+
+.civicai-ai-prediction-card {
+  padding: 18px;
+}
+
+.civicai-sidebar-heading {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 13px;
+}
+
+.civicai-sidebar-icon {
+  width: 29px;
+  height: 29px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--civicai-primary);
+
+  border-radius: 8px;
+
+  background: #f0edff;
+
+  font-size: 12px;
+}
+
+.civicai-sidebar-heading h2 {
+  color: var(--civicai-text-primary);
+
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.civicai-sidebar-heading h2 span {
+  color: var(--civicai-text-muted);
+
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.civicai-ai-description {
+  margin-bottom: 15px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.civicai-prediction-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+.civicai-prediction-item {
+  display: flex;
+  gap: 9px;
+}
+
+.civicai-prediction-symbol {
+  width: 15px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 9px;
+}
+
+.civicai-prediction-item small,
+.civicai-prediction-item strong {
+  display: block;
+}
+
+.civicai-prediction-item small {
+  margin-bottom: 2px;
+
+  color: var(--civicai-text-secondary);
+
+  font-size: 9px;
+}
+
+.civicai-prediction-item strong {
+  color: var(--civicai-primary);
+
+  font-size: 10px;
+}
+
+.civicai-prediction-item strong.civicai-priority-high {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 4px 8px;
+
+  color: #e45a67;
+
+  border-radius: 6px;
+
+  background: #fff0f2;
+
+  font-size: 9px;
+}
+
+.civicai-confidence {
+  margin-top: 17px;
+}
+
+.civicai-confidence-heading {
+  display: flex;
+  justify-content: space-between;
+
+  color: var(--civicai-text-secondary);
+
+  font-size: 9px;
+}
+
+.civicai-confidence-heading strong {
+  color: var(--civicai-text-primary);
+  font-size: 10px;
+}
+
+.civicai-confidence-track {
+  width: 100%;
+  height: 4px;
+
+  margin-top: 6px;
+
+  overflow: hidden;
+
+  border-radius: 99px;
+
+  background: #e6e9f3;
+}
+
+.civicai-confidence-track span {
+  display: block;
+
+  width: 92%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: linear-gradient(
+    90deg,
+    var(--civicai-primary),
+    var(--civicai-primary-light)
+  );
+}
+
+.civicai-prediction-note {
+  margin-top: 14px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   INFORMATION CARDS
+   ========================================================= */
+
+.civicai-info-card {
+  padding: 17px;
+}
+
+.civicai-info-card h3 {
+  margin-bottom: 14px;
+
+  color: var(--civicai-text-primary);
+
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.civicai-info-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: 11px;
+}
+
+.civicai-info-icon {
+  width: 28px;
+  height: 28px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  font-size: 10px;
+}
+
+.civicai-info-purple {
+  color: var(--civicai-primary);
+  background: #f0edff;
+}
+
+.civicai-info-blue {
+  color: var(--civicai-blue);
+  background: #edf5ff;
+}
+
+.civicai-info-green {
+  color: var(--civicai-green);
+  background: #e9faf3;
+}
+
+.civicai-info-item p {
+  color: var(--civicai-text-secondary);
+
+  font-size: 8px;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   TIPS
+   ========================================================= */
+
+.civicai-tip-item {
+  display: grid;
+
+  grid-template-columns: 18px 1fr 15px;
+
+  gap: 6px;
+
+  align-items: start;
+
+  margin-top: 12px;
+}
+
+.civicai-tip-item > span {
+  width: 16px;
+  height: 16px;
+
+  display: grid;
+  place-items: center;
+
+  color: #fff;
+
+  border-radius: 4px;
+
+  background: var(--civicai-green);
+
+  font-size: 7px;
+}
+
+.civicai-tip-item > div strong,
+.civicai-tip-item > div small {
+  display: block;
+}
+
+.civicai-tip-item strong {
+  color: var(--civicai-text-primary);
+  font-size: 8px;
+}
+
+.civicai-tip-item small {
+  color: var(--civicai-text-muted);
+  font-size: 7px;
+}
+
+.civicai-tip-item > i {
+  color: var(--civicai-green);
+  font-size: 10px;
+}
+
+/* =========================================================
+   AI HELP CARD
+   ========================================================= */
+
+.civicai-ai-help-card {
+  position: relative;
+
+  min-height: 150px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: 19px;
+
+  border-radius: var(--civicai-radius-lg);
+
+  background: linear-gradient(135deg, #6a37e9, #a33de5);
+
+  box-shadow: 0 14px 30px rgba(102, 55, 233, 0.2);
+}
+
+.civicai-ai-help-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 62%;
+}
+
+.civicai-ai-help-content h3 {
+  color: #fff;
+
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.civicai-ai-help-content p {
+  margin: 7px 0 12px;
+
+  color: rgba(255, 255, 255, 0.84);
+
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+.civicai-ai-help-button {
+  min-height: 30px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 0 11px;
+
+  color: var(--civicai-primary);
+
+  border-radius: 6px;
+
+  background: #fff;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.civicai-ai-visual {
+  position: absolute;
+
+  right: -10px;
+  bottom: -25px;
+
+  width: 135px;
+  height: 135px;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+}
+
+.civicai-ai-visual img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0.92;
+
+  mix-blend-mode: screen;
+}
+
+/* =========================================================
+   PRE FOOTER CTA
+   ========================================================= */
+
+.civicai-complaint-cta {
+  padding: 0 0 18px;
+}
+
+.civicai-complaint-cta-inner {
+  position: relative;
+
+  min-height: 68px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: 10px 24px;
+
+  border: 1px solid var(--civicai-border-light);
+
+  border-radius: var(--civicai-radius-lg);
+
+  background: linear-gradient(90deg, #f8f8ff, #ffffff);
+
+  box-shadow: var(--civicai-shadow-xs);
+}
+
+.civicai-complaint-cta-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 65%;
+}
+
+.civicai-complaint-cta-inner h2 {
+  color: var(--civicai-text-primary);
+
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.civicai-complaint-cta-inner h2 span {
+  color: var(--civicai-primary);
+}
+
+.civicai-complaint-cta-inner p {
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 8px;
+}
+
+/* =========================================================
+   RIGHT SIDE IMAGE
+   ========================================================= */
+
+.civicai-cta-people {
+  position: absolute;
+
+  right: 18px;
+  top: 0;
+  bottom: 0;
+
+  width: auto;
+  height: 72px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  pointer-events: none;
+}
+
+.civicai-cta-people img {
+  width: 135px;
+  height: 70px;
+  display: block;
+  object-fit: contain;
+  object-position: bottom right;
+  mix-blend-mode: multiply;
+}
+
+/* =========================================================
+   AI QUICK HELP
+   ========================================================= */
+
+.civicai-ai-quick-help {
+  padding: 16px;
+
+  background: var(--civicai-glass-background);
+
+  border: 1px solid var(--civicai-glass-border);
+
+  border-radius: var(--civicai-radius-lg);
+
+  box-shadow: var(--civicai-shadow-xs);
+
+  backdrop-filter: blur(14px);
+}
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.civicai-quick-help-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 13px;
+}
+
+.civicai-quick-help-icon {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  color: var(--civicai-primary);
+
+  background: #f0edff;
+
+  border-radius: 8px;
+
+  font-size: 11px;
+}
+
+.civicai-quick-help-heading h3 {
+  color: var(--civicai-text-primary);
+
+  font-size: 11px;
+
+  line-height: 1.3;
+
+  font-weight: 750;
+}
+
+.civicai-quick-help-heading p {
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 8px;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   QUICK HELP LIST
+   ========================================================= */
+
+.civicai-quick-help-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+/* =========================================================
+   QUICK HELP ITEM
+   ========================================================= */
+
+.civicai-quick-help-item {
+  min-height: 43px;
+
+  display: grid;
+
+  grid-template-columns: 28px 1fr 12px;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 6px 8px;
+
+  border: 1px solid var(--civicai-border-light);
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.68);
+
+  transition:
+    transform var(--civicai-transition),
+    border-color var(--civicai-transition),
+    box-shadow var(--civicai-transition),
+    background var(--civicai-transition);
+
+  cursor: pointer;
+}
+
+.civicai-quick-help-item:hover {
+  transform: translateY(-1px);
+
+  border-color: rgba(81, 70, 229, 0.22);
+
+  background: #ffffff;
+
+  box-shadow: var(--civicai-shadow-xs);
+}
+
+/* =========================================================
+   ITEM ICON
+   ========================================================= */
+
+.civicai-quick-help-item > span {
+  width: 27px;
+  height: 27px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--civicai-primary);
+
+  background: #f0edff;
+
+  border-radius: 7px;
+
+  font-size: 9px;
+}
+
+/* =========================================================
+   ITEM CONTENT
+   ========================================================= */
+
+.civicai-quick-help-item strong,
+.civicai-quick-help-item small {
+  display: block;
+}
+
+.civicai-quick-help-item strong {
+  color: var(--civicai-text-primary);
+
+  font-size: 8px;
+
+  line-height: 1.3;
+
+  font-weight: 650;
+}
+
+.civicai-quick-help-item small {
+  margin-top: 1px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 7px;
+
+  line-height: 1.3;
+}
+
+/* =========================================================
+   ARROW
+   ========================================================= */
+
+.civicai-quick-help-item > i {
+  color: var(--civicai-text-muted);
+
+  font-size: 7px;
+
+  transition:
+    color var(--civicai-transition),
+    transform var(--civicai-transition);
+}
+
+.civicai-quick-help-item:hover > i {
+  color: var(--civicai-primary);
+
+  transform: translateX(2px);
+}
+
+/* =========================================================
+   RESPONSIVE — NEW COMPLAINT PAGE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .civicai-complaint-layout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  /* -----------------------------------------------------
+       SIDEBAR — TWO COLUMN TABLET LAYOUT
+       ----------------------------------------------------- */
+
+  .civicai-complaint-sidebar {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    align-items: start;
+
+    gap: 18px;
+  }
+
+  .civicai-ai-prediction-card {
+    grid-row: span 2;
+  }
+
+  .civicai-ai-help-card {
+    grid-column: 1 / -1;
+  }
+
+  /* -----------------------------------------------------
+       HERO ART
+       ----------------------------------------------------- */
+
+  .civicai-complaint-hero-art {
+    right: 190px;
+
+    opacity: 0.35;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   760px AND BELOW
+   ========================================================= */
+
+@media (max-width: 760px) {
+  /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+  .civicai-complaint-hero {
+    padding-top: 28px;
+  }
+
+  .civicai-complaint-hero-inner {
+    min-height: 150px;
+
+    align-items: flex-start;
+  }
+
+  .civicai-complaint-heading {
+    max-width: 70%;
+  }
+
+  .civicai-complaint-hero-art {
+    right: -50px;
+
+    bottom: 0;
+
+    width: 330px;
+
+    opacity: 0.22;
+  }
+
+  /* -----------------------------------------------------
+       HELP CARD
+       ----------------------------------------------------- */
+
+  .civicai-help-card {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    min-width: auto;
+
+    padding: 7px;
+  }
+
+  .civicai-help-card small {
+    display: none;
+  }
+
+  /* -----------------------------------------------------
+       PROGRESS
+       ----------------------------------------------------- */
+
+  .civicai-progress-panel {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    padding: 14px 6px;
+  }
+
+  .civicai-progress-step strong {
+    font-size: 9px;
+  }
+
+  .civicai-progress-step small {
+    display: none;
+  }
+
+  .civicai-progress-line {
+    left: 9%;
+    right: 9%;
+
+    top: 27px;
+  }
+
+  .civicai-progress-number {
+    width: 25px;
+    height: 25px;
+
+    font-size: 10px;
+  }
+
+  /* -----------------------------------------------------
+       CATEGORY GRID
+       ----------------------------------------------------- */
+
+  .civicai-category-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* -----------------------------------------------------
+       SIDEBAR — FULL WIDTH MOBILE
+       ----------------------------------------------------- */
+
+  .civicai-complaint-sidebar {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 16px;
+  }
+
+  /* -----------------------------------------------------
+       ALL SIDEBAR CARDS — FULL WIDTH
+       ----------------------------------------------------- */
+
+  .civicai-ai-prediction-card,
+  .civicai-info-card,
+  .civicai-ai-help-card,
+  .civicai-ai-quick-help {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
+    grid-row: auto;
+
+    grid-column: auto;
+  }
+
+  /* -----------------------------------------------------
+       INFO CARD
+       ----------------------------------------------------- */
+
+  .civicai-info-card {
+    padding: 16px;
+  }
+
+  /* -----------------------------------------------------
+       AI HELP CARD
+       ----------------------------------------------------- */
+
+  .civicai-ai-help-card {
+    min-height: 155px;
+
+    width: 100%;
+  }
+
+  .civicai-ai-help-content {
+    max-width: 58%;
+  }
+
+  /* -----------------------------------------------------
+       AI IMAGE — KEEP VISIBLE
+       ----------------------------------------------------- */
+
+  .civicai-ai-visual {
+    width: 145px;
+    height: 145px;
+
+    right: -12px;
+    bottom: -18px;
+
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: center;
+
+    z-index: 1;
+  }
+
+  .civicai-ai-visual img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    opacity: 0.92;
+
+    mix-blend-mode: screen;
+
+    filter: none;
+  }
+
+  .civicai-complaint-cta-inner {
+    min-height: 82px;
+    padding: 12px 16px;
+    padding-right: 115px;
+  }
+
+  .civicai-complaint-cta-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 100%;
+  }
+
+  .civicai-complaint-cta-inner h2 {
+    font-size: 13px;
+
+    line-height: 1.25;
+  }
+
+  .civicai-complaint-cta-inner p {
+    font-size: 7px;
+
+    line-height: 1.4;
+  }
+
+  /* -----------------------------------------------------
+       CTA IMAGE — VISIBLE ON MOBILE
+       ----------------------------------------------------- */
+
+  .civicai-cta-people {
+    position: absolute;
+
+    right: 8px;
+    top: 5px;
+    bottom: 0;
+
+    width: 105px;
+    height: 72px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: flex-end;
+
+    z-index: 1;
+
+    pointer-events: none;
+  }
+
+  .civicai-cta-people img {
+    width: 105px;
+    height: 70px;
+
+    display: block;
+
+    object-fit: contain;
+
+    object-position: bottom right;
+
+    mix-blend-mode: multiply;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   480px AND BELOW
+   ========================================================= */
+
+@media (max-width: 480px) {
+  /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+  .civicai-complaint-heading {
+    max-width: 100%;
+  }
+
+  .civicai-complaint-heading h1 {
+    font-size: 26px;
+  }
+
+  .civicai-complaint-heading p {
+    font-size: 11px;
+  }
+
+  /* -----------------------------------------------------
+       HELP CARD
+       ----------------------------------------------------- */
+
+  .civicai-help-card {
+    display: none;
+  }
+
+  /* -----------------------------------------------------
+       PROGRESS
+       ----------------------------------------------------- */
+
+  .civicai-progress-panel {
+    overflow-x: auto;
+
+    grid-template-columns: repeat(5, minmax(72px, 1fr));
+
+    padding: 14px 6px;
+  }
+
+  .civicai-progress-step strong {
+    font-size: 8px;
+  }
+
+  /* -----------------------------------------------------
+       CATEGORY
+       ----------------------------------------------------- */
+
+  .civicai-category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* -----------------------------------------------------
+       LOCATION
+       ----------------------------------------------------- */
+
+  .civicai-location-actions {
+    grid-template-columns: 1fr;
+  }
+
+  /* -----------------------------------------------------
+       VOICE
+       ----------------------------------------------------- */
+
+  .civicai-voice-row {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .civicai-record-button {
+    width: 100%;
+  }
+
+  /* -----------------------------------------------------
+       FORM ACTIONS
+       ----------------------------------------------------- */
+
+  .civicai-form-actions {
+    gap: 8px;
+  }
+
+  .civicai-form-actions .civicai-primary-button {
+    flex: 1;
+  }
+
+  /* -----------------------------------------------------
+       SIDEBAR
+       ----------------------------------------------------- */
+
+  .civicai-complaint-sidebar {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 14px;
+  }
+
+  .civicai-ai-prediction-card,
+  .civicai-info-card,
+  .civicai-ai-help-card,
+  .civicai-ai-quick-help {
+    width: 100%;
+
+    max-width: none;
+
+    min-width: 0;
+  }
+
+  /* -----------------------------------------------------
+       AI HELP CARD
+       ----------------------------------------------------- */
+
+  .civicai-ai-help-card {
+    min-height: 150px;
+
+    width: 100%;
+  }
+
+  .civicai-ai-help-content {
+    max-width: 58%;
+  }
+
+  .civicai-ai-visual {
+    width: 130px;
+    height: 130px;
+
+    right: -10px;
+    bottom: -16px;
+  }
+
+  .civicai-ai-visual img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    opacity: 0.92;
+
+    mix-blend-mode: screen;
+
+    filter: none;
+  }
+
+  /* -----------------------------------------------------
+       PRE-FOOTER CTA
+       ----------------------------------------------------- */
+
+  .civicai-complaint-cta-inner {
+    min-height: 78px;
+
+    padding: 11px 14px;
+
+    /*
+         * Keep enough room for right-side image.
+         */
+    padding-right: 100px;
+  }
+
+  .civicai-complaint-cta-inner h2 {
+    font-size: 12px;
+
+    line-height: 1.25;
+  }
+
+  .civicai-complaint-cta-inner p {
+    font-size: 6.5px;
+
+    line-height: 1.4;
+  }
+
+  /* -----------------------------------------------------
+       PRE-FOOTER IMAGE — STILL VISIBLE
+       ----------------------------------------------------- */
+
+  .civicai-cta-people {
+    display: flex;
+
+    right: 5px;
+
+    bottom: 0;
+
+    width: 92px;
+    height: 68px;
+
+    z-index: 1;
+  }
+
+  .civicai-cta-people img {
+    width: 92px;
+    height: 66px;
+
+    display: block;
+
+    object-fit: contain;
+
+    object-position: bottom right;
+
+    mix-blend-mode: multiply;
+  }
+}
+
+/* =========================================================
+   VERY SMALL DEVICES
+   360px AND BELOW
+   ========================================================= */
+
+@media (max-width: 360px) {
+  .civicai-complaint-cta-inner {
+    padding-right: 88px;
+  }
+
+  .civicai-cta-people {
+    right: 3px;
+
+    width: 82px;
+    height: 62px;
+  }
+
+  .civicai-cta-people img {
+    width: 82px;
+    height: 60px;
+  }
+
+  .civicai-complaint-cta-inner h2 {
+    font-size: 11px;
+  }
+
+  .civicai-complaint-cta-inner p {
+    font-size: 6px;
+  }
+
+  .civicai-ai-visual {
+    width: 115px;
+    height: 115px;
+
+    right: -8px;
+    bottom: -14px;
+  }
+
+  .civicai-ai-visual img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 0.92;
+    mix-blend-mode: screen;
+    filter: none;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .civicai-help-card,
+  .civicai-category-item,
+  .civicai-upload-area,
+  .civicai-record-button,
+  .civicai-quick-help-item {
+    transition: none;
+  }
+}

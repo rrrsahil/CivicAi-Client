@@ -1,0 +1,1395 @@
+/* =========================================================
+   CIVICAI — CONTACT PAGE
+   Page-specific CSS
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.civicai-contact-page {
+    width: 100%;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.civicai-contact-hero {
+    padding: 34px 0 18px;
+}
+
+.civicai-contact-hero-inner {
+    position: relative;
+
+    min-height: 145px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: hidden;
+}
+
+.civicai-contact-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 470px;
+}
+
+.civicai-contact-eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 5px;
+
+    color: var(--civicai-primary);
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.civicai-contact-hero-content h1 {
+    color: var(--civicai-text-primary);
+
+    font-size: clamp(30px, 3vw, 36px);
+    line-height: 1.15;
+    font-weight: 800;
+}
+
+.civicai-contact-hero-content > p {
+    max-width: 430px;
+
+    margin-top: 8px;
+
+    color: var(--civicai-text-secondary);
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   HERO CITY
+========================================================= */
+
+.civicai-contact-hero-art {
+    position: relative;
+
+    width: 560px;
+    height: 145px;
+}
+
+.civicai-contact-city {
+    position: absolute;
+
+    left: 60px;
+    bottom: 3px;
+
+    width: 390px;
+    height: 105px;
+
+    opacity: 0.55;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 0 82%,
+            rgba(81, 70, 229, 0.07) 82%
+        );
+}
+
+.contact-building {
+    position: absolute;
+
+    bottom: 15px;
+
+    border-radius: 4px 4px 0 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(111, 99, 243, 0.20),
+            rgba(81, 70, 229, 0.05)
+        );
+}
+
+.cb-1 {
+    left: 80px;
+    width: 35px;
+    height: 63px;
+}
+
+.cb-2 {
+    left: 125px;
+    width: 46px;
+    height: 92px;
+}
+
+.cb-3 {
+    left: 182px;
+    width: 32px;
+    height: 68px;
+}
+
+.cb-4 {
+    left: 224px;
+    width: 45px;
+    height: 78px;
+}
+
+.cb-5 {
+    left: 280px;
+    width: 34px;
+    height: 58px;
+}
+
+.contact-tree {
+    position: absolute;
+
+    bottom: 7px;
+
+    width: 28px;
+    height: 32px;
+
+    border-radius: 50% 50% 35% 35%;
+
+    background: rgba(16, 185, 129, 0.22);
+}
+
+.ct-1 {
+    left: 35px;
+}
+
+.ct-2 {
+    left: 315px;
+
+    background: rgba(59, 130, 246, 0.16);
+}
+
+.ct-3 {
+    right: 15px;
+
+    background: rgba(16, 185, 129, 0.18);
+}
+
+.contact-sun {
+    position: absolute;
+
+    top: 2px;
+    right: 65px;
+
+    width: 25px;
+    height: 25px;
+
+    border-radius: 50%;
+
+    background: rgba(245, 158, 11, 0.23);
+}
+
+
+/* =========================================================
+   HELP CARD
+========================================================= */
+
+.civicai-contact-help {
+    position: absolute;
+
+    top: 25px;
+    right: 0;
+
+    min-width: 185px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 15px;
+
+    border: 1px solid var(--civicai-border-light);
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    box-shadow: var(--civicai-shadow-sm);
+
+    backdrop-filter: blur(12px);
+}
+
+.contact-help-icon {
+    width: 35px;
+    height: 35px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    color: var(--civicai-primary);
+
+    background: #f0efff;
+
+    font-size: 14px;
+}
+
+.civicai-contact-help strong,
+.civicai-contact-help small {
+    display: block;
+}
+
+.civicai-contact-help strong {
+    color: var(--civicai-text-primary);
+
+    font-size: 10px;
+}
+
+.civicai-contact-help small {
+    margin-top: 2px;
+
+    color: var(--civicai-text-muted);
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   CONTACT INFO CARDS
+========================================================= */
+
+.civicai-contact-info-section {
+    padding: 8px 0 22px;
+}
+
+.civicai-contact-info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    border: 1px solid var(--civicai-border-light);
+    border-radius: var(--civicai-radius-md);
+
+    background: rgba(255, 255, 255, 0.88);
+
+    box-shadow: var(--civicai-shadow-sm);
+
+    overflow: hidden;
+}
+
+.civicai-contact-info-card {
+    min-height: 160px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+.civicai-contact-info-card:not(:last-child) {
+    border-right: 1px solid var(--civicai-border-light);
+}
+
+.contact-info-icon {
+    width: 45px;
+    height: 45px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 11px;
+
+    border-radius: 50%;
+
+    font-size: 17px;
+}
+
+.contact-info-icon.purple {
+    color: var(--civicai-primary);
+    background: #f0efff;
+}
+
+.contact-info-icon.green {
+    color: var(--civicai-green);
+    background: #eafaf3;
+}
+
+.contact-info-icon.blue {
+    color: var(--civicai-blue);
+    background: #edf6ff;
+}
+
+.civicai-contact-info-card h2 {
+    color: var(--civicai-text-primary);
+
+    font-size: 11px;
+}
+
+.civicai-contact-info-card a,
+.civicai-contact-info-card p {
+    color: var(--civicai-text-secondary);
+
+    font-size: 9px;
+    line-height: 1.65;
+}
+
+.civicai-contact-info-card a {
+    margin-top: 5px;
+}
+
+.civicai-contact-info-card a:hover {
+    color: var(--civicai-primary);
+}
+
+.civicai-contact-info-card p {
+    margin-top: 3px;
+}
+
+.civicai-contact-info-card .contact-address {
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.civicai-contact-main-section {
+    padding-bottom: 22px;
+}
+
+.civicai-contact-main-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(300px, 0.95fr);
+
+    gap: 20px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   COMMON CARD HEADING
+========================================================= */
+
+.civicai-contact-form-card,
+.civicai-faq-card {
+    border: 1px solid var(--civicai-border-light);
+    border-radius: var(--civicai-radius-md);
+
+    background: rgba(255, 255, 255, 0.88);
+
+    box-shadow: var(--civicai-shadow-sm);
+}
+
+.civicai-contact-form-card {
+    padding: 22px;
+}
+
+.civicai-faq-card {
+    padding: 22px;
+}
+
+.civicai-contact-card-heading h2 {
+    color: var(--civicai-text-primary);
+
+    font-size: 14px;
+    font-weight: 750;
+}
+
+.civicai-contact-card-heading p {
+    margin-top: 4px;
+
+    color: var(--civicai-text-muted);
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.civicai-contact-form {
+    margin-top: 22px;
+}
+
+.civicai-contact-form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 17px 20px;
+}
+
+.civicai-form-group {
+    min-width: 0;
+}
+
+.civicai-form-group.full {
+    grid-column: 1 / -1;
+}
+
+.civicai-form-group label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--civicai-text-secondary);
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.civicai-form-group label span {
+    color: #ef4444;
+}
+
+.civicai-form-group input,
+.civicai-form-group select,
+.civicai-form-group textarea {
+    width: 100%;
+
+    border: 1px solid #dfe4f0;
+    border-radius: 7px;
+
+    outline: none;
+
+    color: var(--civicai-text-secondary);
+
+    background: #fff;
+
+    font-size: 9px;
+
+    transition:
+        border-color var(--civicai-transition),
+        box-shadow var(--civicai-transition);
+}
+
+.civicai-form-group input,
+.civicai-form-group select {
+    height: 38px;
+
+    padding: 0 11px;
+}
+
+.civicai-form-group textarea {
+    min-height: 90px;
+
+    padding: 10px 11px;
+
+    resize: vertical;
+}
+
+.civicai-form-group input::placeholder,
+.civicai-form-group textarea::placeholder {
+    color: #9aa3b8;
+}
+
+.civicai-form-group input:focus,
+.civicai-form-group select:focus,
+.civicai-form-group textarea:focus {
+    border-color: rgba(81, 70, 229, 0.45);
+
+    box-shadow:
+        0 0 0 3px rgba(81, 70, 229, 0.06);
+}
+
+
+/* Select */
+
+.civicai-select-wrapper {
+    position: relative;
+}
+
+.civicai-select-wrapper select {
+    appearance: none;
+
+    padding-right: 35px;
+
+    cursor: pointer;
+}
+
+.civicai-select-wrapper i {
+    position: absolute;
+
+    right: 12px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #75809a;
+
+    pointer-events: none;
+
+    font-size: 8px;
+}
+
+
+/* Message */
+
+.civicai-message-wrapper {
+    position: relative;
+}
+
+.civicai-message-wrapper textarea {
+    display: block;
+
+    padding-bottom: 24px;
+}
+
+#messageCount {
+    position: absolute;
+
+    right: 10px;
+    bottom: 8px;
+
+    color: var(--civicai-text-muted);
+
+    font-size: 7px;
+}
+
+
+/* Submit */
+
+.civicai-contact-submit {
+    width: 100%;
+
+    min-height: 38px;
+
+    margin-top: 17px;
+
+    font-size: 9px;
+}
+
+.civicai-contact-form-status {
+    min-height: 15px;
+
+    margin-top: 7px;
+
+    text-align: center;
+
+    font-size: 8px;
+}
+
+.civicai-contact-form-status.success {
+    color: var(--civicai-green);
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.civicai-faq-list {
+    display: grid;
+
+    gap: 8px;
+
+    margin-top: 21px;
+}
+
+
+/* FAQ Item */
+
+.civicai-faq-item {
+    border: 1px solid #dfe4f0;
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    background: #fff;
+}
+
+
+/* FAQ Question / Summary */
+
+.civicai-faq-question {
+    width: 100%;
+    min-height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 0 12px;
+
+    color: var(--civicai-text-primary);
+
+    text-align: left;
+
+    cursor: pointer;
+
+    list-style: none;
+
+    outline: none;
+}
+
+
+/* Remove default browser arrow */
+
+.civicai-faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.civicai-faq-question::marker {
+    display: none;
+}
+
+
+/* FAQ Question Text */
+
+.civicai-faq-question span {
+    font-size: 9px;
+    font-weight: 650;
+}
+
+
+/* FAQ Arrow */
+
+.civicai-faq-question i {
+    flex-shrink: 0;
+
+    color: var(--civicai-text-muted);
+
+    font-size: 8px;
+
+    transition:
+        transform var(--civicai-transition),
+        color var(--civicai-transition);
+}
+
+
+/* Hover */
+
+.civicai-faq-question:hover {
+    background: #fcfcff;
+}
+
+
+/* Focus */
+
+.civicai-faq-question:focus-visible {
+    outline: 2px solid rgba(81, 70, 229, 0.18);
+    outline-offset: -2px;
+}
+
+
+/* =========================================================
+   OPEN FAQ
+========================================================= */
+/* Rotate Arrow */
+
+.civicai-faq-item[open] .civicai-faq-question i {
+    color: var(--civicai-primary);
+
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   FAQ ANSWER
+========================================================= */
+
+.civicai-faq-answer {
+    display: grid;
+
+    grid-template-rows: 0fr;
+
+    transition:
+        grid-template-rows 0.25s ease;
+}
+
+
+/* Answer Text */
+
+.civicai-faq-answer p {
+    min-height: 0;
+
+    overflow: hidden;
+
+    padding: 0 12px;
+
+    color: var(--civicai-text-muted);
+
+    font-size: 8px;
+    line-height: 1.7;
+
+    opacity: 0;
+
+    transition:
+        opacity 0.2s ease,
+        padding 0.25s ease;
+}
+
+
+/* =========================================================
+   OPEN ANSWER
+========================================================= */
+
+.civicai-faq-item[open] .civicai-faq-answer {
+    grid-template-rows: 1fr;
+}
+
+
+.civicai-faq-item[open] .civicai-faq-answer p {
+    padding: 0 12px 13px;
+
+    opacity: 1;
+}
+
+/* FAQ bottom link */
+
+.civicai-view-faq {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+
+    margin-top: 18px;
+
+    color: var(--civicai-primary);
+
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.civicai-view-faq:hover {
+    color: var(--civicai-primary-dark);
+}
+
+
+/* =========================================================
+   OFFICE LOCATION
+========================================================= */
+
+.civicai-office-section {
+    padding-bottom: 22px;
+}
+
+.civicai-office-card {
+    display: grid;
+
+    grid-template-columns:
+        0.9fr
+        1.7fr;
+
+    min-height: 230px;
+
+    border: 1px solid var(--civicai-border-light);
+    border-radius: var(--civicai-radius-md);
+
+    background: rgba(255, 255, 255, 0.9);
+
+    box-shadow: var(--civicai-shadow-sm);
+
+    overflow: hidden;
+}
+
+
+/* Details */
+
+.civicai-office-details {
+    padding: 20px 22px;
+}
+
+.civicai-office-contact-list {
+    display: grid;
+
+    gap: 14px;
+
+    margin-top: 18px;
+}
+
+.civicai-office-contact-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+}
+
+.civicai-office-contact-item > span {
+    width: 28px;
+    height: 28px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    color: var(--civicai-primary);
+
+    background: #f2f1ff;
+
+    font-size: 9px;
+}
+
+.civicai-office-contact-item p,
+.civicai-office-contact-item a {
+    padding-top: 2px;
+
+    color: var(--civicai-text-secondary);
+
+    font-size: 8px;
+    line-height: 1.6;
+}
+
+.civicai-office-contact-item a:hover {
+    color: var(--civicai-primary);
+}
+
+
+/* =========================================================
+   REAL MAP
+========================================================= */
+
+.civicai-real-map {
+    position: relative;
+
+    min-height: 230px;
+
+    overflow: hidden;
+
+    background: #eef1f5;
+}
+
+.civicai-real-map iframe {
+    width: 100%;
+    height: 100%;
+
+    min-height: 230px;
+
+    display: block;
+
+    border: 0;
+}
+
+
+/* Map overlay */
+
+.civicai-map-location-card {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 145px;
+
+    padding: 10px 12px;
+
+    border: 1px solid rgba(231, 235, 245, 0.8);
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    box-shadow: 0 8px 24px rgba(56, 73, 130, 0.15);
+
+    pointer-events: none;
+}
+
+.map-pin {
+    width: 30px;
+    height: 30px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    color: #ef4444;
+
+    background: #fff0f0;
+
+    font-size: 12px;
+}
+
+.civicai-map-location-card strong {
+    display: block;
+
+    color: var(--civicai-text-primary);
+
+    font-size: 8px;
+}
+
+.civicai-map-location-card p {
+    margin-top: 2px;
+
+    color: var(--civicai-text-muted);
+
+    font-size: 7px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.civicai-contact-newsletter {
+    padding-bottom: 28px;
+}
+
+.civicai-contact-newsletter-inner {
+    position: relative;
+
+    min-height: 115px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    overflow: hidden;
+
+    padding: 10px 30px;
+
+    border: 1px solid var(--civicai-border-light);
+    border-radius: var(--civicai-radius-md);
+
+    background:
+        linear-gradient(
+            100deg,
+            #f8f7ff,
+            #ffffff
+        );
+
+    box-shadow: var(--civicai-shadow-xs);
+}
+
+.civicai-contact-newsletter-image {
+    width: 105px;
+    height: 115px;
+
+    flex-shrink: 0;
+
+    align-self: flex-end;
+
+    overflow: hidden;
+}
+
+.civicai-contact-newsletter-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    mix-blend-mode: multiply;
+}
+
+.civicai-contact-newsletter-content {
+    max-width: 390px;
+}
+
+.civicai-contact-newsletter-content h2 {
+    color: var(--civicai-text-primary);
+    font-size: 14px;
+}
+
+.civicai-contact-newsletter-content p {
+    margin-top: 5px;
+    color: var(--civicai-text-muted);
+    font-size: 8px;
+    line-height: 1.65;
+}
+
+.civicai-newsletter-form {
+    display: flex;
+    flex: 1;
+    max-width: 400px;
+    margin-left: auto;
+}
+
+.civicai-newsletter-form input {
+    min-width: 0;
+    flex: 1;
+
+    height: 38px;
+
+    padding: 0 12px;
+
+    border: 1px solid var(--civicai-border);
+    border-right: 0;
+
+    border-radius: 7px 0 0 7px;
+
+    outline: none;
+
+    color: var(--civicai-text-secondary);
+
+    background: #fff;
+
+    font-size: 8px;
+}
+
+.civicai-newsletter-form input:focus {
+    border-color: rgba(81, 70, 229, 0.35);
+}
+
+.civicai-newsletter-form .civicai-primary-button {
+    min-width: 100px;
+
+    min-height: 38px;
+
+    border-radius: 0 7px 7px 0;
+
+    box-shadow: none;
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .civicai-contact-hero-art {
+        width: 440px;
+    }
+
+    .civicai-contact-main-grid {
+        grid-template-columns:
+            minmax(0, 1.35fr)
+            minmax(280px, 0.9fr);
+    }
+
+    .civicai-office-card {
+        grid-template-columns:
+            0.8fr
+            1.5fr;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .civicai-section-container {
+        width: min(calc(100% - 32px), 600px);
+    }
+
+
+    /* Hero */
+
+    .civicai-contact-hero {
+        padding-top: 25px;
+    }
+
+    .civicai-contact-hero-inner {
+        min-height: 185px;
+
+        display: block;
+    }
+
+    .civicai-contact-hero-content h1 {
+        font-size: 30px;
+    }
+
+    .civicai-contact-hero-content > p {
+        max-width: 320px;
+
+        font-size: 11px;
+    }
+
+    .civicai-contact-hero-art {
+        position: absolute;
+
+        right: 0;
+        bottom: 0;
+
+        width: 100%;
+        height: 110px;
+
+        opacity: 0.6;
+    }
+
+    .civicai-contact-help {
+        top: 5px;
+        right: 0;
+
+        transform: scale(0.84);
+        transform-origin: right top;
+    }
+
+
+    /* Contact information */
+
+    .civicai-contact-info-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .civicai-contact-info-card {
+        min-height: 145px;
+    }
+
+    .civicai-contact-info-card:nth-child(1),
+    .civicai-contact-info-card:nth-child(2) {
+        border-bottom: 1px solid var(--civicai-border-light);
+    }
+
+    .civicai-contact-info-card:nth-child(2) {
+        border-right: 0;
+    }
+
+    .civicai-contact-info-card:nth-child(4) {
+        border-right: 0;
+    }
+
+
+    /* Main */
+
+    .civicai-contact-main-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Form */
+
+    .civicai-contact-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .civicai-form-group.full {
+        grid-column: auto;
+    }
+
+
+    /* FAQ */
+
+    .civicai-faq-card {
+        min-height: auto;
+    }
+
+
+    /* Office */
+
+    .civicai-office-card {
+        grid-template-columns: 1fr;
+    }
+
+    .civicai-office-details {
+        padding-bottom: 22px;
+    }
+
+    .civicai-real-map {
+        min-height: 280px;
+    }
+
+    .civicai-real-map iframe {
+        min-height: 280px;
+    }
+
+
+    /* Newsletter */
+
+    .civicai-contact-newsletter-inner {
+        min-height: 170px;
+
+        align-items: flex-start;
+
+        padding: 14px;
+    }
+
+    .civicai-contact-newsletter-image {
+        width: 80px;
+        height: 105px;
+    }
+
+    .civicai-contact-newsletter-content {
+        max-width: calc(100% - 92px);
+    }
+
+    .civicai-contact-newsletter-content h2 {
+        font-size: 12px;
+    }
+
+    .civicai-contact-newsletter-content p {
+        font-size: 7px;
+    }
+
+    .civicai-newsletter-form {
+        position: absolute;
+
+        left: 14px;
+        right: 14px;
+        bottom: 12px;
+
+        max-width: none;
+
+        width: calc(100% - 28px);
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .civicai-contact-hero-inner {
+        min-height: 195px;
+    }
+
+    .civicai-contact-hero-content h1 {
+        font-size: 27px;
+    }
+
+
+    .civicai-contact-info-card {
+        min-height: 135px;
+
+        padding: 14px 8px;
+    }
+
+    .contact-info-icon {
+        width: 40px;
+        height: 40px;
+
+        margin-bottom: 8px;
+
+        font-size: 14px;
+    }
+
+    .civicai-contact-info-card h2 {
+        font-size: 10px;
+    }
+
+    .civicai-contact-info-card a,
+    .civicai-contact-info-card p {
+        font-size: 7px;
+    }
+
+
+    .civicai-contact-form-card,
+    .civicai-faq-card {
+        padding: 16px;
+    }
+
+    .civicai-contact-card-heading h2 {
+        font-size: 13px;
+    }
+
+    .civicai-contact-card-heading p {
+        font-size: 8px;
+    }
+
+
+    .civicai-faq-question {
+        min-height: 50px;
+
+        padding: 0 10px;
+    }
+
+    .civicai-faq-question span {
+        font-size: 8px;
+    }
+
+    .civicai-faq-answer p {
+        font-size: 7px;
+    }
+
+
+    .civicai-office-details {
+        padding: 16px;
+    }
+
+    .civicai-real-map,
+    .civicai-real-map iframe {
+        min-height: 250px;
+    }
+
+    .civicai-map-location-card {
+        min-width: 135px;
+
+        padding: 8px 9px;
+    }
+
+
+    .civicai-contact-newsletter-inner {
+        min-height: 170px;
+    }
+
+    .civicai-contact-newsletter-image {
+        width: 68px;
+    }
+
+    .civicai-contact-newsletter-content {
+        max-width: calc(100% - 78px);
+    }
+
+    .civicai-newsletter-form {
+        flex-direction: column;
+
+        gap: 6px;
+    }
+
+    .civicai-newsletter-form input {
+        height: 35px;
+
+        border-right: 1px solid var(--civicai-border);
+
+        border-radius: 7px;
+        padding: 12px 0px;
+    }
+
+    .civicai-newsletter-form .civicai-primary-button {
+        width: 100%;
+
+        min-height: 35px;
+
+        border-radius: 7px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .civicai-faq-answer,
+    .civicai-faq-answer p,
+    .civicai-faq-question i,
+    .civicai-form-group input,
+    .civicai-form-group select,
+    .civicai-form-group textarea {
+        transition: none;
+    }
+
+}

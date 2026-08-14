@@ -1,0 +1,260 @@
+/* =========================================================
+   CIVICAI FOOTER
+   ========================================================= */
+
+.civicai-main-footer {
+    position: relative;
+
+    background: linear-gradient(180deg, #f8faff 0%, #f2f5ff 100%);
+
+    border-top: 1px solid var(--civicai-border-light);
+
+    overflow: hidden;
+}
+
+.civicai-main-footer::before {
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    right: -160px;
+    bottom: -180px;
+
+    border-radius: 50%;
+
+    background: rgba(81, 70, 229, 0.055);
+
+    filter: blur(4px);
+
+    pointer-events: none;
+}
+
+/* =========================================================
+   FOOTER CONTAINER
+   ========================================================= */
+
+.civicai-footer-container {
+    position: relative;
+    z-index: 1;
+
+    width: min(calc(100% - 48px), var(--civicai-max-width));
+
+    margin-inline: auto;
+
+    padding: 48px 0 34px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.65fr
+        1fr
+        1fr
+        1fr
+        1.25fr;
+
+    gap: 34px;
+}
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.civicai-footer-brand-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+.civicai-footer-logo {
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 9px;
+
+    background: linear-gradient(145deg, #5745e7, #3c82ef);
+}
+
+.civicai-footer-logo-shape {
+    width: 17px;
+    height: 20px;
+
+    border-radius: 5px 8px 6px 8px;
+
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.civicai-footer-brand-name {
+    font-size: 17px;
+
+    font-weight: 800;
+
+    color: var(--civicai-text-primary);
+}
+
+.civicai-footer-description {
+    max-width: 250px;
+
+    margin-top: 13px;
+
+    color: var(--civicai-text-secondary);
+
+    font-size: 10px;
+
+    line-height: 1.7;
+}
+
+/* =========================================================
+   SOCIALS
+   ========================================================= */
+
+.civicai-footer-socials {
+    display: flex;
+
+    gap: 7px;
+
+    margin-top: 17px;
+}
+
+.civicai-footer-social-link {
+    width: 28px;
+    height: 28px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 8px;
+
+    color: var(--civicai-primary);
+
+    background: #fff;
+
+    border: 1px solid var(--civicai-border);
+
+    font-size: 11px;
+
+    transition:
+        transform var(--civicai-transition),
+        color var(--civicai-transition),
+        background var(--civicai-transition);
+}
+
+.civicai-footer-social-link:hover {
+    color: #fff;
+
+    background: var(--civicai-primary);
+
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   FOOTER COLUMNS
+   ========================================================= */
+
+.civicai-footer-heading {
+    margin-bottom: 14px;
+
+    color: var(--civicai-text-primary);
+
+    font-size: 11px;
+
+    font-weight: 750;
+}
+
+.civicai-footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.civicai-footer-links a {
+    color: var(--civicai-text-secondary);
+
+    font-size: 9px;
+
+    transition:
+        color var(--civicai-transition),
+        transform var(--civicai-transition);
+}
+
+.civicai-footer-links a:hover {
+    color: var(--civicai-primary);
+
+    transform: translateX(2px);
+}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.civicai-footer-contact {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.civicai-footer-contact-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    margin-bottom: 10px;
+
+    color: var(--civicai-text-secondary);
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+.civicai-footer-contact-item i {
+    width: 13px;
+
+    margin-top: 2px;
+
+    color: var(--civicai-primary);
+
+    font-size: 10px;
+}
+
+/* =========================================================
+   FOOTER BOTTOM
+   ========================================================= */
+
+.civicai-footer-bottom {
+    position: relative;
+    z-index: 1;
+
+    border-top: 1px solid var(--civicai-border);
+}
+
+.civicai-footer-bottom-container {
+    width: min(calc(100% - 48px), var(--civicai-max-width));
+
+    margin-inline: auto;
+
+    min-height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.civicai-footer-copyright {
+    color: var(--civicai-text-muted);
+
+    font-size: 8px;
+}

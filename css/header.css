@@ -1,0 +1,314 @@
+/* =========================================================
+   CIVICAI HEADER
+   ========================================================= */
+
+.civicai-main-header {
+    position: relative;
+    z-index: 100;
+
+    width: 100%;
+
+    height: var(--civicai-header-height);
+
+    background:
+        rgba(255, 255, 255, 0.82);
+
+    border-bottom:
+        1px solid rgba(99, 115, 175, 0.10);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 3px 18px rgba(53, 71, 125, 0.045);
+}
+
+
+.civicai-header-container {
+    width: min(
+        calc(100% - 48px),
+        1240px
+    );
+
+    height: 100%;
+
+    margin-inline: auto;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.civicai-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    flex-shrink: 0;
+}
+
+
+.civicai-brand-logo {
+    position: relative;
+
+    width: 39px;
+    height: 39px;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #5542e7,
+            #3c83f1
+        );
+
+    box-shadow:
+        0 5px 14px rgba(81, 70, 229, 0.18);
+}
+
+
+.civicai-brand-logo-shape {
+    width: 21px;
+    height: 24px;
+
+    border-radius: 6px 10px 7px 10px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.95),
+            rgba(255,255,255,.55)
+        );
+
+    transform: rotate(-8deg);
+
+    position: relative;
+}
+
+
+.civicai-brand-logo-shape::after {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--civicai-primary);
+
+    top: 8px;
+    left: 7px;
+}
+
+
+.civicai-brand-content {
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.05;
+}
+
+
+.civicai-brand-name {
+    font-size: 18px;
+    font-weight: 800;
+
+    color: #172554;
+}
+
+
+.civicai-brand-tagline {
+    margin-top: 3px;
+
+    color: #71809d;
+
+    font-size: 7px;
+
+    letter-spacing: 0.01em;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.civicai-primary-navigation {
+    display: flex;
+
+    align-items: center;
+
+    gap: 29px;
+
+    margin-left: auto;
+    margin-right: 30px;
+
+    height: 100%;
+}
+
+
+.civicai-navigation-link {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    height: 100%;
+
+    color: #26345d;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition:
+        color var(--civicai-transition);
+}
+
+
+.civicai-navigation-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 12px;
+
+    height: 2px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--civicai-primary),
+            var(--civicai-blue)
+        );
+
+    transform: scaleX(0);
+
+    transform-origin: center;
+
+    transition:
+        transform var(--civicai-transition);
+}
+
+
+.civicai-navigation-link:hover {
+    color: var(--civicai-primary);
+}
+
+
+.civicai-navigation-link:hover::after,
+.civicai-navigation-link-active::after {
+    transform: scaleX(1);
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.civicai-header-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.civicai-header-login,
+.civicai-header-register {
+    min-width: 48px;
+    height: 34px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 13px;
+
+    border-radius: 7px;
+
+    font-size: 10px;
+    font-weight: 650;
+
+    transition:
+        transform var(--civicai-transition),
+        box-shadow var(--civicai-transition);
+}
+
+
+.civicai-header-login {
+    color: var(--civicai-primary);
+
+    background: rgba(255,255,255,.75);
+
+    border: 1px solid #cfd5ed;
+}
+
+
+.civicai-header-register {
+    color: #fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5845e7,
+            #3879ef
+        );
+
+    box-shadow:
+        0 5px 13px rgba(81,70,229,.18);
+}
+
+
+.civicai-header-login:hover,
+.civicai-header-register:hover {
+    transform: translateY(-1px);
+}
+
+
+.civicai-header-register:hover {
+    box-shadow:
+        0 8px 18px rgba(81,70,229,.25);
+}
+
+
+/* =========================================================
+   MOBILE TRIGGER
+   ========================================================= */
+
+.civicai-mobile-menu-trigger {
+    display: none;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 9px;
+
+    color: var(--civicai-primary);
+
+    border: 1px solid var(--civicai-border);
+
+    background: #fff;
+}

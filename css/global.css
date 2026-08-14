@@ -1,0 +1,294 @@
+/* =========================================================
+   CIVICAI GLOBAL CSS
+   ========================================================= */
+
+:root {
+  /* ===============================
+       Brand Colors
+       =============================== */
+
+  --civicai-primary: #5146e5;
+  --civicai-primary-dark: #4338ca;
+  --civicai-primary-light: #6d63f3;
+
+  --civicai-blue: #3b82f6;
+  --civicai-cyan: #06b6d4;
+  --civicai-green: #10b981;
+  --civicai-orange: #f59e0b;
+  --civicai-pink: #ec4899;
+
+  /* ===============================
+       Text
+       =============================== */
+
+  --civicai-text-primary: #172554;
+  --civicai-text-secondary: #4b5878;
+  --civicai-text-muted: #71809d;
+  --civicai-text-white: #ffffff;
+
+  /* ===============================
+       Background
+       =============================== */
+
+  --civicai-background: #ffffff;
+  --civicai-background-soft: #f8faff;
+  --civicai-background-blue: #f4f7ff;
+
+  /* ===============================
+       Glass
+       =============================== */
+
+  --civicai-glass-background: rgba(255, 255, 255, 0.72);
+  --civicai-glass-strong: rgba(255, 255, 255, 0.88);
+  --civicai-glass-border: rgba(111, 127, 190, 0.16);
+
+  /* ===============================
+       Borders
+       =============================== */
+
+  --civicai-border: #e7ebf5;
+  --civicai-border-light: #edf0f8;
+
+  /* ===============================
+       Shadows
+       =============================== */
+
+  --civicai-shadow-xs: 0 2px 8px rgba(45, 65, 120, 0.06);
+
+  --civicai-shadow-sm: 0 8px 24px rgba(56, 73, 130, 0.08);
+
+  --civicai-shadow-md: 0 16px 40px rgba(56, 73, 130, 0.1);
+
+  --civicai-shadow-lg: 0 24px 60px rgba(56, 73, 130, 0.13);
+
+  /* ===============================
+       Radius
+       =============================== */
+
+  --civicai-radius-sm: 8px;
+  --civicai-radius-md: 14px;
+  --civicai-radius-lg: 20px;
+  --civicai-radius-xl: 28px;
+
+  /* ===============================
+       Layout
+       =============================== */
+
+  --civicai-max-width: 1200px;
+  --civicai-header-height: 68px;
+
+  /* ===============================
+       Transition
+       =============================== */
+
+  --civicai-transition: 0.25s ease;
+}
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family: "Inter", sans-serif;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(91, 82, 230, 0.035),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 35%,
+      rgba(59, 130, 246, 0.035),
+      transparent 30%
+    ),
+    var(--civicai-background);
+
+  color: var(--civicai-text-primary);
+
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+/* =========================================================
+   COMMON CONTAINERS
+   ========================================================= */
+
+.civicai-section-container {
+  width: min(calc(100% - 48px), var(--civicai-max-width));
+
+  margin-inline: auto;
+}
+
+/* =========================================================
+   COMMON SECTION HEADING
+   ========================================================= */
+
+.civicai-section-heading {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.civicai-section-eyebrow {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--civicai-primary);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.02em;
+}
+
+.civicai-section-heading h2 {
+  color: var(--civicai-text-primary);
+
+  font-size: clamp(25px, 3vw, 34px);
+
+  line-height: 1.2;
+
+  font-weight: 750;
+}
+
+.civicai-section-heading h2 span {
+  background: linear-gradient(
+    90deg,
+    var(--civicai-primary),
+    var(--civicai-blue)
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================================
+   COMMON BUTTONS
+   ========================================================= */
+
+.civicai-primary-button,
+.civicai-secondary-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 42px;
+
+  padding: 0 19px;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 650;
+
+  transition:
+    transform var(--civicai-transition),
+    box-shadow var(--civicai-transition),
+    background var(--civicai-transition);
+}
+
+.civicai-primary-button {
+  color: #fff;
+
+  background: linear-gradient(135deg, #5645e8, #347cf0);
+
+  box-shadow: 0 8px 18px rgba(81, 70, 229, 0.2);
+}
+
+.civicai-primary-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 26px rgba(81, 70, 229, 0.28);
+}
+
+.civicai-secondary-button {
+  color: var(--civicai-text-primary);
+
+  background: rgba(255, 255, 255, 0.78);
+
+  border: 1px solid var(--civicai-border);
+
+  box-shadow: var(--civicai-shadow-xs);
+
+  backdrop-filter: blur(12px);
+}
+
+.civicai-secondary-button:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(81, 70, 229, 0.25);
+
+  box-shadow: var(--civicai-shadow-sm);
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+:focus-visible {
+  outline: 3px solid rgba(81, 70, 229, 0.22);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  color: #fff;
+  background: var(--civicai-primary);
+}

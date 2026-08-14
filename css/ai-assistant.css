@@ -1,0 +1,2148 @@
+/* =========================================================
+   CIVICAI AI ASSISTANT PAGE
+========================================================= */
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.civicai-ai-page {
+  overflow: hidden;
+}
+
+.civicai-ai-container {
+  width: min(calc(100% - 72px), var(--civicai-max-width));
+
+  margin-inline: auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.civicai-ai-hero {
+  padding: 28px 0 22px;
+}
+
+.civicai-ai-hero-content {
+  position: relative;
+
+  min-height: 105px;
+
+  display: flex;
+  align-items: center;
+}
+
+.civicai-ai-hero-copy {
+  position: relative;
+  z-index: 3;
+}
+
+.civicai-ai-breadcrumb {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 8px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 8px;
+}
+
+.civicai-ai-breadcrumb a {
+  color: var(--civicai-primary);
+}
+
+.civicai-ai-breadcrumb i {
+  font-size: 6px;
+}
+
+.civicai-ai-hero-copy h1 {
+  color: var(--civicai-text-primary);
+
+  font-size: 28px;
+  font-weight: 750;
+
+  line-height: 1.2;
+}
+
+.civicai-ai-hero-copy p {
+  margin-top: 7px;
+
+  color: var(--civicai-text-secondary);
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   DECORATIVE CITY
+========================================================= */
+
+.civicai-ai-cityscape {
+  position: absolute;
+
+  right: 125px;
+  bottom: 0;
+
+  width: 390px;
+  height: 105px;
+
+  opacity: 0.4;
+}
+
+.civicai-ai-sun {
+  position: absolute;
+
+  top: 12px;
+  right: 65px;
+
+  width: 25px;
+  height: 25px;
+
+  border-radius: 50%;
+
+  background: #ffd86f;
+}
+
+.ai-building {
+  position: absolute;
+
+  bottom: 0;
+
+  border-radius: 5px 5px 0 0;
+
+  background: linear-gradient(180deg, #dbe5ff, #f0f4ff);
+}
+
+.ai-building-one {
+  left: 80px;
+
+  width: 35px;
+  height: 62px;
+}
+
+.ai-building-two {
+  left: 120px;
+
+  width: 47px;
+  height: 88px;
+}
+
+.ai-building-three {
+  left: 173px;
+
+  width: 41px;
+  height: 70px;
+}
+
+.ai-building-four {
+  left: 220px;
+
+  width: 56px;
+  height: 52px;
+}
+
+.ai-building::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 11px 8px;
+
+  background: linear-gradient(
+    90deg,
+    transparent 25%,
+    #c4d1f3 25% 38%,
+    transparent 38% 65%,
+    #c4d1f3 65% 78%,
+    transparent 78%
+  );
+
+  opacity: 0.7;
+}
+
+.ai-tree {
+  position: absolute;
+
+  bottom: 2px;
+
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+
+  background: #9ce4c5;
+}
+
+.ai-tree-one {
+  left: 60px;
+}
+
+.ai-tree-two {
+  left: 280px;
+
+  width: 20px;
+  height: 20px;
+}
+
+.ai-tree-three {
+  left: 310px;
+}
+
+/* =========================================================
+   HERO HELP CARD
+========================================================= */
+
+.civicai-ai-help-card {
+  position: absolute;
+
+  right: 0;
+  top: 13px;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  min-width: 153px;
+
+  padding: 11px 13px;
+
+  border: 1px solid var(--civicai-border-light);
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  box-shadow: var(--civicai-shadow-sm);
+
+  backdrop-filter: blur(10px);
+}
+
+.civicai-ai-help-icon {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 8px;
+
+  color: var(--civicai-primary);
+
+  background: #f0edff;
+
+  font-size: 12px;
+}
+
+.civicai-ai-help-card strong,
+.civicai-ai-help-card small {
+  display: block;
+}
+
+.civicai-ai-help-card strong {
+  font-size: 9px;
+}
+
+.civicai-ai-help-card small {
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 7px;
+}
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.civicai-ai-main-section {
+  padding-bottom: 22px;
+}
+
+.civicai-ai-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    330px;
+
+  gap: 20px;
+
+  align-items: start;
+}
+
+/* =========================================================
+   CHAT CARD
+========================================================= */
+
+.civicai-ai-chat-card {
+  height: 720px;
+  min-height: 854px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border: 1px solid var(--civicai-border-light);
+  border-radius: var(--civicai-radius-lg);
+
+  background: #ffffff;
+
+  box-shadow: var(--civicai-shadow-sm);
+}
+
+/* =========================================================
+   CHAT HEADER
+========================================================= */
+
+.civicai-ai-chat-header {
+  flex: 0 0 68px;
+
+  min-height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 18px;
+
+  border-bottom: 1px solid var(--civicai-border-light);
+
+  background: #ffffff;
+}
+
+.civicai-ai-chat-identity {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.civicai-ai-avatar {
+  position: relative;
+
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  background: #f0edff;
+
+  border: 2px solid #ebe8ff;
+}
+
+.civicai-ai-avatar img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.civicai-ai-online-dot {
+  position: absolute;
+
+  right: 0;
+  bottom: 1px;
+
+  width: 9px;
+  height: 9px;
+
+  border: 2px solid #ffffff;
+
+  border-radius: 50%;
+
+  background: var(--civicai-green);
+}
+
+.civicai-ai-chat-identity h2 {
+  color: var(--civicai-text-primary);
+
+  font-size: 11px;
+}
+
+.civicai-ai-chat-identity span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: var(--civicai-green);
+
+  font-size: 7px;
+}
+
+.civicai-ai-chat-identity span i {
+  font-size: 5px;
+}
+
+.civicai-ai-chat-actions {
+  display: flex;
+
+  gap: 5px;
+}
+
+.civicai-ai-chat-actions button {
+  width: 29px;
+  height: 29px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 7px;
+
+  color: var(--civicai-text-muted);
+
+  transition:
+    color var(--civicai-transition),
+    background var(--civicai-transition);
+}
+
+.civicai-ai-chat-actions button:hover {
+  color: var(--civicai-primary);
+
+  background: #f3f1ff;
+}
+
+/* =========================================================
+   CHAT BODY
+========================================================= */
+
+.civicai-ai-chat-body {
+  flex: 1;
+
+  min-height: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 22px 22px 20px;
+
+  background: linear-gradient(180deg, #ffffff, #fcfcff);
+
+  scrollbar-width: thin;
+  scrollbar-color: #d7d8f5 transparent;
+}
+
+/* Chrome / Edge / Safari */
+
+.civicai-ai-chat-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.civicai-ai-chat-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.civicai-ai-chat-body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+
+  background: #d7d8f5;
+}
+
+.civicai-ai-chat-body::-webkit-scrollbar-thumb:hover {
+  background: #b9b7ed;
+}
+
+/* =========================================================
+   DATE DIVIDER
+========================================================= */
+
+.civicai-ai-date-divider {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 22px;
+
+  color: #a0a8bb;
+
+  font-size: 7px;
+}
+
+.civicai-ai-date-divider::before,
+.civicai-ai-date-divider::after {
+  content: "";
+
+  flex: 1;
+
+  height: 1px;
+
+  background: var(--civicai-border-light);
+}
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.civicai-ai-message {
+  display: flex;
+
+  gap: 9px;
+
+  margin-bottom: 20px;
+}
+
+.civicai-ai-message-avatar {
+  width: 29px;
+  height: 29px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  background: #f0edff;
+}
+
+.civicai-ai-message-avatar img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.civicai-ai-message-content {
+  max-width: 78%;
+}
+
+.user-message {
+  justify-content: flex-end;
+}
+
+.user-message .civicai-ai-message-content {
+  max-width: 65%;
+}
+
+.civicai-ai-message-name {
+  margin-bottom: 4px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 7px;
+  font-weight: 600;
+}
+
+.civicai-ai-bubble {
+  padding: 11px 13px;
+
+  border: 1px solid #eceef5;
+
+  border-radius: 5px 13px 13px 13px;
+
+  color: var(--civicai-text-secondary);
+
+  background: #ffffff;
+
+  box-shadow: 0 2px 8px rgba(45, 65, 120, 0.035);
+}
+
+.civicai-ai-bubble p {
+  margin-bottom: 7px;
+
+  font-size: 8px;
+  line-height: 1.65;
+}
+
+.civicai-ai-bubble p:last-child {
+  margin-bottom: 0;
+}
+
+.user-message .civicai-ai-bubble {
+  border: 0;
+
+  border-radius: 13px 5px 13px 13px;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #5645e8, #347cf0);
+
+  box-shadow: 0 7px 17px rgba(81, 70, 229, 0.13);
+}
+
+.user-message .civicai-ai-bubble p {
+  color: #ffffff;
+}
+
+.civicai-ai-message-time {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #a4acbe;
+
+  font-size: 6px;
+}
+
+/* =========================================================
+   AI CHAT EXTRA CONTENT
+========================================================= */
+
+.civicai-ai-info-highlight {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin: 9px 0;
+
+  padding: 9px 10px;
+
+  border: 1px solid #e8e6ff;
+
+  border-radius: 9px;
+
+  background: #faf9ff;
+}
+
+.civicai-ai-highlight-icon {
+  width: 31px;
+  height: 31px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  color: var(--civicai-primary);
+
+  background: #efedff;
+
+  font-size: 10px;
+}
+
+.civicai-ai-info-highlight strong,
+.civicai-ai-info-highlight small {
+  display: block;
+}
+
+.civicai-ai-info-highlight strong {
+  color: var(--civicai-primary);
+
+  font-size: 9px;
+}
+
+.civicai-ai-info-highlight small {
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 6px;
+}
+
+/* =========================================================
+   DEPARTMENT CARD
+========================================================= */
+
+.civicai-ai-department-card {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin: 9px 0;
+
+  padding: 9px;
+
+  border: 1px solid #e6eefc;
+
+  border-radius: 9px;
+
+  background: #f9fbff;
+}
+
+.civicai-ai-department-icon {
+  width: 31px;
+  height: 31px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  color: var(--civicai-blue);
+
+  background: #eaf4ff;
+
+  font-size: 10px;
+}
+
+.civicai-ai-department-card strong {
+  display: block;
+
+  color: var(--civicai-text-primary);
+
+  font-size: 7px;
+}
+
+.civicai-ai-department-card span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 6px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   ACTION CARD
+========================================================= */
+
+.civicai-ai-action-card {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin: 9px 0;
+
+  padding: 9px;
+
+  border: 1px solid #e9ebf4;
+
+  border-radius: 9px;
+
+  background: #fafaff;
+}
+
+.civicai-ai-action-icon {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 7px;
+
+  color: var(--civicai-primary);
+
+  background: #efedff;
+
+  font-size: 10px;
+}
+
+.civicai-ai-action-card > div:nth-child(2) {
+  flex: 1;
+}
+
+.civicai-ai-action-card strong,
+.civicai-ai-action-card small {
+  display: block;
+}
+
+.civicai-ai-action-card strong {
+  color: var(--civicai-text-primary);
+
+  font-size: 7px;
+}
+
+.civicai-ai-action-card small {
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 6px;
+}
+
+.civicai-ai-action-card > a {
+  width: 25px;
+  height: 25px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 6px;
+
+  color: var(--civicai-primary);
+
+  background: #f0edff;
+
+  font-size: 7px;
+}
+
+/* =========================================================
+   AI TIPS BOX
+========================================================= */
+
+.civicai-ai-tips-box {
+  margin: 9px 0;
+
+  padding: 9px 10px;
+
+  border-radius: 9px;
+
+  background: #f8faff;
+
+  border: 1px solid #e8edf8;
+}
+
+.civicai-ai-tips-box > strong {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--civicai-text-primary);
+
+  font-size: 7px;
+}
+
+.civicai-ai-tips-box ul {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.civicai-ai-tips-box li {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 6px;
+
+  color: var(--civicai-text-secondary);
+
+  font-size: 6.5px;
+
+  line-height: 1.5;
+}
+
+.civicai-ai-tips-box li i {
+  margin-top: 2px;
+
+  color: var(--civicai-green);
+
+  font-size: 6px;
+}
+
+/* =========================================================
+   LONG CHAT BODY
+========================================================= */
+
+.civicai-ai-chat-body {
+  scroll-behavior: smooth;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .civicai-ai-info-highlight,
+  .civicai-ai-department-card,
+  .civicai-ai-action-card {
+    padding: 8px;
+  }
+
+  .civicai-ai-tips-box {
+    padding: 8px;
+  }
+}
+
+/* =========================================================
+   QUICK QUESTIONS
+========================================================= */
+
+.civicai-ai-quick-section {
+  margin: 5px 0 23px 38px;
+}
+
+.civicai-ai-quick-section > span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 7px;
+  font-weight: 600;
+}
+
+.civicai-ai-quick-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 8px;
+
+  max-width: 500px;
+}
+
+.civicai-ai-quick-card {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 9px;
+
+  border: 1px solid var(--civicai-border-light);
+
+  border-radius: 9px;
+
+  text-align: left;
+
+  background: #ffffff;
+
+  transition:
+    transform var(--civicai-transition),
+    border-color var(--civicai-transition),
+    box-shadow var(--civicai-transition);
+}
+
+.civicai-ai-quick-card:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(81, 70, 229, 0.22);
+
+  box-shadow: var(--civicai-shadow-xs);
+}
+
+.civicai-ai-quick-card > span {
+  width: 28px;
+  height: 28px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 7px;
+
+  font-size: 10px;
+}
+
+.quick-purple {
+  color: var(--civicai-primary);
+  background: #f0edff;
+}
+
+.quick-blue {
+  color: var(--civicai-blue);
+  background: #eaf4ff;
+}
+
+.quick-green {
+  color: var(--civicai-green);
+  background: #e9faf3;
+}
+
+.quick-orange {
+  color: var(--civicai-orange);
+  background: #fff3e2;
+}
+
+.civicai-ai-quick-card strong,
+.civicai-ai-quick-card small {
+  display: block;
+}
+
+.civicai-ai-quick-card strong {
+  color: var(--civicai-text-primary);
+
+  font-size: 7px;
+}
+
+.civicai-ai-quick-card small {
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 6px;
+}
+
+/* =========================================================
+   MINI COMPLAINT CARD
+========================================================= */
+
+.civicai-ai-complaint-mini-card {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin: 9px 0;
+
+  padding: 8px;
+
+  border: 1px solid #e9ebf4;
+
+  border-radius: 8px;
+
+  background: #fafaff;
+}
+
+.mini-complaint-icon {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 7px;
+
+  color: var(--civicai-primary);
+
+  background: #efedff;
+
+  font-size: 11px;
+}
+
+.mini-complaint-info {
+  flex: 1;
+}
+
+.mini-complaint-info strong {
+  display: block;
+
+  color: var(--civicai-text-primary);
+
+  font-size: 7px;
+}
+
+.mini-complaint-info span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 6px;
+}
+
+.mini-status {
+  padding: 4px 7px;
+
+  border-radius: 5px;
+
+  color: #3280df;
+
+  background: #eaf4ff;
+
+  font-size: 6px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   VIEW LINK
+========================================================= */
+
+.civicai-ai-view-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  color: var(--civicai-primary);
+
+  font-size: 7px;
+  font-weight: 650;
+}
+
+.civicai-ai-view-link i {
+  font-size: 6px;
+}
+
+/* =========================================================
+   CHAT FOOTER
+========================================================= */
+
+.civicai-ai-chat-footer {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  min-height: 62px;
+
+  padding: 10px 13px;
+
+  border-top: 1px solid var(--civicai-border-light);
+
+  background: #ffffff;
+}
+
+.civicai-ai-input-tools {
+  display: flex;
+
+  gap: 3px;
+}
+
+.civicai-ai-input-tools button {
+  width: 28px;
+  height: 28px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--civicai-text-muted);
+
+  border-radius: 7px;
+}
+
+.civicai-ai-input-tools button:hover {
+  color: var(--civicai-primary);
+
+  background: #f3f1ff;
+}
+
+.civicai-ai-chat-footer textarea {
+  flex: 1;
+
+  min-height: 36px;
+  max-height: 70px;
+
+  padding: 9px 11px;
+
+  resize: none;
+
+  outline: none;
+
+  border: 1px solid var(--civicai-border);
+
+  border-radius: 8px;
+
+  color: var(--civicai-text-primary);
+
+  background: #fbfcff;
+
+  font-size: 8px;
+}
+
+.civicai-ai-chat-footer textarea:focus {
+  border-color: rgba(81, 70, 229, 0.4);
+}
+
+.civicai-ai-chat-footer textarea::placeholder {
+  color: #a1a9bc;
+}
+
+.civicai-ai-send-button {
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #5645e8, #347cf0);
+
+  box-shadow: 0 6px 15px rgba(81, 70, 229, 0.18);
+
+  transition:
+    transform var(--civicai-transition),
+    box-shadow var(--civicai-transition);
+}
+
+.civicai-ai-send-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 9px 20px rgba(81, 70, 229, 0.25);
+}
+
+.civicai-ai-chat-disclaimer {
+  flex: 0 0 auto;
+
+  padding: 0 15px 11px;
+
+  color: #a1a9bc;
+
+  background: #ffffff;
+
+  font-size: 6px;
+
+  text-align: center;
+}
+
+.civicai-ai-chat-disclaimer i {
+  margin-right: 3px;
+}
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.civicai-ai-sidebar {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.civicai-ai-side-card {
+  padding: 17px;
+
+  border: 1px solid var(--civicai-border-light);
+
+  border-radius: var(--civicai-radius-lg);
+
+  background: #ffffff;
+
+  box-shadow: var(--civicai-shadow-sm);
+}
+
+/* =========================================================
+   SIDEBAR HEADING
+========================================================= */
+
+.civicai-ai-side-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 14px;
+}
+
+.civicai-ai-side-heading > span {
+  width: 28px;
+  height: 28px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 8px;
+
+  color: var(--civicai-primary);
+
+  background: #f0edff;
+
+  font-size: 10px;
+}
+
+.civicai-ai-side-heading h2 {
+  color: var(--civicai-text-primary);
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   CAPABILITIES
+========================================================= */
+
+.civicai-ai-capability-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 11px;
+}
+
+.civicai-ai-capability {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.civicai-ai-capability > span {
+  width: 31px;
+  height: 31px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  font-size: 10px;
+}
+
+.capability-purple {
+  color: var(--civicai-primary);
+  background: #f0edff;
+}
+
+.capability-blue {
+  color: var(--civicai-blue);
+  background: #eaf4ff;
+}
+
+.capability-green {
+  color: var(--civicai-green);
+  background: #e9faf3;
+}
+
+.capability-orange {
+  color: var(--civicai-orange);
+  background: #fff3e2;
+}
+
+.civicai-ai-capability strong,
+.civicai-ai-capability small {
+  display: block;
+}
+
+.civicai-ai-capability strong {
+  color: var(--civicai-text-primary);
+
+  font-size: 8px;
+}
+
+.civicai-ai-capability small {
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 6.5px;
+}
+
+/* =========================================================
+   SUGGESTED QUESTIONS
+========================================================= */
+
+.civicai-ai-question-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.civicai-ai-question-list button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 8px 0;
+
+  border-bottom: 1px solid #f0f2f7;
+
+  color: var(--civicai-text-secondary);
+
+  text-align: left;
+
+  font-size: 7px;
+
+  transition:
+    color var(--civicai-transition),
+    padding-left var(--civicai-transition);
+}
+
+.civicai-ai-question-list button:last-child {
+  border-bottom: 0;
+}
+
+.civicai-ai-question-list button:hover {
+  padding-left: 3px;
+
+  color: var(--civicai-primary);
+}
+
+.civicai-ai-question-list button i {
+  color: #a5adc0;
+
+  font-size: 6px;
+}
+
+/* =========================================================
+   RECENT CONVERSATIONS
+========================================================= */
+
+.civicai-ai-recent-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.civicai-ai-recent-list > a {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 7px;
+
+  border-radius: 8px;
+
+  transition: background var(--civicai-transition);
+}
+
+.civicai-ai-recent-list > a:hover {
+  background: #fafaff;
+}
+
+.civicai-ai-recent-list > a > span {
+  width: 28px;
+  height: 28px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 7px;
+
+  color: var(--civicai-primary);
+
+  background: #f0edff;
+
+  font-size: 9px;
+}
+
+.civicai-ai-recent-list strong,
+.civicai-ai-recent-list small {
+  display: block;
+}
+
+.civicai-ai-recent-list strong {
+  color: var(--civicai-text-primary);
+
+  font-size: 7px;
+}
+
+.civicai-ai-recent-list small {
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 6px;
+}
+
+.civicai-ai-view-history {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 11px;
+
+  color: var(--civicai-primary);
+
+  font-size: 7px;
+  font-weight: 600;
+}
+
+.civicai-ai-view-history i {
+  font-size: 6px;
+}
+
+/* =========================================================
+   TRUST CARD
+========================================================= */
+
+.civicai-ai-trust-card {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 9px;
+
+  padding: 14px;
+
+  border: 1px solid #e1f3ed;
+
+  border-radius: 13px;
+
+  background: #f7fdfb;
+}
+
+.civicai-ai-trust-icon {
+  width: 29px;
+  height: 29px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  color: var(--civicai-green);
+
+  background: #e7f9f2;
+
+  font-size: 10px;
+}
+
+.civicai-ai-trust-card strong {
+  display: block;
+
+  color: #146b54;
+
+  font-size: 8px;
+}
+
+.civicai-ai-trust-card p {
+  margin-top: 3px;
+
+  color: #628b7e;
+
+  font-size: 6.5px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.civicai-ai-cta-section {
+  padding-bottom: 25px;
+}
+
+.civicai-ai-cta {
+  position: relative;
+
+  min-height: 102px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 18px 30px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--civicai-border-light);
+
+  border-radius: var(--civicai-radius-lg);
+
+  background: linear-gradient(90deg, #f7f7ff, #ffffff);
+
+  box-shadow: var(--civicai-shadow-xs);
+}
+
+.civicai-ai-cta-copy {
+  position: relative;
+
+  z-index: 3;
+}
+
+.civicai-ai-cta-copy h2 {
+  color: var(--civicai-text-primary);
+
+  font-size: 14px;
+}
+
+.civicai-ai-cta-copy p {
+  margin-top: 4px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 8px;
+}
+
+.civicai-ai-cta-actions {
+  position: relative;
+
+  z-index: 4;
+
+  display: flex;
+
+  gap: 9px;
+
+  margin-left: auto;
+
+  margin-right: 125px;
+}
+
+.civicai-ai-cta-actions .civicai-primary-button,
+.civicai-ai-cta-actions .civicai-secondary-button {
+  min-height: 34px;
+
+  padding-inline: 12px;
+
+  font-size: 8px;
+}
+
+.civicai-ai-cta-image {
+  position: absolute;
+
+  right: 10px;
+  bottom: 0;
+
+  width: 115px;
+  height: 98px;
+
+  z-index: 2;
+}
+
+.civicai-ai-cta-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  object-position: bottom;
+}
+
+/* =========================================================
+   AI INFO BOX
+========================================================= */
+
+.civicai-ai-info-box {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 10px;
+
+  padding: 9px;
+
+  border: 1px solid #e8eafa;
+
+  border-radius: 8px;
+
+  background: #fafaff;
+}
+
+.info-box-icon {
+  width: 28px;
+  height: 28px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 7px;
+
+  color: var(--civicai-primary);
+
+  background: #efedff;
+
+  font-size: 9px;
+}
+
+.civicai-ai-info-box strong,
+.civicai-ai-info-box span {
+  display: block;
+}
+
+.civicai-ai-info-box strong {
+  color: var(--civicai-text-primary);
+
+  font-size: 7px;
+}
+
+.civicai-ai-info-box span {
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 6px;
+}
+
+/* =========================================================
+   AI STATUS LIST
+========================================================= */
+
+.civicai-ai-status-list {
+  margin-top: 10px;
+
+  padding: 8px 9px;
+
+  border-radius: 8px;
+
+  background: #fafaff;
+}
+
+.ai-status-item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 6px 0;
+}
+
+.ai-status-item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  left: 9px;
+  top: 27px;
+
+  width: 1px;
+  height: 11px;
+
+  background: #e3e6ef;
+}
+
+.ai-status-item > span {
+  width: 19px;
+  height: 19px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  font-size: 7px;
+}
+
+.ai-status-item strong,
+.ai-status-item small {
+  display: block;
+}
+
+.ai-status-item strong {
+  color: var(--civicai-text-primary);
+
+  font-size: 6.5px;
+}
+
+.ai-status-item small {
+  margin-top: 1px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 5.5px;
+}
+
+/* Completed */
+
+.ai-status-item.completed > span {
+  color: #ffffff;
+
+  background: var(--civicai-green);
+}
+
+/* Active */
+
+.ai-status-item.active > span {
+  color: #ffffff;
+
+  background: var(--civicai-primary);
+}
+
+/* Pending */
+
+.ai-status-item.pending > span {
+  color: #9da5b8;
+
+  background: #eef0f5;
+}
+
+/* =========================================================
+   DEPARTMENT CARD
+========================================================= */
+
+.civicai-ai-department-card {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 9px;
+
+  padding: 9px;
+
+  border: 1px solid #e8eaf5;
+
+  border-radius: 8px;
+
+  background: #fafaff;
+}
+
+.department-icon {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 7px;
+
+  color: var(--civicai-primary);
+
+  background: #efedff;
+
+  font-size: 10px;
+}
+
+.civicai-ai-department-card > div:nth-child(2) {
+  flex: 1;
+}
+
+.civicai-ai-department-card strong,
+.civicai-ai-department-card span {
+  display: block;
+}
+
+.civicai-ai-department-card strong {
+  color: var(--civicai-text-primary);
+
+  font-size: 7px;
+}
+
+.civicai-ai-department-card span {
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 6px;
+}
+
+.civicai-ai-department-card > i {
+  color: #a2aabc;
+
+  font-size: 7px;
+}
+
+/* =========================================================
+   RESPONSIVE - 1050px
+========================================================= */
+
+@media (max-width: 1050px) {
+  .civicai-ai-container {
+    width: min(calc(100% - 48px), 950px);
+  }
+
+  .civicai-ai-layout {
+    grid-template-columns:
+      minmax(0, 1fr)
+      280px;
+  }
+
+  .civicai-ai-cityscape {
+    right: 105px;
+  }
+
+  .civicai-ai-chat-body {
+    min-height: 570px;
+  }
+
+  .civicai-ai-cta-actions {
+    margin-right: 100px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - 800px
+========================================================= */
+
+@media (max-width: 800px) {
+  .civicai-ai-container {
+    width: min(calc(100% - 32px), 650px);
+  }
+
+  .civicai-ai-cityscape {
+    right: -20px;
+
+    opacity: 0.18;
+  }
+
+  .civicai-ai-help-card {
+    display: none;
+  }
+
+  .civicai-ai-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .civicai-ai-sidebar {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: start;
+  }
+
+  .civicai-ai-trust-card {
+    grid-column: 1 / -1;
+  }
+
+  .civicai-ai-cta-actions {
+    margin-right: 90px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - 600px
+========================================================= */
+
+@media (max-width: 600px) {
+  .civicai-ai-container {
+    width: calc(100% - 24px);
+  }
+
+  .civicai-ai-hero {
+    padding-top: 22px;
+  }
+
+  .civicai-ai-hero-content {
+    min-height: 90px;
+  }
+
+  .civicai-ai-hero-copy h1 {
+    font-size: 24px;
+  }
+
+  .civicai-ai-hero-copy p {
+    max-width: 280px;
+
+    font-size: 9px;
+  }
+
+  .civicai-ai-sidebar {
+    display: flex;
+  }
+
+  .civicai-ai-chat-body {
+    min-height: 520px;
+
+    max-height: none;
+
+    padding: 17px 13px;
+  }
+
+  .civicai-ai-message-content {
+    max-width: 86%;
+  }
+
+  .user-message .civicai-ai-message-content {
+    max-width: 82%;
+  }
+
+  .civicai-ai-quick-section {
+    margin-left: 37px;
+  }
+
+  .civicai-ai-quick-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .civicai-ai-cta {
+    min-height: 165px;
+
+    align-items: flex-start;
+
+    padding: 18px;
+  }
+
+  .civicai-ai-cta-copy {
+    max-width: 100%;
+  }
+
+  .civicai-ai-cta-actions {
+    position: absolute;
+
+    left: 18px;
+    bottom: 17px;
+
+    margin: 0;
+
+    flex-wrap: wrap;
+  }
+
+  .civicai-ai-cta-image {
+    right: -15px;
+    top: 0;
+
+    width: 130px;
+    height: 110px;
+
+    opacity: 0.3;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - 420px
+========================================================= */
+
+@media (max-width: 420px) {
+  .civicai-ai-chat-header {
+    padding-inline: 12px;
+  }
+
+  .civicai-ai-chat-identity h2 {
+    font-size: 9px;
+  }
+
+  .civicai-ai-chat-identity span {
+    font-size: 6px;
+  }
+
+  .civicai-ai-chat-body {
+    min-height: 500px;
+  }
+
+  .civicai-ai-bubble {
+    padding: 9px 10px;
+  }
+
+  .civicai-ai-bubble p {
+    font-size: 7px;
+  }
+
+  .civicai-ai-quick-section {
+    margin-left: 0;
+  }
+
+  .civicai-ai-quick-grid {
+    max-width: 100%;
+  }
+
+  .civicai-ai-chat-footer {
+    padding: 8px;
+  }
+
+  .civicai-ai-input-tools {
+    display: none;
+  }
+
+  .civicai-ai-cta-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .civicai-ai-quick-card,
+  .civicai-ai-send-button,
+  .civicai-ai-question-list button,
+  .civicai-ai-recent-list > a,
+  .civicai-ai-chat-actions button {
+    transition: none;
+  }
+}
+
+/* =========================================================
+   MOBILE SIDEBAR WIDTH FIX
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .civicai-ai-sidebar {
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        gap: 14px !important;
+
+        min-width: 0 !important;
+    }
+
+    .civicai-ai-side-card,
+    .civicai-ai-trust-card {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        box-sizing: border-box;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .civicai-ai-container {
+        width: calc(100% - 24px) !important;
+
+        max-width: none !important;
+    }
+
+    .civicai-ai-layout {
+        width: 100% !important;
+
+        display: block !important;
+    }
+
+    .civicai-ai-sidebar {
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        gap: 14px !important;
+
+        margin-top: 14px;
+    }
+
+    .civicai-ai-side-card {
+        width: 100% !important;
+
+        max-width: none !important;
+
+        padding: 16px !important;
+
+        margin: 0 !important;
+
+        border-radius: 18px;
+    }
+
+    .civicai-ai-trust-card {
+        width: 100% !important;
+
+        max-width: none !important;
+
+        margin: 0 !important;
+
+        padding: 14px !important;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .civicai-ai-container {
+        width: calc(100% - 20px) !important;
+    }
+
+    .civicai-ai-side-card {
+        width: 100% !important;
+
+        padding: 15px !important;
+    }
+
+    .civicai-ai-sidebar {
+        gap: 12px !important;
+    }
+
+}

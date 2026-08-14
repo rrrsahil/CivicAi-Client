@@ -1,0 +1,1978 @@
+/* =========================================================
+   CIVICAI NOTIFICATIONS PAGE
+   Page-specific stylesheet
+   ========================================================= */
+
+/* =========================================================
+   PAGE HERO
+   ========================================================= */
+
+.civicai-notification-page {
+  width: 100%;
+}
+
+.civicai-notification-hero {
+  padding: 42px 0 25px;
+}
+
+.civicai-notification-hero-content {
+  min-height: 112px;
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.civicai-notification-title-area {
+  position: relative;
+  z-index: 2;
+}
+
+.civicai-notification-title-area h1 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: var(--civicai-text-primary);
+
+  font-size: clamp(28px, 3vw, 34px);
+  line-height: 1.2;
+  font-weight: 750;
+}
+
+.civicai-notification-title-area h1 i {
+  color: var(--civicai-primary);
+  font-size: 27px;
+}
+
+.civicai-notification-title-area p {
+  margin-top: 10px;
+
+  color: var(--civicai-text-secondary);
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   HERO SKYLINE
+   ========================================================= */
+
+.civicai-notification-skyline {
+  position: absolute;
+
+  right: 105px;
+  bottom: 0;
+
+  width: 390px;
+  height: 110px;
+
+  opacity: 0.72;
+
+  background: linear-gradient(
+    to top,
+    rgba(225, 232, 255, 0.75),
+    rgba(255, 255, 255, 0)
+  );
+
+  clip-path: polygon(
+    0 100%,
+    5% 74%,
+    11% 80%,
+    15% 55%,
+    20% 70%,
+    25% 42%,
+    31% 66%,
+    37% 32%,
+    42% 65%,
+    48% 48%,
+    53% 25%,
+    59% 65%,
+    64% 38%,
+    69% 62%,
+    75% 44%,
+    81% 68%,
+    87% 52%,
+    92% 74%,
+    100% 55%,
+    100% 100%
+  );
+
+  pointer-events: none;
+}
+
+.civicai-notification-sun {
+  position: absolute;
+
+  top: 12px;
+  right: 55px;
+
+  width: 22px;
+  height: 22px;
+
+  border-radius: 50%;
+
+  background: rgba(245, 179, 38, 0.22);
+}
+
+/* =========================================================
+   HELP CARD
+   ========================================================= */
+
+.civicai-notification-help {
+  position: relative;
+  z-index: 3;
+
+  min-width: 195px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 13px 17px;
+
+  border: 1px solid var(--civicai-border-light);
+  border-radius: var(--civicai-radius-md);
+
+  background: rgba(255, 255, 255, 0.82);
+
+  box-shadow: var(--civicai-shadow-sm);
+
+  backdrop-filter: blur(14px);
+
+  transition:
+    transform var(--civicai-transition),
+    box-shadow var(--civicai-transition);
+}
+
+.civicai-notification-help:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--civicai-shadow-md);
+}
+
+.civicai-notification-help-icon {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  color: var(--civicai-primary);
+
+  background: #f0edff;
+
+  border-radius: 11px;
+
+  font-size: 16px;
+}
+
+.civicai-notification-help span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.civicai-notification-help strong {
+  color: var(--civicai-text-primary);
+  font-size: 12px;
+}
+
+.civicai-notification-help small {
+  color: var(--civicai-text-muted);
+  font-size: 10px;
+}
+
+/* =========================================================
+   TABS
+   ========================================================= */
+
+.civicai-notification-tabs-section {
+  padding-bottom: 25px;
+}
+
+.civicai-notification-tabs {
+  min-height: 88px;
+
+  display: flex;
+  align-items: stretch;
+
+  padding: 0 28px;
+
+  border: 1px solid var(--civicai-border-light);
+  border-radius: var(--civicai-radius-md);
+
+  background: rgba(255, 255, 255, 0.82);
+
+  box-shadow: var(--civicai-shadow-sm);
+
+  backdrop-filter: blur(12px);
+}
+
+.civicai-notification-tab {
+  position: relative;
+
+  min-width: 145px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  color: var(--civicai-text-primary);
+
+  font-size: 13px;
+  font-weight: 650;
+
+  transition: color var(--civicai-transition);
+}
+
+.civicai-notification-tab strong {
+  color: var(--civicai-text-muted);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.civicai-notification-tab::after {
+  content: "";
+
+  position: absolute;
+
+  left: 18px;
+  right: 18px;
+  bottom: 0;
+
+  height: 2px;
+
+  background: transparent;
+
+  transition: background var(--civicai-transition);
+}
+
+.civicai-notification-tab:hover,
+.civicai-notification-tab.active {
+  color: var(--civicai-primary);
+}
+
+.civicai-notification-tab.active strong {
+  color: var(--civicai-primary);
+}
+
+.civicai-notification-tab.active::after {
+  background: var(--civicai-primary);
+}
+
+.civicai-mark-all-read {
+  margin-left: auto;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--civicai-text-secondary);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.civicai-mark-all-read i {
+  color: var(--civicai-primary);
+}
+
+.civicai-mark-all-read:hover {
+  color: var(--civicai-primary);
+}
+
+/* =========================================================
+   MAIN GRID
+   ========================================================= */
+
+.civicai-notification-main {
+  padding-bottom: 30px;
+}
+
+.civicai-notification-layout {
+  display: grid;
+
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+
+  gap: 24px;
+
+  align-items: start;
+}
+
+.civicai-notification-left {
+  min-width: 0;
+}
+
+.civicai-notification-sidebar {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* =========================================================
+   FILTER PANEL
+   ========================================================= */
+
+.civicai-notification-filter-panel {
+  display: grid;
+
+  grid-template-columns: minmax(180px, 1.7fr) 1fr 1fr auto;
+
+  gap: 10px;
+
+  padding: 14px;
+
+  margin-bottom: 16px;
+
+  border: 1px solid var(--civicai-border-light);
+  border-radius: var(--civicai-radius-md);
+
+  background: rgba(255, 255, 255, 0.84);
+
+  box-shadow: var(--civicai-shadow-xs);
+}
+
+.civicai-notification-filter-search {
+  position: relative;
+}
+
+.civicai-notification-filter-search i {
+  position: absolute;
+
+  left: 13px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: var(--civicai-text-muted);
+
+  font-size: 12px;
+}
+
+.civicai-notification-filter-search input {
+  width: 100%;
+  height: 42px;
+
+  padding: 0 12px 0 36px;
+
+  border: 1px solid var(--civicai-border);
+  border-radius: 9px;
+
+  outline: none;
+
+  color: var(--civicai-text-primary);
+  background: #fff;
+
+  font-size: 11px;
+}
+
+.civicai-notification-filter-search input:focus {
+  border-color: rgba(81, 70, 229, 0.4);
+  box-shadow: 0 0 0 3px rgba(81, 70, 229, 0.07);
+}
+
+.civicai-notification-filter-select {
+  position: relative;
+}
+
+.civicai-notification-filter-select label {
+  position: absolute;
+
+  left: 11px;
+  top: -7px;
+
+  padding: 0 4px;
+
+  color: var(--civicai-text-muted);
+
+  background: #fff;
+
+  font-size: 9px;
+
+  z-index: 2;
+}
+
+.civicai-notification-filter-select select {
+  width: 100%;
+  height: 42px;
+
+  padding: 0 28px 0 12px;
+
+  border: 1px solid var(--civicai-border);
+  border-radius: 9px;
+
+  outline: none;
+
+  color: var(--civicai-text-primary);
+  background: #fff;
+
+  font-size: 11px;
+}
+
+.civicai-notification-filter-button {
+  min-width: 80px;
+  height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  border-radius: 9px;
+
+  color: #fff;
+
+  background: linear-gradient(
+    135deg,
+    var(--civicai-primary),
+    var(--civicai-blue)
+  );
+
+  font-size: 11px;
+  font-weight: 650;
+
+  box-shadow: 0 7px 16px rgba(81, 70, 229, 0.18);
+
+  transition:
+    transform var(--civicai-transition),
+    box-shadow var(--civicai-transition);
+}
+
+.civicai-notification-filter-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(81, 70, 229, 0.25);
+}
+
+/* =========================================================
+   NOTIFICATION LIST CARD
+   ========================================================= */
+
+.civicai-notification-list-card,
+.civicai-notification-activity-card,
+.civicai-notification-side-card,
+.civicai-notification-reminder-card,
+.civicai-notification-tips-card {
+  border: 1px solid var(--civicai-border-light);
+
+  border-radius: var(--civicai-radius-lg);
+
+  background: rgba(255, 255, 255, 0.84);
+
+  box-shadow: var(--civicai-shadow-sm);
+
+  backdrop-filter: blur(12px);
+}
+
+.civicai-notification-activity-card {
+  height: 290px;
+}
+.civicai-notification-list-card {
+  overflow: hidden;
+  /* height: 860px; */
+}
+
+.civicai-notification-list-header {
+  min-height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+
+  border-bottom: 1px solid var(--civicai-border-light);
+}
+
+.civicai-notification-list-header h2 {
+  color: var(--civicai-text-primary);
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.civicai-notification-list-header span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 9px;
+}
+
+.civicai-notification-sort {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.civicai-notification-sort label {
+  color: var(--civicai-text-muted);
+  font-size: 9px;
+}
+
+.civicai-notification-sort select {
+  height: 34px;
+
+  min-width: 125px;
+
+  padding: 0 9px;
+
+  border: 1px solid var(--civicai-border);
+  border-radius: 8px;
+
+  color: var(--civicai-text-primary);
+  background: #fff;
+
+  outline: none;
+
+  font-size: 10px;
+}
+
+.civicai-notification-sort button {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--civicai-border);
+  border-radius: 8px;
+
+  color: var(--civicai-primary);
+  background: #fff;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   SCROLLABLE NOTIFICATION AREA
+   ========================================================= */
+
+.civicai-notification-scroll-area {
+  max-height: 733px;
+
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--civicai-primary-light) #f1f3fa;
+}
+
+.civicai-notification-scroll-area::-webkit-scrollbar {
+  width: 6px;
+}
+
+.civicai-notification-scroll-area::-webkit-scrollbar-track {
+  background: #f3f5fb;
+}
+
+.civicai-notification-scroll-area::-webkit-scrollbar-thumb {
+  background: #8b83ed;
+  border-radius: 10px;
+}
+
+.civicai-notification-scroll-area::-webkit-scrollbar-thumb:hover {
+  background: var(--civicai-primary);
+}
+
+/* =========================================================
+   NOTIFICATION ITEM
+   ========================================================= */
+
+.civicai-notification-item {
+  min-height: 88px;
+
+  display: grid;
+
+  grid-template-columns: 48px minmax(0, 1fr) 90px;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 13px 20px;
+
+  border-bottom: 1px solid var(--civicai-border-light);
+
+  transition:
+    background var(--civicai-transition),
+    transform var(--civicai-transition);
+}
+
+.civicai-notification-item:hover {
+  background: rgba(248, 250, 255, 0.82);
+}
+
+.civicai-notification-item.unread {
+  background: rgba(248, 248, 255, 0.65);
+}
+
+.civicai-notification-icon {
+  width: 44px;
+  height: 44px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  font-size: 16px;
+}
+
+.civicai-notification-icon.purple {
+  color: var(--civicai-primary);
+  background: #f0edff;
+}
+
+.civicai-notification-icon.green {
+  color: var(--civicai-green);
+  background: #e9faf3;
+}
+
+.civicai-notification-icon.blue {
+  color: var(--civicai-blue);
+  background: #edf5ff;
+}
+
+.civicai-notification-icon.orange {
+  color: var(--civicai-orange);
+  background: #fff5e8;
+}
+
+.civicai-notification-icon.pink {
+  color: var(--civicai-pink);
+  background: #fff0f7;
+}
+
+.civicai-notification-content {
+  min-width: 0;
+}
+
+.civicai-notification-content-top {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.civicai-notification-content h3 {
+  overflow: hidden;
+
+  color: var(--civicai-text-primary);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.civicai-notification-content p {
+  margin-top: 4px;
+
+  overflow: hidden;
+
+  color: var(--civicai-text-secondary);
+
+  font-size: 10px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.civicai-notification-dot {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: var(--civicai-primary);
+}
+
+.civicai-notification-item time {
+  display: flex;
+  flex-direction: column;
+
+  text-align: right;
+
+  color: var(--civicai-text-secondary);
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.civicai-notification-item time small {
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 8px;
+  font-weight: 400;
+}
+
+/* =========================================================
+   LOAD MORE
+   ========================================================= */
+
+.civicai-load-notifications {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  width: max-content;
+
+  margin: 14px auto;
+
+  padding: 8px 15px;
+
+  border-radius: 8px;
+
+  color: var(--civicai-primary);
+
+  background: #f5f3ff;
+
+  font-size: 10px;
+  font-weight: 650;
+
+  transition:
+    transform var(--civicai-transition),
+    background var(--civicai-transition);
+}
+
+.civicai-load-notifications:hover {
+  transform: translateY(-1px);
+  background: #ece9ff;
+}
+
+/* =========================================================
+   SIDEBAR CARDS
+   ========================================================= */
+
+.civicai-notification-side-card {
+  padding: 20px;
+}
+
+.civicai-notification-side-card h2 {
+  color: var(--civicai-text-primary);
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.civicai-preference-description {
+  margin-top: 4px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.civicai-notification-summary-list {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 16px;
+}
+
+.civicai-notification-summary-list > div {
+  min-height: 48px;
+
+  display: grid;
+
+  grid-template-columns: 34px 1fr auto;
+
+  align-items: center;
+
+  gap: 9px;
+
+  border-bottom: 1px solid var(--civicai-border-light);
+}
+
+.civicai-notification-summary-list > div:last-child {
+  border-bottom: 0;
+}
+
+.summary-icon {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 9px;
+
+  font-size: 12px;
+}
+
+.summary-icon.blue,
+.preference-icon.blue {
+  color: var(--civicai-blue);
+  background: #edf5ff;
+}
+
+.summary-icon.pink,
+.preference-icon.pink {
+  color: var(--civicai-pink);
+  background: #fff0f7;
+}
+
+.summary-icon.green,
+.preference-icon.green {
+  color: var(--civicai-green);
+  background: #e9faf3;
+}
+
+.summary-icon.purple,
+.preference-icon.purple {
+  color: var(--civicai-primary);
+  background: #f0edff;
+}
+
+.summary-icon.orange,
+.preference-icon.orange {
+  color: var(--civicai-orange);
+  background: #fff5e8;
+}
+
+.civicai-notification-summary-list span:nth-child(2) {
+  color: var(--civicai-text-secondary);
+  font-size: 10px;
+}
+
+.civicai-notification-summary-list strong {
+  color: var(--civicai-text-primary);
+  font-size: 11px;
+}
+
+/* =========================================================
+   PREFERENCES
+   ========================================================= */
+
+.civicai-preference-list {
+  margin-top: 12px;
+}
+
+.civicai-preference-row {
+  min-height: 56px;
+
+  display: grid;
+
+  grid-template-columns: 34px minmax(0, 1fr) 30px;
+
+  align-items: center;
+
+  gap: 9px;
+
+  position: relative;
+
+  cursor: pointer;
+}
+
+.preference-icon {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  font-size: 12px;
+}
+
+.preference-copy {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.preference-copy strong {
+  color: var(--civicai-text-primary);
+
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.preference-copy small {
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 8px;
+}
+
+.civicai-preference-row input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.civicai-toggle {
+  position: relative;
+
+  width: 26px;
+  height: 15px;
+
+  border-radius: 20px;
+
+  background: #d9ddec;
+
+  transition: background var(--civicai-transition);
+}
+
+.civicai-toggle::after {
+  content: "";
+
+  position: absolute;
+
+  width: 11px;
+  height: 11px;
+
+  top: 2px;
+  left: 2px;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  box-shadow: 0 1px 3px rgba(30, 40, 90, 0.2);
+
+  transition: transform var(--civicai-transition);
+}
+
+.civicai-preference-row input:checked + .civicai-toggle {
+  background: var(--civicai-primary);
+}
+
+.civicai-preference-row input:checked + .civicai-toggle::after {
+  transform: translateX(11px);
+}
+
+.civicai-save-preferences {
+  width: 100%;
+  height: 35px;
+
+  margin-top: 12px;
+
+  border: 1px solid var(--civicai-primary);
+  border-radius: 8px;
+
+  color: var(--civicai-primary);
+
+  background: #fff;
+
+  font-size: 10px;
+  font-weight: 650;
+
+  transition:
+    background var(--civicai-transition),
+    color var(--civicai-transition);
+}
+
+.civicai-save-preferences:hover {
+  color: #fff;
+  background: var(--civicai-primary);
+}
+
+/* =========================================================
+   PUSH CARD
+   ========================================================= */
+
+.civicai-push-card p {
+  margin-top: 5px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 9px;
+}
+
+.civicai-push-button {
+  width: 100%;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-top: 13px;
+
+  border: 1px solid var(--civicai-border);
+  border-radius: 8px;
+
+  color: var(--civicai-primary);
+
+  background: #fff;
+
+  font-size: 9px;
+  font-weight: 650;
+
+  transition:
+    border-color var(--civicai-transition),
+    transform var(--civicai-transition);
+}
+
+.civicai-push-button:hover {
+  transform: translateY(-1px);
+  border-color: var(--civicai-primary-light);
+}
+
+/* =========================================================
+   NEVER MISS CARD
+   ========================================================= */
+
+.civicai-notification-reminder-card {
+  min-height: 145px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: 16px 14px 16px 0;
+
+  background: linear-gradient(135deg, #f8f6ff, #ffffff);
+}
+
+.civicai-reminder-image {
+  width: 100px;
+  height: 125px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.civicai-reminder-image img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+
+  object-position: center;
+
+  mix-blend-mode: multiply;
+}
+
+.civicai-reminder-content {
+  position: relative;
+  z-index: 2;
+
+  padding-right: 4px;
+}
+
+.civicai-reminder-content h2 {
+  color: var(--civicai-text-primary);
+
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.civicai-reminder-content p {
+  margin-top: 5px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+.civicai-reminder-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 8px;
+
+  color: var(--civicai-primary);
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   NOTIFICATION TIPS
+   ========================================================= */
+
+.civicai-notification-tips-card {
+  padding: 16px 18px;
+}
+
+.civicai-tips-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.civicai-tips-heading > span {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+
+  color: var(--civicai-orange);
+  background: #fff5e8;
+
+  font-size: 14px;
+}
+
+.civicai-tips-heading h2 {
+  color: var(--civicai-text-primary);
+
+  font-size: 12px;
+}
+
+.civicai-tips-heading p {
+  margin-top: 1px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 8px;
+}
+
+.civicai-notification-tips-card ul {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  margin-top: 13px;
+}
+
+.civicai-notification-tips-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+
+  color: var(--civicai-text-secondary);
+
+  font-size: 9px;
+}
+
+.civicai-notification-tips-card li i {
+  margin-top: 3px;
+
+  color: var(--civicai-green);
+
+  font-size: 8px;
+}
+
+/* =========================================================
+   RECENT ACTIVITY OVERVIEW
+   ========================================================= */
+
+.civicai-notification-activity-card {
+  margin-top: 20px;
+
+  padding: 24px 24px 22px;
+
+  border: 1px solid var(--civicai-border-light);
+
+  border-radius: var(--civicai-radius-lg);
+
+  background: rgba(255, 255, 255, 0.86);
+
+  box-shadow: var(--civicai-shadow-sm);
+
+  backdrop-filter: blur(12px);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   ACTIVITY HEADER
+   ========================================================= */
+
+.civicai-notification-activity-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.civicai-notification-activity-heading h2 {
+  color: var(--civicai-text-primary);
+
+  font-size: 15px;
+
+  line-height: 1.3;
+
+  font-weight: 700;
+}
+
+.civicai-notification-activity-heading p {
+  margin-top: 5px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   TOTAL STAT
+   ========================================================= */
+
+.civicai-notification-total {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  text-align: right;
+
+  flex-shrink: 0;
+}
+
+.civicai-notification-total strong {
+  color: var(--civicai-text-primary);
+
+  font-size: 31px;
+
+  line-height: 1;
+
+  font-weight: 700;
+}
+
+.civicai-notification-total span {
+  margin-top: 6px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 8px;
+
+  line-height: 1.2;
+}
+
+.civicai-notification-total small {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  margin-top: 6px;
+
+  color: var(--civicai-green);
+
+  font-size: 8px;
+
+  font-weight: 600;
+}
+
+.civicai-notification-total small i {
+  font-size: 7px;
+}
+
+/* =========================================================
+   CHART AREA
+   ========================================================= */
+
+.civicai-notification-chart {
+  position: relative;
+
+  width: 100%;
+
+  height: 245px;
+
+  margin-top: 14px;
+
+  padding-bottom: 30px;
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.civicai-chart-grid {
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  top: 20px;
+
+  bottom: 42px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  pointer-events: none;
+}
+
+.civicai-chart-grid span {
+  width: 100%;
+
+  height: 1px;
+
+  background: rgba(231, 235, 245, 0.72);
+}
+
+/* =========================================================
+   SVG GRAPH
+   ========================================================= */
+
+.civicai-curved-chart {
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  top: 20px;
+
+  width: 100%;
+
+  height: 170px;
+
+  overflow: visible;
+}
+
+/* =========================================================
+   CURVED LINE
+   ========================================================= */
+
+.civicai-chart-curve {
+  fill: none;
+
+  stroke: rgba(109, 99, 243, 0.62);
+
+  stroke-width: 2.4;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+
+  vector-effect: non-scaling-stroke;
+}
+
+/* =========================================================
+   GRAPH POINTS
+   ========================================================= */
+
+.civicai-chart-svg-point {
+  fill: var(--civicai-primary);
+
+  stroke: #ffffff;
+
+  stroke-width: 3;
+
+  vector-effect: non-scaling-stroke;
+
+  filter: drop-shadow(0 2px 5px rgba(81, 70, 229, 0.22));
+
+  transition:
+    r var(--civicai-transition),
+    filter var(--civicai-transition);
+}
+
+.civicai-chart-svg-point:hover {
+  r: 7;
+
+  filter: drop-shadow(0 3px 8px rgba(81, 70, 229, 0.35));
+}
+
+/* =========================================================
+   DATE LABELS
+   ========================================================= */
+
+.civicai-chart-labels {
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 0 3.5%;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 8px;
+
+  line-height: 1;
+}
+
+.civicai-chart-labels span {
+  white-space: nowrap;
+}
+
+/* =========================================================
+   RESPONSIVE — 760px
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .civicai-notification-activity-card {
+    padding: 20px 18px 18px;
+  }
+
+  .civicai-notification-activity-header {
+    gap: 12px;
+  }
+
+  .civicai-notification-activity-heading h2 {
+    font-size: 13px;
+  }
+
+  .civicai-notification-activity-heading p {
+    font-size: 8px;
+  }
+
+  .civicai-notification-total strong {
+    font-size: 25px;
+  }
+
+  .civicai-notification-chart {
+    height: 215px;
+  }
+
+  .civicai-curved-chart {
+    height: 150px;
+  }
+
+  .civicai-chart-labels {
+    padding: 0 3%;
+
+    font-size: 7px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .civicai-notification-activity-card {
+    padding: 17px 14px 16px;
+  }
+
+  .civicai-notification-activity-header {
+    align-items: flex-start;
+  }
+
+  .civicai-notification-activity-heading h2 {
+    font-size: 12px;
+  }
+
+  .civicai-notification-activity-heading p {
+    max-width: 170px;
+
+    font-size: 7px;
+  }
+
+  .civicai-notification-total strong {
+    font-size: 22px;
+  }
+
+  .civicai-notification-total span {
+    font-size: 7px;
+  }
+
+  .civicai-notification-total small {
+    font-size: 7px;
+  }
+
+  .civicai-notification-chart {
+    height: 185px;
+
+    margin-top: 10px;
+  }
+
+  .civicai-chart-grid {
+    top: 15px;
+
+    bottom: 35px;
+  }
+
+  .civicai-curved-chart {
+    top: 15px;
+
+    height: 125px;
+  }
+
+  .civicai-chart-labels {
+    padding: 0 2%;
+
+    font-size: 6px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .civicai-chart-svg-point {
+    transition: none;
+  }
+}
+/* =========================================================
+   PRE FOOTER CTA
+   ========================================================= */
+
+.civicai-notification-cta {
+  padding: 0 0 28px;
+}
+
+.civicai-notification-cta-inner {
+  min-height: 78px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 14px 24px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--civicai-border-light);
+  border-radius: var(--civicai-radius-lg);
+
+  background: linear-gradient(90deg, #f8f7ff, #ffffff);
+
+  box-shadow: var(--civicai-shadow-xs);
+}
+
+.civicai-notification-cta-icon {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: var(--civicai-primary);
+
+  background: #f0edff;
+
+  font-size: 19px;
+}
+
+.civicai-notification-cta-content {
+  flex: 1;
+}
+
+.civicai-notification-cta-content h2 {
+  color: var(--civicai-text-primary);
+
+  font-size: 15px;
+}
+
+.civicai-notification-cta-content p {
+  margin-top: 2px;
+
+  color: var(--civicai-text-muted);
+
+  font-size: 9px;
+}
+
+/* =========================================================
+   RESPONSIVE — 1100px
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .civicai-notification-layout {
+    grid-template-columns: minmax(0, 1.65fr) minmax(260px, 1fr);
+  }
+
+  .civicai-notification-tab {
+    min-width: 115px;
+  }
+
+  .civicai-notification-skyline {
+    right: 80px;
+    width: 330px;
+  }
+
+  .civicai-notification-filter-panel {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .civicai-notification-filter-search {
+    grid-column: 1 / -1;
+  }
+
+  .civicai-notification-filter-button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — 850px
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .civicai-notification-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .civicai-notification-sidebar {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    align-items: start;
+  }
+
+  .civicai-notification-reminder-card,
+  .civicai-notification-tips-card {
+    grid-column: span 1;
+  }
+
+  .civicai-notification-tabs {
+    overflow-x: auto;
+    padding: 0 15px;
+
+    scrollbar-width: none;
+  }
+
+  .civicai-notification-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .civicai-notification-tab {
+    flex: 0 0 120px;
+  }
+
+  .civicai-mark-all-read {
+    flex: 0 0 auto;
+    padding-left: 15px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — 760px
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .civicai-notification-hero {
+    padding: 32px 0 20px;
+  }
+
+  .civicai-notification-hero-content {
+    min-height: 155px;
+  }
+
+  .civicai-notification-title-area h1 {
+    font-size: 28px;
+  }
+
+  .civicai-notification-title-area p {
+    max-width: 300px;
+
+    font-size: 12px;
+  }
+
+  .civicai-notification-skyline {
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    max-width: 320px;
+
+    opacity: 0.45;
+  }
+
+  .civicai-notification-help {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    min-width: 165px;
+
+    padding: 10px 12px;
+  }
+
+  .civicai-notification-help-icon {
+    width: 32px;
+    height: 32px;
+
+    font-size: 13px;
+  }
+
+  .civicai-notification-tabs {
+    min-height: 70px;
+  }
+
+  .civicai-notification-tab {
+    min-width: 95px;
+    flex-basis: 95px;
+
+    font-size: 10px;
+  }
+
+  .civicai-notification-tab strong {
+    font-size: 9px;
+  }
+
+  .civicai-notification-filter-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .civicai-notification-filter-search {
+    grid-column: auto;
+  }
+
+  .civicai-notification-filter-button {
+    width: 100%;
+  }
+
+  .civicai-notification-list-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 15px 16px;
+  }
+
+  .civicai-notification-sort {
+    width: 100%;
+  }
+
+  .civicai-notification-sort select {
+    flex: 1;
+  }
+
+  .civicai-notification-item {
+    grid-template-columns: 40px minmax(0, 1fr);
+
+    gap: 10px;
+
+    padding: 13px 15px;
+  }
+
+  .civicai-notification-icon {
+    width: 38px;
+    height: 38px;
+
+    font-size: 14px;
+  }
+
+  .civicai-notification-item time {
+    grid-column: 2;
+
+    flex-direction: row;
+    gap: 7px;
+
+    text-align: left;
+
+    font-size: 8px;
+  }
+
+  .civicai-notification-item time small {
+    margin-top: 0;
+  }
+
+  .civicai-notification-content p {
+    white-space: normal;
+
+    line-height: 1.5;
+  }
+
+  .civicai-notification-scroll-area {
+    max-height: 590px;
+  }
+
+  .civicai-notification-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .civicai-notification-reminder-card,
+  .civicai-notification-tips-card {
+    grid-column: auto;
+  }
+
+  .civicai-notification-activity-header {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .civicai-notification-total {
+    flex-shrink: 0;
+  }
+
+  .civicai-notification-cta-inner {
+    flex-wrap: wrap;
+
+    padding: 16px;
+  }
+
+  .civicai-notification-cta-content {
+    min-width: calc(100% - 65px);
+  }
+
+  .civicai-notification-cta-inner .civicai-primary-button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .civicai-notification-hero-content {
+    min-height: 175px;
+  }
+
+  .civicai-notification-title-area h1 {
+    font-size: 25px;
+  }
+
+  .civicai-notification-title-area h1 i {
+    font-size: 21px;
+  }
+
+  .civicai-notification-help {
+    left: 0;
+    right: auto;
+  }
+
+  .civicai-notification-skyline {
+    top: 15px;
+    right: 0;
+    width: 270px;
+  }
+
+  .civicai-notification-tab {
+    min-width: 82px;
+    flex-basis: 82px;
+  }
+
+  .civicai-mark-all-read {
+    font-size: 9px;
+  }
+
+  .civicai-notification-filter-panel {
+    padding: 10px;
+  }
+
+  .civicai-notification-filter-select select,
+  .civicai-notification-filter-search input,
+  .civicai-notification-filter-button {
+    height: 40px;
+  }
+
+  .civicai-notification-list-header h2 {
+    font-size: 13px;
+  }
+
+  .civicai-notification-sort label {
+    display: none;
+  }
+
+  .civicai-notification-item {
+    min-height: 100px;
+  }
+
+  .civicai-notification-content h3 {
+    font-size: 11px;
+  }
+
+  .civicai-notification-content p {
+    font-size: 9px;
+  }
+
+  .civicai-notification-activity-card {
+    padding: 15px;
+  }
+
+  .civicai-notification-activity-header h2 {
+    font-size: 12px;
+  }
+
+  .civicai-notification-total strong {
+    font-size: 22px;
+  }
+
+  .civicai-notification-chart {
+    height: 125px;
+  }
+
+  .civicai-notification-reminder-card {
+    min-height: 135px;
+  }
+
+  .civicai-reminder-image {
+    width: 85px;
+    height: 115px;
+  }
+
+  .civicai-reminder-content h2 {
+    font-size: 11px;
+  }
+
+  .civicai-reminder-content p {
+    font-size: 7px;
+  }
+
+  .civicai-notification-cta-content h2 {
+    font-size: 13px;
+  }
+
+  .civicai-notification-cta-content p {
+    font-size: 8px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .civicai-notification-help,
+  .civicai-notification-item,
+  .civicai-notification-filter-button,
+  .civicai-save-preferences,
+  .civicai-push-button,
+  .civicai-load-notifications {
+    transition: none;
+  }
+}
