@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0">
+
+        <title>CivicAI - Complaint History</title>
+
+        <!-- Google Font -->
+        <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com">
+
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin>
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+        <!-- Existing Global CSS -->
+        <link
+            rel="stylesheet"
+            href="./css/global.css">
+
+        <!-- Complaint History CSS -->
+        <link
+            rel="stylesheet"
+            href="./css/complaint-history.css">
+
+    </head>
+
+    <body>
+
+        <!-- =====================================================
+         EXISTING HEADER
+         header.html is already created separately.
+         Keep your existing header/include here.
+    ====================================================== -->
+
+        <!-- HEADER: ./header.html -->
+
+        <main class="civicai-history-page">
+
+            <!-- =================================================
+             PAGE HERO
+        ================================================== -->
+
+            <section class="civicai-history-hero">
+
+                <div class="civicai-history-container">
+
+                    <div class="civicai-history-hero-content">
+
+                        <div class="civicai-history-hero-copy">
+
+                            <h1>
+                                Complaint History
+                            </h1>
+
+                            <p>
+                                View all your reported complaints and their
+                                current status.
+                            </p>
+
+                        </div>
+
+                        <!-- Decorative city area -->
+
+                        <div class="civicai-history-cityscape">
+
+                            <div class="civicai-history-sun"></div>
+
+                            <div
+                                class="civicai-history-building building-one"></div>
+                            <div
+                                class="civicai-history-building building-two"></div>
+                            <div
+                                class="civicai-history-building building-three"></div>
+                            <div
+                                class="civicai-history-building building-four"></div>
+
+                            <span class="civicai-history-tree tree-one"></span>
+                            <span class="civicai-history-tree tree-two"></span>
+                            <span
+                                class="civicai-history-tree tree-three"></span>
+
+                        </div>
+
+                        <!-- Help -->
+
+                        <a
+                            href="./ai-assistant.html"
+                            class="civicai-history-help-card">
+
+                            <span class="civicai-history-help-icon">
+                                <i class="fa-solid fa-robot"></i>
+                            </span>
+
+                            <span>
+                                <strong>Need Help?</strong>
+                                <small>Chat with AI Assistant</small>
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =================================================
+             STATISTICS
+        ================================================== -->
+
+            <section class="civicai-history-stats-section">
+
+                <div class="civicai-history-container">
+
+                    <div class="civicai-history-stats-card">
+
+                        <!-- Total -->
+
+                        <article class="civicai-history-stat">
+
+                            <div
+                                class="civicai-history-stat-icon history-purple">
+                                <i class="fa-regular fa-rectangle-list"></i>
+                            </div>
+
+                            <strong>18</strong>
+
+                            <span>Total Complaints</span>
+
+                            <small class="history-positive">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                12% from last 30 days
+                            </small>
+
+                        </article>
+
+                        <!-- Progress -->
+
+                        <article class="civicai-history-stat">
+
+                            <div
+                                class="civicai-history-stat-icon history-orange">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+
+                            <strong>5</strong>
+
+                            <span>In Progress</span>
+
+                            <small class="history-negative">
+                                <i class="fa-solid fa-arrow-down"></i>
+                                8% from last 30 days
+                            </small>
+
+                        </article>
+
+                        <!-- Resolved -->
+
+                        <article class="civicai-history-stat">
+
+                            <div class="civicai-history-stat-icon history-blue">
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+
+                            <strong>8</strong>
+
+                            <span>Resolved</span>
+
+                            <small class="history-positive">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                15% from last 30 days
+                            </small>
+
+                        </article>
+
+                        <!-- Closed -->
+
+                        <article class="civicai-history-stat">
+
+                            <div class="civicai-history-stat-icon history-pink">
+                                <i class="fa-solid fa-circle-notch"></i>
+                            </div>
+
+                            <strong>3</strong>
+
+                            <span>Closed</span>
+
+                            <small class="history-positive">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                5% from last 30 days
+                            </small>
+
+                        </article>
+
+                        <!-- Resolution -->
+
+                        <article class="civicai-history-stat">
+
+                            <div
+                                class="civicai-history-stat-icon history-green">
+                                <i class="fa-regular fa-calendar"></i>
+                            </div>
+
+                            <strong>
+                                4.3 <em>Days</em>
+                            </strong>
+
+                            <span>Avg. Resolution Time</span>
+
+                            <small class="history-positive">
+                                <i class="fa-solid fa-arrow-down"></i>
+                                0.7 days from last 30 days
+                            </small>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =================================================
+             FILTERS
+        ================================================== -->
+
+            <section class="civicai-history-filter-section">
+
+                <div class="civicai-history-container">
+
+                    <div class="civicai-history-filter-card">
+
+                        <!-- Search -->
+
+                        <div class="civicai-history-filter search-filter">
+
+                            <label for="history-search">
+                                Search
+                            </label>
+
+                            <div class="civicai-history-input-wrap">
+
+                                <input
+                                    id="history-search"
+                                    type="text"
+                                    placeholder="Search by Complaint ID, Title or Keyword...">
+
+                                <i class="fa-solid fa-magnifying-glass"></i>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Status -->
+
+                        <div class="civicai-history-filter">
+
+                            <label for="history-status">
+                                Status
+                            </label>
+
+                            <select id="history-status">
+
+                                <option>
+                                    All Status
+                                </option>
+
+                                <option>
+                                    In Progress
+                                </option>
+
+                                <option>
+                                    Resolved
+                                </option>
+
+                                <option>
+                                    Closed
+                                </option>
+
+                                <option>
+                                    Pending Review
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- Category -->
+
+                        <div class="civicai-history-filter">
+
+                            <label for="history-category">
+                                Category
+                            </label>
+
+                            <select id="history-category">
+
+                                <option>
+                                    All Categories
+                                </option>
+
+                                <option>
+                                    Road & Infrastructure
+                                </option>
+
+                                <option>
+                                    Electricity
+                                </option>
+
+                                <option>
+                                    Water Supply
+                                </option>
+
+                                <option>
+                                    Sanitation
+                                </option>
+
+                                <option>
+                                    Traffic & Transport
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- Department -->
+
+                        <div class="civicai-history-filter">
+
+                            <label for="history-department">
+                                Department
+                            </label>
+
+                            <select id="history-department">
+
+                                <option>
+                                    All Departments
+                                </option>
+
+                                <option>
+                                    Public Works Department
+                                </option>
+
+                                <option>
+                                    Electricity Department
+                                </option>
+
+                                <option>
+                                    Water Supply Department
+                                </option>
+
+                                <option>
+                                    Sanitation Department
+                                </option>
+
+                                <option>
+                                    Traffic Police Department
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- Date -->
+
+                        <div class="civicai-history-filter history-date-filter">
+
+                            <label for="history-date">
+                                Date Range
+                            </label>
+
+                            <div class="civicai-history-date-wrap">
+
+                                <input
+                                    id="history-date"
+                                    type="text"
+                                    placeholder="Select Date Range">
+
+                                <i class="fa-regular fa-calendar"></i>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Actions -->
+
+                        <div class="civicai-history-filter-actions">
+
+                            <button
+                                type="button"
+                                class="civicai-history-clear-btn">
+
+                                <i class="fa-solid fa-rotate-left"></i>
+
+                                Clear Filters
+
+                            </button>
+
+                            <button
+                                type="button"
+                                class="civicai-history-apply-btn">
+
+                                <i class="fa-solid fa-filter"></i>
+
+                                Apply Filters
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =================================================
+             COMPLAINT TABLE
+        ================================================== -->
+
+            <section class="civicai-history-table-section">
+
+                <div class="civicai-history-container">
+
+                    <div class="civicai-history-table-card">
+
+                        <!-- Table Header -->
+
+                        <div class="civicai-history-table-header">
+
+                            <h2>
+                                All Complaints
+                            </h2>
+
+                            <div class="civicai-history-table-tools">
+
+                                <label>
+                                    Sort by:
+
+                                    <select>
+                                        <option>
+                                            Newest First
+                                        </option>
+
+                                        <option>
+                                            Oldest First
+                                        </option>
+
+                                        <option>
+                                            Highest Priority
+                                        </option>
+                                    </select>
+
+                                </label>
+
+                                <button
+                                    type="button"
+                                    class="civicai-history-export-btn">
+
+                                    <i class="fa-solid fa-download"></i>
+
+                                    Export
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Responsive Table -->
+
+                        <div class="civicai-history-table-scroll">
+
+                            <table class="civicai-history-table">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>
+                                            Complaint ID
+                                        </th>
+
+                                        <th>
+                                            Issue Details
+                                        </th>
+
+                                        <th>
+                                            Category
+                                        </th>
+
+                                        <th>
+                                            Department
+                                        </th>
+
+                                        <th>
+                                            Date Reported
+                                        </th>
+
+                                        <th>
+                                            Status
+                                        </th>
+
+                                        <th>
+                                            Priority
+                                        </th>
+
+                                        <th>
+                                            Action
+                                        </th>
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <!-- Complaint 01 -->
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="history-complaint-id">
+
+                                                <span
+                                                    class="history-row-icon purple-row">
+                                                    <i
+                                                        class="fa-solid fa-road"></i>
+                                                </span>
+
+                                                <strong>
+                                                    #C-2024-9812
+                                                </strong>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+
+                                            <div class="history-issue">
+
+                                                <strong>
+                                                    Deep Pothole on Main Street
+                                                </strong>
+
+                                                <small>
+                                                    There is a deep pothole in
+                                                    front of...
+                                                </small>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-category purple-category">
+                                                Road & Infrastructure
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            Public Works<br>
+                                            Department
+                                        </td>
+
+                                        <td>
+                                            May 31, 2024<br>
+                                            <small>10:30 AM</small>
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-status status-progress">
+                                                In Progress
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-priority priority-high">
+                                                High
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <a
+                                                href="./complaint-details.html"
+                                                class="history-action">
+                                                <i
+                                                    class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </td>
+
+                                    </tr>
+
+                                    <!-- Complaint 02 -->
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="history-complaint-id">
+
+                                                <span
+                                                    class="history-row-icon orange-row">
+                                                    <i
+                                                        class="fa-solid fa-lightbulb"></i>
+                                                </span>
+
+                                                <strong>
+                                                    #C-2024-9711
+                                                </strong>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+
+                                            <div class="history-issue">
+
+                                                <strong>
+                                                    Streetlight Not Working
+                                                </strong>
+
+                                                <small>
+                                                    Streetlight near the park
+                                                    gate is not...
+                                                </small>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-category orange-category">
+                                                Street Light
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            Electricity<br>
+                                            Department
+                                        </td>
+
+                                        <td>
+                                            May 28, 2024<br>
+                                            <small>08:15 PM</small>
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-status status-progress">
+                                                In Progress
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-priority priority-medium">
+                                                Medium
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <a href="#" class="history-action">
+                                                <i
+                                                    class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </td>
+
+                                    </tr>
+
+                                    <!-- Complaint 03 -->
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="history-complaint-id">
+
+                                                <span
+                                                    class="history-row-icon blue-row">
+                                                    <i
+                                                        class="fa-solid fa-droplet"></i>
+                                                </span>
+
+                                                <strong>
+                                                    #C-2024-9452
+                                                </strong>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+
+                                            <div class="history-issue">
+
+                                                <strong>
+                                                    Water Leakage on 5th Ave
+                                                </strong>
+
+                                                <small>
+                                                    Water is leaking from the
+                                                    pipeline...
+                                                </small>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-category blue-category">
+                                                Water Supply
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            Water Supply<br>
+                                            Department
+                                        </td>
+
+                                        <td>
+                                            May 24, 2024<br>
+                                            <small>02:45 PM</small>
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-status status-resolved">
+                                                Resolved
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-priority priority-high">
+                                                High
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <a href="#" class="history-action">
+                                                <i
+                                                    class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </td>
+
+                                    </tr>
+
+                                    <!-- Complaint 04 -->
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="history-complaint-id">
+
+                                                <span
+                                                    class="history-row-icon green-row">
+                                                    <i
+                                                        class="fa-solid fa-trash-can"></i>
+                                                </span>
+
+                                                <strong>
+                                                    #C-2024-9321
+                                                </strong>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+
+                                            <div class="history-issue">
+
+                                                <strong>
+                                                    Garbage Not Collected
+                                                </strong>
+
+                                                <small>
+                                                    Garbage was not collected
+                                                    from...
+                                                </small>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-category green-category">
+                                                Garbage / Sanitation
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            Sanitation<br>
+                                            Department
+                                        </td>
+
+                                        <td>
+                                            May 20, 2024<br>
+                                            <small>09:10 AM</small>
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-status status-resolved">
+                                                Resolved
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-priority priority-low">
+                                                Low
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <a href="#" class="history-action">
+                                                <i
+                                                    class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </td>
+
+                                    </tr>
+
+                                    <!-- Complaint 05 -->
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="history-complaint-id">
+
+                                                <span
+                                                    class="history-row-icon pink-row">
+                                                    <i
+                                                        class="fa-solid fa-car"></i>
+                                                </span>
+
+                                                <strong>
+                                                    #C-2024-9109
+                                                </strong>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+
+                                            <div class="history-issue">
+
+                                                <strong>
+                                                    Traffic Signal Malfunction
+                                                </strong>
+
+                                                <small>
+                                                    Traffic signal at ABC
+                                                    Crossroad is...
+                                                </small>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-category pink-category">
+                                                Traffic & Transport
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            Traffic Police<br>
+                                            Department
+                                        </td>
+
+                                        <td>
+                                            May 18, 2024<br>
+                                            <small>11:20 AM</small>
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-status status-closed">
+                                                Closed
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-priority priority-medium">
+                                                Medium
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <a href="#" class="history-action">
+                                                <i
+                                                    class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </td>
+
+                                    </tr>
+
+                                    <!-- Complaint 06 -->
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="history-complaint-id">
+
+                                                <span
+                                                    class="history-row-icon purple-row">
+                                                    <i
+                                                        class="fa-solid fa-building"></i>
+                                                </span>
+
+                                                <strong>
+                                                    #C-2024-8934
+                                                </strong>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+
+                                            <div class="history-issue">
+
+                                                <strong>
+                                                    Broken Footpath
+                                                </strong>
+
+                                                <small>
+                                                    Footpath tiles are broken
+                                                    near...
+                                                </small>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-category purple-category">
+                                                Road & Infrastructure
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            Public Works<br>
+                                            Department
+                                        </td>
+
+                                        <td>
+                                            May 15, 2024<br>
+                                            <small>05:40 PM</small>
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-status status-closed">
+                                                Closed
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-priority priority-low">
+                                                Low
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <a href="#" class="history-action">
+                                                <i
+                                                    class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </td>
+
+                                    </tr>
+
+                                    <!-- Complaint 07 -->
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="history-complaint-id">
+
+                                                <span
+                                                    class="history-row-icon orange-row">
+                                                    <i
+                                                        class="fa-solid fa-smog"></i>
+                                                </span>
+
+                                                <strong>
+                                                    #C-2024-8762
+                                                </strong>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+
+                                            <div class="history-issue">
+
+                                                <strong>
+                                                    Air Pollution Issue
+                                                </strong>
+
+                                                <small>
+                                                    Smoke and bad odor from
+                                                    the...
+                                                </small>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-category orange-category">
+                                                Pollution
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            Pollution Control<br>
+                                            Board
+                                        </td>
+
+                                        <td>
+                                            May 10, 2024<br>
+                                            <small>04:05 PM</small>
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-status status-resolved">
+                                                Resolved
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-priority priority-high">
+                                                High
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <a href="#" class="history-action">
+                                                <i
+                                                    class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </td>
+
+                                    </tr>
+
+                                    <!-- Complaint 08 -->
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="history-complaint-id">
+
+                                                <span
+                                                    class="history-row-icon pink-row">
+                                                    <i
+                                                        class="fa-regular fa-heart"></i>
+                                                </span>
+
+                                                <strong>
+                                                    #C-2024-8653
+                                                </strong>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+
+                                            <div class="history-issue">
+
+                                                <strong>
+                                                    Unhygienic Water in Area
+                                                </strong>
+
+                                                <small>
+                                                    Water in our area is not
+                                                    clean and...
+                                                </small>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-category pink-category">
+                                                Health
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            Health<br>
+                                            Department
+                                        </td>
+
+                                        <td>
+                                            May 07, 2024<br>
+                                            <small>10:00 AM</small>
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-status status-progress">
+                                                In Progress
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <span
+                                                class="history-priority priority-high">
+                                                High
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <a href="#" class="history-action">
+                                                <i
+                                                    class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                        <!-- Pagination -->
+
+                        <div class="civicai-history-pagination">
+
+                            <button
+                                type="button"
+                                aria-label="Previous page">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="active-page">
+                                1
+                            </button>
+
+                            <button type="button">
+                                2
+                            </button>
+
+                            <button type="button">
+                                3
+                            </button>
+
+                            <button
+                                type="button"
+                                aria-label="Next page">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =================================================
+             LOWER INFORMATION AREA
+        ================================================== -->
+
+            <section class="civicai-history-lower-section">
+
+                <div class="civicai-history-container">
+
+                    <div class="civicai-history-lower-grid">
+
+                        <!-- =================================================
+                         SUMMARY INSIGHT
+                    ================================================== -->
+
+                        <article class="civicai-history-summary-card">
+
+                            <div class="civicai-history-info-heading">
+
+                                <span>
+                                    <i
+                                        class="fa-solid fa-wand-magic-sparkles"></i>
+                                </span>
+
+                                <h2>
+                                    Summary Insight
+                                </h2>
+
+                            </div>
+
+                            <p class="civicai-history-summary-text">
+
+                                You have been most active in reporting issues
+                                related to <strong>Road &
+                                    Infrastructure.</strong>
+
+                            </p>
+
+                            <div class="civicai-history-chart-area">
+
+                                <!-- CSS Donut -->
+
+                                <div class="civicai-history-donut">
+
+                                    <div class="civicai-history-donut-center">
+
+                                        <strong>
+                                            18
+                                        </strong>
+
+                                        <span>
+                                            Total
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- Legend -->
+
+                                <div class="civicai-history-chart-legend">
+
+                                    <div>
+                                        <span class="legend-purple"></span>
+                                        Road & Infrastructure
+                                        <strong>6 (33%)</strong>
+                                    </div>
+
+                                    <div>
+                                        <span class="legend-orange"></span>
+                                        Street Light
+                                        <strong>3 (17%)</strong>
+                                    </div>
+
+                                    <div>
+                                        <span class="legend-blue"></span>
+                                        Water Supply
+                                        <strong>2 (11%)</strong>
+                                    </div>
+
+                                    <div>
+                                        <span class="legend-green"></span>
+                                        Garbage / Sanitation
+                                        <strong>2 (11%)</strong>
+                                    </div>
+
+                                    <div>
+                                        <span class="legend-grey"></span>
+                                        Others
+                                        <strong>5 (28%)</strong>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                        <!-- =================================================
+                         NEED HELP
+                    ================================================== -->
+
+                        <article class="civicai-history-support-card">
+
+                            <div class="civicai-history-info-heading">
+
+                                <span class="support-heading-icon">
+                                    <i class="fa-solid fa-headphones"></i>
+                                </span>
+
+                                <h2>
+                                    Need Help?
+                                </h2>
+
+                            </div>
+
+                            <p class="civicai-history-support-text">
+
+                                If you have any queries regarding your complaint
+                                or need assistance.
+
+                            </p>
+
+                            <div class="civicai-history-support-list">
+
+                                <a
+                                    href="./ai-assistant.html"
+                                    class="civicai-history-support-item">
+
+                                    <span>
+                                        <i class="fa-solid fa-robot"></i>
+                                    </span>
+
+                                    <div>
+                                        <strong>
+                                            Chat with AI Assistant
+                                        </strong>
+
+                                        <small>
+                                            Get instant answers to your
+                                            questions
+                                        </small>
+                                    </div>
+
+                                </a>
+
+                                <a
+                                    href="tel:18001234567"
+                                    class="civicai-history-support-item">
+
+                                    <span>
+                                        <i class="fa-solid fa-phone"></i>
+                                    </span>
+
+                                    <div>
+                                        <strong>
+                                            Call Support
+                                        </strong>
+
+                                        <small>
+                                            1800-123-4567
+                                        </small>
+                                    </div>
+
+                                </a>
+
+                                <a
+                                    href="mailto:support@civicai.gov.in"
+                                    class="civicai-history-support-item">
+
+                                    <span>
+                                        <i class="fa-regular fa-envelope"></i>
+                                    </span>
+
+                                    <div>
+                                        <strong>
+                                            Email Support
+                                        </strong>
+
+                                        <small>
+                                            support@civicai.gov.in
+                                        </small>
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                            <!-- Existing image path requested -->
+
+                            <div class="civicai-history-support-image">
+
+                                <img
+                                    src="./assets/img.jpg"
+                                    alt="CivicAI support assistant">
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =================================================
+             PRE FOOTER CTA
+        ================================================== -->
+
+            <section class="civicai-history-cta-section">
+
+                <div class="civicai-history-container">
+
+                    <div class="civicai-history-cta">
+
+                        <div class="civicai-history-cta-copy">
+
+                            <h2>
+                                See something that needs attention?
+                            </h2>
+
+                            <p>
+                                Don't wait! Report it now and help us build
+                                a better community.
+                            </p>
+
+                        </div>
+
+                        <div class="civicai-history-cta-actions">
+
+                            <a
+                                href="./new-complaint.html"
+                                class="civicai-primary-button">
+
+                                <i class="fa-solid fa-plus"></i>
+
+                                Raise a New Complaint
+
+                            </a>
+
+                            <a
+                                href="./track-complaint.html"
+                                class="civicai-secondary-button">
+
+                                <i class="fa-solid fa-location-crosshairs"></i>
+
+                                Track Complaint
+
+                            </a>
+
+                        </div>
+
+                        <div class="civicai-history-cta-image">
+
+                            <img
+                                src="./assets/img.jpg"
+                                alt="Citizen using CivicAI">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- =====================================================
+         EXISTING FOOTER
+         footer.html is already created separately.
+    ====================================================== -->
+
+        <!-- FOOTER: ./footer.html -->
+
+    </body>
+
+</html>

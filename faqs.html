@@ -1,0 +1,921 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FAQs | CivicAI</title>
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- =====================================================
+         GLOBAL CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="./css/global.css" />
+
+    <!-- =====================================================
+         PAGE CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="./css/faqs.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         HEADER
+         Existing header.html is used separately.
+    ====================================================== -->
+
+    <!-- header.html -->
+
+    <!-- =====================================================
+         Faqs PAGE
+    ====================================================== -->
+
+    <!-- =========================================================
+     CIVICAI FAQS PAGE
+     Header & Footer are handled globally
+========================================================= -->
+
+    <!-- =========================================================
+     CIVICAI — FAQs PAGE
+     Header & Footer are excluded.
+========================================================= -->
+
+    <main class="civicai-faq-page">
+      <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+      <section class="civicai-faq-hero">
+        <div class="civicai-section-container civicai-faq-hero-inner">
+          <div class="civicai-faq-hero-content">
+            <span class="civicai-faq-eyebrow">
+              <i class="fa-regular fa-circle-question"></i>
+              Help Center
+            </span>
+
+            <h1>FAQs</h1>
+
+            <p>
+              Find answers to common questions about CivicAI and how our
+              platform works.
+            </p>
+          </div>
+
+          <!-- Decorative city illustration -->
+
+          <div class="civicai-faq-hero-art">
+            <div class="civicai-faq-skyline">
+              <span class="faq-building faq-building-1"></span>
+              <span class="faq-building faq-building-2"></span>
+              <span class="faq-building faq-building-3"></span>
+              <span class="faq-building faq-building-4"></span>
+              <span class="faq-building faq-building-5"></span>
+
+              <span class="faq-tree faq-tree-1"></span>
+              <span class="faq-tree faq-tree-2"></span>
+              <span class="faq-tree faq-tree-3"></span>
+
+              <span class="faq-sun"></span>
+            </div>
+
+            <div class="civicai-faq-help-float">
+              <span class="faq-help-icon">
+                <i class="fa-regular fa-comments"></i>
+              </span>
+
+              <div>
+                <strong>Need Help?</strong>
+                <small>Chat with AI Assistant</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         FAQ TOPICS
+    ====================================================== -->
+
+      <section class="civicai-faq-topics-section">
+        <div class="civicai-section-container">
+          <div class="civicai-faq-topics">
+            <!-- All Topics -->
+
+            <button
+              type="button"
+              class="civicai-faq-topic active"
+              data-topic="all">
+              <span class="faq-topic-icon purple">
+                <i class="fa-solid fa-border-all"></i>
+              </span>
+
+              <strong>All Topics</strong>
+
+              <small>24</small>
+            </button>
+
+            <!-- Complaints -->
+
+            <button
+              type="button"
+              class="civicai-faq-topic"
+              data-topic="complaints">
+              <span class="faq-topic-icon green">
+                <i class="fa-regular fa-file-lines"></i>
+              </span>
+
+              <strong>Complaints</strong>
+
+              <small>6</small>
+            </button>
+
+            <!-- Account -->
+
+            <button
+              type="button"
+              class="civicai-faq-topic"
+              data-topic="account">
+              <span class="faq-topic-icon red">
+                <i class="fa-regular fa-user"></i>
+              </span>
+
+              <strong>Account</strong>
+
+              <small>5</small>
+            </button>
+
+            <!-- Privacy -->
+
+            <button
+              type="button"
+              class="civicai-faq-topic"
+              data-topic="privacy">
+              <span class="faq-topic-icon blue">
+                <i class="fa-solid fa-shield-halved"></i>
+              </span>
+
+              <strong>Privacy &amp; Security</strong>
+
+              <small>4</small>
+            </button>
+
+            <!-- Payments -->
+
+            <button
+              type="button"
+              class="civicai-faq-topic"
+              data-topic="payments">
+              <span class="faq-topic-icon orange">
+                <i class="fa-regular fa-credit-card"></i>
+              </span>
+
+              <strong>Payments</strong>
+
+              <small>3</small>
+            </button>
+
+            <!-- General -->
+
+            <button
+              type="button"
+              class="civicai-faq-topic"
+              data-topic="general">
+              <span class="faq-topic-icon pink">
+                <i class="fa-solid fa-gear"></i>
+              </span>
+
+              <strong>General</strong>
+
+              <small>6</small>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         FAQ CONTENT
+    ====================================================== -->
+
+      <section class="civicai-faq-content-section">
+        <div class="civicai-section-container">
+          <div class="civicai-faq-content-grid">
+            <!-- =================================================
+                     LEFT — FREQUENTLY ASKED QUESTIONS
+                ================================================== -->
+            <!-- =========================================================
+     FAQ MAIN CARD
+========================================================= -->
+
+            <article class="civicai-faq-main-card">
+
+              <!-- FAQ HEADER -->
+              <div class="civicai-faq-card-heading">
+                <div>
+                  <span class="civicai-faq-card-eyebrow">
+                    Help Center
+                  </span>
+
+                  <h2>Frequently Asked Questions</h2>
+                </div>
+
+                <span class="faq-question-count">
+                  12 Questions
+                </span>
+              </div>
+
+              <!-- FAQ QUESTION LIST -->
+              <div
+                class="civicai-question-list"
+                id="faqQuestionList">
+
+                <!-- =====================================================
+         QUESTION 1
+    ====================================================== -->
+
+                <details
+                  class="civicai-question-item"
+                  name="civicai-faq"
+                  data-category="complaints">
+                  <summary class="civicai-question-button">
+
+                    <span class="civicai-question-title">
+                      How do I file a complaint on CivicAI?
+                    </span>
+
+                    <span class="civicai-question-arrow">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+
+                  </summary>
+
+                  <div class="civicai-question-answer">
+
+                    <div class="civicai-question-answer-inner">
+
+                      <p>
+                        You can file a complaint by clicking on the
+                        "File a Complaint" button from your dashboard.
+                        Select the appropriate complaint category,
+                        provide the required details, describe the issue
+                        clearly and attach supporting photos or documents
+                        if required.
+                      </p>
+
+                      <p>
+                        After submitting the complaint, CivicAI will
+                        generate a unique complaint ID. You can use this
+                        ID to track the status and progress of your complaint.
+                      </p>
+
+                    </div>
+
+                  </div>
+                </details>
+
+                <!-- =====================================================
+         QUESTION 2
+    ====================================================== -->
+
+                <details
+                  class="civicai-question-item"
+                  name="civicai-faq"
+                  data-category="complaints">
+                  <summary class="civicai-question-button">
+
+                    <span class="civicai-question-title">
+                      How can I track my complaint?
+                    </span>
+
+                    <span class="civicai-question-arrow">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+
+                  </summary>
+
+                  <div class="civicai-question-answer">
+
+                    <div class="civicai-question-answer-inner">
+
+                      <p>
+                        Open the "Track Complaint" section from the
+                        CivicAI navigation menu. Enter your complaint ID
+                        or select an existing complaint from your account
+                        to view its latest status.
+                      </p>
+
+                      <p>
+                        The tracking page can display the current complaint
+                        status, assigned department and available progress
+                        updates.
+                      </p>
+
+                    </div>
+
+                  </div>
+                </details>
+
+                <!-- =====================================================
+         QUESTION 3
+    ====================================================== -->
+
+                <details
+                  class="civicai-question-item"
+                  name="civicai-faq"
+                  data-category="complaints">
+                  <summary class="civicai-question-button">
+
+                    <span class="civicai-question-title">
+                      What types of issues can I report?
+                    </span>
+
+                    <span class="civicai-question-arrow">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+
+                  </summary>
+
+                  <div class="civicai-question-answer">
+
+                    <div class="civicai-question-answer-inner">
+
+                      <p>
+                        CivicAI can be used to report civic issues such as
+                        sanitation problems, road and streetlight issues,
+                        water supply concerns, waste management, public
+                        infrastructure problems and other supported civic
+                        services.
+                      </p>
+
+                      <p>
+                        Select the category that most closely matches
+                        your issue before submitting the complaint.
+                      </p>
+
+                    </div>
+
+                  </div>
+                </details>
+
+                <!-- =====================================================
+         QUESTION 4
+    ====================================================== -->
+
+                <details
+                  class="civicai-question-item"
+                  name="civicai-faq"
+                  data-category="complaints">
+                  <summary class="civicai-question-button">
+
+                    <span class="civicai-question-title">
+                      How long does it take to resolve a complaint?
+                    </span>
+
+                    <span class="civicai-question-arrow">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+
+                  </summary>
+
+                  <div class="civicai-question-answer">
+
+                    <div class="civicai-question-answer-inner">
+
+                      <p>
+                        Resolution time depends on the type of complaint,
+                        the responsible civic department and the complexity
+                        of the issue.
+                      </p>
+
+                      <p>
+                        You can continue tracking the complaint through
+                        CivicAI to view the latest available progress.
+                      </p>
+
+                    </div>
+
+                  </div>
+                </details>
+
+                <!-- =====================================================
+         QUESTION 5
+    ====================================================== -->
+
+                <details
+                  class="civicai-question-item"
+                  name="civicai-faq"
+                  data-category="complaints">
+                  <summary class="civicai-question-button">
+
+                    <span class="civicai-question-title">
+                      Can I update my complaint after submitting?
+                    </span>
+
+                    <span class="civicai-question-arrow">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+
+                  </summary>
+
+                  <div class="civicai-question-answer">
+
+                    <div class="civicai-question-answer-inner">
+
+                      <p>
+                        If your complaint is still eligible for
+                        modification, additional information may be
+                        added from the complaint details page.
+                      </p>
+
+                      <p>
+                        For complaints that have already been processed
+                        or closed, contact support for further assistance.
+                      </p>
+
+                    </div>
+
+                  </div>
+                </details>
+
+                <!-- =====================================================
+         QUESTION 6
+    ====================================================== -->
+
+                <details
+                  class="civicai-question-item"
+                  name="civicai-faq"
+                  data-category="account">
+                  <summary class="civicai-question-button">
+
+                    <span class="civicai-question-title">
+                      How do I create an account on CivicAI?
+                    </span>
+
+                    <span class="civicai-question-arrow">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+
+                  </summary>
+
+                  <div class="civicai-question-answer">
+
+                    <div class="civicai-question-answer-inner">
+
+                      <p>
+                        Select the "Register" option from the CivicAI
+                        website and provide the required account
+                        information. Follow the verification steps to
+                        complete your registration.
+                      </p>
+
+                    </div>
+
+                  </div>
+                </details>
+
+                <!-- =====================================================
+         QUESTION 7
+    ====================================================== -->
+
+                <details
+                  class="civicai-question-item"
+                  name="civicai-faq"
+                  data-category="account">
+                  <summary class="civicai-question-button">
+
+                    <span class="civicai-question-title">
+                      I forgot my password. What should I do?
+                    </span>
+
+                    <span class="civicai-question-arrow">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+
+                  </summary>
+
+                  <div class="civicai-question-answer">
+
+                    <div class="civicai-question-answer-inner">
+
+                      <p>
+                        Use the "Forgot Password" option on the login
+                        page. Enter the required account information and
+                        follow the password recovery instructions.
+                      </p>
+
+                    </div>
+
+                  </div>
+                </details>
+
+                <!-- =====================================================
+         QUESTION 8
+    ====================================================== -->
+
+                <details
+                  class="civicai-question-item"
+                  name="civicai-faq"
+                  data-category="privacy">
+                  <summary class="civicai-question-button">
+
+                    <span class="civicai-question-title">
+                      Is my personal information secure?
+                    </span>
+
+                    <span class="civicai-question-arrow">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+
+                  </summary>
+
+                  <div class="civicai-question-answer">
+
+                    <div class="civicai-question-answer-inner">
+
+                      <p>
+                        CivicAI should use appropriate security controls
+                        to protect user account and complaint information.
+                        Users should also avoid sharing passwords, OTPs
+                        or other confidential credentials.
+                      </p>
+
+                    </div>
+
+                  </div>
+                </details>
+
+                <!-- =====================================================
+         QUESTION 9
+    ====================================================== -->
+
+                <details
+                  class="civicai-question-item"
+                  name="civicai-faq"
+                  data-category="account">
+                  <summary class="civicai-question-button">
+
+                    <span class="civicai-question-title">
+                      Can I delete my account?
+                    </span>
+
+                    <span class="civicai-question-arrow">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+
+                  </summary>
+
+                  <div class="civicai-question-answer">
+
+                    <div class="civicai-question-answer-inner">
+
+                      <p>
+                        Account deletion availability depends on the
+                        account management policies implemented by
+                        CivicAI. Contact support if you need assistance
+                        with account deletion.
+                      </p>
+
+                    </div>
+
+                  </div>
+                </details>
+
+                <!-- =====================================================
+         QUESTION 10
+    ====================================================== -->
+
+                <details
+                  class="civicai-question-item"
+                  name="civicai-faq"
+                  data-category="general">
+                  <summary class="civicai-question-button">
+
+                    <span class="civicai-question-title">
+                      Is CivicAI mobile app available?
+                    </span>
+
+                    <span class="civicai-question-arrow">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+
+                  </summary>
+
+                  <div class="civicai-question-answer">
+
+                    <div class="civicai-question-answer-inner">
+
+                      <p>
+                        Mobile availability depends on the current CivicAI
+                        deployment. If a mobile application is provided,
+                        users can access it through the official supported
+                        distribution channel.
+                      </p>
+
+                    </div>
+
+                  </div>
+                </details>
+
+                <!-- =====================================================
+         QUESTION 11
+    ====================================================== -->
+
+                <details
+                  class="civicai-question-item"
+                  name="civicai-faq"
+                  data-category="general">
+                  <summary class="civicai-question-button">
+
+                    <span class="civicai-question-title">
+                      How can I contact support if I need help?
+                    </span>
+
+                    <span class="civicai-question-arrow">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+
+                  </summary>
+
+                  <div class="civicai-question-answer">
+
+                    <div class="civicai-question-answer-inner">
+
+                      <p>
+                        You can contact the CivicAI support team through
+                        the Contact Us page, email support or the available
+                        AI Assistant support channel.
+                      </p>
+
+                    </div>
+
+                  </div>
+                </details>
+
+                <!-- =====================================================
+         QUESTION 12
+    ====================================================== -->
+
+                <details
+                  class="civicai-question-item"
+                  name="civicai-faq"
+                  data-category="payments">
+                  <summary class="civicai-question-button">
+
+                    <span class="civicai-question-title">
+                      How can I check payment information?
+                    </span>
+
+                    <span class="civicai-question-arrow">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+
+                  </summary>
+
+                  <div class="civicai-question-answer">
+
+                    <div class="civicai-question-answer-inner">
+
+                      <p>
+                        Payment-related information can be accessed from
+                        the relevant service or transaction section when
+                        payment functionality is available.
+                      </p>
+
+                    </div>
+
+                  </div>
+                </details>
+
+              </div>
+
+              <!-- LOAD MORE -->
+              <button
+                type="button"
+                class="civicai-load-more"
+                id="loadMoreQuestions">
+                <span>Load More Questions</span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+
+            </article>
+
+            <!-- =================================================
+                     RIGHT SIDEBAR
+                ================================================== -->
+
+            <aside class="civicai-faq-sidebar">
+              <!-- =============================================
+                         POPULAR QUESTIONS
+                    ============================================== -->
+
+              <article class="civicai-popular-card">
+                <div class="civicai-sidebar-heading">
+                  <h2>Popular Questions</h2>
+                </div>
+
+                <div class="civicai-popular-list">
+                  <a href="#faq-complaint">
+                    <span class="popular-icon">
+                      <i class="fa-solid fa-fire"></i>
+                    </span>
+
+                    <div>
+                      <strong> How do I file a complaint? </strong>
+
+                      <small> 12.5K views </small>
+                    </div>
+                  </a>
+
+                  <a href="#faq-track">
+                    <span class="popular-icon">
+                      <i class="fa-solid fa-fire"></i>
+                    </span>
+
+                    <div>
+                      <strong> How can I track my complaint? </strong>
+
+                      <small> 10.2K views </small>
+                    </div>
+                  </a>
+
+                  <a href="#faq-types">
+                    <span class="popular-icon">
+                      <i class="fa-solid fa-fire"></i>
+                    </span>
+
+                    <div>
+                      <strong> What types of issues can I report? </strong>
+
+                      <small> 8.7K views </small>
+                    </div>
+                  </a>
+
+                  <a href="#faq-time">
+                    <span class="popular-icon">
+                      <i class="fa-solid fa-fire"></i>
+                    </span>
+
+                    <div>
+                      <strong>
+                        How long does it take to resolve a complaint?
+                      </strong>
+
+                      <small> 6.3K views </small>
+                    </div>
+                  </a>
+
+                  <a href="#faq-password">
+                    <span class="popular-icon">
+                      <i class="fa-solid fa-fire"></i>
+                    </span>
+
+                    <div>
+                      <strong> How do I reset my password? </strong>
+
+                      <small> 4.9K views </small>
+                    </div>
+                  </a>
+                </div>
+
+                <a href="#" class="civicai-popular-link">
+                  View All Popular Questions
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </article>
+
+              <!-- =============================================
+                         STILL NEED HELP
+                    ============================================== -->
+
+              <article class="civicai-still-help-card">
+                <div class="civicai-sidebar-heading">
+                  <h2>Still Need Help?</h2>
+
+                  <p>
+                    Can't find what you're looking for? Our support team is here
+                    to assist you.
+                  </p>
+                </div>
+
+                <div class="civicai-help-options">
+                  <!-- AI -->
+
+                  <a href="#">
+                    <span class="help-option-icon purple">
+                      <i class="fa-regular fa-comments"></i>
+                    </span>
+
+                    <div>
+                      <strong> Chat with AI Assistant </strong>
+
+                      <small>
+                        Get instant answers to your questions 24/7
+                      </small>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+
+                  <!-- Email -->
+
+                  <a href="mailto:support@civicai.gov.in">
+                    <span class="help-option-icon green">
+                      <i class="fa-regular fa-envelope"></i>
+                    </span>
+
+                    <div>
+                      <strong> Email Support </strong>
+
+                      <small>
+                        support@civicai.gov.in<br />
+                        We reply within 24 hours
+                      </small>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+
+                  <!-- Phone -->
+
+                  <a href="tel:18001234567">
+                    <span class="help-option-icon orange">
+                      <i class="fa-solid fa-phone"></i>
+                    </span>
+
+                    <div>
+                      <strong> Call Us </strong>
+
+                      <small>
+                        1800-123-4567<br />
+                        Mon – Fri, 9 AM – 6 PM
+                      </small>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                </div>
+
+                <a href="contact.html" class="civicai-faq-contact-button">
+                  Contact Us
+
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </article>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         SUPPORT CTA
+    ====================================================== -->
+
+      <section class="civicai-faq-support-section">
+        <div class="civicai-section-container">
+          <article class="civicai-faq-support-card">
+            <!-- Image requested by user -->
+
+            <div class="civicai-faq-support-image">
+              <img src="assets/img.jpg" alt="CivicAI Support" />
+            </div>
+
+            <div class="civicai-faq-support-content">
+              <span class="faq-support-label"> We're here to help </span>
+
+              <h2>Still Have Questions?</h2>
+
+              <p>
+                We're here to help! Reach out to our support team and we'll get
+                back to you as soon as possible.
+              </p>
+            </div>
+
+            <a
+              href="contact.html"
+              class="civicai-primary-button civicai-faq-support-button">
+              Contact Support
+
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+    <!-- =====================================================
+         FOOTER
+         Existing footer.html is used separately.
+    ====================================================== -->
+
+    <!-- footer.html -->
+  </body>
+</html>

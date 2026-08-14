@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact | CivicAI</title>
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- =====================================================
+         GLOBAL CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="./css/global.css" />
+
+    <!-- =====================================================
+         PAGE CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="./css/contact.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         HEADER
+         Existing header.html is used separately.
+    ====================================================== -->
+
+    <!-- header.html -->
+
+    <!-- =====================================================
+         Contact PAGE
+    ====================================================== -->
+
+    <!-- =========================================================
+     CIVICAI CONTACT PAGE
+     Header & Footer are handled globally
+========================================================= -->
+
+    <!-- =========================================================
+     CIVICAI — CONTACT US PAGE
+     Header & Footer are intentionally excluded.
+========================================================= -->
+
+    <main class="civicai-contact-page">
+      <!-- =====================================================
+         HERO
+    ====================================================== -->
+      <section class="civicai-contact-hero">
+        <div class="civicai-section-container civicai-contact-hero-inner">
+          <div class="civicai-contact-hero-content">
+            <span class="civicai-contact-eyebrow">
+              <i class="fa-regular fa-comments"></i>
+              Get In Touch
+            </span>
+
+            <h1>Contact Us</h1>
+
+            <p>
+              We're here to help! Reach out to us for any questions, feedback,
+              or assistance.
+            </p>
+          </div>
+
+          <!-- Decorative city area -->
+          <div class="civicai-contact-hero-art">
+            <div class="civicai-contact-city">
+              <span class="contact-building cb-1"></span>
+              <span class="contact-building cb-2"></span>
+              <span class="contact-building cb-3"></span>
+              <span class="contact-building cb-4"></span>
+              <span class="contact-building cb-5"></span>
+
+              <span class="contact-tree ct-1"></span>
+              <span class="contact-tree ct-2"></span>
+              <span class="contact-tree ct-3"></span>
+
+              <span class="contact-sun"></span>
+            </div>
+
+            <div class="civicai-contact-help">
+              <span class="contact-help-icon">
+                <i class="fa-regular fa-comments"></i>
+              </span>
+
+              <div>
+                <strong>Need Help?</strong>
+                <small>Chat with AI Assistant</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         CONTACT INFORMATION CARDS
+    ====================================================== -->
+      <section class="civicai-contact-info-section">
+        <div class="civicai-section-container">
+          <div class="civicai-contact-info-grid">
+            <!-- Email -->
+            <article class="civicai-contact-info-card">
+              <div class="contact-info-icon purple">
+                <i class="fa-regular fa-envelope"></i>
+              </div>
+
+              <h2>Email Us</h2>
+
+              <a href="mailto:support@civicai.gov.in">
+                support@civicai.gov.in
+              </a>
+
+              <p>We reply within 24 hours</p>
+            </article>
+
+            <!-- Phone -->
+            <article class="civicai-contact-info-card">
+              <div class="contact-info-icon green">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+
+              <h2>Call Us</h2>
+
+              <a href="tel:18001234567"> 1800-123-4567 </a>
+
+              <p>Mon – Fri, 9 AM – 6 PM</p>
+            </article>
+
+            <!-- Address -->
+            <article class="civicai-contact-info-card">
+              <div class="contact-info-icon blue">
+                <i class="fa-solid fa-building"></i>
+              </div>
+
+              <h2>Visit Us</h2>
+
+              <p class="contact-address">
+                B-123, Civic Center,<br />
+                New Delhi – 110001, India
+              </p>
+            </article>
+
+            <!-- Working hours -->
+            <article class="civicai-contact-info-card">
+              <div class="contact-info-icon purple">
+                <i class="fa-regular fa-clock"></i>
+              </div>
+
+              <h2>Working Hours</h2>
+
+              <p>Mon – Fri: 9 AM – 6 PM</p>
+
+              <p>Sat – Sun: Closed</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         MESSAGE + FAQ
+    ====================================================== -->
+      <section class="civicai-contact-main-section">
+        <div class="civicai-section-container">
+          <div class="civicai-contact-main-grid">
+            <!-- =================================================
+                     SEND MESSAGE
+                ================================================== -->
+            <article class="civicai-contact-form-card">
+              <div class="civicai-contact-card-heading">
+                <h2>Send Us a Message</h2>
+
+                <p>
+                  Fill out the form and we'll get back to you as soon as
+                  possible.
+                </p>
+              </div>
+
+              <form class="civicai-contact-form" id="contactForm">
+                <div class="civicai-contact-form-grid">
+                  <!-- Full name -->
+                  <div class="civicai-form-group">
+                    <label for="fullName"> Full Name <span>*</span> </label>
+
+                    <input
+                      type="text"
+                      id="fullName"
+                      name="fullName"
+                      placeholder="Enter your full name"
+                      required />
+                  </div>
+
+                  <!-- Email -->
+                  <div class="civicai-form-group">
+                    <label for="email"> Email Address <span>*</span> </label>
+
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Enter your email address"
+                      required />
+                  </div>
+
+                  <!-- Subject -->
+                  <div class="civicai-form-group">
+                    <label for="subject"> Subject <span>*</span> </label>
+
+                    <div class="civicai-select-wrapper">
+                      <select id="subject" name="subject" required>
+                        <option value>Select a subject</option>
+
+                        <option value="complaint">Complaint Assistance</option>
+
+                        <option value="technical">Technical Support</option>
+
+                        <option value="account">Account Support</option>
+
+                        <option value="feedback">Feedback</option>
+
+                        <option value="other">Other</option>
+                      </select>
+
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                  </div>
+
+                  <!-- Category -->
+                  <div class="civicai-form-group">
+                    <label for="category"> Category </label>
+
+                    <div class="civicai-select-wrapper">
+                      <select id="category" name="category">
+                        <option value>Choose a category</option>
+
+                        <option value="services">Civic Services</option>
+
+                        <option value="complaints">Complaints</option>
+
+                        <option value="website">Website / App</option>
+
+                        <option value="account">Account</option>
+
+                        <option value="general">General Inquiry</option>
+                      </select>
+
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                  </div>
+
+                  <!-- Message -->
+                  <div class="civicai-form-group full">
+                    <label for="message"> Message <span>*</span> </label>
+
+                    <div class="civicai-message-wrapper">
+                      <textarea
+                        id="message"
+                        name="message"
+                        maxlength="500"
+                        placeholder="Type your message here..."
+                        required></textarea>
+
+                      <span id="messageCount"> 0 / 500 </span>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  class="civicai-primary-button civicai-contact-submit">
+                  <i class="fa-regular fa-paper-plane"></i>
+                  Send Message
+                </button>
+
+                <p
+                  class="civicai-contact-form-status"
+                  id="contactFormStatus"></p>
+              </form>
+            </article>
+
+            <!-- =================================================
+                     FAQ
+                ================================================== -->
+            <article class="civicai-faq-card">
+              <div class="civicai-contact-card-heading">
+                <h2>Frequently Asked Questions</h2>
+
+                <p>Find quick answers to common questions.</p>
+              </div>
+              <div class="civicai-faq-list">
+
+                <!-- FAQ 1 -->
+                <details class="civicai-faq-item">
+                  <summary class="civicai-faq-question">
+                    <span>How do I file a complaint?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </summary>
+
+                  <div class="civicai-faq-answer">
+                    <p>
+                      Log in to your CivicAI account and open the
+                      "My Complaints"
+                      section. Select "New Complaint", choose the relevant
+                      category,
+                      describe the issue and submit the complaint with any
+                      supporting
+                      documents or photos.
+                    </p>
+                  </div>
+                </details>
+
+                <!-- FAQ 2 -->
+                <details class="civicai-faq-item">
+                  <summary class="civicai-faq-question">
+                    <span>How can I track my complaint?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </summary>
+
+                  <div class="civicai-faq-answer">
+                    <p>
+                      Open "My Complaints" from your dashboard. You can view the
+                      complaint status, submitted date, assigned department and
+                      the latest available update.
+                    </p>
+                  </div>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details class="civicai-faq-item">
+                  <summary class="civicai-faq-question">
+                    <span>What is the time taken to resolve a complaint?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </summary>
+
+                  <div class="civicai-faq-answer">
+                    <p>
+                      Resolution time depends on the complaint category,
+                      responsible department and complexity of the issue. You
+                      can track the latest status from your complaint details
+                      page.
+                    </p>
+                  </div>
+                </details>
+
+                <!-- FAQ 4 -->
+                <details class="civicai-faq-item">
+                  <summary class="civicai-faq-question">
+                    <span>How do I add documents or photos?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </summary>
+
+                  <div class="civicai-faq-answer">
+                    <p>
+                      While submitting a complaint, use the attachment option to
+                      upload supported documents or images. Make sure the files
+                      are clear and relevant to the complaint.
+                    </p>
+                  </div>
+                </details>
+
+                <!-- FAQ 5 -->
+                <details class="civicai-faq-item">
+                  <summary class="civicai-faq-question">
+                    <span>Is my data secure on CivicAI?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </summary>
+
+                  <div class="civicai-faq-answer">
+                    <p>
+                      CivicAI is designed to protect account and complaint
+                      information using appropriate security controls. Avoid
+                      sharing passwords, OTPs or other sensitive account
+                      information with anyone.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="civicai-faq-item">
+                  <summary class="civicai-faq-question">
+                    <span>Can I update my complaint after submitting it?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </summary>
+
+                  <div class="civicai-faq-answer">
+                    <p>
+                      You can view your submitted complaint from the
+                      "My Complaints"
+                      section. If an update or additional information is
+                      required,
+                      use the available complaint update option or contact the
+                      responsible department.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+
+              <a href="#" class="civicai-view-faq">
+                View All FAQs
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         OFFICE LOCATION + REAL MAP
+    ====================================================== -->
+      <section class="civicai-office-section">
+        <div class="civicai-section-container">
+          <article class="civicai-office-card">
+            <!-- Office details -->
+            <div class="civicai-office-details">
+              <div class="civicai-contact-card-heading">
+                <h2>Our Office Location</h2>
+
+                <p>Come visit us at our headquarters.</p>
+              </div>
+
+              <div class="civicai-office-contact-list">
+                <div class="civicai-office-contact-item">
+                  <span>
+                    <i class="fa-solid fa-location-dot"></i>
+                  </span>
+
+                  <p>
+                    B-123, Civic Center,<br />
+                    New Delhi – 110001, India
+                  </p>
+                </div>
+
+                <div class="civicai-office-contact-item">
+                  <span>
+                    <i class="fa-solid fa-phone"></i>
+                  </span>
+
+                  <a href="tel:18001234567"> 1800-123-4567 </a>
+                </div>
+
+                <div class="civicai-office-contact-item">
+                  <span>
+                    <i class="fa-regular fa-envelope"></i>
+                  </span>
+
+                  <a href="mailto:support@civicai.gov.in">
+                    support@civicai.gov.in
+                  </a>
+                </div>
+
+                <div class="civicai-office-contact-item">
+                  <span>
+                    <i class="fa-regular fa-clock"></i>
+                  </span>
+
+                  <p>Mon – Fri, 9 AM – 6 PM</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- =================================================
+                     REAL GOOGLE MAP
+                ================================================== -->
+            <div class="civicai-real-map">
+              <iframe
+                title="CivicAI Office Location"
+                src="https://www.google.com/maps?q=B-123%2C%20Civic%20Center%2C%20New%20Delhi%20110001&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+
+              <div class="civicai-map-location-card">
+                <span class="map-pin">
+                  <i class="fa-solid fa-location-dot"></i>
+                </span>
+
+                <div>
+                  <strong>CivicAI Office</strong>
+
+                  <p>
+                    B-123, Civic Center,<br />
+                    New Delhi – 110001
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         NEWSLETTER CTA
+    ====================================================== -->
+      <section class="civicai-contact-newsletter">
+        <div class="civicai-section-container">
+          <article class="civicai-contact-newsletter-inner">
+            <div class="civicai-contact-newsletter-image">
+              <img src="assets/img.jpg" alt="CivicAI support" />
+            </div>
+
+            <div class="civicai-contact-newsletter-content">
+              <h2>Stay Updated</h2>
+
+              <p>
+                Subscribe to our newsletter for the latest updates,
+                announcements and news from CivicAI.
+              </p>
+            </div>
+
+            <form class="civicai-newsletter-form">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                aria-label="Newsletter email"
+                required />
+
+              <button type="submit" class="civicai-primary-button">
+                <i class="fa-regular fa-paper-plane"></i>
+                Subscribe
+              </button>
+            </form>
+          </article>
+        </div>
+      </section>
+    </main>
+    <!-- =====================================================
+         FOOTER
+         Existing footer.html is used separately.
+    ====================================================== -->
+
+    <!-- footer.html -->
+  </body>
+</html>

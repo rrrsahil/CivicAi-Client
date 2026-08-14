@@ -1,0 +1,1013 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Profile | CivicAI</title>
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- =====================================================
+         GLOBAL CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="./css/global.css" />
+
+    <!-- =====================================================
+         PAGE CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="./css/profile.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         HEADER
+         Existing header.html is used separately.
+    ====================================================== -->
+
+    <!-- header.html -->
+
+    <!-- =====================================================
+         Profile PAGE
+    ====================================================== -->
+
+    <!-- =========================================================
+     CIVICAI PROFILE PAGE
+     Header & Footer are handled globally
+========================================================= -->
+
+    <main class="civicai-profile-page">
+      <!-- =====================================================
+         PROFILE PAGE HERO
+    ====================================================== -->
+      <section class="civicai-profile-hero">
+        <div class="civicai-section-container">
+          <div class="civicai-profile-hero-content">
+            <div class="civicai-profile-hero-text">
+              <h1>My Profile</h1>
+
+              <p>
+                View and manage your personal information
+                <br class="civicai-profile-desktop-break" />
+                and account settings.
+              </p>
+            </div>
+
+            <div class="civicai-profile-hero-art">
+              <div class="civicai-profile-sun"></div>
+
+              <div class="civicai-profile-building building-one"></div>
+              <div class="civicai-profile-building building-two"></div>
+              <div class="civicai-profile-building building-three"></div>
+              <div class="civicai-profile-building building-four"></div>
+
+              <div class="civicai-profile-tree tree-one"></div>
+              <div class="civicai-profile-tree tree-two"></div>
+              <div class="civicai-profile-tree tree-three"></div>
+            </div>
+
+            <div class="civicai-profile-help">
+              <span class="civicai-profile-help-icon">
+                <i class="fa-solid fa-headset"></i>
+              </span>
+
+              <div>
+                <strong>Need Help?</strong>
+                <small>Chat with AI Assistant</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         PROFILE SUMMARY
+    ====================================================== -->
+      <section class="civicai-profile-summary-section">
+        <div class="civicai-section-container">
+          <article class="civicai-profile-summary-card">
+            <!-- Profile Identity -->
+            <div class="civicai-profile-identity">
+              <div class="civicai-profile-photo-wrap">
+                <img
+                  src="assets/img.jpg"
+                  alt="Profile"
+                  class="civicai-profile-photo" />
+
+                <button
+                  type="button"
+                  class="civicai-profile-camera"
+                  aria-label="Change profile photo">
+                  <i class="fa-solid fa-camera"></i>
+                </button>
+              </div>
+
+              <div class="civicai-profile-basic">
+                <div class="civicai-profile-name-row">
+                  <h2 id="profileSummaryName">Rakesh Sharma</h2>
+
+                  <span class="civicai-verified-badge">
+                    <i class="fa-solid fa-check"></i>
+                    Verified Citizen
+                  </span>
+                </div>
+
+                <div class="civicai-profile-contact-list">
+
+                  <span id="profileSummaryEmail">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span data-summary-value>rakesh.sharma@email.com</span>
+                  </span>
+
+                  <span id="profileSummaryPhone">
+                    <i class="fa-solid fa-phone"></i>
+                    <span data-summary-value>+91 98765 43210</span>
+                  </span>
+
+                  <span id="profileSummaryLocation">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span data-summary-value>Vadodara, Gujarat, India</span>
+                  </span>
+
+                  <span>
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>Member Since: May 15, 2024</span>
+                  </span>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Profile Statistics -->
+            <div class="civicai-profile-statistics">
+              <div class="civicai-profile-stat">
+                <div class="civicai-profile-stat-icon civicai-stat-blue">
+                  <i class="fa-regular fa-clipboard"></i>
+                </div>
+
+                <strong>18</strong>
+
+                <span>Complaints Filed</span>
+              </div>
+
+              <div class="civicai-profile-stat">
+                <div class="civicai-profile-stat-icon civicai-stat-green">
+                  <i class="fa-regular fa-circle-check"></i>
+                </div>
+
+                <strong>12</strong>
+
+                <span>Resolved</span>
+              </div>
+
+              <div class="civicai-profile-stat">
+                <div class="civicai-profile-stat-icon civicai-stat-purple">
+                  <i class="fa-regular fa-star"></i>
+                </div>
+
+                <strong>4.8</strong>
+
+                <span>Satisfaction Rating</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         PROFILE MAIN GRID
+    ====================================================== -->
+      <section class="civicai-profile-content-section">
+        <div class="civicai-section-container">
+          <div class="civicai-profile-main-grid">
+            <!-- =================================================
+                     LEFT COLUMN
+                ================================================== -->
+            <div class="civicai-profile-left-column">
+              <!-- =================================================
+                         PERSONAL INFORMATION
+                    ================================================== -->
+              <article class="civicai-profile-card"
+                id="personalInformationCard">
+
+                <div class="civicai-profile-card-header">
+
+                  <div>
+                    <h3>Personal Information</h3>
+
+                    <p>
+                      Update your personal details and how we can reach you.
+                    </p>
+                  </div>
+
+                  <div class="civicai-profile-edit-actions">
+
+                    <button
+                      type="button"
+                      class="civicai-profile-outline-button"
+                      id="editProfileButton">
+                      <i class="fa-solid fa-pen"></i>
+                      Edit
+                    </button>
+
+                    <button
+                      type="button"
+                      class="civicai-profile-outline-button civicai-profile-save-button"
+                      id="saveProfileButton"
+                      hidden>
+                      <i class="fa-solid fa-check"></i>
+                      Save
+                    </button>
+
+                    <button
+                      type="button"
+                      class="civicai-profile-cancel-button"
+                      id="cancelProfileButton"
+                      hidden>
+                      Cancel
+                    </button>
+
+                  </div>
+
+                </div>
+
+                <div class="civicai-profile-info-list">
+
+                  <!-- FULL NAME -->
+                  <div class="civicai-profile-info-row">
+
+                    <div class="civicai-profile-info-label">
+                      <span class="civicai-profile-info-icon">
+                        <i class="fa-regular fa-user"></i>
+                      </span>
+
+                      <span>Full Name</span>
+                    </div>
+
+                    <strong
+                      class="civicai-profile-value"
+                      data-field="fullName">
+                      Rakesh Sharma
+                    </strong>
+
+                    <input
+                      type="text"
+                      class="civicai-profile-edit-input"
+                      data-field="fullName"
+                      value="Rakesh Sharma"
+                      hidden />
+
+                  </div>
+
+                  <!-- EMAIL -->
+                  <div class="civicai-profile-info-row">
+
+                    <div class="civicai-profile-info-label">
+                      <span class="civicai-profile-info-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                      </span>
+
+                      <span>Email Address</span>
+                    </div>
+
+                    <strong
+                      class="civicai-profile-value"
+                      data-field="email">
+                      rakesh.sharma@email.com
+                    </strong>
+
+                    <input
+                      type="email"
+                      class="civicai-profile-edit-input"
+                      data-field="email"
+                      value="rakesh.sharma@email.com"
+                      hidden />
+
+                  </div>
+
+                  <!-- PHONE -->
+                  <div class="civicai-profile-info-row">
+
+                    <div class="civicai-profile-info-label">
+                      <span class="civicai-profile-info-icon">
+                        <i class="fa-solid fa-phone"></i>
+                      </span>
+
+                      <span>Phone Number</span>
+                    </div>
+
+                    <strong
+                      class="civicai-profile-value"
+                      data-field="phone">
+                      +91 98765 43210
+                    </strong>
+
+                    <input
+                      type="tel"
+                      class="civicai-profile-edit-input"
+                      data-field="phone"
+                      value="+91 98765 43210"
+                      inputmode="tel"
+                      hidden />
+
+                  </div>
+
+                  <!-- ALTERNATE PHONE -->
+                  <div class="civicai-profile-info-row">
+
+                    <div class="civicai-profile-info-label">
+                      <span class="civicai-profile-info-icon">
+                        <i class="fa-solid fa-phone"></i>
+                      </span>
+
+                      <span>Alternate Phone</span>
+                    </div>
+
+                    <strong
+                      class="civicai-profile-value"
+                      data-field="alternatePhone">
+                      +91 91234 56789
+                    </strong>
+
+                    <input
+                      type="tel"
+                      class="civicai-profile-edit-input"
+                      data-field="alternatePhone"
+                      value="+91 91234 56789"
+                      inputmode="tel"
+                      hidden />
+
+                  </div>
+
+                  <!-- DATE OF BIRTH -->
+                  <div class="civicai-profile-info-row">
+
+                    <div class="civicai-profile-info-label">
+                      <span class="civicai-profile-info-icon">
+                        <i class="fa-regular fa-calendar"></i>
+                      </span>
+
+                      <span>Date of Birth</span>
+                    </div>
+
+                    <strong
+                      class="civicai-profile-value"
+                      data-field="dob">
+                      15/08/1990
+                    </strong>
+
+                    <input
+                      type="date"
+                      class="civicai-profile-edit-input"
+                      data-field="dob"
+                      value="1990-08-15"
+                      hidden />
+
+                  </div>
+
+                  <!-- GENDER -->
+                  <div class="civicai-profile-info-row">
+
+                    <div class="civicai-profile-info-label">
+                      <span class="civicai-profile-info-icon">
+                        <i class="fa-solid fa-venus-mars"></i>
+                      </span>
+
+                      <span>Gender</span>
+                    </div>
+
+                    <strong
+                      class="civicai-profile-value"
+                      data-field="gender">
+                      Male
+                    </strong>
+
+                    <select
+                      class="civicai-profile-edit-input"
+                      data-field="gender"
+                      hidden>
+                      <option value="Male" selected>Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Other">Other</option>
+                      <option value="Prefer not to say">
+                        Prefer not to say
+                      </option>
+                    </select>
+
+                  </div>
+
+                  <!-- ADDRESS -->
+                  <div class="civicai-profile-info-row">
+
+                    <div class="civicai-profile-info-label">
+                      <span class="civicai-profile-info-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                      </span>
+
+                      <span>Address</span>
+                    </div>
+
+                    <strong
+                      class="civicai-profile-value"
+                      data-field="address">
+                      B-123, Civic Center, Near Sayaji Garden
+                    </strong>
+
+                    <input
+                      type="text"
+                      class="civicai-profile-edit-input"
+                      data-field="address"
+                      value="B-123, Civic Center, Near Sayaji Garden"
+                      hidden />
+
+                  </div>
+
+                  <!-- CITY -->
+                  <div class="civicai-profile-info-row">
+
+                    <div class="civicai-profile-info-label">
+                      <span class="civicai-profile-info-icon">
+                        <i class="fa-solid fa-city"></i>
+                      </span>
+
+                      <span>City</span>
+                    </div>
+
+                    <strong
+                      class="civicai-profile-value"
+                      data-field="city">
+                      Vadodara
+                    </strong>
+
+                    <input
+                      type="text"
+                      class="civicai-profile-edit-input"
+                      data-field="city"
+                      value="Vadodara"
+                      hidden />
+
+                  </div>
+
+                  <!-- STATE -->
+                  <div class="civicai-profile-info-row">
+
+                    <div class="civicai-profile-info-label">
+                      <span class="civicai-profile-info-icon">
+                        <i class="fa-solid fa-map"></i>
+                      </span>
+
+                      <span>State</span>
+                    </div>
+
+                    <strong
+                      class="civicai-profile-value"
+                      data-field="state">
+                      Gujarat
+                    </strong>
+
+                    <input
+                      type="text"
+                      class="civicai-profile-edit-input"
+                      data-field="state"
+                      value="Gujarat"
+                      hidden />
+
+                  </div>
+
+                  <!-- PIN CODE -->
+                  <div class="civicai-profile-info-row">
+
+                    <div class="civicai-profile-info-label">
+                      <span class="civicai-profile-info-icon">
+                        <i class="fa-solid fa-location-crosshairs"></i>
+                      </span>
+
+                      <span>PIN Code</span>
+                    </div>
+
+                    <strong
+                      class="civicai-profile-value"
+                      data-field="pin">
+                      390001
+                    </strong>
+
+                    <input
+                      type="text"
+                      class="civicai-profile-edit-input"
+                      data-field="pin"
+                      value="390001"
+                      maxlength="6"
+                      inputmode="numeric"
+                      hidden />
+
+                  </div>
+
+                </div>
+
+              </article>
+
+              <!-- =================================================
+                         SECURITY SETTINGS
+                    ================================================== -->
+              <article class="civicai-profile-card civicai-security-card">
+                <div class="civicai-profile-card-header">
+                  <div>
+                    <h3>Security Settings</h3>
+
+                    <p>Manage your account security and privacy.</p>
+                  </div>
+                </div>
+
+                <div class="civicai-security-list">
+                  <div class="civicai-security-row">
+                    <span class="civicai-security-icon">
+                      <i class="fa-solid fa-lock"></i>
+                    </span>
+
+                    <div class="civicai-security-content">
+                      <strong>Password</strong>
+
+                      <small> •••••••••••• </small>
+                    </div>
+
+                    <button
+                      type="button"
+                      class="civicai-profile-outline-button">
+                      Change
+                    </button>
+                  </div>
+
+                  <div class="civicai-security-row">
+                    <span class="civicai-security-icon">
+                      <i class="fa-solid fa-shield-halved"></i>
+                    </span>
+
+                    <div class="civicai-security-content">
+                      <strong>Two-Factor Authentication</strong>
+
+                      <small> Added security for your account </small>
+                    </div>
+
+                    <span class="civicai-enabled-badge"> Enabled </span>
+                  </div>
+
+                  <div class="civicai-security-row">
+                    <span class="civicai-security-icon">
+                      <i class="fa-regular fa-bell"></i>
+                    </span>
+
+                    <div class="civicai-security-content">
+                      <strong>Login Alerts</strong>
+
+                      <small> Get notified of new logins </small>
+                    </div>
+
+                    <span class="civicai-enabled-badge"> Enabled </span>
+                  </div>
+
+                  <div class="civicai-security-row">
+                    <span class="civicai-security-icon">
+                      <i class="fa-solid fa-display"></i>
+                    </span>
+
+                    <div class="civicai-security-content">
+                      <strong>Active Sessions</strong>
+
+                      <small> Manage your active sessions </small>
+                    </div>
+
+                    <button
+                      type="button"
+                      class="civicai-profile-outline-button">
+                      Manage
+                    </button>
+                  </div>
+
+                  <div class="civicai-security-row">
+                    <span class="civicai-security-icon">
+                      <i class="fa-solid fa-user-shield"></i>
+                    </span>
+
+                    <div class="civicai-security-content">
+                      <strong>Privacy Settings</strong>
+
+                      <small> Manage your data and privacy </small>
+                    </div>
+
+                    <button
+                      type="button"
+                      class="civicai-profile-outline-button">
+                      Manage
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- =================================================
+                     RIGHT COLUMN
+                ================================================== -->
+            <div class="civicai-profile-right-column">
+              <!-- =================================================
+                         ACCOUNT SUMMARY
+                    ================================================== -->
+              <article class="civicai-profile-card">
+                <div class="civicai-profile-card-header">
+                  <div>
+                    <h3>Account Summary</h3>
+
+                    <p>Your account overview and activity.</p>
+                  </div>
+                </div>
+
+                <div class="civicai-account-summary-list">
+                  <div class="civicai-account-row">
+                    <span class="civicai-account-icon">
+                      <i class="fa-regular fa-user"></i>
+                    </span>
+
+                    <span>Account Type</span>
+
+                    <strong>Citizen</strong>
+                  </div>
+
+                  <div class="civicai-account-row">
+                    <span class="civicai-account-icon">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </span>
+
+                    <span>Verification Status</span>
+
+                    <strong class="civicai-account-success">
+                      Verified
+                      <i class="fa-solid fa-circle-check"></i>
+                    </strong>
+                  </div>
+
+                  <div class="civicai-account-row">
+                    <span class="civicai-account-icon">
+                      <i class="fa-regular fa-calendar"></i>
+                    </span>
+
+                    <span>Member Since</span>
+
+                    <strong>May 15, 2024</strong>
+                  </div>
+
+                  <div class="civicai-account-row">
+                    <span class="civicai-account-icon">
+                      <i class="fa-regular fa-clipboard"></i>
+                    </span>
+
+                    <span>Total Complaints</span>
+
+                    <strong>18</strong>
+                  </div>
+
+                  <div class="civicai-account-row">
+                    <span class="civicai-account-icon">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </span>
+
+                    <span>Resolved Complaints</span>
+
+                    <strong>12</strong>
+                  </div>
+
+                  <div class="civicai-account-row">
+                    <span class="civicai-account-icon">
+                      <i class="fa-regular fa-clock"></i>
+                    </span>
+
+                    <span>Pending Complaints</span>
+
+                    <strong>6</strong>
+                  </div>
+                </div>
+
+                <a href="#activity" class="civicai-profile-full-button">
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+                  View Activity Log
+                </a>
+              </article>
+
+              <!-- =================================================
+                         PROFILE PREFERENCES
+                    ================================================== -->
+              <article class="civicai-profile-card">
+                <div class="civicai-profile-card-header">
+                  <div>
+                    <h3>Profile Preferences</h3>
+
+                    <p>
+                      Manage your notification and communication preferences.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="civicai-preferences-list">
+                  <div class="civicai-preference-row">
+                    <span class="civicai-preference-icon">
+                      <i class="fa-regular fa-envelope"></i>
+                    </span>
+
+                    <div>
+                      <strong>Email Notifications</strong>
+                      <small> Receive updates on your email </small>
+                    </div>
+
+                    <label class="civicai-switch">
+                      <input type="checkbox" checked />
+                      <span></span>
+                    </label>
+                  </div>
+
+                  <div class="civicai-preference-row">
+                    <span class="civicai-preference-icon">
+                      <i class="fa-regular fa-comment"></i>
+                    </span>
+
+                    <div>
+                      <strong>SMS Notifications</strong>
+                      <small> Receive updates on your mobile </small>
+                    </div>
+
+                    <label class="civicai-switch">
+                      <input type="checkbox" checked />
+                      <span></span>
+                    </label>
+                  </div>
+
+                  <div class="civicai-preference-row">
+                    <span class="civicai-preference-icon">
+                      <i class="fa-regular fa-bell"></i>
+                    </span>
+
+                    <div>
+                      <strong>Push Notifications</strong>
+                      <small> Receive push notifications </small>
+                    </div>
+
+                    <label class="civicai-switch">
+                      <input type="checkbox" checked />
+                      <span></span>
+                    </label>
+                  </div>
+
+                  <div class="civicai-preference-row">
+                    <span class="civicai-preference-icon">
+                      <i class="fa-solid fa-bullhorn"></i>
+                    </span>
+
+                    <div>
+                      <strong>Marketing Communications</strong>
+                      <small> Receive tips and updates </small>
+                    </div>
+
+                    <label class="civicai-switch">
+                      <input type="checkbox" checked />
+                      <span></span>
+                    </label>
+                  </div>
+
+                  <div class="civicai-preference-row">
+                    <span class="civicai-preference-icon">
+                      <i class="fa-regular fa-calendar-check"></i>
+                    </span>
+
+                    <div>
+                      <strong>Complaint Reminders</strong>
+                      <small> Get reminders for pending complaints </small>
+                    </div>
+
+                    <label class="civicai-switch">
+                      <input type="checkbox" checked />
+                      <span></span>
+                    </label>
+                  </div>
+                </div>
+
+                <button type="button" class="civicai-profile-full-button">
+                  <i class="fa-solid fa-check"></i>
+                  Save Preferences
+                </button>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         RECENT ACTIVITY
+    ====================================================== -->
+      <section id="activity" class="civicai-profile-activity-section">
+        <div class="civicai-section-container">
+          <article class="civicai-profile-card civicai-activity-card">
+            <div class="civicai-profile-card-header">
+              <div>
+                <h3>Recent Activity</h3>
+
+                <p>Review your recent account activity and sessions.</p>
+              </div>
+
+              <button type="button" class="civicai-profile-outline-button">
+                View All Activity
+              </button>
+            </div>
+
+            <div class="civicai-activity-table-wrap">
+              <table class="civicai-activity-table">
+                <thead>
+                  <tr>
+                    <th>Activity</th>
+                    <th>Location</th>
+                    <th>Device</th>
+                    <th>Date &amp; Time</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="civicai-activity-name">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        Login Successful
+                      </span>
+                    </td>
+
+                    <td>Vadodara, Gujarat, India</td>
+
+                    <td>Chrome on Windows</td>
+
+                    <td>Jun 01, 2024 10:30 AM</td>
+
+                    <td>
+                      <span class="civicai-success-status"> Success </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <span class="civicai-activity-name">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        Profile Updated
+                      </span>
+                    </td>
+
+                    <td>Vadodara, Gujarat, India</td>
+
+                    <td>Chrome on Windows</td>
+
+                    <td>May 31, 2024 04:15 PM</td>
+
+                    <td>
+                      <span class="civicai-success-status"> Success </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <span class="civicai-activity-name">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        Profile Updated
+                      </span>
+                    </td>
+
+                    <td>Vadodara, Gujarat, India</td>
+
+                    <td>Chrome on Windows</td>
+
+                    <td>May 31, 2024 04:15 PM</td>
+
+                    <td>
+                      <span class="civicai-success-status"> Success </span>
+                    </td>
+                  </tr><tr>
+                    <td>
+                      <span class="civicai-activity-name">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        Profile Updated
+                      </span>
+                    </td>
+
+                    <td>Vadodara, Gujarat, India</td>
+
+                    <td>Chrome on Windows</td>
+
+                    <td>May 31, 2024 04:15 PM</td>
+
+                    <td>
+                      <span class="civicai-success-status"> Success </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="civicai-activity-name">
+                        <i class="fa-solid fa-lock"></i>
+                        Password Changed
+                      </span>
+                    </td>
+
+                    <td>Vadodara, Gujarat, India</td>
+
+                    <td>Chrome on Windows</td>
+
+                    <td>May 28, 2024 09:20 AM</td>
+
+                    <td>
+                      <span class="civicai-success-status"> Success </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <span class="civicai-activity-name">
+                        <i class="fa-regular fa-file-lines"></i>
+                        Complaint Submitted
+                      </span>
+                    </td>
+
+                    <td>Vadodara, Gujarat, India</td>
+
+                    <td>Mobile App on Android</td>
+
+                    <td>May 25, 2024 11:10 AM</td>
+
+                    <td>
+                      <span class="civicai-success-status"> Success </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <span class="civicai-activity-name">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        Login Successful
+                      </span>
+                    </td>
+
+                    <td>Ahmedabad, Gujarat, India</td>
+
+                    <td>Mobile App on Android</td>
+
+                    <td>May 20, 2024 08:45 PM</td>
+
+                    <td>
+                      <span class="civicai-success-status"> Success </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         PRIVACY CTA
+    ====================================================== -->
+      <section class="civicai-profile-privacy-section">
+        <div class="civicai-section-container">
+          <article class="civicai-profile-privacy-card">
+            <div class="civicai-profile-privacy-image">
+              <img src="assets/img.jpg" alt="Privacy and security" />
+            </div>
+
+            <div class="civicai-profile-privacy-content">
+              <h2>Your Privacy &amp; Security Matter</h2>
+
+              <p>
+                We are committed to protecting your personal information and
+                keeping your data secure.
+              </p>
+            </div>
+
+            <a href="#" class="civicai-profile-privacy-button">
+              <i class="fa-solid fa-shield-halved"></i>
+              Learn More About Privacy
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+         Existing footer.html is used separately.
+    ====================================================== -->
+
+    <!-- footer.html -->
+  </body>
+  <script src="./js/profile.js"></script>
+</html>

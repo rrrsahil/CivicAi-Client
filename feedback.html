@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Feedback | CivicAI</title>
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- =====================================================
+         GLOBAL CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="./css/global.css" />
+
+    <!-- =====================================================
+         PAGE CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="./css/feedback.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         HEADER
+         Existing header.html is used separately.
+    ====================================================== -->
+
+    <!-- header.html -->
+
+    <!-- =====================================================
+         Feedback PAGE
+    ====================================================== -->
+
+    <!-- =========================================================
+     CIVICAI FEEDBACK PAGE
+     Header & Footer are handled globally
+========================================================= -->
+    <!-- =========================================================
+     CIVICAI FEEDBACK PAGE
+     Header & Footer are intentionally excluded
+========================================================= -->
+
+    <main class="civicai-feedback-page">
+      <!-- =====================================================
+         HERO
+    ====================================================== -->
+      <section class="civicai-feedback-hero">
+        <div class="civicai-section-container civicai-feedback-hero-inner">
+          <div class="civicai-feedback-hero-content">
+            <span class="civicai-feedback-eyebrow">
+              <i class="fa-regular fa-comment-dots"></i>
+              Citizen Feedback
+            </span>
+
+            <h1>Feedback</h1>
+
+            <p>
+              We value your feedback! Help us improve our platform and serve you
+              better.
+            </p>
+          </div>
+
+          <div class="civicai-feedback-hero-art">
+            <div class="civicai-feedback-skyline">
+              <span class="skyline-building building-one"></span>
+              <span class="skyline-building building-two"></span>
+              <span class="skyline-building building-three"></span>
+              <span class="skyline-building building-four"></span>
+              <span class="skyline-tree tree-one"></span>
+              <span class="skyline-tree tree-two"></span>
+              <span class="skyline-sun"></span>
+            </div>
+
+            <div class="civicai-feedback-help">
+              <span class="civicai-feedback-help-icon">
+                <i class="fa-solid fa-headset"></i>
+              </span>
+
+              <div>
+                <strong>Need Help?</strong>
+                <small>Chat with AI Assistant</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         FEEDBACK INTRO CARDS
+    ====================================================== -->
+      <section class="civicai-feedback-intro">
+        <div class="civicai-section-container">
+          <div class="civicai-feedback-intro-grid">
+            <article class="civicai-feedback-intro-card">
+              <span class="civicai-feedback-intro-icon purple">
+                <i class="fa-regular fa-message"></i>
+              </span>
+
+              <h3>Share Your Experience</h3>
+
+              <p>Tell us about your overall experience with CivicAI.</p>
+            </article>
+
+            <article class="civicai-feedback-intro-card">
+              <span class="civicai-feedback-intro-icon green">
+                <i class="fa-regular fa-lightbulb"></i>
+              </span>
+
+              <h3>Help Us Improve</h3>
+
+              <p>Your feedback helps us identify areas of improvement.</p>
+            </article>
+
+            <article class="civicai-feedback-intro-card">
+              <span class="civicai-feedback-intro-icon orange">
+                <i class="fa-regular fa-star"></i>
+              </span>
+
+              <h3>Better Services</h3>
+
+              <p>We use your suggestions to enhance our services.</p>
+            </article>
+
+            <article class="civicai-feedback-intro-card">
+              <span class="civicai-feedback-intro-icon blue">
+                <i class="fa-solid fa-shield-halved"></i>
+              </span>
+
+              <h3>Your Voice Matters</h3>
+
+              <p>Every feedback is important and makes a difference.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         MAIN FEEDBACK AREA
+    ====================================================== -->
+      <section class="civicai-feedback-main">
+        <div class="civicai-section-container">
+          <div class="civicai-feedback-layout">
+            <!-- =================================================
+                     SUBMIT FEEDBACK
+                ================================================== -->
+            <article class="civicai-feedback-form-card">
+              <div class="civicai-feedback-section-heading">
+                <div>
+                  <h2>Submit Your Feedback</h2>
+
+                  <p>
+                    We would love to hear your thoughts, suggestions or issues.
+                  </p>
+                </div>
+              </div>
+
+              <form class="civicai-feedback-form">
+                <!-- Feedback Type -->
+                <div class="civicai-feedback-field">
+                  <label for="feedbackType">
+                    Feedback Type
+                    <span>*</span>
+                  </label>
+
+                  <div class="civicai-feedback-input-wrap">
+                    <i class="fa-regular fa-clipboard"></i>
+
+                    <select id="feedbackType" required>
+                      <option value>Select feedback type</option>
+
+                      <option>Service Experience</option>
+
+                      <option>App / Website</option>
+
+                      <option>Complaint Handling</option>
+
+                      <option>Suggestions</option>
+
+                      <option>Other</option>
+                    </select>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                </div>
+
+                <!-- Subject -->
+                <div class="civicai-feedback-field">
+                  <label for="feedbackSubject">
+                    Subject
+                    <span>*</span>
+                  </label>
+
+                  <div class="civicai-feedback-input-wrap">
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <input
+                      id="feedbackSubject"
+                      type="text"
+                      placeholder="Enter a short subject"
+                      maxlength="120"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Feedback -->
+                <div class="civicai-feedback-field">
+                  <label for="feedbackMessage">
+                    Your Feedback
+                    <span>*</span>
+                  </label>
+
+                  <div class="civicai-feedback-textarea-wrap">
+                    <textarea
+                      id="feedbackMessage"
+                      maxlength="1000"
+                      placeholder="Share your detailed feedback, suggestions or experience..."
+                      required
+                    ></textarea>
+
+                    <small>0 / 1000</small>
+                  </div>
+                </div>
+
+                <!-- Rating -->
+                <div class="civicai-feedback-field">
+                  <label>
+                    Rating
+                    <span>*</span>
+                  </label>
+
+                  <p class="civicai-rating-question">
+                    How would you rate your overall experience?
+                  </p>
+
+                  <div class="civicai-rating-stars">
+                    <button type="button" aria-label="1 star">
+                      <i class="fa-regular fa-star"></i>
+                    </button>
+
+                    <button type="button" aria-label="2 stars">
+                      <i class="fa-regular fa-star"></i>
+                    </button>
+
+                    <button type="button" aria-label="3 stars">
+                      <i class="fa-regular fa-star"></i>
+                    </button>
+
+                    <button type="button" aria-label="4 stars">
+                      <i class="fa-regular fa-star"></i>
+                    </button>
+
+                    <button type="button" aria-label="5 stars">
+                      <i class="fa-regular fa-star"></i>
+                    </button>
+                  </div>
+
+                  <small class="civicai-rating-hint"> Select a rating </small>
+                </div>
+
+                <!-- Contact Preference -->
+                <div class="civicai-feedback-field">
+                  <label> Would you like us to contact you? </label>
+
+                  <p class="civicai-rating-question">
+                    We will use your contact details only if needed.
+                  </p>
+
+                  <div class="civicai-contact-options">
+                    <label class="civicai-radio-option">
+                      <input type="radio" name="contact" value="yes" />
+
+                      <span class="civicai-radio-circle"></span>
+
+                      <span> Yes, please contact me </span>
+                    </label>
+
+                    <label class="civicai-radio-option">
+                      <input type="radio" name="contact" value="no" checked />
+
+                      <span class="civicai-radio-circle"></span>
+
+                      <span> No, thank you </span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="civicai-feedback-submit">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  Submit Feedback
+                </button>
+
+                <div class="civicai-feedback-security">
+                  <i class="fa-solid fa-shield-halved"></i>
+
+                  <span>
+                    Your feedback is secure and will be used only for
+                    improvement purposes.
+                  </span>
+                </div>
+              </form>
+            </article>
+
+            <!-- =================================================
+                     RIGHT SIDEBAR
+                ================================================== -->
+            <aside class="civicai-feedback-sidebar">
+              <!-- Categories -->
+              <article class="civicai-feedback-side-card">
+                <div class="civicai-feedback-side-heading">
+                  <h2>Feedback Categories</h2>
+
+                  <p>Choose the category that best fits your feedback.</p>
+                </div>
+
+                <div class="civicai-feedback-category-list">
+                  <div class="civicai-feedback-category">
+                    <span class="purple">
+                      <i class="fa-regular fa-message"></i>
+                    </span>
+
+                    <div>
+                      <strong>Service Experience</strong>
+                      <small> Feedback about our services </small>
+                    </div>
+                  </div>
+
+                  <div class="civicai-feedback-category">
+                    <span class="green">
+                      <i class="fa-solid fa-desktop"></i>
+                    </span>
+
+                    <div>
+                      <strong>App / Website</strong>
+                      <small> Feedback about the platform </small>
+                    </div>
+                  </div>
+
+                  <div class="civicai-feedback-category">
+                    <span class="orange">
+                      <i class="fa-regular fa-calendar"></i>
+                    </span>
+
+                    <div>
+                      <strong>Complaint Handling</strong>
+                      <small> Feedback about complaint resolution </small>
+                    </div>
+                  </div>
+
+                  <div class="civicai-feedback-category">
+                    <span class="blue">
+                      <i class="fa-regular fa-lightbulb"></i>
+                    </span>
+
+                    <div>
+                      <strong>Suggestions</strong>
+                      <small> Share your suggestions </small>
+                    </div>
+                  </div>
+
+                  <div class="civicai-feedback-category">
+                    <span class="gray">
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </span>
+
+                    <div>
+                      <strong>Other</strong>
+                      <small> Any other feedback </small>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Why Feedback Matters -->
+<!-- Why Feedback Matters -->
+<article
+  class="civicai-feedback-side-card civicai-feedback-matters"
+>
+  <div class="civicai-feedback-side-heading">
+    <h2>Why Your Feedback Matters?</h2>
+  </div>
+
+  <div class="civicai-feedback-matters-list">
+    <div>
+      <span>
+        <i class="fa-solid fa-check"></i>
+      </span>
+
+      <p>Creates a more responsive and citizen-friendly platform </p>
+    </div>
+
+    <div>
+      <span>
+        <i class="fa-solid fa-check"></i>
+      </span>
+
+      <p>Brings better features you actually need</p>
+    </div>
+
+    <div>
+      <span>
+        <i class="fa-solid fa-check"></i>
+      </span>
+
+      <p>Helps us resolve issues faster and better</p>
+    </div>
+
+    <div>
+      <span>
+        <i class="fa-solid fa-check"></i>
+      </span>
+
+      <p>Builds a platform that truly works for you</p>
+    </div>
+
+    <div>
+      <span>
+        <i class="fa-solid fa-check"></i>
+      </span>
+
+      <p>Makes the grievance process easier and more transparent</p>
+    </div>
+
+    <div>
+      <span>
+        <i class="fa-solid fa-check"></i>
+      </span>
+
+      <p>Helps identify common problems in the community</p>
+    </div>
+
+    <div>
+      <span>
+        <i class="fa-solid fa-check"></i>
+      </span>
+
+      <p>Supports faster and smarter decision-making</p>
+    </div>
+
+    <div>
+      <span>
+        <i class="fa-solid fa-check"></i>
+      </span>
+
+      <p>Helps us improve our platform and services</p>
+    </div>
+  </div>
+
+  <div class="civicai-feedback-matters-art">
+    <img
+      src="assets/img.jpg"
+      alt="CivicAI support illustration"
+    />
+  </div>
+</article>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         FEEDBACK HISTORY
+    ====================================================== -->
+      <section class="civicai-feedback-history-section">
+        <div class="civicai-section-container">
+          <article class="civicai-feedback-history-card">
+            <div class="civicai-feedback-history-header">
+              <div>
+                <h2>Your Feedback History</h2>
+
+                <p>View and review all the feedback you have submitted.</p>
+              </div>
+
+              <div class="civicai-feedback-history-controls">
+                <label for="feedbackHistoryFilter"> Filter </label>
+
+                <select id="feedbackHistoryFilter">
+                  <option>All Feedback</option>
+                  <option>Service Experience</option>
+                  <option>Suggestions</option>
+                  <option>Complaint Handling</option>
+                  <option>App / Website</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- =================================================
+                     HISTORY SUMMARY
+                ================================================== -->
+            <div class="civicai-feedback-history-summary">
+              <div>
+                <span class="purple">
+                  <i class="fa-regular fa-message"></i>
+                </span>
+
+                <div>
+                  <strong>5</strong>
+                  <small>Total Submitted</small>
+                </div>
+              </div>
+
+              <div>
+                <span class="green">
+                  <i class="fa-solid fa-circle-check"></i>
+                </span>
+
+                <div>
+                  <strong>3</strong>
+                  <small>Resolved</small>
+                </div>
+              </div>
+
+              <div>
+                <span class="orange">
+                  <i class="fa-solid fa-clock"></i>
+                </span>
+
+                <div>
+                  <strong>1</strong>
+                  <small>In Review</small>
+                </div>
+              </div>
+
+              <div>
+                <span class="blue">
+                  <i class="fa-solid fa-star"></i>
+                </span>
+
+                <div>
+                  <strong>4.2</strong>
+                  <small>Average Rating</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- =================================================
+                     SCROLLABLE HISTORY TABLE
+                ================================================== -->
+            <div class="civicai-feedback-history-scroll">
+              <table class="civicai-feedback-history-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Subject</th>
+                    <th>Category</th>
+                    <th>Feedback Details</th>
+                    <th>Rating</th>
+                    <th>Status</th>
+                    <th>Date & Time</th>
+                    <th>Response</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>1</td>
+
+                    <td>
+                      <strong> Great app, easy to use! </strong>
+
+                      <small> Platform experience </small>
+                    </td>
+
+                    <td>
+                      <span class="civicai-feedback-tag purple">
+                        Service Experience
+                      </span>
+                    </td>
+
+                    <td>
+                      <p>
+                        The complaint reporting process is simple and easy to
+                        understand. Navigation between complaint sections is
+                        also clear.
+                      </p>
+                    </td>
+
+                    <td>
+                      <div class="civicai-table-stars">★★★★★</div>
+                    </td>
+
+                    <td>
+                      <span class="civicai-feedback-status resolved">
+                        Resolved
+                      </span>
+                    </td>
+
+                    <td>
+                      May 31, 2024
+                      <small>04:15 PM</small>
+                    </td>
+
+                    <td>
+                      <span class="civicai-response-badge"> Responded </span>
+                    </td>
+
+                    <td>
+                      <button class="civicai-history-view">
+                        <i class="fa-regular fa-eye"></i>
+                        View
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>2</td>
+
+                    <td>
+                      <strong> Add tracking on map </strong>
+
+                      <small> Map functionality </small>
+                    </td>
+
+                    <td>
+                      <span class="civicai-feedback-tag blue">
+                        Suggestions
+                      </span>
+                    </td>
+
+                    <td>
+                      <p>
+                        It would be useful to see the complaint progress and
+                        assigned location directly on the map.
+                      </p>
+                    </td>
+
+                    <td>
+                      <div class="civicai-table-stars">★★★★☆</div>
+                    </td>
+
+                    <td>
+                      <span class="civicai-feedback-status review">
+                        In Review
+                      </span>
+                    </td>
+
+                    <td>
+                      May 28, 2024
+                      <small>11:20 AM</small>
+                    </td>
+
+                    <td>
+                      <span class="civicai-response-badge pending">
+                        Under Review
+                      </span>
+                    </td>
+
+                    <td>
+                      <button class="civicai-history-view">
+                        <i class="fa-regular fa-eye"></i>
+                        View
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>3</td>
+
+                    <td>
+                      <strong> Complaint status delay </strong>
+
+                      <small> Complaint updates </small>
+                    </td>
+
+                    <td>
+                      <span class="civicai-feedback-tag orange">
+                        Complaint Handling
+                      </span>
+                    </td>
+
+                    <td>
+                      <p>
+                        Status updates were sometimes delayed after the field
+                        team completed the inspection.
+                      </p>
+                    </td>
+
+                    <td>
+                      <div class="civicai-table-stars">★★★☆☆</div>
+                    </td>
+
+                    <td>
+                      <span class="civicai-feedback-status resolved">
+                        Resolved
+                      </span>
+                    </td>
+
+                    <td>
+                      May 25, 2024
+                      <small>09:30 AM</small>
+                    </td>
+
+                    <td>
+                      <span class="civicai-response-badge"> Responded </span>
+                    </td>
+
+                    <td>
+                      <button class="civicai-history-view">
+                        <i class="fa-regular fa-eye"></i>
+                        View
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>4</td>
+
+                    <td>
+                      <strong> App is slow sometimes </strong>
+
+                      <small> Performance issue </small>
+                    </td>
+
+                    <td>
+                      <span class="civicai-feedback-tag green">
+                        App / Website
+                      </span>
+                    </td>
+
+                    <td>
+                      <p>
+                        The dashboard takes longer to load when several
+                        complaint records are displayed together.
+                      </p>
+                    </td>
+
+                    <td>
+                      <div class="civicai-table-stars">★★★☆☆</div>
+                    </td>
+
+                    <td>
+                      <span class="civicai-feedback-status closed">
+                        Closed
+                      </span>
+                    </td>
+
+                    <td>
+                      May 20, 2024
+                      <small>06:45 PM</small>
+                    </td>
+
+                    <td>
+                      <span class="civicai-response-badge"> Responded </span>
+                    </td>
+
+                    <td>
+                      <button class="civicai-history-view">
+                        <i class="fa-regular fa-eye"></i>
+                        View
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>5</td>
+
+                    <td>
+                      <strong> Thanks for quick support </strong>
+
+                      <small> Support experience </small>
+                    </td>
+
+                    <td>
+                      <span class="civicai-feedback-tag purple">
+                        Service Experience
+                      </span>
+                    </td>
+
+                    <td>
+                      <p>
+                        The support response was helpful and the complaint
+                        information was explained clearly.
+                      </p>
+                    </td>
+
+                    <td>
+                      <div class="civicai-table-stars">★★★★★</div>
+                    </td>
+
+                    <td>
+                      <span class="civicai-feedback-status resolved">
+                        Resolved
+                      </span>
+                    </td>
+
+                    <td>
+                      May 18, 2024
+                      <small>10:10 AM</small>
+                    </td>
+
+                    <td>
+                      <span class="civicai-response-badge"> Responded </span>
+                    </td>
+
+                    <td>
+                      <button class="civicai-history-view">
+                        <i class="fa-regular fa-eye"></i>
+                        View
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>6</td>
+
+                    <td>
+                      <strong> Better notification details </strong>
+
+                      <small> Notification improvement </small>
+                    </td>
+
+                    <td>
+                      <span class="civicai-feedback-tag blue">
+                        Suggestions
+                      </span>
+                    </td>
+
+                    <td>
+                      <p>
+                        Notifications could include a short explanation of what
+                        changed in the complaint instead of only the status.
+                      </p>
+                    </td>
+
+                    <td>
+                      <div class="civicai-table-stars">★★★★☆</div>
+                    </td>
+
+                    <td>
+                      <span class="civicai-feedback-status review">
+                        In Review
+                      </span>
+                    </td>
+
+                    <td>
+                      May 15, 2024
+                      <small>02:25 PM</small>
+                    </td>
+
+                    <td>
+                      <span class="civicai-response-badge pending">
+                        Under Review
+                      </span>
+                    </td>
+
+                    <td>
+                      <button class="civicai-history-view">
+                        <i class="fa-regular fa-eye"></i>
+                        View
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>7</td>
+
+                    <td>
+                      <strong> Easier photo uploads </strong>
+
+                      <small> Complaint evidence </small>
+                    </td>
+
+                    <td>
+                      <span class="civicai-feedback-tag green">
+                        App / Website
+                      </span>
+                    </td>
+
+                    <td>
+                      <p>
+                        Uploading multiple photos during complaint submission
+                        should show clearer upload progress.
+                      </p>
+                    </td>
+
+                    <td>
+                      <div class="civicai-table-stars">★★★★☆</div>
+                    </td>
+
+                    <td>
+                      <span class="civicai-feedback-status resolved">
+                        Resolved
+                      </span>
+                    </td>
+
+                    <td>
+                      May 12, 2024
+                      <small>12:40 PM</small>
+                    </td>
+
+                    <td>
+                      <span class="civicai-response-badge"> Responded </span>
+                    </td>
+
+                    <td>
+                      <button class="civicai-history-view">
+                        <i class="fa-regular fa-eye"></i>
+                        View
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>8</td>
+
+                    <td>
+                      <strong> More complaint categories </strong>
+
+                      <small> Category suggestion </small>
+                    </td>
+
+                    <td>
+                      <span class="civicai-feedback-tag orange">
+                        Suggestions
+                      </span>
+                    </td>
+
+                    <td>
+                      <p>
+                        Adding more specific subcategories could help route
+                        complaints to the appropriate department.
+                      </p>
+                    </td>
+
+                    <td>
+                      <div class="civicai-table-stars">★★★★★</div>
+                    </td>
+
+                    <td>
+                      <span class="civicai-feedback-status resolved">
+                        Resolved
+                      </span>
+                    </td>
+
+                    <td>
+                      May 08, 2024
+                      <small>09:15 AM</small>
+                    </td>
+
+                    <td>
+                      <span class="civicai-response-badge"> Responded </span>
+                    </td>
+
+                    <td>
+                      <button class="civicai-history-view">
+                        <i class="fa-regular fa-eye"></i>
+                        View
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="civicai-feedback-history-footer">
+              <span> Showing 8 of 8 feedback entries </span>
+
+              <button class="civicai-feedback-load">
+                Load More Feedback
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         SUPPORT CTA
+    ====================================================== -->
+      <section class="civicai-feedback-support">
+        <div class="civicai-section-container">
+          <div class="civicai-feedback-support-inner">
+            <div class="civicai-feedback-support-image">
+              <img src="assets/img.jpg" alt="CivicAI support assistant" />
+            </div>
+
+            <div class="civicai-feedback-support-content">
+              <h2>We're Here to Help</h2>
+
+              <p>
+                If you face any issue while using the platform, feel free to
+                reach out to our support team.
+              </p>
+            </div>
+
+            <a
+              href="#"
+              class="civicai-primary-button civicai-feedback-support-button"
+            >
+              <i class="fa-solid fa-headset"></i>
+              Contact Support
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+         Existing footer.html is used separately.
+    ====================================================== -->
+
+    <!-- footer.html -->
+  </body>
+<script src="./js/feedback.js" > </script>
+</html>

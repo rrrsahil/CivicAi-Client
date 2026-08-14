@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>New Complaint | CivicAI</title>
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;750&display=swap"
+            rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+        <!-- CivicAI Global CSS -->
+        <link rel="stylesheet" href="../css/global.css">
+
+        <!-- CivicAI Responsive CSS -->
+        <link rel="stylesheet" href="../css/responsive.css">
+
+        <!-- New Complaint Page CSS -->
+        <link rel="stylesheet" href="../css/new-complaint.css">
+
+        <script src="./js/new-complaint.js"></script>
+
+    </head>
+
+    <body>
+
+        <!-- =====================================================
+         EXISTING HEADER
+         Connect your existing header.html here.
+         Do NOT duplicate the header markup.
+    ====================================================== -->
+
+        <!-- HEADER: header.html -->
+
+        <main class="civicai-new-complaint-page">
+
+            <!-- =====================================================
+             PAGE HERO
+        ====================================================== -->
+
+            <section class="civicai-complaint-hero">
+                <div
+                    class="civicai-section-container civicai-complaint-hero-inner">
+
+                    <div class="civicai-complaint-heading">
+
+                        <span class="civicai-complaint-eyebrow">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            AI-Powered Complaint Registration
+                        </span>
+
+                        <h1>
+                            New Complaint
+                        </h1>
+
+                        <p>
+                            Report an issue with the help of AI.
+                            It's quick, easy and transparent.
+                        </p>
+
+                    </div>
+
+                    <div class="civicai-complaint-hero-art" aria-hidden="true">
+
+                        <div class="civicai-skyline">
+                            <span
+                                class="skyline-building skyline-building-one"></span>
+                            <span
+                                class="skyline-building skyline-building-two"></span>
+                            <span
+                                class="skyline-building skyline-building-three"></span>
+                            <span
+                                class="skyline-building skyline-building-four"></span>
+                            <span
+                                class="skyline-building skyline-building-five"></span>
+                        </div>
+
+                        <span class="civicai-skyline-sun"></span>
+
+                    </div>
+
+                    <a href="ai-assistant.html" class="civicai-help-card">
+
+                        <span class="civicai-help-icon">
+                            <i class="fa-solid fa-robot"></i>
+                        </span>
+
+                        <span>
+                            <strong>Need Help?</strong>
+                            <small>Chat with AI Assistant</small>
+                        </span>
+
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- =====================================================
+             COMPLAINT PROGRESS STEPPER
+        ====================================================== -->
+
+            <section class="civicai-progress-section">
+
+                <div class="civicai-section-container">
+
+                    <div class="civicai-progress-panel">
+
+                        <div class="civicai-progress-line"></div>
+
+                        <div class="civicai-progress-step active">
+
+                            <span class="civicai-progress-number">
+                                1
+                            </span>
+
+                            <strong>
+                                Describe Issue
+                            </strong>
+
+                            <small>
+                                Tell us what's wrong
+                            </small>
+
+                        </div>
+
+                        <div class="civicai-progress-step">
+
+                            <span class="civicai-progress-number">
+                                2
+                            </span>
+
+                            <strong>
+                                Add Details
+                            </strong>
+
+                            <small>
+                                Location & Category
+                            </small>
+
+                        </div>
+
+                        <div class="civicai-progress-step">
+
+                            <span class="civicai-progress-number">
+                                3
+                            </span>
+
+                            <strong>
+                                AI Review
+                            </strong>
+
+                            <small>
+                                AI predicts & analyzes
+                            </small>
+
+                        </div>
+
+                        <div class="civicai-progress-step">
+
+                            <span class="civicai-progress-number">
+                                4
+                            </span>
+
+                            <strong>
+                                Preview
+                            </strong>
+
+                            <small>
+                                Review before submit
+                            </small>
+
+                        </div>
+
+                        <div class="civicai-progress-step">
+
+                            <span class="civicai-progress-number">
+                                5
+                            </span>
+
+                            <strong>
+                                Submit
+                            </strong>
+
+                            <small>
+                                Your complaint is sent
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =====================================================
+             MAIN COMPLAINT WORKSPACE
+        ====================================================== -->
+
+            <section class="civicai-complaint-workspace">
+
+                <div class="civicai-section-container civicai-complaint-layout">
+
+                    <!-- =================================================
+                     LEFT COLUMN
+                ================================================== -->
+
+                    <div class="civicai-complaint-main-column">
+
+                        <!-- =============================================
+                         01. DESCRIBE ISSUE
+                    ============================================== -->
+
+                        <article class="civicai-complaint-card">
+
+                            <div class="civicai-card-heading">
+
+                                <span
+                                    class="civicai-card-icon civicai-icon-purple">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </span>
+
+                                <div>
+                                    <h2>
+                                        1. Describe the Issue
+                                    </h2>
+
+                                    <p>
+                                        Write a detailed description of the
+                                        issue you want to report.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="civicai-form-group">
+
+                                <textarea
+                                    class="civicai-complaint-textarea"
+                                    maxlength="1000"
+                                    placeholder="e.g. There is a deep pothole on the main road near my society for the last 2 weeks..."></textarea>
+
+                                <span class="civicai-character-count">
+                                    0 / 1000
+                                </span>
+
+                            </div>
+
+                            <div class="civicai-voice-row">
+
+                                <div>
+                                    <strong>
+                                        Or speak your complaint
+                                    </strong>
+
+                                    <span>
+                                        Click the button and record your voice
+                                    </span>
+                                </div>
+
+                                <button class="civicai-record-button"
+                                    type="button">
+                                    <i class="fa-solid fa-microphone"></i>
+                                    Start Recording
+                                </button>
+
+                            </div>
+
+                        </article>
+
+                        <!-- =============================================
+                         02. LOCATION
+                    ============================================== -->
+
+                        <article class="civicai-complaint-card">
+
+                            <div class="civicai-card-heading">
+
+                                <span
+                                    class="civicai-card-icon civicai-icon-purple">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </span>
+
+                                <div>
+                                    <h2>
+                                        2. Add Location
+                                    </h2>
+
+                                    <p>
+                                        Provide the exact location of the issue.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="civicai-location-actions">
+
+                                <button
+                                    type="button"
+                                    class="civicai-location-button active">
+                                    <i
+                                        class="fa-solid fa-location-crosshairs"></i>
+                                    Use My Current Location
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="civicai-location-button">
+                                    <i class="fa-regular fa-map"></i>
+                                    Select on Map
+                                </button>
+
+                            </div>
+
+                            <div class="civicai-form-group">
+
+                                <label for="complaint-address">
+                                    Address / Landmark
+                                </label>
+
+                                <input
+                                    id="complaint-address"
+                                    type="text"
+                                    placeholder="e.g. Near Sayaji Garden, Opp. ABC Mall, Vadodara">
+
+                            </div>
+
+                        </article>
+
+                        <!-- =============================================
+                         03. CATEGORY
+                    ============================================== -->
+
+                        <article class="civicai-complaint-card">
+
+                            <div class="civicai-card-heading">
+
+                                <span
+                                    class="civicai-card-icon civicai-icon-purple">
+                                    <i class="fa-solid fa-layer-group"></i>
+                                </span>
+
+                                <div>
+                                    <h2>
+                                        3. Categorize the Issue
+                                    </h2>
+
+                                    <p>
+                                        Select the category that best matches
+                                        your issue.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="civicai-category-grid">
+
+                                <button class="civicai-category-item selected"
+                                    type="button">
+
+                                    <span
+                                        class="civicai-category-icon civicai-category-purple">
+                                        <i class="fa-solid fa-road"></i>
+                                    </span>
+
+                                    <strong>
+                                        Road & Infrastructure
+                                    </strong>
+
+                                    <span class="civicai-selected-check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </span>
+
+                                </button>
+
+                                <button class="civicai-category-item"
+                                    type="button">
+
+                                    <span
+                                        class="civicai-category-icon civicai-category-blue">
+                                        <i class="fa-solid fa-droplet"></i>
+                                    </span>
+
+                                    <strong>
+                                        Water Supply
+                                    </strong>
+
+                                </button>
+
+                                <button class="civicai-category-item"
+                                    type="button">
+
+                                    <span
+                                        class="civicai-category-icon civicai-category-orange">
+                                        <i class="fa-solid fa-bolt"></i>
+                                    </span>
+
+                                    <strong>
+                                        Electricity
+                                    </strong>
+
+                                </button>
+
+                                <button class="civicai-category-item"
+                                    type="button">
+
+                                    <span
+                                        class="civicai-category-icon civicai-category-yellow">
+                                        <i class="fa-regular fa-lightbulb"></i>
+                                    </span>
+
+                                    <strong>
+                                        Street Light
+                                    </strong>
+
+                                </button>
+
+                                <button class="civicai-category-item"
+                                    type="button">
+
+                                    <span
+                                        class="civicai-category-icon civicai-category-green">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </span>
+
+                                    <strong>
+                                        Garbage / Sanitation
+                                    </strong>
+
+                                </button>
+
+                                <button class="civicai-category-item"
+                                    type="button">
+
+                                    <span
+                                        class="civicai-category-icon civicai-category-cyan">
+                                        <i class="fa-solid fa-water"></i>
+                                    </span>
+
+                                    <strong>
+                                        Drainage
+                                    </strong>
+
+                                </button>
+
+                                <button class="civicai-category-item"
+                                    type="button">
+
+                                    <span
+                                        class="civicai-category-icon civicai-category-green">
+                                        <i class="fa-solid fa-tree"></i>
+                                    </span>
+
+                                    <strong>
+                                        Parks & Recreation
+                                    </strong>
+
+                                </button>
+
+                                <button class="civicai-category-item"
+                                    type="button">
+
+                                    <span
+                                        class="civicai-category-icon civicai-category-red">
+                                        <i class="fa-solid fa-building"></i>
+                                    </span>
+
+                                    <strong>
+                                        Building / Construction
+                                    </strong>
+
+                                </button>
+
+                                <button class="civicai-category-item"
+                                    type="button">
+
+                                    <span
+                                        class="civicai-category-icon civicai-category-pink">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+
+                                    <strong>
+                                        Traffic & Transport
+                                    </strong>
+
+                                </button>
+
+                                <button class="civicai-category-item"
+                                    type="button">
+
+                                    <span
+                                        class="civicai-category-icon civicai-category-orange">
+                                        <i class="fa-solid fa-smog"></i>
+                                    </span>
+
+                                    <strong>
+                                        Pollution
+                                    </strong>
+
+                                </button>
+
+                                <button class="civicai-category-item"
+                                    type="button">
+
+                                    <span
+                                        class="civicai-category-icon civicai-category-pink">
+                                        <i class="fa-solid fa-heart-pulse"></i>
+                                    </span>
+
+                                    <strong>
+                                        Health
+                                    </strong>
+
+                                </button>
+
+                                <button class="civicai-category-item"
+                                    type="button">
+
+                                    <span
+                                        class="civicai-category-icon civicai-category-gray">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </span>
+
+                                    <strong>
+                                        Others
+                                    </strong>
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+                        <!-- =============================================
+                         04. UPLOAD PHOTOS / VIDEOS
+                    ============================================== -->
+
+                        <article class="civicai-complaint-card">
+
+                            <div class="civicai-card-heading">
+
+                                <span
+                                    class="civicai-card-icon civicai-icon-purple">
+                                    <i class="fa-regular fa-image"></i>
+                                </span>
+
+                                <div>
+                                    <h2>
+                                        4. Upload Photos / Videos
+                                        <small>(Optional)</small>
+                                    </h2>
+
+                                    <p>
+                                        Add photos or videos to help us
+                                        understand the issue better.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <!-- FILE UPLOAD -->
+                            <div
+                                class="civicai-upload-area"
+                                id="civicaiUploadArea">
+
+                                <!-- Actual File Input -->
+                                <input
+                                    type="file"
+                                    id="civicaiFileInput"
+                                    class="civicai-file-input"
+                                    accept="image/png,image/jpeg,image/jpg,video/mp4"
+                                    multiple>
+
+                                <span class="civicai-upload-icon">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                </span>
+
+                                <p>
+                                    Drag & drop files here
+                                </p>
+
+                                <span>
+                                    or
+                                </span>
+
+                                <button
+                                    type="button"
+                                    class="civicai-upload-button"
+                                    id="civicaiChooseFiles">
+                                    Choose Files
+                                </button>
+
+                            </div>
+
+                            <!-- Selected files will appear here -->
+                            <div
+                                class="civicai-selected-files"
+                                id="civicaiSelectedFiles"></div>
+
+                            <small class="civicai-upload-note">
+                                PNG, JPG, MP4 up to 20MB each.
+                                You can upload up to 5 files.
+                            </small>
+
+                        </article>
+
+                        <!-- =============================================
+                         05. ADDITIONAL INFORMATION
+                    ============================================== -->
+
+                        <article class="civicai-complaint-card">
+
+                            <div class="civicai-card-heading">
+
+                                <span
+                                    class="civicai-card-icon civicai-icon-purple">
+                                    <i class="fa-regular fa-clipboard"></i>
+                                </span>
+
+                                <div>
+                                    <h2>
+                                        5. Additional Information
+                                        <small>(Optional)</small>
+                                    </h2>
+
+                                    <p>
+                                        Any other details that can help us
+                                        resolve the issue faster.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="civicai-form-group">
+
+                                <textarea
+                                    class="civicai-additional-textarea"
+                                    maxlength="500"
+                                    placeholder="Add any extra details like how long the issue has been there, time, frequency, etc."></textarea>
+
+                                <span class="civicai-character-count">
+                                    0 / 500
+                                </span>
+
+                            </div>
+
+                            <div class="civicai-form-actions">
+
+                                <button
+                                    type="button"
+                                    class="civicai-cancel-button">
+                                    Cancel
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="civicai-primary-button">
+                                    Continue to AI Review
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                    <!-- =================================================
+                     RIGHT COLUMN
+                ================================================== -->
+
+                    <aside class="civicai-complaint-sidebar">
+
+                        <!-- =============================================
+                         AI PREDICTION
+                    ============================================== -->
+
+                        <article class="civicai-ai-prediction-card">
+
+                            <div class="civicai-sidebar-heading">
+
+                                <span class="civicai-sidebar-icon">
+                                    <i
+                                        class="fa-solid fa-wand-magic-sparkles"></i>
+                                </span>
+
+                                <h2>
+                                    AI Prediction
+                                    <span>(Live)</span>
+                                </h2>
+
+                            </div>
+
+                            <p class="civicai-ai-description">
+                                Based on your description, our AI has made the
+                                following predictions:
+                            </p>
+
+                            <div class="civicai-prediction-list">
+
+                                <div class="civicai-prediction-item">
+
+                                    <span class="civicai-prediction-symbol">
+                                        <i class="fa-regular fa-square"></i>
+                                    </span>
+
+                                    <div>
+                                        <small>Category</small>
+                                        <strong>Road & Infrastructure</strong>
+                                    </div>
+
+                                </div>
+
+                                <div class="civicai-prediction-item">
+
+                                    <span class="civicai-prediction-symbol">
+                                        <i class="fa-regular fa-building"></i>
+                                    </span>
+
+                                    <div>
+                                        <small>Department</small>
+                                        <strong>Public Works Department</strong>
+                                    </div>
+
+                                </div>
+
+                                <div class="civicai-prediction-item">
+
+                                    <span class="civicai-prediction-symbol">
+                                        <i class="fa-regular fa-clock"></i>
+                                    </span>
+
+                                    <div>
+                                        <small>Priority</small>
+
+                                        <strong class="civicai-priority-high">
+                                            <i
+                                                class="fa-solid fa-circle-exclamation"></i>
+                                            High
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="civicai-prediction-item">
+
+                                    <span class="civicai-prediction-symbol">
+                                        <i class="fa-regular fa-hourglass"></i>
+                                    </span>
+
+                                    <div>
+                                        <small>Estimated Resolution</small>
+                                        <strong>3 – 5 Days</strong>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="civicai-confidence">
+
+                                <div class="civicai-confidence-heading">
+
+                                    <span>
+                                        Confidence Score
+                                    </span>
+
+                                    <strong>
+                                        92%
+                                    </strong>
+
+                                </div>
+
+                                <div class="civicai-confidence-track">
+                                    <span></span>
+                                </div>
+
+                            </div>
+
+                            <p class="civicai-prediction-note">
+                                These are predictions. You can review and edit
+                                before submitting.
+                            </p>
+
+                        </article>
+
+                        <!-- =============================================
+                         WHY ADD DETAILS
+                    ============================================== -->
+
+                        <article class="civicai-info-card">
+
+                            <h3>
+                                Why Add Details?
+                            </h3>
+
+                            <div class="civicai-info-item">
+
+                                <span
+                                    class="civicai-info-icon civicai-info-purple">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </span>
+
+                                <p>
+                                    Accurate location helps the right department
+                                    act faster.
+                                </p>
+
+                            </div>
+
+                            <div class="civicai-info-item">
+
+                                <span
+                                    class="civicai-info-icon civicai-info-blue">
+                                    <i class="fa-regular fa-image"></i>
+                                </span>
+
+                                <p>
+                                    Photos & videos provide clear evidence.
+                                </p>
+
+                            </div>
+
+                            <div class="civicai-info-item">
+
+                                <span
+                                    class="civicai-info-icon civicai-info-green">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+
+                                <p>
+                                    Detailed information increases the chance of
+                                    quick resolution.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                        <!-- =============================================
+                         TIPS
+                    ============================================== -->
+
+                        <article class="civicai-info-card civicai-tips-card">
+
+                            <h3>
+                                Tips for a Better Report
+                            </h3>
+
+                            <div class="civicai-tip-item">
+
+                                <span>
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Be specific and clear
+                                    </strong>
+
+                                    <small>
+                                        Describe the issue in detail.
+                                    </small>
+                                </div>
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                            </div>
+
+                            <div class="civicai-tip-item">
+
+                                <span>
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Provide exact location
+                                    </strong>
+
+                                    <small>
+                                        Use a map or exact address.
+                                    </small>
+                                </div>
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                            </div>
+
+                            <div class="civicai-tip-item">
+
+                                <span>
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Upload clear photos
+                                    </strong>
+
+                                    <small>
+                                        Visible and recent photos.
+                                    </small>
+                                </div>
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                            </div>
+
+                            <div class="civicai-tip-item">
+
+                                <span>
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Add extra details
+                                    </strong>
+
+                                    <small>
+                                        Helps officers understand better.
+                                    </small>
+                                </div>
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                            </div>
+
+                        </article>
+
+                        <!-- =============================================
+                         AI ASSISTANT CTA
+                    ============================================== -->
+
+                        <article class="civicai-ai-help-card">
+
+                            <div class="civicai-ai-help-content">
+
+                                <h3>
+                                    Talk to AI Assistant
+                                </h3>
+
+                                <p>
+                                    Not sure how to report?
+                                    Our AI Assistant can help you draft your
+                                    complaint.
+                                </p>
+
+                                <a
+                                    href="ai-assistant.html"
+                                    class="civicai-ai-help-button">
+                                    <i class="fa-solid fa-robot"></i>
+                                    Open AI Assistant
+                                </a>
+
+                            </div>
+
+                            <div class="civicai-ai-visual">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=500&q=80"
+                                    alt="AI assistant robot"
+                                    loading="lazy">
+
+                            </div>
+
+                        </article>
+
+                        <!-- =====================================================
+     AI QUICK HELP
+====================================================== -->
+<article class="civicai-ai-quick-help">
+
+    <div class="civicai-quick-help-heading">
+
+        <span class="civicai-quick-help-icon">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </span>
+
+        <div>
+            <h3>AI Assistant can help with</h3>
+
+            <p>
+                Get quick guidance at every step while creating
+                your complaint.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="civicai-quick-help-list">
+
+        <!-- STEP 1 -->
+        <div class="civicai-quick-help-item">
+
+            <span>
+                <i class="fa-solid fa-pen"></i>
+            </span>
+
+            <div>
+                <strong>Describe my complaint</strong>
+
+                <small>
+                    Help me explain the problem clearly with
+                    the important details.
+                </small>
+            </div>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+        </div>
+
+
+        <!-- STEP 2 -->
+        <div class="civicai-quick-help-item">
+
+            <span>
+                <i class="fa-solid fa-layer-group"></i>
+            </span>
+
+            <div>
+                <strong>Choose the right category</strong>
+
+                <small>
+                    Find the complaint category that best matches
+                    your reported issue.
+                </small>
+            </div>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+        </div>
+
+
+        <!-- STEP 3 -->
+        <div class="civicai-quick-help-item">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+            </span>
+
+            <div>
+                <strong>Add location details</strong>
+
+                <small>
+                    Know what location, landmark, or address
+                    information should be provided.
+                </small>
+            </div>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+        </div>
+
+
+        <!-- STEP 4 -->
+        <div class="civicai-quick-help-item">
+
+            <span>
+                <i class="fa-solid fa-circle-info"></i>
+            </span>
+
+            <div>
+                <strong>Add useful evidence</strong>
+
+                <small>
+                    Learn which additional details, photos,
+                    or documents can support your complaint.
+                </small>
+            </div>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+        </div>
+
+
+        <!-- STEP 5 -->
+        <div class="civicai-quick-help-item">
+
+            <span>
+                <i class="fa-solid fa-circle-check"></i>
+            </span>
+
+            <div>
+                <strong>Review my report</strong>
+
+                <small>
+                    Check whether your complaint is complete
+                    and ready to submit.
+                </small>
+            </div>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+        </div>
+
+    </div>
+
+</article>
+
+                            </aside>
+
+                        </div>
+
+                    </section>
+
+                    <!-- =====================================================
+     PRE-FOOTER CIVIC CTA
+====================================================== -->
+
+                    <section class="civicai-complaint-cta">
+
+                        <div class="civicai-section-container">
+
+                            <div class="civicai-complaint-cta-inner">
+
+                                <div class="civicai-complaint-cta-content">
+
+                                    <h2>
+                                        Your Voice. Our Priority.
+                                        <span>Better Cities for All.</span>
+                                    </h2>
+
+                                    <p>
+                                        Every complaint you raise makes your
+                                        city a
+                                        better place to live.
+                                    </p>
+
+                                </div>
+
+                                <div class="civicai-cta-people">
+                                    <img
+                                        src="./assets/img.jpg"
+                                        alt="CivicAI community">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </main>
+
+                <!-- =====================================================
+         EXISTING FOOTER
+         Connect your existing footer.html here.
+         Do NOT duplicate footer markup.
+    ====================================================== -->
+
+                <!-- FOOTER: footer.html -->
+
+            </body>
+        </html>

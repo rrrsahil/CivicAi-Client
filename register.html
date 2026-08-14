@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Create Account | CivicAI</title>
+
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/auth.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <main class="auth-page auth-register">
+      <!-- LEFT -->
+      <section class="auth-visual">
+        <div class="auth-visual-content">
+          <span class="auth-eyebrow"> JOIN CIVICAI </span>
+
+          <h1>Create Account</h1>
+
+          <p class="auth-subtitle">Join CivicAI community today!</p>
+
+          <p class="auth-description">
+            Create your account to raise complaints, track status and get
+            important updates.
+          </p>
+        </div>
+
+        <div class="auth-city">
+          <div class="auth-cloud cloud-one"></div>
+          <div class="auth-cloud cloud-two"></div>
+
+          <img src="assets/img.jpg" alt="CivicAI city illustration" />
+        </div>
+      </section>
+
+      <!-- RIGHT -->
+      <section class="auth-form-side">
+        <div class="auth-card register-card">
+          <div class="auth-card-header">
+            <h2>Create Your Account</h2>
+          </div>
+
+          <form class="auth-form">
+            <!-- Full Name -->
+            <div class="form-group">
+              <label for="full-name"> Full Name </label>
+
+              <div class="input-wrapper">
+                <i class="fa-regular fa-user"></i>
+
+                <input
+                  type="text"
+                  id="full-name"
+                  placeholder="Enter your full name"
+                  autocomplete="name"
+                />
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="register-email"> Email Address </label>
+
+              <div class="input-wrapper">
+                <i class="fa-regular fa-envelope"></i>
+
+                <input
+                  type="email"
+                  id="register-email"
+                  placeholder="Enter your email address"
+                  autocomplete="email"
+                />
+              </div>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+              <label for="register-password"> Password </label>
+
+              <div class="input-wrapper">
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                  type="password"
+                  id="register-password"
+                  placeholder="Create a password"
+                  autocomplete="new-password"
+                />
+
+                <span class="password-icon">
+                  <i class="fa-regular fa-eye-slash"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- Confirm -->
+            <div class="form-group">
+              <label for="confirm-password"> Confirm Password </label>
+
+              <div class="input-wrapper">
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                  type="password"
+                  id="confirm-password"
+                  placeholder="Confirm your password"
+                  autocomplete="new-password"
+                />
+
+                <span class="password-icon">
+                  <i class="fa-regular fa-eye-slash"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- Terms -->
+            <label class="terms-option">
+              <input type="checkbox" required />
+
+              <span>
+                I agree to the
+                <a href="terms.html"> Terms of Service </a>
+                and
+                <a href="privacy-policy.html"> Privacy Policy </a>
+              </span>
+            </label>
+
+            <!-- Register -->
+            <button type="submit" class="auth-submit">Register</button>
+
+            <!-- Divider -->
+            <div class="auth-divider">
+              <span></span>
+
+              <small> or continue with </small>
+
+              <span></span>
+            </div>
+
+            <!-- Social -->
+            <div class="social-login">
+              <button type="button">
+                <i class="fa-brands fa-google"></i>
+
+                Google
+              </button>
+
+              <button type="button">
+                <i class="fa-brands fa-facebook"></i>
+
+                Facebook
+              </button>
+            </div>
+
+            <p class="auth-bottom-text">
+              Already have an account?
+
+              <a href="login.html"> Login Now </a>
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

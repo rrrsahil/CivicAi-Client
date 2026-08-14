@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Track Complaint | CivicAI</title>
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- =====================================================
+         GLOBAL CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="./css/global.css" />
+
+    <!-- =====================================================
+         PAGE CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="./css/track-complaint.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         HEADER
+         Existing header.html is used separately.
+    ====================================================== -->
+
+    <!-- header.html -->
+
+    <!-- =====================================================
+         Profile PAGE
+    ====================================================== -->
+
+    <!-- =========================================================
+     CIVICAI — TRACK COMPLAINT PAGE
+     No JavaScript required
+========================================================= -->
+
+    <main class="civicai-track-page">
+      <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+      <section class="civicai-track-hero">
+        <div class="civicai-section-container civicai-track-hero-inner">
+          <div class="civicai-track-hero-content">
+            <span class="civicai-track-eyebrow"> Complaint Tracking </span>
+
+            <h1>Track Your Complaint</h1>
+
+            <p>
+              Enter your complaint ID to get real-time updates on its progress.
+            </p>
+          </div>
+
+          <!-- Decorative city illustration -->
+
+          <div class="civicai-track-hero-art">
+            <div class="track-city">
+              <span class="track-building track-b1"></span>
+              <span class="track-building track-b2"></span>
+              <span class="track-building track-b3"></span>
+              <span class="track-building track-b4"></span>
+              <span class="track-building track-b5"></span>
+
+              <span class="track-tree track-t1"></span>
+              <span class="track-tree track-t2"></span>
+              <span class="track-tree track-t3"></span>
+
+              <span class="track-sun"></span>
+            </div>
+
+            <div class="civicai-track-help">
+              <span class="track-help-icon">
+                <i class="fa-regular fa-comments"></i>
+              </span>
+
+              <div>
+                <strong>Need Help?</strong>
+                <small>Chat with AI Assistant</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         SEARCH / TRACK FORM
+    ====================================================== -->
+
+      <section class="civicai-track-search-section">
+        <div class="civicai-section-container">
+          <div class="civicai-track-search-card">
+            <div class="track-search-field">
+              <label for="complaint-id"> Enter Complaint ID </label>
+
+              <input
+                id="complaint-id"
+                type="text"
+                value="#C-2024-9812"
+                placeholder="Enter complaint ID"
+              />
+            </div>
+
+            <button
+              type="button"
+              class="civicai-primary-button track-search-button"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+              Track Complaint
+            </button>
+
+            <div class="track-search-help">
+              <span>Don't have the ID?</span>
+
+              <a href="complaints.html">
+                View My Complaints
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         COMPLAINT SUMMARY + CURRENT STATUS
+    ====================================================== -->
+
+      <section class="civicai-track-summary-section">
+        <div class="civicai-section-container">
+          <div class="civicai-track-summary-grid">
+            <!-- =================================================
+                     COMPLAINT DETAILS
+                ================================================== -->
+
+            <article class="civicai-track-complaint-card">
+              <div class="track-complaint-icon">
+                <i class="fa-solid fa-road"></i>
+              </div>
+
+              <div class="track-complaint-main">
+                <span class="track-label"> Complaint ID </span>
+
+                <div class="track-id-row">
+                  <h2>#C-2024-9812</h2>
+
+                  <button
+                    type="button"
+                    class="track-copy-button"
+                    aria-label="Copy complaint ID"
+                  >
+                    <i class="fa-regular fa-copy"></i>
+                  </button>
+                </div>
+
+                <h3>Deep Pothole on Main Street</h3>
+
+                <p>
+                  There is a deep pothole in front of my house on Main Street
+                  which is causing traffic issues and vehicle damage.
+                </p>
+
+                <div class="track-complaint-meta">
+                  <span>
+                    <i class="fa-regular fa-calendar"></i>
+                    May 31, 2024
+                  </span>
+
+                  <span>
+                    <i class="fa-regular fa-clock"></i>
+                    10:30 AM
+                  </span>
+
+                  <span>
+                    <i class="fa-solid fa-building"></i>
+                    Public Works Department
+                  </span>
+
+                  <span class="track-priority-badge">
+                    <i class="fa-solid fa-circle"></i>
+                    High Priority
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <!-- =================================================
+                     CURRENT STATUS
+                ================================================== -->
+
+            <article class="civicai-track-status-card">
+              <div class="track-card-heading">
+                <h2>Current Status</h2>
+
+                <span class="track-status-badge"> In Progress </span>
+              </div>
+
+              <div class="track-status-progress">
+                <div class="track-status-line"></div>
+
+                <div class="track-status-step completed">
+                  <span class="status-dot">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+
+                  <strong>Submitted</strong>
+                  <small>May 31</small>
+                </div>
+
+                <div class="track-status-step completed">
+                  <span class="status-dot">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+
+                  <strong>Assigned</strong>
+                  <small>Jun 01</small>
+                </div>
+
+                <div class="track-status-step active">
+                  <span class="status-dot"></span>
+
+                  <strong>In Progress</strong>
+                  <small>Jun 02</small>
+                </div>
+
+                <div class="track-status-step">
+                  <span class="status-dot"></span>
+
+                  <strong>Resolved</strong>
+                  <small>Pending</small>
+                </div>
+              </div>
+
+              <div class="track-status-message">
+                <i class="fa-regular fa-bell"></i>
+
+                <p>
+                  Our team is actively working on your complaint. We will notify
+                  you once there is an update.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         TIMELINE + REAL MAP
+    ====================================================== -->
+
+      <section class="civicai-track-progress-section">
+        <div class="civicai-section-container">
+          <div class="civicai-track-progress-grid">
+            <!-- =================================================
+                     TIMELINE
+                ================================================== -->
+
+            <article class="civicai-track-timeline-card">
+              <h2>Complaint Progress Timeline</h2>
+
+              <div class="civicai-track-timeline">
+                <!-- Submitted -->
+
+                <div class="track-timeline-item completed">
+                  <span class="timeline-icon">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+
+                  <div class="timeline-content">
+                    <h3>Complaint Submitted</h3>
+
+                    <p>Your complaint has been submitted successfully.</p>
+
+                    <time> May 31, 2024&nbsp; • &nbsp;10:30 AM </time>
+                  </div>
+                </div>
+
+                <!-- Assigned -->
+
+                <div class="track-timeline-item assigned">
+                  <span class="timeline-icon">
+                    <i class="fa-solid fa-user-tie"></i>
+                  </span>
+
+                  <div class="timeline-content">
+                    <h3>Assigned to Officer</h3>
+
+                    <p>
+                      Your complaint has been assigned to Amit Patel (Field
+                      Officer).
+                    </p>
+
+                    <time> Jun 01, 2024&nbsp; • &nbsp;09:15 AM </time>
+                  </div>
+                </div>
+
+                <!-- Progress -->
+
+                <div class="track-timeline-item active">
+                  <span class="timeline-icon">
+                    <i class="fa-solid fa-gear"></i>
+                  </span>
+
+                  <div class="timeline-content">
+                    <h3>Work In Progress</h3>
+
+                    <p>Our team has started working on this issue.</p>
+
+                    <time> Jun 02, 2024&nbsp; • &nbsp;11:40 AM </time>
+
+                    <div class="timeline-note">
+                      <strong> Inspection done. </strong>
+
+                      Repair material is arranged. Work will start soon.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Review -->
+
+                <div class="track-timeline-item pending">
+                  <span class="timeline-icon">
+                    <i class="fa-solid fa-circle"></i>
+                  </span>
+
+                  <div class="timeline-content">
+                    <h3>Resolution in Review</h3>
+
+                    <p>
+                      The issue is being reviewed before marking as resolved.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Resolved -->
+
+                <div class="track-timeline-item pending">
+                  <span class="timeline-icon">
+                    <i class="fa-solid fa-circle"></i>
+                  </span>
+
+                  <div class="timeline-content">
+                    <h3>Complaint Resolved</h3>
+
+                    <p>
+                      The issue will be marked as resolved and you will be
+                      notified.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- =================================================
+                     REAL MAP
+                ================================================== -->
+
+            <article class="civicai-track-location-card">
+              <div class="track-map-wrapper">
+                <iframe
+                  title="CivicAI Complaint Location"
+                  src="https://www.google.com/maps?q=Sayaji+Garden,+Vadodara,+Gujarat&output=embed"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen
+                ></iframe>
+              </div>
+
+              <div class="track-location-info">
+                <h2>Complaint Location</h2>
+
+                <div class="track-location-row">
+                  <i class="fa-solid fa-location-dot"></i>
+
+                  <p>
+                    Main Street, Near House No. 45,<br />
+                    Sayaji Garden, Vadodara, Gujarat 390001
+                  </p>
+                </div>
+
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Sayaji+Garden,+Vadodara,+Gujarat"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="civicai-secondary-button track-map-button"
+                >
+                  View on Map
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         INFORMATION CARDS
+    ====================================================== -->
+
+      <section class="civicai-track-info-section">
+        <div class="civicai-section-container">
+          <div class="civicai-track-info-grid">
+            <!-- Assigned Team -->
+
+            <article class="track-info-card">
+              <div class="track-info-title">
+                <span class="info-title-icon purple">
+                  <i class="fa-solid fa-users"></i>
+                </span>
+
+                <h2>Assigned Team</h2>
+              </div>
+
+              <div class="track-officer">
+                <img src="assets/img.jpg" alt="Assigned officer" />
+
+                <div>
+                  <strong>Amit Patel</strong>
+                  <span>Field Officer</span>
+                </div>
+              </div>
+
+              <a href="tel:+919876543210" class="track-phone">
+                <i class="fa-solid fa-phone"></i>
+                +91 98765 43210
+              </a>
+
+              <div class="track-team-members">
+                <strong>Team Members</strong>
+
+                <div class="team-avatar-stack">
+                  <img src="assets/img.jpg" alt="Team member" />
+                  <img src="assets/img.jpg" alt="Team member" />
+                  <img src="assets/img.jpg" alt="Team member" />
+
+                  <span>+2</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Department -->
+
+            <article class="track-info-card">
+              <div class="track-info-title">
+                <span class="info-title-icon blue">
+                  <i class="fa-solid fa-building"></i>
+                </span>
+
+                <h2>Department</h2>
+              </div>
+
+              <div class="department-icon">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+
+              <h3>Public Works Department</h3>
+
+              <p>Ward 23, Vadodara Municipal Corporation</p>
+
+              <a
+                href="contact.html"
+                class="civicai-secondary-button track-department-button"
+              >
+                Contact Department
+              </a>
+            </article>
+
+            <!-- Resolution -->
+
+            <article class="track-info-card">
+              <div class="track-info-title">
+                <span class="info-title-icon cyan">
+                  <i class="fa-regular fa-clock"></i>
+                </span>
+
+                <h2>Estimated Resolution</h2>
+              </div>
+
+              <div class="resolution-icon">
+                <i class="fa-regular fa-clock"></i>
+              </div>
+
+              <strong class="resolution-time"> 3 - 5 Days </strong>
+
+              <span class="resolution-date"> by Jun 05, 2024 </span>
+
+              <div class="resolution-note">
+                We are working to resolve this as early as possible.
+              </div>
+            </article>
+
+            <!-- Priority -->
+
+            <article class="track-info-card priority-card">
+              <div class="track-info-title">
+                <span class="info-title-icon purple">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </span>
+
+                <h2>Priority Level</h2>
+              </div>
+
+              <div class="priority-icon">
+                <i class="fa-solid fa-exclamation"></i>
+              </div>
+
+              <strong class="priority-text"> High Priority </strong>
+
+              <p>
+                This complaint is marked as high priority and is being
+                fast-tracked.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         LATEST UPDATES
+         CSS ONLY — DETAILS/SUMMARY
+    ====================================================== -->
+
+      <section class="civicai-track-updates-section">
+        <div class="civicai-section-container">
+          <details class="civicai-track-updates-card" open>
+            <summary>
+              <span> Latest Updates </span>
+
+              <i class="fa-solid fa-chevron-down"></i>
+            </summary>
+
+            <div class="track-updates-list">
+              <!-- Update 1 -->
+
+              <article class="track-update-item">
+                <span class="update-icon">
+                  <i class="fa-regular fa-clipboard"></i>
+                </span>
+
+                <div>
+                  <h3>Site Inspection Completed</h3>
+
+                  <p>
+                    The field officer has inspected the site. The pothole is
+                    confirmed and added to the repair list.
+                  </p>
+
+                  <time> Jun 02, 2024&nbsp; • &nbsp;11:40 AM </time>
+                </div>
+              </article>
+
+              <!-- Update 2 -->
+
+              <article class="track-update-item">
+                <span class="update-icon">
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                </span>
+
+                <div>
+                  <h3>Repair Material Arranged</h3>
+
+                  <p>
+                    Required materials have been arranged. Repair work will
+                    begin shortly.
+                  </p>
+
+                  <time> Jun 02, 2024&nbsp; • &nbsp;11:45 AM </time>
+                </div>
+              </article>
+
+              <!-- Additional updates -->
+
+              <article class="track-update-item">
+                <span class="update-icon">
+                  <i class="fa-solid fa-user-check"></i>
+                </span>
+
+                <div>
+                  <h3>Officer Assigned</h3>
+
+                  <p>
+                    A field officer has been assigned to inspect and coordinate
+                    the repair work.
+                  </p>
+
+                  <time> Jun 01, 2024&nbsp; • &nbsp;09:15 AM </time>
+                </div>
+              </article>
+
+              <article class="track-update-item">
+                <span class="update-icon">
+                  <i class="fa-solid fa-file-circle-check"></i>
+                </span>
+
+                <div>
+                  <h3>Complaint Verified</h3>
+
+                  <p>
+                    Complaint details and submitted information were reviewed
+                    successfully.
+                  </p>
+
+                  <time> May 31, 2024&nbsp; • &nbsp;10:42 AM </time>
+                </div>
+              </article>
+            </div>
+
+            <div class="track-updates-footer">
+              <span> 4 latest updates </span>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         FEEDBACK CTA
+    ====================================================== -->
+
+      <section class="civicai-track-feedback-section">
+        <div class="civicai-section-container">
+          <div class="civicai-track-feedback">
+            <div class="track-feedback-image">
+              <img src="assets/img.jpg" alt="CivicAI feedback assistant" />
+            </div>
+
+            <div class="track-feedback-copy">
+              <h2>How would you rate your experience so far?</h2>
+
+              <p>Your feedback helps us improve our services.</p>
+            </div>
+
+            <div class="track-rating">
+              <a href="#" aria-label="Rate 1 star">
+                <i class="fa-regular fa-star"></i>
+              </a>
+
+              <a href="#" aria-label="Rate 2 stars">
+                <i class="fa-regular fa-star"></i>
+              </a>
+
+              <a href="#" aria-label="Rate 3 stars">
+                <i class="fa-regular fa-star"></i>
+              </a>
+
+              <a href="#" aria-label="Rate 4 stars">
+                <i class="fa-regular fa-star"></i>
+              </a>
+
+              <a href="#" aria-label="Rate 5 stars">
+                <i class="fa-regular fa-star"></i>
+              </a>
+
+              <small> Tap to rate </small>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- =====================================================
+         FOOTER
+         Existing footer.html is used separately.
+    ====================================================== -->
+
+    <!-- footer.html -->
+  </body>
+</html>

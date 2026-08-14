@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Notifications | CivicAI</title>
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet" />
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+        <!-- Global CSS -->
+        <link rel="stylesheet" href="./css/global.css" />
+
+        <!-- Notifications CSS -->
+        <link rel="stylesheet" href="./css/notifications.css" />
+    </head>
+
+    <body>
+        <!-- =====================================================
+         HEADER
+         Use your existing header.html here.
+         ===================================================== -->
+
+        <!-- HEADER: ./components/header.html -->
+
+        <main class="civicai-notification-page">
+            <!-- =====================================================
+             PAGE HERO
+             ===================================================== -->
+
+            <section class="civicai-notification-hero">
+                <div class="civicai-section-container">
+                    <div class="civicai-notification-hero-content">
+                        <div class="civicai-notification-title-area">
+                            <h1>
+                                Notifications
+                                <i class="fa-regular fa-bell"></i>
+                            </h1>
+
+                            <p>Stay updated with the latest alerts and
+                                activities.</p>
+                        </div>
+
+                        <div class="civicai-notification-skyline">
+                            <div class="civicai-notification-sun"></div>
+                        </div>
+
+                        <a href="./ai-assistant.html"
+                            class="civicai-notification-help">
+                            <span class="civicai-notification-help-icon">
+                                <i class="fa-solid fa-message"></i>
+                            </span>
+
+                            <span>
+                                <strong>Need Help?</strong>
+                                <small>Chat with AI Assistant</small>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================================
+             NOTIFICATION TABS
+             ===================================================== -->
+
+            <section class="civicai-notification-tabs-section">
+                <div class="civicai-section-container">
+                    <div class="civicai-notification-tabs">
+                        <a
+                            href="#all-notifications"
+                            class="civicai-notification-tab active">
+                            <span>All</span>
+                            <strong>24</strong>
+                        </a>
+
+                        <a href="#unread-notifications"
+                            class="civicai-notification-tab">
+                            <span>Unread</span>
+                            <strong>3</strong>
+                        </a>
+
+                        <a href="#updates" class="civicai-notification-tab">
+                            <span>Updates</span>
+                            <strong>8</strong>
+                        </a>
+
+                        <a href="#reminders" class="civicai-notification-tab">
+                            <span>Reminders</span>
+                            <strong>5</strong>
+                        </a>
+
+                        <a href="#announcements"
+                            class="civicai-notification-tab">
+                            <span>Announcements</span>
+                            <strong>6</strong>
+                        </a>
+
+                        <button type="button" class="civicai-mark-all-read">
+                            <i class="fa-solid fa-check-double"></i>
+                            Mark all as read
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================================
+             MAIN NOTIFICATION AREA
+             ===================================================== -->
+
+            <section class="civicai-notification-main">
+                <div class="civicai-section-container">
+                    <div class="civicai-notification-layout">
+                        <!-- =================================================
+                         LEFT COLUMN
+                         ================================================= -->
+
+                        <div class="civicai-notification-left">
+                            <!-- =============================================
+                             FILTER PANEL
+                             ============================================= -->
+
+                            <div class="civicai-notification-filter-panel">
+                                <div class="civicai-notification-filter-search">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                                    <input
+                                        type="search"
+                                        placeholder="Search notifications..."
+                                        aria-label="Search notifications" />
+                                </div>
+
+                                <div class="civicai-notification-filter-select">
+                                    <label for="notification-type"> Type
+                                    </label>
+
+                                    <select id="notification-type">
+                                        <option>All Types</option>
+                                        <option>Complaint Updates</option>
+                                        <option>Messages</option>
+                                        <option>Announcements</option>
+                                        <option>Reminders</option>
+                                        <option>Surveys</option>
+                                        <option>System Alerts</option>
+                                    </select>
+                                </div>
+
+                                <div class="civicai-notification-filter-select">
+                                    <label for="notification-status"> Status
+                                    </label>
+
+                                    <select id="notification-status">
+                                        <option>All</option>
+                                        <option>Unread</option>
+                                        <option>Read</option>
+                                    </select>
+                                </div>
+
+                                <button
+                                    type="button"
+                                    class="civicai-notification-filter-button">
+                                    <i class="fa-solid fa-filter"></i>
+                                    Apply
+                                </button>
+                            </div>
+
+                            <!-- =============================================
+                             ALL NOTIFICATIONS
+                             ============================================= -->
+
+                            <article
+                                class="civicai-notification-list-card"
+                                id="all-notifications">
+                                <div class="civicai-notification-list-header">
+                                    <div>
+                                        <h2>All Notifications</h2>
+
+                                        <span> 24 notifications </span>
+                                    </div>
+
+                                    <div class="civicai-notification-sort">
+                                        <label for="notification-sort"> Sort by:
+                                        </label>
+
+                                        <select id="notification-sort">
+                                            <option>Newest First</option>
+                                            <option>Oldest First</option>
+                                            <option>Unread First</option>
+                                        </select>
+
+                                        <button
+                                            type="button"
+                                            aria-label="More notification filters">
+                                            <i class="fa-solid fa-sliders"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Scrollable notification area -->
+
+                                <div class="civicai-notification-scroll-area">
+                                    <!-- Notification 01 -->
+
+                                    <div
+                                        class="civicai-notification-item unread">
+                                        <div
+                                            class="civicai-notification-icon purple">
+                                            <i
+                                                class="fa-regular fa-clipboard"></i>
+                                        </div>
+
+                                        <div
+                                            class="civicai-notification-content">
+                                            <div
+                                                class="civicai-notification-content-top">
+                                                <h3>Complaint Updated</h3>
+
+                                                <span
+                                                    class="civicai-notification-dot"></span>
+                                            </div>
+
+                                            <p>
+                                                Your complaint #C-2024-9812 has
+                                                been updated to In
+                                                Progress.
+                                            </p>
+                                        </div>
+
+                                        <time>
+                                            10:30 AM
+                                            <small>Today</small>
+                                        </time>
+                                    </div>
+
+                                    <!-- Notification 02 -->
+
+                                    <div
+                                        class="civicai-notification-item unread">
+                                        <div
+                                            class="civicai-notification-icon green">
+                                            <i
+                                                class="fa-solid fa-circle-check"></i>
+                                        </div>
+
+                                        <div
+                                            class="civicai-notification-content">
+                                            <div
+                                                class="civicai-notification-content-top">
+                                                <h3>Work In Progress</h3>
+
+                                                <span
+                                                    class="civicai-notification-dot"></span>
+                                            </div>
+
+                                            <p>
+                                                Work has started on your
+                                                complaint "Deep Pothole on Main
+                                                Street".
+                                            </p>
+                                        </div>
+
+                                        <time>
+                                            Yesterday
+                                            <small>11:45 AM</small>
+                                        </time>
+                                    </div>
+
+                                    <!-- Notification 03 -->
+
+                                    <div class="civicai-notification-item">
+                                        <div
+                                            class="civicai-notification-icon orange">
+                                            <i
+                                                class="fa-solid fa-user-check"></i>
+                                        </div>
+
+                                        <div
+                                            class="civicai-notification-content">
+                                            <h3>Officer Assigned</h3>
+
+                                            <p>
+                                                Amit Patel has been assigned to
+                                                your complaint
+                                                #C-2024-9812.
+                                            </p>
+                                        </div>
+
+                                        <time>
+                                            Jun 01, 2024
+                                            <small>09:15 AM</small>
+                                        </time>
+                                    </div>
+
+                                    <!-- Notification 04 -->
+
+                                    <div class="civicai-notification-item">
+                                        <div
+                                            class="civicai-notification-icon blue">
+                                            <i
+                                                class="fa-regular fa-message"></i>
+                                        </div>
+
+                                        <div
+                                            class="civicai-notification-content">
+                                            <h3>New Message</h3>
+
+                                            <p>
+                                                You have a new message from Amit
+                                                Patel regarding your
+                                                complaint.
+                                            </p>
+                                        </div>
+
+                                        <time>
+                                            May 31, 2024
+                                            <small>04:20 PM</small>
+                                        </time>
+                                    </div>
+
+                                    <!-- Notification 05 -->
+
+                                    <div class="civicai-notification-item">
+                                        <div
+                                            class="civicai-notification-icon green">
+                                            <i
+                                                class="fa-solid fa-circle-check"></i>
+                                        </div>
+
+                                        <div
+                                            class="civicai-notification-content">
+                                            <h3>Complaint Resolved</h3>
+
+                                            <p>
+                                                Your complaint #C-2024-9452 has
+                                                been resolved
+                                                successfully.
+                                            </p>
+                                        </div>
+
+                                        <time>
+                                            May 30, 2024
+                                            <small>02:10 PM</small>
+                                        </time>
+                                    </div>
+
+                                    <!-- Notification 06 -->
+
+                                    <div class="civicai-notification-item"
+                                        id="announcements">
+                                        <div
+                                            class="civicai-notification-icon purple">
+                                            <i class="fa-solid fa-bullhorn"></i>
+                                        </div>
+
+                                        <div
+                                            class="civicai-notification-content">
+                                            <h3>Public Announcement</h3>
+
+                                            <p>
+                                                Water supply maintenance
+                                                scheduled in Ward 23 on June 5,
+                                                2024.
+                                            </p>
+                                        </div>
+
+                                        <time>
+                                            May 29, 2024
+                                            <small>01:00 PM</small>
+                                        </time>
+                                    </div>
+
+                                    <!-- Notification 07 -->
+
+                                    <div class="civicai-notification-item"
+                                        id="reminders">
+                                        <div
+                                            class="civicai-notification-icon orange">
+                                            <i
+                                                class="fa-regular fa-calendar"></i>
+                                        </div>
+
+                                        <div
+                                            class="civicai-notification-content">
+                                            <h3>Reminder</h3>
+
+                                            <p>
+                                                Don't forget to rate your
+                                                experience for complaint
+                                                #C-2024-8102.
+                                            </p>
+                                        </div>
+
+                                        <time>
+                                            May 28, 2024
+                                            <small>10:30 AM</small>
+                                        </time>
+                                    </div>
+
+                                    <!-- Notification 08 -->
+
+                                    <div class="civicai-notification-item">
+                                        <div
+                                            class="civicai-notification-icon blue">
+                                            <i
+                                                class="fa-solid fa-square-poll-vertical"></i>
+                                        </div>
+
+                                        <div
+                                            class="civicai-notification-content">
+                                            <h3>Survey Available</h3>
+
+                                            <p>We value your feedback! Please
+                                                take a quick survey.</p>
+                                        </div>
+
+                                        <time>
+                                            May 27, 2024
+                                            <small>09:00 AM</small>
+                                        </time>
+                                    </div>
+
+                                    <!-- Notification 09 -->
+
+                                    <div class="civicai-notification-item">
+                                        <div
+                                            class="civicai-notification-icon green">
+                                            <i
+                                                class="fa-solid fa-trash-can"></i>
+                                        </div>
+
+                                        <div
+                                            class="civicai-notification-content">
+                                            <h3>Garbage Collection Update</h3>
+
+                                            <p>
+                                                Garbage collection in your area
+                                                will be delayed due to
+                                                holidays.
+                                            </p>
+                                        </div>
+
+                                        <time>
+                                            May 26, 2024
+                                            <small>08:45 AM</small>
+                                        </time>
+                                    </div>
+
+                                    <!-- Notification 10 -->
+
+                                    <div class="civicai-notification-item">
+                                        <div
+                                            class="civicai-notification-icon purple">
+                                            <i
+                                                class="fa-regular fa-face-smile"></i>
+                                        </div>
+
+                                        <div
+                                            class="civicai-notification-content">
+                                            <h3>Thank You!</h3>
+
+                                            <p>
+                                                Thank you for your reporting.
+                                                Together we build a better
+                                                community.
+                                            </p>
+                                        </div>
+
+                                        <time>
+                                            May 25, 2024
+                                            <small>06:30 PM</small>
+                                        </time>
+                                    </div>
+
+                                    <!-- Additional notifications -->
+
+                                    <div class="civicai-notification-item"
+                                        id="updates">
+                                        <div
+                                            class="civicai-notification-icon blue">
+                                            <i class="fa-solid fa-rotate"></i>
+                                        </div>
+
+                                        <div
+                                            class="civicai-notification-content">
+                                            <h3>Complaint Status Changed</h3>
+
+                                            <p>
+                                                The status of complaint
+                                                #C-2024-8762 has changed to
+                                                Under Review.
+                                            </p>
+                                        </div>
+
+                                        <time>
+                                            May 24, 2024
+                                            <small>04:10 PM</small>
+                                        </time>
+                                    </div>
+
+                                    <div
+                                        class="civicai-notification-item"
+                                        id="unread-notifications">
+                                        <div
+                                            class="civicai-notification-icon pink">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </div>
+
+                                        <div
+                                            class="civicai-notification-content">
+                                            <h3>Feedback Received</h3>
+
+                                            <p>
+                                                Your feedback has been received.
+                                                Thank you for helping
+                                                improve CivicAI.
+                                            </p>
+                                        </div>
+
+                                        <time>
+                                            May 23, 2024
+                                            <small>03:25 PM</small>
+                                        </time>
+                                    </div>
+                                </div>
+
+                                <button type="button"
+                                    class="civicai-load-notifications">
+                                    Load More Notifications
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                            </article>
+
+                            <!-- =============================================
+                             RECENT ACTIVITY OVERVIEW
+                             ============================================= -->
+
+                            <article class="civicai-notification-activity-card">
+
+                                <!-- Header -->
+                                <div
+                                    class="civicai-notification-activity-header">
+
+                                    <div
+                                        class="civicai-notification-activity-heading">
+
+                                        <h2>
+                                            Recent Activity Overview
+                                        </h2>
+
+                                        <p>
+                                            Notification activity over the last
+                                            7 days.
+                                        </p>
+
+                                    </div>
+
+                                    <div class="civicai-notification-total">
+
+                                        <strong>24</strong>
+
+                                        <span>
+                                            Total Notifications
+                                        </span>
+
+                                        <small>
+                                            <i class="fa-solid fa-arrow-up"></i>
+                                            18%
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- Chart -->
+                                <div class="civicai-notification-chart">
+
+                                    <!-- Horizontal grid -->
+                                    <div class="civicai-chart-grid">
+
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+
+                                    </div>
+
+                                    <!-- SVG curved graph -->
+                                    <svg
+                                        class="civicai-curved-chart"
+                                        viewBox="0 0 1000 190"
+                                        preserveAspectRatio="none"
+                                        aria-label="Recent notification activity graph"
+                                        role="img">
+
+                                        <!-- Smooth curved line -->
+
+                                        <path
+                                            class="civicai-chart-curve"
+                                            d="
+                    M 45 128
+
+                    C 110 116,
+                      145 105,
+                      190 96
+
+                    C 235 87,
+                      270 102,
+                      330 132
+
+                    C 390 162,
+                      420 140,
+                      475 112
+
+                    C 530 84,
+                      570 93,
+                      620 65
+
+                    C 670 37,
+                      720 48,
+                      760 82
+
+                    C 800 116,
+                      850 105,
+                      955 55
+                "></path>
+
+                                        <!-- Point 1 -->
+                                        <circle
+                                            class="civicai-chart-svg-point"
+                                            cx="45"
+                                            cy="128"
+                                            r="5"></circle>
+
+                                        <!-- Point 2 -->
+                                        <circle
+                                            class="civicai-chart-svg-point"
+                                            cx="190"
+                                            cy="96"
+                                            r="5"></circle>
+
+                                        <!-- Point 3 -->
+                                        <circle
+                                            class="civicai-chart-svg-point"
+                                            cx="330"
+                                            cy="132"
+                                            r="5"></circle>
+
+                                        <!-- Point 4 -->
+                                        <circle
+                                            class="civicai-chart-svg-point"
+                                            cx="475"
+                                            cy="112"
+                                            r="5"></circle>
+
+                                        <!-- Point 5 -->
+                                        <circle
+                                            class="civicai-chart-svg-point"
+                                            cx="620"
+                                            cy="65"
+                                            r="5"></circle>
+
+                                        <!-- Point 6 -->
+                                        <circle
+                                            class="civicai-chart-svg-point"
+                                            cx="760"
+                                            cy="82"
+                                            r="5"></circle>
+
+                                        <!-- Point 7 -->
+                                        <circle
+                                            class="civicai-chart-svg-point"
+                                            cx="955"
+                                            cy="55"
+                                            r="5"></circle>
+
+                                    </svg>
+
+                                    <!-- Date labels -->
+
+                                    <div class="civicai-chart-labels">
+
+                                        <span>May 25</span>
+
+                                        <span>May 26</span>
+
+                                        <span>May 27</span>
+
+                                        <span>May 28</span>
+
+                                        <span>May 29</span>
+
+                                        <span>May 30</span>
+
+                                        <span>Jun 01</span>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+                        </div>
+
+                        <!-- =================================================
+                         RIGHT COLUMN
+                         ================================================= -->
+
+                        <aside class="civicai-notification-sidebar">
+                            <!-- =============================================
+                             NOTIFICATION SUMMARY
+                             ============================================= -->
+
+                            <article class="civicai-notification-side-card">
+                                <h2>Notification Summary</h2>
+
+                                <div class="civicai-notification-summary-list">
+                                    <div>
+                                        <span class="summary-icon blue">
+                                            <i
+                                                class="fa-regular fa-file-lines"></i>
+                                        </span>
+
+                                        <span>Total Notifications</span>
+
+                                        <strong>24</strong>
+                                    </div>
+
+                                    <div>
+                                        <span class="summary-icon pink">
+                                            <i class="fa-regular fa-bell"></i>
+                                        </span>
+
+                                        <span>Unread</span>
+
+                                        <strong>3</strong>
+                                    </div>
+
+                                    <div>
+                                        <span class="summary-icon green">
+                                            <i
+                                                class="fa-regular fa-calendar"></i>
+                                        </span>
+
+                                        <span>This Week</span>
+
+                                        <strong>12</strong>
+                                    </div>
+
+                                    <div>
+                                        <span class="summary-icon purple">
+                                            <i
+                                                class="fa-regular fa-calendar-check"></i>
+                                        </span>
+
+                                        <span>This Month</span>
+
+                                        <strong>24</strong>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- =============================================
+                             NOTIFICATION PREFERENCES
+                             ============================================= -->
+
+                            <article class="civicai-notification-side-card">
+                                <h2>Notification Preferences</h2>
+
+                                <p class="civicai-preference-description">
+                                    Choose what notifications you want to
+                                    receive.
+                                </p>
+
+                                <div class="civicai-preference-list">
+                                    <label class="civicai-preference-row">
+                                        <span class="preference-icon purple">
+                                            <i
+                                                class="fa-regular fa-clipboard"></i>
+                                        </span>
+
+                                        <span class="preference-copy">
+                                            <strong>Complaint Updates</strong>
+                                            <small>Updates about your
+                                                complaints</small>
+                                        </span>
+
+                                        <input type="checkbox" checked />
+
+                                        <span class="civicai-toggle"></span>
+                                    </label>
+
+                                    <label class="civicai-preference-row">
+                                        <span class="preference-icon green">
+                                            <i
+                                                class="fa-regular fa-message"></i>
+                                        </span>
+
+                                        <span class="preference-copy">
+                                            <strong>Messages</strong>
+                                            <small>Messages from
+                                                officers</small>
+                                        </span>
+
+                                        <input type="checkbox" checked />
+
+                                        <span class="civicai-toggle"></span>
+                                    </label>
+
+                                    <label class="civicai-preference-row">
+                                        <span class="preference-icon blue">
+                                            <i class="fa-solid fa-bullhorn"></i>
+                                        </span>
+
+                                        <span class="preference-copy">
+                                            <strong>Announcements</strong>
+                                            <small>Important public
+                                                announcements</small>
+                                        </span>
+
+                                        <input type="checkbox" checked />
+
+                                        <span class="civicai-toggle"></span>
+                                    </label>
+
+                                    <label class="civicai-preference-row">
+                                        <span class="preference-icon orange">
+                                            <i
+                                                class="fa-regular fa-calendar"></i>
+                                        </span>
+
+                                        <span class="preference-copy">
+                                            <strong>Reminders</strong>
+                                            <small>Reminders and
+                                                follow-ups</small>
+                                        </span>
+
+                                        <input type="checkbox" checked />
+
+                                        <span class="civicai-toggle"></span>
+                                    </label>
+
+                                    <label class="civicai-preference-row">
+                                        <span class="preference-icon purple">
+                                            <i class="fa-regular fa-star"></i>
+                                        </span>
+
+                                        <span class="preference-copy">
+                                            <strong>Surveys & Feedback</strong>
+                                            <small>Surveys and feedback
+                                                requests</small>
+                                        </span>
+
+                                        <input type="checkbox" />
+
+                                        <span class="civicai-toggle"></span>
+                                    </label>
+
+                                    <label class="civicai-preference-row">
+                                        <span class="preference-icon pink">
+                                            <i class="fa-regular fa-bell"></i>
+                                        </span>
+
+                                        <span class="preference-copy">
+                                            <strong>System Alerts</strong>
+                                            <small>System updates and
+                                                alerts</small>
+                                        </span>
+
+                                        <input type="checkbox" checked />
+
+                                        <span class="civicai-toggle"></span>
+                                    </label>
+                                </div>
+
+                                <button type="button"
+                                    class="civicai-save-preferences">
+                                    Save Preferences
+                                </button>
+                            </article>
+
+                            <!-- =============================================
+                             PUSH NOTIFICATION
+                             ============================================= -->
+
+                            <article
+                                class="civicai-notification-side-card civicai-push-card">
+                                <h2>Stay Connected</h2>
+
+                                <p>
+                                    Enable push notifications to get instant
+                                    updates on your
+                                    device.
+                                </p>
+
+                                <button type="button"
+                                    class="civicai-push-button">
+                                    <i class="fa-regular fa-bell"></i>
+                                    Enable Push Notifications
+                                </button>
+                            </article>
+
+                            <!-- =============================================
+                             NEVER MISS IMPORTANT UPDATES
+                             ============================================= -->
+
+                            <article class="civicai-notification-reminder-card">
+                                <div class="civicai-reminder-image">
+                                    <img
+                                        src="./assets/img.jpg"
+                                        alt="CivicAI notification assistant" />
+                                </div>
+
+                                <div class="civicai-reminder-content">
+                                    <h2>Never Miss Important Updates!</h2>
+
+                                    <p>
+                                        Turn on notifications and stay informed
+                                        about your
+                                        complaints.
+                                    </p>
+
+                                    <a href="./settings.html"
+                                        class="civicai-reminder-link">
+                                        Manage Notifications
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </article>
+
+                            <!-- =============================================
+                             EXTRA COMPACT CARD
+                             Prevents unnecessary empty space
+                             ============================================= -->
+
+                            <article class="civicai-notification-tips-card">
+                                <div class="civicai-tips-heading">
+                                    <span>
+                                        <i class="fa-solid fa-lightbulb"></i>
+                                    </span>
+
+                                    <div>
+                                        <h2>Notification Tips</h2>
+
+                                        <p>Keep your alerts useful.</p>
+                                    </div>
+                                </div>
+
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-check"></i>
+                                        Keep complaint updates enabled.
+                                    </li>
+
+                                    <li>
+                                        <i class="fa-solid fa-check"></i>
+                                        Enable reminders for pending actions.
+                                    </li>
+
+                                    <li>
+                                        <i class="fa-solid fa-check"></i>
+                                        Review notification preferences
+                                        regularly.
+                                    </li>
+                                </ul>
+                            </article>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================================
+             PRE-FOOTER CTA
+             ===================================================== -->
+
+            <section class="civicai-notification-cta">
+                <div class="civicai-section-container">
+                    <div class="civicai-notification-cta-inner">
+                        <div class="civicai-notification-cta-icon">
+                            <i class="fa-solid fa-bell"></i>
+                        </div>
+
+                        <div class="civicai-notification-cta-content">
+                            <h2>Get Real-time Alerts</h2>
+
+                            <p>
+                                Enable push notifications to receive instant
+                                updates about your
+                                complaints.
+                            </p>
+                        </div>
+
+                        <a href="./settings.html"
+                            class="civicai-primary-button">
+                            <i class="fa-regular fa-bell"></i>
+                            Enable Notifications
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- =====================================================
+         FOOTER
+         Use your existing footer.html here.
+         ===================================================== -->
+
+        <!-- FOOTER: ./components/footer.html -->
+    </body>
+</html>

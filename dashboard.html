@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta
+            name="description"
+            content="CivicAI citizen dashboard for managing complaints, tracking civic issues and receiving AI-powered community insights."
+        />
+
+        <title>CivicAI | Citizen Dashboard</title>
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+        <!-- Global -->
+        <link rel="stylesheet" href="../css/global.css" />
+
+        <!-- Header -->
+        <link rel="stylesheet" href="../css/header.css" />
+
+        <!-- Footer -->
+        <link rel="stylesheet" href="../css/footer.css" />
+
+        <!-- Dashboard -->
+        <link rel="stylesheet" href="../css/dashboard.css" />
+
+        <!-- Responsive -->
+        <link rel="stylesheet" href="../css/responsive.css" />
+    </head>
+
+    <body>
+        <!-- =====================================================
+         EXISTING HEADER
+         ===================================================== -->
+
+        <!--
+        Your existing header.html goes here.
+
+        Do NOT duplicate header markup in this page.
+    -->
+
+        <main class="civicai-dashboard-page">
+            <!-- =================================================
+             DASHBOARD INTRO
+             ================================================= -->
+
+            <section class="civicai-dashboard-intro">
+                <div class="civicai-dashboard-shell">
+                    <div class="civicai-dashboard-intro-content">
+                        <div class="civicai-dashboard-greeting-row">
+                            <h1>Good morning, Rakesh!</h1>
+
+                            <span class="civicai-dashboard-wave" aria-hidden="true"> 👋 </span>
+                        </div>
+
+                        <p>Here's what's happening in your community today.</p>
+                    </div>
+
+                    <button type="button" class="civicai-dashboard-period-button">
+                        <i class="fa-regular fa-calendar"></i>
+
+                        <span> This Month </span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </div>
+
+                <!-- Decorative city skyline -->
+
+                <div class="civicai-dashboard-skyline" aria-hidden="true">
+                    <span class="civicai-skyline-sun"></span>
+
+                    <span class="civicai-skyline-cloud civicai-skyline-cloud-one"></span>
+                    <span class="civicai-skyline-cloud civicai-skyline-cloud-two"></span>
+
+                    <div class="civicai-building civicai-building-a"></div>
+                    <div class="civicai-building civicai-building-b"></div>
+                    <div class="civicai-building civicai-building-c"></div>
+                    <div class="civicai-building civicai-building-d"></div>
+                    <div class="civicai-building civicai-building-e"></div>
+                    <div class="civicai-building civicai-building-f"></div>
+
+                    <span class="civicai-skyline-tree civicai-tree-one"></span>
+                    <span class="civicai-skyline-tree civicai-tree-two"></span>
+                    <span class="civicai-skyline-tree civicai-tree-three"></span>
+                </div>
+            </section>
+
+            <!-- =================================================
+             OVERVIEW CARDS
+             ================================================= -->
+
+            <section class="civicai-dashboard-overview" aria-label="Complaint overview">
+                <div class="civicai-dashboard-shell">
+                    <div class="civicai-dashboard-stat-grid">
+                        <!-- Total Complaints -->
+
+                        <article class="civicai-dashboard-stat-card">
+                            <div class="civicai-dashboard-stat-icon civicai-dashboard-stat-icon-purple">
+                                <i class="fa-regular fa-file-lines"></i>
+                            </div>
+
+                            <div class="civicai-dashboard-stat-body">
+                                <span class="civicai-dashboard-stat-label"> Total Complaints </span>
+
+                                <strong class="civicai-dashboard-stat-value"> 12 </strong>
+
+                                <span class="civicai-dashboard-stat-change civicai-stat-positive">
+                                    <i class="fa-solid fa-arrow-up"></i>
+
+                                    20% from last month
+                                </span>
+                            </div>
+                        </article>
+
+                        <!-- In Progress -->
+
+                        <article class="civicai-dashboard-stat-card">
+                            <div class="civicai-dashboard-stat-icon civicai-dashboard-stat-icon-orange">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+
+                            <div class="civicai-dashboard-stat-body">
+                                <span class="civicai-dashboard-stat-label"> In Progress </span>
+
+                                <strong class="civicai-dashboard-stat-value"> 4 </strong>
+
+                                <span class="civicai-dashboard-stat-change civicai-stat-negative">
+                                    <i class="fa-solid fa-arrow-down"></i>
+
+                                    11% from last month
+                                </span>
+                            </div>
+                        </article>
+
+                        <!-- Resolved -->
+
+                        <article class="civicai-dashboard-stat-card">
+                            <div class="civicai-dashboard-stat-icon civicai-dashboard-stat-icon-green">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </div>
+
+                            <div class="civicai-dashboard-stat-body">
+                                <span class="civicai-dashboard-stat-label"> Resolved </span>
+
+                                <strong class="civicai-dashboard-stat-value"> 7 </strong>
+
+                                <span class="civicai-dashboard-stat-change civicai-stat-positive">
+                                    <i class="fa-solid fa-arrow-up"></i>
+
+                                    16% from last month
+                                </span>
+                            </div>
+                        </article>
+
+                        <!-- Resolution Time -->
+
+                        <article class="civicai-dashboard-stat-card">
+                            <div class="civicai-dashboard-stat-icon civicai-dashboard-stat-icon-blue">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+
+                            <div class="civicai-dashboard-stat-body">
+                                <span class="civicai-dashboard-stat-label"> Avg. Resolution Time </span>
+
+                                <strong class="civicai-dashboard-stat-value">
+                                    4.2
+
+                                    <small> Days </small>
+                                </strong>
+
+                                <span class="civicai-dashboard-stat-change civicai-stat-positive">
+                                    <i class="fa-solid fa-arrow-down"></i>
+
+                                    0.6 days from last month
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =================================================
+             QUICK ACTIONS
+             ================================================= -->
+
+            <section class="civicai-dashboard-quick-section">
+                <div class="civicai-dashboard-shell">
+                    <h2 class="civicai-dashboard-section-title">Quick Actions</h2>
+
+                    <div class="civicai-dashboard-action-grid">
+                        <a href="new-complaint.html" class="civicai-dashboard-action-card">
+                            <span class="civicai-dashboard-action-icon civicai-action-purple">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </span>
+
+                            <span class="civicai-dashboard-action-content">
+                                <strong> Raise a Complaint </strong>
+
+                                <small> Report a new issue </small>
+                            </span>
+                        </a>
+
+                        <a href="complaint-tracking.html" class="civicai-dashboard-action-card">
+                            <span class="civicai-dashboard-action-icon civicai-action-blue">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+
+                            <span class="civicai-dashboard-action-content">
+                                <strong> Track Complaint </strong>
+
+                                <small> Check real-time status </small>
+                            </span>
+                        </a>
+
+                        <a href="ai-assistant.html" class="civicai-dashboard-action-card">
+                            <span class="civicai-dashboard-action-icon civicai-action-green">
+                                <i class="fa-solid fa-robot"></i>
+                            </span>
+
+                            <span class="civicai-dashboard-action-content">
+                                <strong> AI Assistant </strong>
+
+                                <small> Get instant help </small>
+                            </span>
+                        </a>
+
+                        <a href="nearby-issues.html" class="civicai-dashboard-action-card">
+                            <span class="civicai-dashboard-action-icon civicai-action-pink">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </span>
+
+                            <span class="civicai-dashboard-action-content">
+                                <strong> Nearby Issues </strong>
+
+                                <small> See issues in your area </small>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =================================================
+             AI INSIGHT
+             ================================================= -->
+
+            <section class="civicai-dashboard-ai-section">
+                <div class="civicai-dashboard-shell">
+                    <article class="civicai-dashboard-ai-banner">
+                        <button type="button" class="civicai-dashboard-ai-close" aria-label="Close insight">×</button>
+
+                        <div class="civicai-dashboard-ai-copy">
+                            <div class="civicai-dashboard-ai-heading">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                                <span> AI Insight </span>
+                            </div>
+
+                            <p>There has been a 15% increase in pothole-related complaints in your area this month.</p>
+
+                            <small> Would you like to report a similar issue? </small>
+                        </div>
+
+                        <div class="civicai-dashboard-ai-visual">
+                            <div class="civicai-ai-chart">
+                                <span style="height: 18%"></span>
+                                <span style="height: 31%"></span>
+                                <span style="height: 23%"></span>
+                                <span style="height: 47%"></span>
+                                <span style="height: 61%"></span>
+
+                                <svg viewBox="0 0 220 90" preserveAspectRatio="none" aria-hidden="true">
+                                    <polyline points="5,74 45,60 82,68 122,40 160,51 205,10" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <a href="new-complaint.html" class="civicai-dashboard-ai-button"> Report Now </a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- =================================================
+             MAIN ANALYTICS GRID
+             ================================================= -->
+
+            <section class="civicai-dashboard-content-section">
+                <div class="civicai-dashboard-shell">
+                    <div class="civicai-dashboard-main-grid">
+                        <!-- =====================================
+                         RECENT COMPLAINTS
+                         ===================================== -->
+
+                        <article class="civicai-dashboard-panel civicai-recent-complaints">
+                            <div class="civicai-dashboard-panel-header">
+                                <h2>Recent Complaints</h2>
+
+                                <a href="complaint-history.html"> View All </a>
+                            </div>
+
+                            <div class="civicai-dashboard-complaint-list">
+                                <a href="complaint-details.html" class="civicai-dashboard-complaint-row">
+                                    <span class="civicai-complaint-icon civicai-complaint-road">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+
+                                    <span class="civicai-complaint-information">
+                                        <small> #C-8492 </small>
+
+                                        <strong> Severe Pothole on Main St. </strong>
+
+                                        <span>
+                                            Oct 24, 2024
+                                            <b>•</b>
+                                            Public Works
+                                        </span>
+                                    </span>
+
+                                    <span class="civicai-complaint-status civicai-status-progress"> In Progress </span>
+
+                                    <i class="fa-solid fa-chevron-right civicai-complaint-arrow"></i>
+                                </a>
+
+                                <a href="complaint-details.html" class="civicai-dashboard-complaint-row">
+                                    <span class="civicai-complaint-icon civicai-complaint-light">
+                                        <i class="fa-regular fa-lightbulb"></i>
+                                    </span>
+
+                                    <span class="civicai-complaint-information">
+                                        <small> #C-8511 </small>
+
+                                        <strong> Streetlight Outage </strong>
+
+                                        <span>
+                                            Oct 20, 2024
+                                            <b>•</b>
+                                            Electricity Department
+                                        </span>
+                                    </span>
+
+                                    <span class="civicai-complaint-status civicai-status-pending">
+                                        Pending Review
+                                    </span>
+
+                                    <i class="fa-solid fa-chevron-right civicai-complaint-arrow"></i>
+                                </a>
+
+                                <a href="complaint-details.html" class="civicai-dashboard-complaint-row">
+                                    <span class="civicai-complaint-icon civicai-complaint-trash">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </span>
+
+                                    <span class="civicai-complaint-information">
+                                        <small> #C-8102 </small>
+
+                                        <strong> Missed Waste Collection </strong>
+
+                                        <span>
+                                            Sep 14, 2024
+                                            <b>•</b>
+                                            Sanitation Department
+                                        </span>
+                                    </span>
+
+                                    <span class="civicai-complaint-status civicai-status-resolved"> Resolved </span>
+
+                                    <i class="fa-solid fa-chevron-right civicai-complaint-arrow"></i>
+                                </a>
+
+                                <a href="complaint-details.html" class="civicai-dashboard-complaint-row">
+                                    <span class="civicai-complaint-icon civicai-complaint-water">
+                                        <i class="fa-solid fa-droplet"></i>
+                                    </span>
+
+                                    <span class="civicai-complaint-information">
+                                        <small> #C-7965 </small>
+
+                                        <strong> Water Leakage on 5th Ave </strong>
+
+                                        <span>
+                                            Sep 05, 2024
+                                            <b>•</b>
+                                            Water Department
+                                        </span>
+                                    </span>
+
+                                    <span class="civicai-complaint-status civicai-status-resolved"> Resolved </span>
+
+                                    <i class="fa-solid fa-chevron-right civicai-complaint-arrow"></i>
+                                </a>
+                            </div>
+
+                            <a href="complaint-history.html" class="civicai-dashboard-panel-footer-link">
+                                View All Complaints
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </article>
+
+                        <!-- =====================================
+                         STATUS OVERVIEW
+                         ===================================== -->
+
+                        <article class="civicai-dashboard-panel civicai-status-overview">
+                            <div class="civicai-dashboard-panel-header">
+                                <h2>Complaint Status Overview</h2>
+                            </div>
+
+                            <div class="civicai-status-overview-body">
+                                <div class="civicai-dashboard-donut">
+                                    <div class="civicai-dashboard-donut-inner">
+                                        <strong> 12 </strong>
+
+                                        <span> Total </span>
+                                    </div>
+                                </div>
+
+                                <div class="civicai-status-legend">
+                                    <div>
+                                        <span class="civicai-legend-dot civicai-legend-blue"></span>
+
+                                        <span> In Progress </span>
+
+                                        <strong> 4 <small>(33.3%)</small> </strong>
+                                    </div>
+
+                                    <div>
+                                        <span class="civicai-legend-dot civicai-legend-orange"></span>
+
+                                        <span> Pending Review </span>
+
+                                        <strong> 2 <small>(16.7%)</small> </strong>
+                                    </div>
+
+                                    <div>
+                                        <span class="civicai-legend-dot civicai-legend-green"></span>
+
+                                        <span> Resolved </span>
+
+                                        <strong> 7 <small>(58.3%)</small> </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- =====================================
+                         TOP CATEGORIES
+                         ===================================== -->
+
+                        <article class="civicai-dashboard-panel civicai-category-panel">
+                            <div class="civicai-dashboard-panel-header">
+                                <h2>Top Complaint Categories</h2>
+
+                                <a href="complaint-history.html"> View All </a>
+                            </div>
+
+                            <div class="civicai-category-list">
+                                <div class="civicai-category-row">
+                                    <span class="civicai-category-icon civicai-category-purple">
+                                        <i class="fa-solid fa-road"></i>
+                                    </span>
+
+                                    <span class="civicai-category-name"> Road & Infrastructure </span>
+
+                                    <span class="civicai-category-progress">
+                                        <i style="width: 82%"></i>
+                                    </span>
+
+                                    <strong> 5 </strong>
+                                </div>
+
+                                <div class="civicai-category-row">
+                                    <span class="civicai-category-icon civicai-category-orange">
+                                        <i class="fa-solid fa-bolt"></i>
+                                    </span>
+
+                                    <span class="civicai-category-name"> Electricity </span>
+
+                                    <span class="civicai-category-progress">
+                                        <i style="width: 55%"></i>
+                                    </span>
+
+                                    <strong> 3 </strong>
+                                </div>
+
+                                <div class="civicai-category-row">
+                                    <span class="civicai-category-icon civicai-category-green">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </span>
+
+                                    <span class="civicai-category-name"> Sanitation </span>
+
+                                    <span class="civicai-category-progress">
+                                        <i style="width: 38%"></i>
+                                    </span>
+
+                                    <strong> 2 </strong>
+                                </div>
+
+                                <div class="civicai-category-row">
+                                    <span class="civicai-category-icon civicai-category-blue">
+                                        <i class="fa-solid fa-droplet"></i>
+                                    </span>
+
+                                    <span class="civicai-category-name"> Water Supply </span>
+
+                                    <span class="civicai-category-progress">
+                                        <i style="width: 38%"></i>
+                                    </span>
+
+                                    <strong> 2 </strong>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- =====================================
+                         COMPLAINT TREND
+                         ===================================== -->
+
+                        <article class="civicai-dashboard-panel civicai-trend-panel">
+                            <div class="civicai-dashboard-panel-header">
+                                <h2>Complaint Trend</h2>
+
+                                <button type="button" class="civicai-mini-filter">
+                                    This Month
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                            </div>
+
+                            <div class="civicai-trend-chart">
+                                <div class="civicai-chart-y-axis">
+                                    <span>15</span>
+                                    <span>12</span>
+                                    <span>9</span>
+                                    <span>6</span>
+                                    <span>3</span>
+                                    <span>0</span>
+                                </div>
+
+                                <div class="civicai-line-chart">
+                                    <div class="civicai-chart-grid-lines">
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </div>
+
+                                    <svg
+                                        viewBox="0 0 620 210"
+                                        preserveAspectRatio="none"
+                                        aria-label="Complaint trend chart"
+                                    >
+                                        <defs>
+                                            <lineargradient id="civicaiTrendFill" x1="0" y1="0" x2="0" y2="1">
+                                                <stop offset="0%" stop-color="#6b5af0" stop-opacity=".18" />
+
+                                                <stop offset="100%" stop-color="#6b5af0" stop-opacity="0" />
+                                            </lineargradient>
+                                        </defs>
+
+                                        <polygon
+                                            class="civicai-chart-area"
+                                            points="
+                                            0,145
+                                            50,130
+                                            100,95
+                                            150,128
+                                            200,80
+                                            250,35
+                                            300,83
+                                            350,125
+                                            400,101
+                                            450,70
+                                            500,103
+                                            550,78
+                                            610,25
+                                            610,210
+                                            0,210
+                                        "
+                                        />
+
+                                        <polyline
+                                            class="civicai-chart-line"
+                                            points="
+                                            0,145
+                                            50,130
+                                            100,95
+                                            150,128
+                                            200,80
+                                            250,35
+                                            300,83
+                                            350,125
+                                            400,101
+                                            450,70
+                                            500,103
+                                            550,78
+                                            610,25
+                                        "
+                                        />
+
+                                        <g class="civicai-chart-points">
+                                            <circle cx="0" cy="145" r="5"></circle>
+                                            <circle cx="50" cy="130" r="5"></circle>
+                                            <circle cx="100" cy="95" r="5"></circle>
+                                            <circle cx="150" cy="128" r="5"></circle>
+                                            <circle cx="200" cy="80" r="5"></circle>
+                                            <circle cx="250" cy="35" r="5"></circle>
+                                            <circle cx="300" cy="83" r="5"></circle>
+                                            <circle cx="350" cy="125" r="5"></circle>
+                                            <circle cx="400" cy="101" r="5"></circle>
+                                            <circle cx="450" cy="70" r="5"></circle>
+                                            <circle cx="500" cy="103" r="5"></circle>
+                                            <circle cx="550" cy="78" r="5"></circle>
+                                            <circle cx="610" cy="25" r="5"></circle>
+                                        </g>
+                                    </svg>
+
+                                    <div class="civicai-chart-x-axis">
+                                        <span>1 May</span>
+                                        <span>6 May</span>
+                                        <span>11 May</span>
+                                        <span>16 May</span>
+                                        <span>21 May</span>
+                                        <span>26 May</span>
+                                        <span>31 May</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="civicai-chart-label" style="padding: 10px 0px 0px 0px">
+                                <span></span>
+
+                                Complaints
+                            </div>
+                        </article>
+
+                        <!-- =====================================
+                         RECENT NOTIFICATIONS
+                         ===================================== -->
+
+                        <article class="civicai-dashboard-panel civicai-notification-panel">
+                            <div class="civicai-dashboard-panel-header">
+                                <h2>Recent Notifications</h2>
+
+                                <a href="notifications.html"> View All </a>
+                            </div>
+
+                            <div class="civicai-dashboard-notification-list">
+                                <a href="notifications.html" class="civicai-dashboard-notification">
+                                    <span class="civicai-notification-icon civicai-notification-success">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </span>
+
+                                    <span>
+                                        <strong> Your complaint #C-8102 has been resolved successfully. </strong>
+
+                                        <small> 10 mins ago </small>
+                                    </span>
+                                </a>
+
+                                <a href="notifications.html" class="civicai-dashboard-notification">
+                                    <span class="civicai-notification-icon civicai-notification-info">
+                                        <i class="fa-solid fa-circle-info"></i>
+                                    </span>
+
+                                    <span>
+                                        <strong> Update on #C-8492: Assigned to field officer. </strong>
+
+                                        <small> 1 hour ago </small>
+                                    </span>
+                                </a>
+
+                                <a href="notifications.html" class="civicai-dashboard-notification">
+                                    <span class="civicai-notification-icon civicai-notification-purple">
+                                        <i class="fa-regular fa-message"></i>
+                                    </span>
+
+                                    <span>
+                                        <strong> Your feedback for #C-7965 has been received. Thank you! </strong>
+
+                                        <small> 3 hours ago </small>
+                                    </span>
+                                </a>
+
+                                <a href="notifications.html" class="civicai-dashboard-notification">
+                                    <span class="civicai-notification-icon civicai-notification-orange">
+                                        <i class="fa-solid fa-bell"></i>
+                                    </span>
+
+                                    <span>
+                                        <strong> New update in your area: Water supply maintenance on 5th Ave. </strong>
+
+                                        <small> 5 hours ago </small>
+                                    </span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- =====================================
+                         ISSUES NEAR YOU
+                         ===================================== -->
+
+                        <article class="civicai-dashboard-panel civicai-nearby-panel">
+                            <div class="civicai-dashboard-panel-header">
+                                <h2>Issues Near You</h2>
+
+                                <a href="nearby-issues.html">
+                                    View on Map
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+
+                            <div class="civicai-dashboard-map">
+                                <div class="civicai-map-road civicai-map-road-one"></div>
+                                <div class="civicai-map-road civicai-map-road-two"></div>
+                                <div class="civicai-map-road civicai-map-road-three"></div>
+                                <div class="civicai-map-road civicai-map-road-four"></div>
+                                <div class="civicai-map-road civicai-map-road-five"></div>
+
+                                <span class="civicai-map-area-label"> Your Area </span>
+
+                                <span class="civicai-map-marker civicai-marker-red">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </span>
+
+                                <span class="civicai-map-marker civicai-marker-orange">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </span>
+
+                                <span class="civicai-map-marker civicai-marker-blue">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </span>
+
+                                <span class="civicai-map-marker civicai-marker-green">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </span>
+
+                                <span class="civicai-map-user-location">
+                                    <span></span>
+                                </span>
+                            </div>
+
+                            <div class="civicai-map-filters">
+                                <button class="civicai-map-filter-active">All</button>
+
+                                <button>
+                                    <i class="fa-solid fa-road"></i>
+                                    Roads
+                                </button>
+
+                                <button>
+                                    <i class="fa-solid fa-bolt"></i>
+                                    Electricity
+                                </button>
+
+                                <button>
+                                    <i class="fa-solid fa-trash-can"></i>
+                                    Sanitation
+                                </button>
+
+                                <button>
+                                    <i class="fa-solid fa-droplet"></i>
+                                    Water
+                                </button>
+
+                                <button>
+                                    <i class="fa-solid fa-circle"></i>
+                                    Other
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- =====================================
+                         CIVIC UPDATE
+                         ===================================== -->
+
+                        <article class="civicai-dashboard-panel civicai-civic-update-panel">
+                            <div class="civicai-dashboard-panel-header">
+                                <h2>Civic Update</h2>
+                            </div>
+
+                            <div class="civicai-civic-update-body">
+                                <div class="civicai-civic-update-visual">
+                                    <span class="civicai-megaphone-circle">
+                                        <i class="fa-solid fa-bullhorn"></i>
+                                    </span>
+
+                                    <span class="civicai-update-message civicai-message-one">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </span>
+
+                                    <span class="civicai-update-message civicai-message-two">
+                                        <i class="fa-regular fa-face-smile"></i>
+                                    </span>
+                                </div>
+
+                                <div class="civicai-civic-update-copy">
+                                    <p>
+                                        Property tax deadline extended for Ward 23. Pay by May 31, 2024 to avoid late
+                                        fees.
+                                    </p>
+
+                                    <a href="news-updates.html">
+                                        Read More
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =================================================
+             FEEDBACK CTA
+             ================================================= -->
+
+            <section class="civicai-dashboard-feedback-section">
+                <div class="civicai-dashboard-shell">
+                    <article class="civicai-dashboard-feedback">
+                        <div class="civicai-feedback-illustration">
+                            <div class="civicai-feedback-clipboard">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <i class="fa-solid fa-pencil"></i>
+                        </div>
+
+                        <div class="civicai-feedback-copy">
+                            <h2>Your Feedback Matters!</h2>
+
+                            <p>Help us improve our services by sharing your experience.</p>
+
+                            <a href="feedback.html" class="civicai-feedback-button"> Give Feedback </a>
+                        </div>
+
+                        <div class="civicai-feedback-decoration">
+                            <i class="fa-regular fa-message"></i>
+                            <i class="fa-regular fa-face-smile"></i>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- =====================================================
+         EXISTING FOOTER
+         ===================================================== -->
+
+        <!--
+        Your existing footer.html goes here.
+
+        Do NOT duplicate footer markup in this page.
+    --></body>
+</html>
