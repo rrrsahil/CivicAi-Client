@@ -1,11 +1,12 @@
 /* =========================================================
    CIVICAI AUTH
    Compact Split Authentication Design
-========================================================= */
+   ========================================================= */
+
 
 /* =========================================================
    PAGE
-========================================================= */
+   ========================================================= */
 
 .auth-page {
   min-height: 100vh;
@@ -20,9 +21,10 @@
   background: #e9e9e9;
 }
 
+
 /* =========================================================
-   MAIN AUTH CONTAINER
-========================================================= */
+   PAGE BACKGROUND DECORATION
+   ========================================================= */
 
 .auth-page::before {
   content: "";
@@ -46,20 +48,20 @@
     );
 }
 
+
 /* =========================================================
    LEFT + RIGHT WRAPPER
-   Since HTML already has two sections,
-   auth-page itself becomes the main card.
-========================================================= */
+   ========================================================= */
 
 .auth-visual,
 .auth-form-side {
   min-height: 0;
 }
 
+
 /* =========================================================
    LEFT VISUAL PANEL
-========================================================= */
+   ========================================================= */
 
 .auth-visual {
   position: relative;
@@ -84,9 +86,10 @@
   border-radius: 22px 0 0 22px;
 }
 
+
 /* =========================================================
    LEFT CONTENT
-========================================================= */
+   ========================================================= */
 
 .auth-visual-content {
   position: absolute;
@@ -103,9 +106,10 @@
   display: none;
 }
 
+
 /* =========================================================
    CITY / ILLUSTRATION
-========================================================= */
+   ========================================================= */
 
 .auth-city {
   position: absolute;
@@ -130,6 +134,7 @@
   padding: 30px;
 }
 
+
 /* IMAGE */
 
 .auth-city img {
@@ -150,17 +155,19 @@
   display: block;
 }
 
+
 /* =========================================================
    DECORATIVE CLOUDS
-========================================================= */
+   ========================================================= */
 
 .auth-cloud {
   display: none;
 }
 
+
 /* =========================================================
    RIGHT FORM PANEL
-========================================================= */
+   ========================================================= */
 
 .auth-form-side {
   width: 50%;
@@ -173,7 +180,12 @@
 
   padding: 45px 48px;
 
-  background: linear-gradient(145deg, #101337 0%, #11143d 48%, #171044 100%);
+  background: linear-gradient(
+    145deg,
+    #101337 0%,
+    #11143d 48%,
+    #171044 100%
+  );
 
   border-radius: 0 22px 22px 0;
 
@@ -182,9 +194,10 @@
   overflow: hidden;
 }
 
+
 /* =========================================================
    DARK PANEL DECORATION
-========================================================= */
+   ========================================================= */
 
 .auth-form-side::before {
   content: "";
@@ -226,9 +239,10 @@
   pointer-events: none;
 }
 
+
 /* =========================================================
    AUTH CARD
-========================================================= */
+   ========================================================= */
 
 .auth-card {
   position: relative;
@@ -258,9 +272,10 @@
   box-shadow: none;
 }
 
+
 /* =========================================================
    CARD HEADER
-========================================================= */
+   ========================================================= */
 
 .auth-card-header {
   margin-bottom: 24px;
@@ -269,7 +284,7 @@
 .auth-card-header h2 {
   color: #ffffff;
 
-  font-size: 21px;
+  font-size: 26px;
 
   line-height: 1.3;
 
@@ -283,22 +298,24 @@
 
   color: rgba(255, 255, 255, 0.65);
 
-  font-size: 10px;
+  font-size: 14px;
 
   line-height: 1.65;
 }
 
+
 /* =========================================================
    FORM
-========================================================= */
+   ========================================================= */
 
 .auth-form {
   width: 100%;
 }
 
+
 /* =========================================================
    FORM GROUP
-========================================================= */
+   ========================================================= */
 
 .form-group {
   margin-bottom: 15px;
@@ -311,14 +328,15 @@
 
   color: rgba(255, 255, 255, 0.85);
 
-  font-size: 9px;
+  font-size: 14px;
 
   font-weight: 600;
 }
 
+
 /* =========================================================
    INPUT WRAPPER
-========================================================= */
+   ========================================================= */
 
 .input-wrapper {
   position: relative;
@@ -339,12 +357,13 @@
 
   color: rgba(255, 255, 255, 0.42);
 
-  font-size: 10px;
+  font-size: 14px;
 }
+
 
 /* =========================================================
    INPUT
-========================================================= */
+   ========================================================= */
 
 .input-wrapper input {
   width: 100%;
@@ -363,7 +382,7 @@
 
   background: rgba(255, 255, 255, 0.055);
 
-  font-size: 9px;
+  font-size: 14px;
 
   transition:
     border-color 0.2s ease,
@@ -373,6 +392,8 @@
 
 .input-wrapper input::placeholder {
   color: rgba(255, 255, 255, 0.36);
+
+  font-size: 14px;
 }
 
 .input-wrapper input:hover {
@@ -389,9 +410,10 @@
   box-shadow: 0 0 0 3px rgba(124, 88, 255, 0.14);
 }
 
+
 /* =========================================================
    PASSWORD ICON
-========================================================= */
+   ========================================================= */
 
 .password-icon {
   position: absolute;
@@ -400,14 +422,15 @@
 
   color: rgba(255, 255, 255, 0.4);
 
-  font-size: 9px;
+  font-size: 13px;
 
   cursor: default;
 }
 
+
 /* =========================================================
    FORM OPTIONS
-========================================================= */
+   ========================================================= */
 
 .form-options {
   display: flex;
@@ -430,7 +453,7 @@
 
   color: rgba(255, 255, 255, 0.58);
 
-  font-size: 7px;
+  font-size: 12px;
 
   cursor: pointer;
 }
@@ -445,7 +468,7 @@
 .form-options > a {
   color: #b18cff;
 
-  font-size: 7px;
+  font-size: 12px;
 
   font-weight: 600;
 
@@ -456,9 +479,10 @@
   color: #d0baff;
 }
 
+
 /* =========================================================
    PRIMARY BUTTON
-========================================================= */
+   ========================================================= */
 
 .auth-submit {
   width: 100%;
@@ -474,11 +498,15 @@
 
   color: #ffffff;
 
-  background: linear-gradient(90deg, #ec008c 0%, #f0009a 100%);
+  background: linear-gradient(
+    90deg,
+    #ec008c 0%,
+    #f0009a 100%
+  );
 
   box-shadow: 0 8px 20px rgba(236, 0, 140, 0.22);
 
-  font-size: 9px;
+  font-size: 14px;
 
   font-weight: 700;
 
@@ -502,9 +530,10 @@
   transform: translateY(0);
 }
 
+
 /* =========================================================
    DIVIDER
-========================================================= */
+   ========================================================= */
 
 .auth-divider {
   display: flex;
@@ -527,14 +556,15 @@
 .auth-divider small {
   color: rgba(255, 255, 255, 0.42);
 
-  font-size: 7px;
+  font-size: 11px;
 
   white-space: nowrap;
 }
 
+
 /* =========================================================
    SOCIAL BUTTONS
-========================================================= */
+   ========================================================= */
 
 .social-login {
   display: grid;
@@ -562,7 +592,7 @@
 
   background: rgba(255, 255, 255, 0.045);
 
-  font-size: 8px;
+  font-size: 13px;
 
   font-weight: 600;
 
@@ -588,9 +618,10 @@
   color: #ffffff;
 }
 
+
 /* =========================================================
    BOTTOM TEXT
-========================================================= */
+   ========================================================= */
 
 .auth-bottom-text {
   margin-top: 20px;
@@ -599,7 +630,7 @@
 
   color: rgba(255, 255, 255, 0.48);
 
-  font-size: 7px;
+  font-size: 12px;
 }
 
 .auth-bottom-text a {
@@ -616,9 +647,10 @@
   color: #ffffff;
 }
 
+
 /* =========================================================
    REGISTER
-========================================================= */
+   ========================================================= */
 
 .register-card {
   max-width: 350px;
@@ -627,7 +659,7 @@
 }
 
 .register-card .auth-card-header {
-  margin-bottom: 17px;
+  margin-bottom: 14px;
 }
 
 .register-card .form-group {
@@ -638,9 +670,10 @@
   margin-top: 3px;
 }
 
+
 /* =========================================================
    TERMS
-========================================================= */
+   ========================================================= */
 
 .terms-option {
   display: flex;
@@ -653,7 +686,7 @@
 
   color: rgba(255, 255, 255, 0.52);
 
-  font-size: 7px;
+  font-size: 12px;
 
   line-height: 1.55;
 
@@ -677,9 +710,10 @@
   font-weight: 600;
 }
 
+
 /* =========================================================
    FORGOT PASSWORD
-========================================================= */
+   ========================================================= */
 
 .forgot-card {
   max-width: 350px;
@@ -715,7 +749,7 @@
 
   background: rgba(124, 88, 255, 0.14);
 
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .alternative-box strong {
@@ -723,7 +757,7 @@
 
   color: #ffffff;
 
-  font-size: 8px;
+  font-size: 13px;
 }
 
 .alternative-box p {
@@ -731,7 +765,7 @@
 
   color: rgba(255, 255, 255, 0.48);
 
-  font-size: 7px;
+  font-size: 12px;
 
   line-height: 1.55;
 }
@@ -743,14 +777,15 @@
 
   color: #c29aff;
 
-  font-size: 7px;
+  font-size: 12px;
 
   font-weight: 700;
 }
 
+
 /* =========================================================
    RESET PASSWORD
-========================================================= */
+   ========================================================= */
 
 .reset-card {
   max-width: 350px;
@@ -770,7 +805,7 @@
 
   color: rgba(255, 255, 255, 0.42);
 
-  font-size: 6.5px;
+  font-size: 11px;
 }
 
 .strength-row strong {
@@ -803,9 +838,10 @@
   border-radius: inherit;
 }
 
+
 /* =========================================================
    PASSWORD RULES
-========================================================= */
+   ========================================================= */
 
 .password-rules {
   margin: 0 0 16px;
@@ -826,18 +862,19 @@
 
   color: rgba(255, 255, 255, 0.52);
 
-  font-size: 6.5px;
+  font-size: 11px;
 }
 
 .password-rules i {
   color: #4ade80;
 
-  font-size: 7px;
+  font-size: 11px;
 }
+
 
 /* =========================================================
    RESET NOTICE
-========================================================= */
+   ========================================================= */
 
 .reset-notice {
   margin-top: 14px;
@@ -858,7 +895,7 @@
 
   background: rgba(74, 222, 128, 0.055);
 
-  font-size: 7px;
+  font-size: 12px;
 
   line-height: 1.5;
 }
@@ -869,11 +906,13 @@
   color: #4ade80;
 }
 
+
 /* =========================================================
    LARGE DESKTOP
-========================================================= */
+   ========================================================= */
 
 @media (min-width: 1000px) {
+
   .auth-page {
     width: min(1000px, calc(100vw - 80px));
 
@@ -889,12 +928,11 @@
 
     box-shadow: 0 25px 70px rgba(15, 23, 42, 0.22);
 
-    position: relative;
-
     position: fixed;
 
     z-index: 2;
   }
+
 
   .auth-visual {
     min-height: 100%;
@@ -902,18 +940,46 @@
     height: 100%;
   }
 
+
   .auth-form-side {
     min-height: 100%;
 
     height: 100%;
+
+    /*
+      FIX:
+      Increased font sizes made the register form
+      taller than before. Reduced vertical padding
+      gives the form more usable vertical space.
+    */
+    padding: 20px 48px;
+  }
+
+
+  /*
+    Register-specific spacing
+  */
+
+  .register-card .auth-card-header {
+    margin-bottom: 14px;
+  }
+
+  .register-card .form-group {
+    margin-bottom: 10px;
+  }
+
+  .register-card .auth-submit {
+    margin-top: 3px;
   }
 }
 
+
 /* =========================================================
    MEDIUM DESKTOP
-========================================================= */
+   ========================================================= */
 
 @media (min-width: 701px) and (max-width: 999px) {
+
   .auth-page {
     width: min(900px, calc(100vw - 40px));
 
@@ -928,9 +994,11 @@
     box-shadow: 0 20px 55px rgba(15, 23, 42, 0.18);
   }
 
+
   .auth-visual {
     min-height: 550px;
   }
+
 
   .auth-form-side {
     min-height: 550px;
@@ -939,11 +1007,13 @@
   }
 }
 
+
 /* =========================================================
    TABLET
-========================================================= */
+   ========================================================= */
 
 @media (max-width: 700px) {
+
   .auth-page {
     width: calc(100% - 28px);
 
@@ -964,6 +1034,7 @@
     padding: 0;
   }
 
+
   /* LEFT */
 
   .auth-visual {
@@ -980,12 +1051,14 @@
     border: 0;
   }
 
+
   .auth-city {
     padding: 18px;
 
     width: 100%;
     height: 100%;
   }
+
 
   /* RIGHT */
 
@@ -999,6 +1072,7 @@
     border-radius: 0;
   }
 
+
   .auth-card {
     max-width: 390px;
 
@@ -1006,11 +1080,13 @@
   }
 }
 
+
 /* =========================================================
    SMALL MOBILE
-========================================================= */
+   ========================================================= */
 
 @media (max-width: 480px) {
+
   .auth-page {
     width: calc(100% - 20px);
 
@@ -1019,43 +1095,52 @@
     border-radius: 18px;
   }
 
+
   .auth-visual {
     min-height: 220px;
 
     height: 220px;
   }
 
+
   .auth-city {
     padding: 12px;
   }
+
 
   .auth-form-side {
     padding: 30px 19px 32px;
   }
 
+
   .auth-card {
     max-width: 100%;
   }
 
+
   .auth-card-header h2 {
-    font-size: 19px;
+    font-size: 23px;
   }
+
 
   .social-login {
     grid-template-columns: 1fr 1fr;
   }
 }
 
+
 /* =========================================================
    VERY SMALL MOBILE
-========================================================= */
+   ========================================================= */
 
 @media (max-width: 360px) {
+
   .auth-page {
     width: calc(100% - 14px);
 
     border-radius: 16px;
   }
+
 
   .auth-visual {
     min-height: 190px;
@@ -1063,22 +1148,26 @@
     height: 190px;
   }
 
+
   .auth-form-side {
     padding: 25px 15px 30px;
   }
 
+
   .auth-card-header h2 {
-    font-size: 17px;
+    font-size: 21px;
   }
+
 
   .social-login {
     grid-template-columns: 1fr;
   }
 }
 
+
 /* =========================================================
    FOCUS ACCESSIBILITY
-========================================================= */
+   ========================================================= */
 
 .auth-page input:focus-visible,
 .auth-page button:focus-visible,
@@ -1088,11 +1177,13 @@
   outline-offset: 3px;
 }
 
+
 /* =========================================================
    REDUCED MOTION
-========================================================= */
+   ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
+
   .auth-card,
   .auth-submit,
   .social-login button,
@@ -1101,11 +1192,13 @@
   }
 }
 
+
 /* =========================================================
    AUTH PAGE — DESKTOP CENTERING
-========================================================= */
+   ========================================================= */
 
 @media (min-width: 1000px) {
+
   .auth-page {
     position: fixed;
 
@@ -1116,4 +1209,245 @@
 
     transform: translate(-50%, -50%);
   }
+}
+/* =========================================================
+   REGISTER PAGE — FINAL BALANCED SPACING
+   ========================================================= */
+
+@media (min-width: 1000px) {
+
+    /* Right Register Panel */
+    .auth-form-side:has(.register-card) {
+        width: 50%;
+        height: 100%;
+        min-height: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /*
+         * Equal vertical spacing
+         * Equal horizontal spacing
+         */
+        padding: 28px 48px;
+
+        box-sizing: border-box;
+
+        /*
+         * No scrolling
+         */
+        overflow: hidden;
+    }
+
+
+    /* =====================================================
+       REGISTER CARD
+       ===================================================== */
+
+    .register-card {
+        width: 100%;
+        max-width: 350px;
+
+        margin: 0;
+
+        /*
+         * Keep content centered
+         */
+        transform: none;
+    }
+
+
+    /* =====================================================
+       HEADING
+       ===================================================== */
+
+    .register-card .auth-card-header {
+        margin-bottom: 12px;
+    }
+
+    .register-card .auth-card-header h2 {
+        margin: 0;
+
+        font-size: 25px;
+
+        line-height: 1.2;
+    }
+
+
+    /* =====================================================
+       FORM GROUPS
+       ===================================================== */
+
+    .register-card .form-group {
+        margin-bottom: 9px;
+    }
+
+    .register-card .form-group label {
+        display: block;
+
+        margin-bottom: 5px;
+
+        font-size: 14px;
+
+        line-height: 1.3;
+    }
+
+
+    /* =====================================================
+       INPUTS
+       ===================================================== */
+
+    .register-card .input-wrapper input {
+        width: 100%;
+
+        height: 38px;
+
+        font-size: 14px;
+    }
+
+    .register-card .input-wrapper input::placeholder {
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       TERMS
+       ===================================================== */
+
+    .register-card .terms-option {
+        margin-top: 5px;
+
+        margin-bottom: 11px;
+
+        font-size: 12px;
+
+        line-height: 1.4;
+    }
+
+
+    /* =====================================================
+       REGISTER BUTTON
+       ===================================================== */
+
+    .register-card .auth-submit {
+        width: 100%;
+
+        height: 39px;
+
+        margin-top: 0;
+    }
+
+
+    /* =====================================================
+       DIVIDER
+       ===================================================== */
+
+    .register-card .auth-divider {
+        margin: 13px 0 10px;
+    }
+
+
+    /* =====================================================
+       SOCIAL BUTTONS
+       ===================================================== */
+
+    .register-card .social-login {
+        gap: 10px;
+    }
+
+    .register-card .social-login button {
+        height: 36px;
+
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       ALREADY HAVE ACCOUNT
+       ===================================================== */
+
+    .register-card .auth-bottom-text {
+        margin-top: 10px;
+
+        font-size: 12px;
+
+        line-height: 1.4;
+
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   REGISTER — TABLET
+   ========================================================= */
+
+@media (min-width: 701px) and (max-width: 999px) {
+
+    .auth-form-side:has(.register-card) {
+        width: 100%;
+
+        height: auto;
+
+        min-height: 0;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        padding: 32px 35px;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+    .register-card {
+        width: 100%;
+
+        max-width: 350px;
+
+        margin: 0;
+    }
+}
+
+
+/* =========================================================
+   REGISTER — MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .auth-form-side:has(.register-card) {
+        width: 100%;
+
+        height: auto;
+
+        min-height: 0;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        padding: 30px 20px;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+    .register-card {
+        width: 100%;
+
+        max-width: 390px;
+
+        margin: 0;
+
+        transform: none;
+    }
 }

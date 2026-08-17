@@ -2326,3 +2326,293 @@
         transition: none;
     }
 }
+
+/* Dashboard card text - 14px */
+.civicai-dashboard-stat-label {
+    font-size: 14px;
+}
+
+.civicai-dashboard-stat-change {
+    font-size: 14px;
+}
+
+.civicai-dashboard-section-title {
+    font-size: 14px;
+}
+
+.civicai-dashboard-stat-label {
+    font-size: 16px;
+}
+/* =========================================================
+   QUICK ACTIONS - FONT SIZE
+   ========================================================= */
+
+.civicai-dashboard-action-content strong {
+    font-size: 14px;
+}
+
+.civicai-dashboard-action-content small {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   AI INSIGHT - FONT SIZE
+   ========================================================= */
+
+.civicai-dashboard-ai-heading {
+    font-size: 15px;
+}
+
+.civicai-dashboard-ai-copy p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.civicai-dashboard-ai-copy small {
+    font-size: 12px;
+}
+
+.civicai-dashboard-ai-button {
+    font-size: 13px;
+}
+
+/* =========================================================
+   RECENT COMPLAINTS
+   ========================================================= */
+
+.civicai-dashboard-panel-header h2 {
+    font-size: 16px;
+}
+
+.civicai-dashboard-panel-header a {
+    font-size: 12px;
+}
+
+.civicai-complaint-information small {
+    font-size: 10px;
+}
+
+.civicai-complaint-information strong {
+    font-size: 13px;
+}
+
+.civicai-complaint-information > span {
+    font-size: 10px;
+}
+
+.civicai-complaint-status {
+    font-size: 9px;
+}
+
+.civicai-complaint-arrow {
+    font-size: 12px;
+}
+
+.civicai-dashboard-panel-footer-link {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   COMPLAINT STATUS OVERVIEW
+   ========================================================= */
+
+.civicai-dashboard-donut-inner strong {
+    font-size: 24px;
+}
+
+.civicai-dashboard-donut-inner span {
+    font-size: 10px;
+}
+
+.civicai-status-legend > div {
+    font-size: 11px;
+}
+
+.civicai-status-legend strong {
+    font-size: 11px;
+}
+
+.civicai-status-legend small {
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   TOP COMPLAINT CATEGORIES
+   ========================================================= */
+
+.civicai-category-name {
+    font-size: 12px;
+}
+
+.civicai-category-row strong {
+    font-size: 12px;
+}
+
+.civicai-category-row {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .civicai-dashboard-panel-header h2 {
+        font-size: 15px;
+    }
+
+    .civicai-dashboard-panel-header a {
+        font-size: 11px;
+    }
+
+    .civicai-complaint-information strong {
+        font-size: 12px;
+    }
+
+    .civicai-complaint-information small,
+    .civicai-complaint-information > span {
+        font-size: 9px;
+    }
+
+    .civicai-category-name {
+        font-size: 11px;
+    }
+
+    .civicai-category-row strong {
+        font-size: 11px;
+    }
+}
+/* =========================================================
+   COMPLAINT TREND
+   ========================================================= */
+
+.civicai-mini-filter {
+    font-size: 11px;
+}
+
+.civicai-chart-y-axis {
+    font-size: 9px;
+}
+
+.civicai-chart-x-axis {
+    font-size: 9px;
+}
+
+.civicai-chart-label {
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   RECENT NOTIFICATIONS
+   ========================================================= */
+
+.civicai-dashboard-notification strong {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.civicai-dashboard-notification small {
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   ISSUES NEAR YOU
+   ========================================================= */
+
+.civicai-map-area-label {
+    font-size: 9px;
+}
+
+.civicai-map-filters button {
+    font-size: 10px;
+}
+
+.civicai-map-filters button i {
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   CIVIC UPDATE
+   ========================================================= */
+
+.civicai-civic-update-copy p {
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.civicai-civic-update-copy a {
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .civicai-mini-filter {
+        font-size: 10px;
+    }
+
+    .civicai-dashboard-notification strong {
+        font-size: 11px;
+    }
+
+    .civicai-dashboard-notification small {
+        font-size: 9px;
+    }
+
+    .civicai-map-filters button {
+        font-size: 9px;
+    }
+
+    .civicai-civic-update-copy p {
+        font-size: 11px;
+    }
+}
+/* =========================================================
+   FEEDBACK SECTION - FONT SIZE
+   ========================================================= */
+
+.civicai-feedback-copy h2 {
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.civicai-feedback-copy p {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.civicai-feedback-button {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .civicai-feedback-copy h2 {
+        font-size: 16px;
+    }
+
+    .civicai-feedback-copy p {
+        font-size: 12px;
+    }
+
+    .civicai-feedback-button {
+        font-size: 11px;
+    }
+}

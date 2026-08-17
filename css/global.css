@@ -84,6 +84,7 @@
   --civicai-transition: 0.25s ease;
 }
 
+
 /* =========================================================
    RESET
    ========================================================= */
@@ -96,14 +97,19 @@
   box-sizing: border-box;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
+
 
 body {
   min-height: 100vh;
 
   font-family: "Inter", sans-serif;
+
+  /* Updated for better readability */
+  font-size: 16px;
 
   background:
     radial-gradient(
@@ -125,6 +131,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+
 body,
 button,
 input,
@@ -133,15 +140,18 @@ select {
   font-family: inherit;
 }
 
+
 button,
 a {
   -webkit-tap-highlight-color: transparent;
 }
 
+
 a {
   color: inherit;
   text-decoration: none;
 }
+
 
 button {
   border: 0;
@@ -149,14 +159,17 @@ button {
   cursor: pointer;
 }
 
+
 img {
   max-width: 100%;
   display: block;
 }
 
+
 ul {
   list-style: none;
 }
+
 
 /* =========================================================
    COMMON CONTAINERS
@@ -168,6 +181,7 @@ ul {
   margin-inline: auto;
 }
 
+
 /* =========================================================
    COMMON SECTION HEADING
    ========================================================= */
@@ -177,6 +191,7 @@ ul {
   margin-bottom: 42px;
 }
 
+
 .civicai-section-eyebrow {
   display: block;
 
@@ -184,21 +199,26 @@ ul {
 
   color: var(--civicai-primary);
 
-  font-size: 12px;
+  /* Updated: 12px → 14px */
+  font-size: 14px;
+
   font-weight: 700;
 
   letter-spacing: 0.02em;
 }
 
+
 .civicai-section-heading h2 {
   color: var(--civicai-text-primary);
 
-  font-size: clamp(25px, 3vw, 34px);
+  /* Updated for better readability */
+  font-size: clamp(28px, 3vw, 38px);
 
   line-height: 1.2;
 
   font-weight: 750;
 }
+
 
 .civicai-section-heading h2 span {
   background: linear-gradient(
@@ -212,6 +232,7 @@ ul {
 
   -webkit-text-fill-color: transparent;
 }
+
 
 /* =========================================================
    COMMON BUTTONS
@@ -232,7 +253,9 @@ ul {
 
   border-radius: 9px;
 
-  font-size: 13px;
+  /* Updated: 13px → 15px */
+  font-size: 15px;
+
   font-weight: 650;
 
   transition:
@@ -240,6 +263,7 @@ ul {
     box-shadow var(--civicai-transition),
     background var(--civicai-transition);
 }
+
 
 .civicai-primary-button {
   color: #fff;
@@ -249,11 +273,13 @@ ul {
   box-shadow: 0 8px 18px rgba(81, 70, 229, 0.2);
 }
 
+
 .civicai-primary-button:hover {
   transform: translateY(-2px);
 
   box-shadow: 0 12px 26px rgba(81, 70, 229, 0.28);
 }
+
 
 .civicai-secondary-button {
   color: var(--civicai-text-primary);
@@ -267,6 +293,7 @@ ul {
   backdrop-filter: blur(12px);
 }
 
+
 .civicai-secondary-button:hover {
   transform: translateY(-2px);
 
@@ -274,6 +301,7 @@ ul {
 
   box-shadow: var(--civicai-shadow-sm);
 }
+
 
 /* =========================================================
    ACCESSIBILITY
@@ -283,6 +311,7 @@ ul {
   outline: 3px solid rgba(81, 70, 229, 0.22);
   outline-offset: 3px;
 }
+
 
 /* =========================================================
    SELECTION
