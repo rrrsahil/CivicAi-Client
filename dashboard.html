@@ -7,8 +7,7 @@
 
         <meta
             name="description"
-            content="CivicAI citizen dashboard for managing complaints, tracking civic issues and receiving AI-powered community insights."
-        />
+            content="CivicAI citizen dashboard for managing complaints, tracking civic issues and receiving AI-powered community insights." />
 
         <title>CivicAI | Citizen Dashboard</title>
 
@@ -19,11 +18,12 @@
 
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-            rel="stylesheet"
-        />
+            rel="stylesheet" />
 
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
         <!-- Global -->
         <link rel="stylesheet" href="../css/global.css" />
@@ -42,15 +42,158 @@
     </head>
 
     <body>
-        <!-- =====================================================
-         EXISTING HEADER
-         ===================================================== -->
+        <header class="civicai-main-header">
+            <div class="civicai-header-container">
+                <!-- BRAND -->
+                <a href="index.html" class="civicai-brand">
+                    <span class="civicai-brand-logo">
+                        <span class="civicai-brand-logo-shape"></span>
+                    </span>
 
-        <!--
-        Your existing header.html goes here.
+                    <span class="civicai-brand-content">
+                        <span class="civicai-brand-name"> CivicAI </span>
 
-        Do NOT duplicate header markup in this page.
-    -->
+                        <span class="civicai-brand-tagline">
+                            Your Voice. Our Responsibility.
+                        </span>
+                    </span>
+                </a>
+
+                <!-- NAVIGATION -->
+                <nav class="civicai-primary-navigation">
+                    <a
+                        href="index.html"
+                        class="civicai-navigation-link civicai-navigation-link-active">
+                        Home
+                    </a>
+
+                    <a href="dashboard.html" class="civicai-navigation-link">
+                        Dashboard
+                    </a>
+
+                    <a href="my-complaints.html"
+                        class="civicai-navigation-link">
+                        My Complaints
+                    </a>
+
+                    <a href="track-complaint.html"
+                        class="civicai-navigation-link">
+                        Track Complaint
+                    </a>
+
+                    <a href="ai-assistant.html" class="civicai-navigation-link">
+                        AI Assistant
+                    </a>
+                </nav>
+
+                <!-- HEADER ACTIONS -->
+                <div class="civicai-header-actions">
+                    <!-- Notifications -->
+                    <button
+                        type="button"
+                        class="civicai-notification-button"
+                        aria-label="Notifications"
+                        id="civicaiNotificationButton">
+                        <span class="civicai-notification-count"> 3 </span>
+
+                        <i class="fa-regular fa-bell"></i>
+                    </button>
+
+                    <!-- Profile -->
+                    <div class="civicai-profile-wrapper">
+                        <button
+                            type="button"
+                            class="civicai-profile-button"
+                            id="civicaiProfileButton"
+                            aria-expanded="false"
+                            aria-haspopup="true">
+                            <span class="civicai-profile-avatar"
+                                id="civicaiProfileAvatar">
+                                RS
+                            </span>
+
+                            <span class="civicai-profile-info">
+                                <span class="civicai-profile-name"
+                                    id="civicaiProfileName">
+                                    Rakesh Sharma
+                                </span>
+
+                                <span class="civicai-profile-location">
+                                    Vadodara, Gujarat
+                                </span>
+                            </span>
+
+                            <i
+                                class="fa-solid fa-chevron-down civicai-profile-arrow"></i>
+                        </button>
+
+                        <!-- PROFILE DROPDOWN -->
+                        <div class="civicai-profile-dropdown"
+                            id="civicaiProfileDropdown">
+                            <div class="civicai-profile-dropdown-header">
+                                <span
+                                    class="civicai-profile-dropdown-avatar"
+                                    id="civicaiDropdownAvatar">
+                                    RS
+                                </span>
+
+                                <div>
+                                    <strong id="civicaiDropdownName"> Rakesh
+                                        Sharma </strong>
+
+                                    <span id="civicaiDropdownEmail">
+                                        user@example.com </span>
+                                </div>
+                            </div>
+
+                            <div class="civicai-profile-dropdown-divider"></div>
+
+                            <a href="profile.html"
+                                class="civicai-profile-dropdown-link">
+                                <i class="fa-regular fa-user"></i>
+
+                                <span> My Profile </span>
+                            </a>
+
+                            <a href="settings.html"
+                                class="civicai-profile-dropdown-link">
+                                <i class="fa-solid fa-gear"></i>
+
+                                <span> Settings </span>
+                            </a>
+
+                            <a
+                                href="notifications.html"
+                                class="civicai-profile-dropdown-link">
+                                <i class="fa-regular fa-bell"></i>
+
+                                <span> Notifications </span>
+                            </a>
+
+                            <div class="civicai-profile-dropdown-divider"></div>
+
+                            <button
+                                type="button"
+                                class="civicai-profile-dropdown-link civicai-profile-logout"
+                                id="civicaiLogoutButton">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+
+                                <span> Logout </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOBILE MENU -->
+                <button
+                    class="civicai-mobile-menu-trigger"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    id="civicaiMobileMenuTrigger">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </header>
 
         <main class="civicai-dashboard-page">
             <!-- =================================================
@@ -63,13 +206,17 @@
                         <div class="civicai-dashboard-greeting-row">
                             <h1>Good morning, Rakesh!</h1>
 
-                            <span class="civicai-dashboard-wave" aria-hidden="true"> 👋 </span>
+                            <span class="civicai-dashboard-wave"
+                                aria-hidden="true">
+                                👋
+                            </span>
                         </div>
 
                         <p>Here's what's happening in your community today.</p>
                     </div>
 
-                    <button type="button" class="civicai-dashboard-period-button">
+                    <button type="button"
+                        class="civicai-dashboard-period-button">
                         <i class="fa-regular fa-calendar"></i>
 
                         <span> This Month </span>
@@ -83,8 +230,10 @@
                 <div class="civicai-dashboard-skyline" aria-hidden="true">
                     <span class="civicai-skyline-sun"></span>
 
-                    <span class="civicai-skyline-cloud civicai-skyline-cloud-one"></span>
-                    <span class="civicai-skyline-cloud civicai-skyline-cloud-two"></span>
+                    <span
+                        class="civicai-skyline-cloud civicai-skyline-cloud-one"></span>
+                    <span
+                        class="civicai-skyline-cloud civicai-skyline-cloud-two"></span>
 
                     <div class="civicai-building civicai-building-a"></div>
                     <div class="civicai-building civicai-building-b"></div>
@@ -95,7 +244,8 @@
 
                     <span class="civicai-skyline-tree civicai-tree-one"></span>
                     <span class="civicai-skyline-tree civicai-tree-two"></span>
-                    <span class="civicai-skyline-tree civicai-tree-three"></span>
+                    <span
+                        class="civicai-skyline-tree civicai-tree-three"></span>
                 </div>
             </section>
 
@@ -103,22 +253,29 @@
              OVERVIEW CARDS
              ================================================= -->
 
-            <section class="civicai-dashboard-overview" aria-label="Complaint overview">
+            <section
+                class="civicai-dashboard-overview"
+                aria-label="Complaint overview">
                 <div class="civicai-dashboard-shell">
                     <div class="civicai-dashboard-stat-grid">
                         <!-- Total Complaints -->
 
                         <article class="civicai-dashboard-stat-card">
-                            <div class="civicai-dashboard-stat-icon civicai-dashboard-stat-icon-purple">
+                            <div
+                                class="civicai-dashboard-stat-icon civicai-dashboard-stat-icon-purple">
                                 <i class="fa-regular fa-file-lines"></i>
                             </div>
 
                             <div class="civicai-dashboard-stat-body">
-                                <span class="civicai-dashboard-stat-label"> Total Complaints </span>
+                                <span class="civicai-dashboard-stat-label">
+                                    Total Complaints
+                                </span>
 
-                                <strong class="civicai-dashboard-stat-value"> 12 </strong>
+                                <strong class="civicai-dashboard-stat-value"> 12
+                                </strong>
 
-                                <span class="civicai-dashboard-stat-change civicai-stat-positive">
+                                <span
+                                    class="civicai-dashboard-stat-change civicai-stat-positive">
                                     <i class="fa-solid fa-arrow-up"></i>
 
                                     20% from last month
@@ -129,16 +286,20 @@
                         <!-- In Progress -->
 
                         <article class="civicai-dashboard-stat-card">
-                            <div class="civicai-dashboard-stat-icon civicai-dashboard-stat-icon-orange">
+                            <div
+                                class="civicai-dashboard-stat-icon civicai-dashboard-stat-icon-orange">
                                 <i class="fa-regular fa-clock"></i>
                             </div>
 
                             <div class="civicai-dashboard-stat-body">
-                                <span class="civicai-dashboard-stat-label"> In Progress </span>
+                                <span class="civicai-dashboard-stat-label"> In
+                                    Progress </span>
 
-                                <strong class="civicai-dashboard-stat-value"> 4 </strong>
+                                <strong class="civicai-dashboard-stat-value"> 4
+                                </strong>
 
-                                <span class="civicai-dashboard-stat-change civicai-stat-negative">
+                                <span
+                                    class="civicai-dashboard-stat-change civicai-stat-negative">
                                     <i class="fa-solid fa-arrow-down"></i>
 
                                     11% from last month
@@ -149,16 +310,20 @@
                         <!-- Resolved -->
 
                         <article class="civicai-dashboard-stat-card">
-                            <div class="civicai-dashboard-stat-icon civicai-dashboard-stat-icon-green">
+                            <div
+                                class="civicai-dashboard-stat-icon civicai-dashboard-stat-icon-green">
                                 <i class="fa-regular fa-circle-check"></i>
                             </div>
 
                             <div class="civicai-dashboard-stat-body">
-                                <span class="civicai-dashboard-stat-label"> Resolved </span>
+                                <span class="civicai-dashboard-stat-label">
+                                    Resolved </span>
 
-                                <strong class="civicai-dashboard-stat-value"> 7 </strong>
+                                <strong class="civicai-dashboard-stat-value"> 7
+                                </strong>
 
-                                <span class="civicai-dashboard-stat-change civicai-stat-positive">
+                                <span
+                                    class="civicai-dashboard-stat-change civicai-stat-positive">
                                     <i class="fa-solid fa-arrow-up"></i>
 
                                     16% from last month
@@ -169,12 +334,15 @@
                         <!-- Resolution Time -->
 
                         <article class="civicai-dashboard-stat-card">
-                            <div class="civicai-dashboard-stat-icon civicai-dashboard-stat-icon-blue">
+                            <div
+                                class="civicai-dashboard-stat-icon civicai-dashboard-stat-icon-blue">
                                 <i class="fa-solid fa-chart-line"></i>
                             </div>
 
                             <div class="civicai-dashboard-stat-body">
-                                <span class="civicai-dashboard-stat-label"> Avg. Resolution Time </span>
+                                <span class="civicai-dashboard-stat-label">
+                                    Avg. Resolution Time
+                                </span>
 
                                 <strong class="civicai-dashboard-stat-value">
                                     4.2
@@ -182,7 +350,8 @@
                                     <small> Days </small>
                                 </strong>
 
-                                <span class="civicai-dashboard-stat-change civicai-stat-positive">
+                                <span
+                                    class="civicai-dashboard-stat-change civicai-stat-positive">
                                     <i class="fa-solid fa-arrow-down"></i>
 
                                     0.6 days from last month
@@ -199,11 +368,14 @@
 
             <section class="civicai-dashboard-quick-section">
                 <div class="civicai-dashboard-shell">
-                    <h2 class="civicai-dashboard-section-title">Quick Actions</h2>
+                    <h2 class="civicai-dashboard-section-title">Quick
+                        Actions</h2>
 
                     <div class="civicai-dashboard-action-grid">
-                        <a href="new-complaint.html" class="civicai-dashboard-action-card">
-                            <span class="civicai-dashboard-action-icon civicai-action-purple">
+                        <a href="new-complaint.html"
+                            class="civicai-dashboard-action-card">
+                            <span
+                                class="civicai-dashboard-action-icon civicai-action-purple">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </span>
 
@@ -214,8 +386,11 @@
                             </span>
                         </a>
 
-                        <a href="complaint-tracking.html" class="civicai-dashboard-action-card">
-                            <span class="civicai-dashboard-action-icon civicai-action-blue">
+                        <a
+                            href="complaint-tracking.html"
+                            class="civicai-dashboard-action-card">
+                            <span
+                                class="civicai-dashboard-action-icon civicai-action-blue">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </span>
 
@@ -226,8 +401,10 @@
                             </span>
                         </a>
 
-                        <a href="ai-assistant.html" class="civicai-dashboard-action-card">
-                            <span class="civicai-dashboard-action-icon civicai-action-green">
+                        <a href="ai-assistant.html"
+                            class="civicai-dashboard-action-card">
+                            <span
+                                class="civicai-dashboard-action-icon civicai-action-green">
                                 <i class="fa-solid fa-robot"></i>
                             </span>
 
@@ -238,8 +415,10 @@
                             </span>
                         </a>
 
-                        <a href="nearby-issues.html" class="civicai-dashboard-action-card">
-                            <span class="civicai-dashboard-action-icon civicai-action-pink">
+                        <a href="nearby-issues.html"
+                            class="civicai-dashboard-action-card">
+                            <span
+                                class="civicai-dashboard-action-icon civicai-action-pink">
                                 <i class="fa-solid fa-location-dot"></i>
                             </span>
 
@@ -260,7 +439,12 @@
             <section class="civicai-dashboard-ai-section">
                 <div class="civicai-dashboard-shell">
                     <article class="civicai-dashboard-ai-banner">
-                        <button type="button" class="civicai-dashboard-ai-close" aria-label="Close insight">×</button>
+                        <button
+                            type="button"
+                            class="civicai-dashboard-ai-close"
+                            aria-label="Close insight">
+                            ×
+                        </button>
 
                         <div class="civicai-dashboard-ai-copy">
                             <div class="civicai-dashboard-ai-heading">
@@ -269,9 +453,14 @@
                                 <span> AI Insight </span>
                             </div>
 
-                            <p>There has been a 15% increase in pothole-related complaints in your area this month.</p>
+                            <p>
+                                There has been a 15% increase in pothole-related
+                                complaints in
+                                your area this month.
+                            </p>
 
-                            <small> Would you like to report a similar issue? </small>
+                            <small> Would you like to report a similar issue?
+                            </small>
                         </div>
 
                         <div class="civicai-dashboard-ai-visual">
@@ -282,13 +471,20 @@
                                 <span style="height: 47%"></span>
                                 <span style="height: 61%"></span>
 
-                                <svg viewBox="0 0 220 90" preserveAspectRatio="none" aria-hidden="true">
-                                    <polyline points="5,74 45,60 82,68 122,40 160,51 205,10" />
+                                <svg
+                                    viewBox="0 0 220 90"
+                                    preserveAspectRatio="none"
+                                    aria-hidden="true">
+                                    <polyline
+                                        points="5,74 45,60 82,68 122,40 160,51 205,10" />
                                 </svg>
                             </div>
                         </div>
 
-                        <a href="new-complaint.html" class="civicai-dashboard-ai-button"> Report Now </a>
+                        <a href="new-complaint.html"
+                            class="civicai-dashboard-ai-button">
+                            Report Now
+                        </a>
                     </article>
                 </div>
             </section>
@@ -304,7 +500,8 @@
                          RECENT COMPLAINTS
                          ===================================== -->
 
-                        <article class="civicai-dashboard-panel civicai-recent-complaints">
+                        <article
+                            class="civicai-dashboard-panel civicai-recent-complaints">
                             <div class="civicai-dashboard-panel-header">
                                 <h2>Recent Complaints</h2>
 
@@ -312,15 +509,19 @@
                             </div>
 
                             <div class="civicai-dashboard-complaint-list">
-                                <a href="complaint-details.html" class="civicai-dashboard-complaint-row">
-                                    <span class="civicai-complaint-icon civicai-complaint-road">
+                                <a
+                                    href="complaint-details.html"
+                                    class="civicai-dashboard-complaint-row">
+                                    <span
+                                        class="civicai-complaint-icon civicai-complaint-road">
                                         <i class="fa-solid fa-car"></i>
                                     </span>
 
                                     <span class="civicai-complaint-information">
                                         <small> #C-8492 </small>
 
-                                        <strong> Severe Pothole on Main St. </strong>
+                                        <strong> Severe Pothole on Main St.
+                                        </strong>
 
                                         <span>
                                             Oct 24, 2024
@@ -329,13 +530,20 @@
                                         </span>
                                     </span>
 
-                                    <span class="civicai-complaint-status civicai-status-progress"> In Progress </span>
+                                    <span
+                                        class="civicai-complaint-status civicai-status-progress">
+                                        In Progress
+                                    </span>
 
-                                    <i class="fa-solid fa-chevron-right civicai-complaint-arrow"></i>
+                                    <i
+                                        class="fa-solid fa-chevron-right civicai-complaint-arrow"></i>
                                 </a>
 
-                                <a href="complaint-details.html" class="civicai-dashboard-complaint-row">
-                                    <span class="civicai-complaint-icon civicai-complaint-light">
+                                <a
+                                    href="complaint-details.html"
+                                    class="civicai-dashboard-complaint-row">
+                                    <span
+                                        class="civicai-complaint-icon civicai-complaint-light">
                                         <i class="fa-regular fa-lightbulb"></i>
                                     </span>
 
@@ -351,22 +559,28 @@
                                         </span>
                                     </span>
 
-                                    <span class="civicai-complaint-status civicai-status-pending">
+                                    <span
+                                        class="civicai-complaint-status civicai-status-pending">
                                         Pending Review
                                     </span>
 
-                                    <i class="fa-solid fa-chevron-right civicai-complaint-arrow"></i>
+                                    <i
+                                        class="fa-solid fa-chevron-right civicai-complaint-arrow"></i>
                                 </a>
 
-                                <a href="complaint-details.html" class="civicai-dashboard-complaint-row">
-                                    <span class="civicai-complaint-icon civicai-complaint-trash">
+                                <a
+                                    href="complaint-details.html"
+                                    class="civicai-dashboard-complaint-row">
+                                    <span
+                                        class="civicai-complaint-icon civicai-complaint-trash">
                                         <i class="fa-solid fa-trash-can"></i>
                                     </span>
 
                                     <span class="civicai-complaint-information">
                                         <small> #C-8102 </small>
 
-                                        <strong> Missed Waste Collection </strong>
+                                        <strong> Missed Waste Collection
+                                        </strong>
 
                                         <span>
                                             Sep 14, 2024
@@ -375,20 +589,28 @@
                                         </span>
                                     </span>
 
-                                    <span class="civicai-complaint-status civicai-status-resolved"> Resolved </span>
+                                    <span
+                                        class="civicai-complaint-status civicai-status-resolved">
+                                        Resolved
+                                    </span>
 
-                                    <i class="fa-solid fa-chevron-right civicai-complaint-arrow"></i>
+                                    <i
+                                        class="fa-solid fa-chevron-right civicai-complaint-arrow"></i>
                                 </a>
 
-                                <a href="complaint-details.html" class="civicai-dashboard-complaint-row">
-                                    <span class="civicai-complaint-icon civicai-complaint-water">
+                                <a
+                                    href="complaint-details.html"
+                                    class="civicai-dashboard-complaint-row">
+                                    <span
+                                        class="civicai-complaint-icon civicai-complaint-water">
                                         <i class="fa-solid fa-droplet"></i>
                                     </span>
 
                                     <span class="civicai-complaint-information">
                                         <small> #C-7965 </small>
 
-                                        <strong> Water Leakage on 5th Ave </strong>
+                                        <strong> Water Leakage on 5th Ave
+                                        </strong>
 
                                         <span>
                                             Sep 05, 2024
@@ -397,13 +619,19 @@
                                         </span>
                                     </span>
 
-                                    <span class="civicai-complaint-status civicai-status-resolved"> Resolved </span>
+                                    <span
+                                        class="civicai-complaint-status civicai-status-resolved">
+                                        Resolved
+                                    </span>
 
-                                    <i class="fa-solid fa-chevron-right civicai-complaint-arrow"></i>
+                                    <i
+                                        class="fa-solid fa-chevron-right civicai-complaint-arrow"></i>
                                 </a>
                             </div>
 
-                            <a href="complaint-history.html" class="civicai-dashboard-panel-footer-link">
+                            <a
+                                href="complaint-history.html"
+                                class="civicai-dashboard-panel-footer-link">
                                 View All Complaints
                                 <i class="fa-solid fa-arrow-right"></i>
                             </a>
@@ -413,7 +641,8 @@
                          STATUS OVERVIEW
                          ===================================== -->
 
-                        <article class="civicai-dashboard-panel civicai-status-overview">
+                        <article
+                            class="civicai-dashboard-panel civicai-status-overview">
                             <div class="civicai-dashboard-panel-header">
                                 <h2>Complaint Status Overview</h2>
                             </div>
@@ -429,27 +658,33 @@
 
                                 <div class="civicai-status-legend">
                                     <div>
-                                        <span class="civicai-legend-dot civicai-legend-blue"></span>
+                                        <span
+                                            class="civicai-legend-dot civicai-legend-blue"></span>
 
                                         <span> In Progress </span>
 
-                                        <strong> 4 <small>(33.3%)</small> </strong>
+                                        <strong> 4 <small>(33.3%)</small>
+                                        </strong>
                                     </div>
 
                                     <div>
-                                        <span class="civicai-legend-dot civicai-legend-orange"></span>
+                                        <span
+                                            class="civicai-legend-dot civicai-legend-orange"></span>
 
                                         <span> Pending Review </span>
 
-                                        <strong> 2 <small>(16.7%)</small> </strong>
+                                        <strong> 2 <small>(16.7%)</small>
+                                        </strong>
                                     </div>
 
                                     <div>
-                                        <span class="civicai-legend-dot civicai-legend-green"></span>
+                                        <span
+                                            class="civicai-legend-dot civicai-legend-green"></span>
 
                                         <span> Resolved </span>
 
-                                        <strong> 7 <small>(58.3%)</small> </strong>
+                                        <strong> 7 <small>(58.3%)</small>
+                                        </strong>
                                     </div>
                                 </div>
                             </div>
@@ -459,7 +694,8 @@
                          TOP CATEGORIES
                          ===================================== -->
 
-                        <article class="civicai-dashboard-panel civicai-category-panel">
+                        <article
+                            class="civicai-dashboard-panel civicai-category-panel">
                             <div class="civicai-dashboard-panel-header">
                                 <h2>Top Complaint Categories</h2>
 
@@ -468,11 +704,14 @@
 
                             <div class="civicai-category-list">
                                 <div class="civicai-category-row">
-                                    <span class="civicai-category-icon civicai-category-purple">
+                                    <span
+                                        class="civicai-category-icon civicai-category-purple">
                                         <i class="fa-solid fa-road"></i>
                                     </span>
 
-                                    <span class="civicai-category-name"> Road & Infrastructure </span>
+                                    <span class="civicai-category-name">
+                                        Road & Infrastructure
+                                    </span>
 
                                     <span class="civicai-category-progress">
                                         <i style="width: 82%"></i>
@@ -482,11 +721,13 @@
                                 </div>
 
                                 <div class="civicai-category-row">
-                                    <span class="civicai-category-icon civicai-category-orange">
+                                    <span
+                                        class="civicai-category-icon civicai-category-orange">
                                         <i class="fa-solid fa-bolt"></i>
                                     </span>
 
-                                    <span class="civicai-category-name"> Electricity </span>
+                                    <span class="civicai-category-name">
+                                        Electricity </span>
 
                                     <span class="civicai-category-progress">
                                         <i style="width: 55%"></i>
@@ -496,11 +737,13 @@
                                 </div>
 
                                 <div class="civicai-category-row">
-                                    <span class="civicai-category-icon civicai-category-green">
+                                    <span
+                                        class="civicai-category-icon civicai-category-green">
                                         <i class="fa-solid fa-trash-can"></i>
                                     </span>
 
-                                    <span class="civicai-category-name"> Sanitation </span>
+                                    <span class="civicai-category-name">
+                                        Sanitation </span>
 
                                     <span class="civicai-category-progress">
                                         <i style="width: 38%"></i>
@@ -510,11 +753,13 @@
                                 </div>
 
                                 <div class="civicai-category-row">
-                                    <span class="civicai-category-icon civicai-category-blue">
+                                    <span
+                                        class="civicai-category-icon civicai-category-blue">
                                         <i class="fa-solid fa-droplet"></i>
                                     </span>
 
-                                    <span class="civicai-category-name"> Water Supply </span>
+                                    <span class="civicai-category-name"> Water
+                                        Supply </span>
 
                                     <span class="civicai-category-progress">
                                         <i style="width: 38%"></i>
@@ -529,11 +774,13 @@
                          COMPLAINT TREND
                          ===================================== -->
 
-                        <article class="civicai-dashboard-panel civicai-trend-panel">
+                        <article
+                            class="civicai-dashboard-panel civicai-trend-panel">
                             <div class="civicai-dashboard-panel-header">
                                 <h2>Complaint Trend</h2>
 
-                                <button type="button" class="civicai-mini-filter">
+                                <button type="button"
+                                    class="civicai-mini-filter">
                                     This Month
                                     <i class="fa-solid fa-chevron-down"></i>
                                 </button>
@@ -562,13 +809,23 @@
                                     <svg
                                         viewBox="0 0 620 210"
                                         preserveAspectRatio="none"
-                                        aria-label="Complaint trend chart"
-                                    >
+                                        aria-label="Complaint trend chart">
                                         <defs>
-                                            <lineargradient id="civicaiTrendFill" x1="0" y1="0" x2="0" y2="1">
-                                                <stop offset="0%" stop-color="#6b5af0" stop-opacity=".18" />
+                                            <lineargradient
+                                                id="civicaiTrendFill"
+                                                x1="0"
+                                                y1="0"
+                                                x2="0"
+                                                y2="1">
+                                                <stop
+                                                    offset="0%"
+                                                    stop-color="#6b5af0"
+                                                    stop-opacity=".18" />
 
-                                                <stop offset="100%" stop-color="#6b5af0" stop-opacity="0" />
+                                                <stop
+                                                    offset="100%"
+                                                    stop-color="#6b5af0"
+                                                    stop-opacity="0" />
                                             </lineargradient>
                                         </defs>
 
@@ -590,8 +847,7 @@
                                             610,25
                                             610,210
                                             0,210
-                                        "
-                                        />
+                                        " />
 
                                         <polyline
                                             class="civicai-chart-line"
@@ -609,23 +865,35 @@
                                             500,103
                                             550,78
                                             610,25
-                                        "
-                                        />
+                                        " />
 
                                         <g class="civicai-chart-points">
-                                            <circle cx="0" cy="145" r="5"></circle>
-                                            <circle cx="50" cy="130" r="5"></circle>
-                                            <circle cx="100" cy="95" r="5"></circle>
-                                            <circle cx="150" cy="128" r="5"></circle>
-                                            <circle cx="200" cy="80" r="5"></circle>
-                                            <circle cx="250" cy="35" r="5"></circle>
-                                            <circle cx="300" cy="83" r="5"></circle>
-                                            <circle cx="350" cy="125" r="5"></circle>
-                                            <circle cx="400" cy="101" r="5"></circle>
-                                            <circle cx="450" cy="70" r="5"></circle>
-                                            <circle cx="500" cy="103" r="5"></circle>
-                                            <circle cx="550" cy="78" r="5"></circle>
-                                            <circle cx="610" cy="25" r="5"></circle>
+                                            <circle cx="0" cy="145"
+                                                r="5"></circle>
+                                            <circle cx="50" cy="130"
+                                                r="5"></circle>
+                                            <circle cx="100" cy="95"
+                                                r="5"></circle>
+                                            <circle cx="150" cy="128"
+                                                r="5"></circle>
+                                            <circle cx="200" cy="80"
+                                                r="5"></circle>
+                                            <circle cx="250" cy="35"
+                                                r="5"></circle>
+                                            <circle cx="300" cy="83"
+                                                r="5"></circle>
+                                            <circle cx="350" cy="125"
+                                                r="5"></circle>
+                                            <circle cx="400" cy="101"
+                                                r="5"></circle>
+                                            <circle cx="450" cy="70"
+                                                r="5"></circle>
+                                            <circle cx="500" cy="103"
+                                                r="5"></circle>
+                                            <circle cx="550" cy="78"
+                                                r="5"></circle>
+                                            <circle cx="610" cy="25"
+                                                r="5"></circle>
                                         </g>
                                     </svg>
 
@@ -641,7 +909,9 @@
                                 </div>
                             </div>
 
-                            <div class="civicai-chart-label" style="padding: 10px 0px 0px 0px">
+                            <div
+                                class="civicai-chart-label"
+                                style="padding: 10px 0px 0px 0px">
                                 <span></span>
 
                                 Complaints
@@ -652,7 +922,8 @@
                          RECENT NOTIFICATIONS
                          ===================================== -->
 
-                        <article class="civicai-dashboard-panel civicai-notification-panel">
+                        <article
+                            class="civicai-dashboard-panel civicai-notification-panel">
                             <div class="civicai-dashboard-panel-header">
                                 <h2>Recent Notifications</h2>
 
@@ -660,49 +931,74 @@
                             </div>
 
                             <div class="civicai-dashboard-notification-list">
-                                <a href="notifications.html" class="civicai-dashboard-notification">
-                                    <span class="civicai-notification-icon civicai-notification-success">
+                                <a
+                                    href="notifications.html"
+                                    class="civicai-dashboard-notification">
+                                    <span
+                                        class="civicai-notification-icon civicai-notification-success">
                                         <i class="fa-solid fa-circle-check"></i>
                                     </span>
 
                                     <span>
-                                        <strong> Your complaint #C-8102 has been resolved successfully. </strong>
+                                        <strong>
+                                            Your complaint #C-8102 has been
+                                            resolved successfully.
+                                        </strong>
 
                                         <small> 10 mins ago </small>
                                     </span>
                                 </a>
 
-                                <a href="notifications.html" class="civicai-dashboard-notification">
-                                    <span class="civicai-notification-icon civicai-notification-info">
+                                <a
+                                    href="notifications.html"
+                                    class="civicai-dashboard-notification">
+                                    <span
+                                        class="civicai-notification-icon civicai-notification-info">
                                         <i class="fa-solid fa-circle-info"></i>
                                     </span>
 
                                     <span>
-                                        <strong> Update on #C-8492: Assigned to field officer. </strong>
+                                        <strong>
+                                            Update on #C-8492: Assigned to field
+                                            officer.
+                                        </strong>
 
                                         <small> 1 hour ago </small>
                                     </span>
                                 </a>
 
-                                <a href="notifications.html" class="civicai-dashboard-notification">
-                                    <span class="civicai-notification-icon civicai-notification-purple">
+                                <a
+                                    href="notifications.html"
+                                    class="civicai-dashboard-notification">
+                                    <span
+                                        class="civicai-notification-icon civicai-notification-purple">
                                         <i class="fa-regular fa-message"></i>
                                     </span>
 
                                     <span>
-                                        <strong> Your feedback for #C-7965 has been received. Thank you! </strong>
+                                        <strong>
+                                            Your feedback for #C-7965 has been
+                                            received. Thank you!
+                                        </strong>
 
                                         <small> 3 hours ago </small>
                                     </span>
                                 </a>
 
-                                <a href="notifications.html" class="civicai-dashboard-notification">
-                                    <span class="civicai-notification-icon civicai-notification-orange">
+                                <a
+                                    href="notifications.html"
+                                    class="civicai-dashboard-notification">
+                                    <span
+                                        class="civicai-notification-icon civicai-notification-orange">
                                         <i class="fa-solid fa-bell"></i>
                                     </span>
 
                                     <span>
-                                        <strong> New update in your area: Water supply maintenance on 5th Ave. </strong>
+                                        <strong>
+                                            New update in your area: Water
+                                            supply maintenance on 5th
+                                            Ave.
+                                        </strong>
 
                                         <small> 5 hours ago </small>
                                     </span>
@@ -714,7 +1010,8 @@
                          ISSUES NEAR YOU
                          ===================================== -->
 
-                        <article class="civicai-dashboard-panel civicai-nearby-panel">
+                        <article
+                            class="civicai-dashboard-panel civicai-nearby-panel">
                             <div class="civicai-dashboard-panel-header">
                                 <h2>Issues Near You</h2>
 
@@ -725,27 +1022,37 @@
                             </div>
 
                             <div class="civicai-dashboard-map">
-                                <div class="civicai-map-road civicai-map-road-one"></div>
-                                <div class="civicai-map-road civicai-map-road-two"></div>
-                                <div class="civicai-map-road civicai-map-road-three"></div>
-                                <div class="civicai-map-road civicai-map-road-four"></div>
-                                <div class="civicai-map-road civicai-map-road-five"></div>
+                                <div
+                                    class="civicai-map-road civicai-map-road-one"></div>
+                                <div
+                                    class="civicai-map-road civicai-map-road-two"></div>
+                                <div
+                                    class="civicai-map-road civicai-map-road-three"></div>
+                                <div
+                                    class="civicai-map-road civicai-map-road-four"></div>
+                                <div
+                                    class="civicai-map-road civicai-map-road-five"></div>
 
-                                <span class="civicai-map-area-label"> Your Area </span>
+                                <span class="civicai-map-area-label"> Your Area
+                                </span>
 
-                                <span class="civicai-map-marker civicai-marker-red">
+                                <span
+                                    class="civicai-map-marker civicai-marker-red">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </span>
 
-                                <span class="civicai-map-marker civicai-marker-orange">
+                                <span
+                                    class="civicai-map-marker civicai-marker-orange">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </span>
 
-                                <span class="civicai-map-marker civicai-marker-blue">
+                                <span
+                                    class="civicai-map-marker civicai-marker-blue">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </span>
 
-                                <span class="civicai-map-marker civicai-marker-green">
+                                <span
+                                    class="civicai-map-marker civicai-marker-green">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </span>
 
@@ -755,7 +1062,8 @@
                             </div>
 
                             <div class="civicai-map-filters">
-                                <button class="civicai-map-filter-active">All</button>
+                                <button
+                                    class="civicai-map-filter-active">All</button>
 
                                 <button>
                                     <i class="fa-solid fa-road"></i>
@@ -788,7 +1096,8 @@
                          CIVIC UPDATE
                          ===================================== -->
 
-                        <article class="civicai-dashboard-panel civicai-civic-update-panel">
+                        <article
+                            class="civicai-dashboard-panel civicai-civic-update-panel">
                             <div class="civicai-dashboard-panel-header">
                                 <h2>Civic Update</h2>
                             </div>
@@ -799,19 +1108,22 @@
                                         <i class="fa-solid fa-bullhorn"></i>
                                     </span>
 
-                                    <span class="civicai-update-message civicai-message-one">
+                                    <span
+                                        class="civicai-update-message civicai-message-one">
                                         <i class="fa-solid fa-arrow-right"></i>
                                     </span>
 
-                                    <span class="civicai-update-message civicai-message-two">
+                                    <span
+                                        class="civicai-update-message civicai-message-two">
                                         <i class="fa-regular fa-face-smile"></i>
                                     </span>
                                 </div>
 
                                 <div class="civicai-civic-update-copy">
                                     <p>
-                                        Property tax deadline extended for Ward 23. Pay by May 31, 2024 to avoid late
-                                        fees.
+                                        Property tax deadline extended for Ward
+                                        23. Pay by May 31,
+                                        2024 to avoid late fees.
                                     </p>
 
                                     <a href="news-updates.html">
@@ -845,9 +1157,13 @@
                         <div class="civicai-feedback-copy">
                             <h2>Your Feedback Matters!</h2>
 
-                            <p>Help us improve our services by sharing your experience.</p>
+                            <p>Help us improve our services by sharing your
+                                experience.</p>
 
-                            <a href="feedback.html" class="civicai-feedback-button"> Give Feedback </a>
+                            <a href="feedback.html"
+                                class="civicai-feedback-button">
+                                Give Feedback
+                            </a>
                         </div>
 
                         <div class="civicai-feedback-decoration">
@@ -857,15 +1173,376 @@
                     </article>
                 </div>
             </section>
+
         </main>
+        <footer class="civicai-main-footer" id="civicai-main-footer">
+            <div class="civicai-footer-container">
+                <!-- Brand Column -->
+                <section class="civicai-footer-brand">
+                    <a href="index.html" class="civicai-footer-brand-link">
+                        <span class="civicai-footer-logo" aria-hidden="true">
+                            <span class="civicai-footer-logo-shape"></span>
+                        </span>
 
-        <!-- =====================================================
-         EXISTING FOOTER
-         ===================================================== -->
+                        <span class="civicai-footer-brand-name"> CivicAI </span>
+                    </a>
 
-        <!--
-        Your existing footer.html goes here.
+                    <p class="civicai-footer-description">
+                        Empowering citizens and transforming governance through
+                        AI and
+                        technology.
+                    </p>
 
-        Do NOT duplicate footer markup in this page.
-    --></body>
+                    <div class="civicai-footer-socials">
+                        <a
+                            href="#"
+                            class="civicai-footer-social-link"
+                            aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            class="civicai-footer-social-link"
+                            aria-label="Twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            class="civicai-footer-social-link"
+                            aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            class="civicai-footer-social-link"
+                            aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Platform -->
+                <section class="civicai-footer-column">
+                    <h3 class="civicai-footer-heading">Platform</h3>
+
+                    <ul class="civicai-footer-links">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#civicai-features">Features</a>
+                        </li>
+
+                        <li>
+                            <a href="#civicai-how-it-works"> How It Works </a>
+                        </li>
+
+                        <li>
+                            <a href="#civicai-departments"> Departments </a>
+                        </li>
+
+                        <li>
+                            <a href="ai-assistant.html"> AI Assistant </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Resources -->
+                <section class="civicai-footer-column">
+                    <h3 class="civicai-footer-heading">Resources</h3>
+
+                    <ul class="civicai-footer-links">
+                        <li>
+                            <a href="contact.html"> Help Center </a>
+                        </li>
+
+                        <li>
+                            <a href="faqs.html"> FAQs </a>
+                        </li>
+
+                        <li>
+                            <a href="user-guide.html"> User Guide </a>
+                        </li>
+
+                        <li>
+                            <a href="#"> API Status </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy-policy.html"> Privacy Policy </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Company -->
+                <section class="civicai-footer-column">
+                    <h3 class="civicai-footer-heading">Company</h3>
+
+                    <ul class="civicai-footer-links">
+                        <li>
+                            <a href="#civicai-about"> About Us </a>
+                        </li>
+
+                        <li>
+                            <a href="#"> Careers </a>
+                        </li>
+
+                        <li>
+                            <a href="news-updates.html"> News &amp; Updates </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html"> Contact Us </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Contact -->
+                <section class="civicai-footer-column civicai-footer-contact">
+                    <h3 class="civicai-footer-heading">Contact Us</h3>
+
+                    <a href="tel:18001234567"
+                        class="civicai-footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+
+                        <span>1800-123-4567</span>
+                    </a>
+
+                    <a
+                        href="mailto:support@civicai.gov.in"
+                        class="civicai-footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <span>support@civicai.gov.in</span>
+                    </a>
+
+                    <div class="civicai-footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span>
+                            123, Civic Center,<br />
+                            New Delhi - 110001, India
+                        </span>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="civicai-footer-bottom">
+                <div class="civicai-footer-bottom-container">
+                    <p class="civicai-footer-copyright">
+                        © 2024 CivicAI. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+    <script>
+      /*
+       * =========================================================
+       * CIVICAI PROFILE DROPDOWN
+       * =========================================================
+       */
+
+      const civicaiProfileButton = document.getElementById(
+        "civicaiProfileButton",
+      );
+
+      const civicaiProfileDropdown = document.getElementById(
+        "civicaiProfileDropdown",
+      );
+
+      const civicaiLogoutButton = document.getElementById(
+        "civicaiLogoutButton",
+      );
+
+      const civicaiMobileMenuTrigger = document.getElementById(
+        "civicaiMobileMenuTrigger",
+      );
+
+      const civicaiPrimaryNavigation = document.querySelector(
+        ".civicai-primary-navigation",
+      );
+
+      /*
+       * =========================================================
+       * GET CURRENT USER
+       * =========================================================
+       */
+
+      function getCivicAICurrentUser() {
+        let user = null;
+
+        const localUser = localStorage.getItem("civicai_current_user");
+
+        const sessionUser = sessionStorage.getItem("civicai_current_user");
+
+        try {
+          if (localUser) {
+            user = JSON.parse(localUser);
+          } else if (sessionUser) {
+            user = JSON.parse(sessionUser);
+          }
+        } catch (error) {
+          console.error("Unable to read current CivicAI user:", error);
+        }
+
+        return user;
+      }
+
+      /*
+       * =========================================================
+       * INITIALIZE PROFILE
+       * =========================================================
+       */
+
+      function initializeCivicAIProfile() {
+        const user = getCivicAICurrentUser();
+
+        /*
+         * Default profile
+         */
+        let name = user?.fullName || "Rakesh Sharma";
+
+        let email = user?.email || "user@example.com";
+
+        /*
+         * Generate initials
+         */
+        const initials = name
+          .trim()
+          .split(/\s+/)
+          .slice(0, 2)
+          .map((word) => word.charAt(0).toUpperCase())
+          .join("");
+
+        /*
+         * Header profile
+         */
+        const profileName = document.getElementById("civicaiProfileName");
+
+        const profileAvatar = document.getElementById("civicaiProfileAvatar");
+
+        /*
+         * Dropdown profile
+         */
+        const dropdownName = document.getElementById("civicaiDropdownName");
+
+        const dropdownEmail = document.getElementById("civicaiDropdownEmail");
+
+        const dropdownAvatar = document.getElementById("civicaiDropdownAvatar");
+
+        if (profileName) {
+          profileName.textContent = name;
+        }
+
+        if (profileAvatar) {
+          profileAvatar.textContent = initials || "CA";
+        }
+
+        if (dropdownName) {
+          dropdownName.textContent = name;
+        }
+
+        if (dropdownEmail) {
+          dropdownEmail.textContent = email;
+        }
+
+        if (dropdownAvatar) {
+          dropdownAvatar.textContent = initials || "CA";
+        }
+      }
+
+      initializeCivicAIProfile();
+
+      /*
+       * =========================================================
+       * OPEN / CLOSE PROFILE
+       * =========================================================
+       */
+
+      civicaiProfileButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+
+        const isOpen =
+          civicaiProfileButton.getAttribute("aria-expanded") === "true";
+
+        civicaiProfileButton.setAttribute("aria-expanded", String(!isOpen));
+
+        civicaiProfileDropdown.classList.toggle(
+          "civicai-profile-dropdown-open",
+          !isOpen,
+        );
+      });
+
+      /*
+       * =========================================================
+       * CLOSE PROFILE WHEN CLICKING OUTSIDE
+       * =========================================================
+       */
+
+      document.addEventListener("click", function (event) {
+        const clickedInsideProfile = event.target.closest(
+          ".civicai-profile-wrapper",
+        );
+
+        if (!clickedInsideProfile) {
+          civicaiProfileButton.setAttribute("aria-expanded", "false");
+
+          civicaiProfileDropdown.classList.remove(
+            "civicai-profile-dropdown-open",
+          );
+        }
+      });
+
+      /*
+       * =========================================================
+       * LOGOUT
+       * =========================================================
+       */
+
+      civicaiLogoutButton.addEventListener("click", function () {
+        /*
+         * Remove logged-in user
+         */
+        localStorage.removeItem("civicai_current_user");
+
+        sessionStorage.removeItem("civicai_current_user");
+
+        /*
+         * Redirect to login
+         */
+        window.location.href = "login.html";
+      });
+
+      /*
+       * =========================================================
+       * MOBILE MENU
+       * =========================================================
+       */
+
+      civicaiMobileMenuTrigger.addEventListener("click", function () {
+        civicaiPrimaryNavigation.classList.toggle(
+          "civicai-mobile-navigation-open",
+        );
+      });
+
+      /*
+       * Close mobile menu after clicking link
+       */
+      document
+        .querySelectorAll(".civicai-navigation-link")
+        .forEach(function (link) {
+          link.addEventListener("click", function () {
+            civicaiPrimaryNavigation.classList.remove(
+              "civicai-mobile-navigation-open",
+            );
+          });
+        });
+    </script>
 </html>

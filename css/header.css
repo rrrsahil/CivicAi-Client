@@ -173,7 +173,7 @@
 
     color: #26345d;
 
-    font-size: 11px;
+    font-size: 16px;
     font-weight: 600;
 
     transition:
@@ -249,7 +249,7 @@
 
     border-radius: 7px;
 
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 650;
 
     transition:
@@ -311,4 +311,855 @@
     border: 1px solid var(--civicai-border);
 
     background: #fff;
+}
+
+/* =========================================================
+   CIVICAI MAIN HEADER
+   ========================================================= */
+
+.civicai-main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-bottom: 1px solid #edf0f7;
+
+    box-shadow: 0 2px 12px rgba(45, 59, 105, 0.05);
+
+    backdrop-filter: blur(14px);
+}
+
+
+/* =========================================================
+   HEADER CONTAINER
+   ========================================================= */
+
+.civicai-header-container {
+    width: min(calc(100% - 48px), 1260px);
+
+    min-height: 78px;
+
+    margin-inline: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.civicai-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   BRAND LOGO
+   ========================================================= */
+
+.civicai-brand-logo {
+    width: 43px;
+    height: 49px;
+
+    display: grid;
+
+    place-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    clip-path: polygon(
+        50% 0%,
+        91% 20%,
+        91% 80%,
+        50% 100%,
+        9% 80%,
+        9% 20%
+    );
+
+    background: linear-gradient(
+        145deg,
+        #5d4be9,
+        #3d75ed
+    );
+}
+
+
+.civicai-brand-logo-shape {
+    width: 24px;
+    height: 29px;
+
+    border: 2px solid rgba(255, 255, 255, 0.9);
+
+    border-radius: 5px 8px 5px 8px;
+
+    transform: rotate(30deg);
+
+    position: relative;
+}
+
+
+.civicai-brand-logo-shape::after {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    left: 6px;
+    top: 8px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   BRAND CONTENT
+   ========================================================= */
+
+.civicai-brand-content {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.civicai-brand-name {
+    color: #172554;
+
+    font-size: 21px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -0.03em;
+}
+
+
+.civicai-brand-tagline {
+    margin-top: 4px;
+
+    color: #8791aa;
+
+    font-size: 7px;
+
+    line-height: 1;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PRIMARY NAVIGATION
+   ========================================================= */
+
+.civicai-primary-navigation {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex: 1;
+}
+
+
+.civicai-navigation-link {
+    position: relative;
+
+    padding: 29px 0 27px;
+
+    color: #26345d;
+
+    font-size: 11px;
+
+    line-height: 1;
+
+    font-weight: 650;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.civicai-navigation-link:hover {
+    color: var(--civicai-primary);
+}
+
+
+.civicai-navigation-link-active {
+    color: var(--civicai-primary);
+}
+
+
+.civicai-navigation-link-active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 18px;
+
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: var(--civicai-primary);
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+   ========================================================= */
+
+.civicai-header-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   NOTIFICATION
+   ========================================================= */
+
+.civicai-notification-button {
+    position: relative;
+
+    width: 35px;
+    height: 35px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #8a94ae;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.civicai-notification-button:hover {
+    color: var(--civicai-primary);
+
+    background: #f3f2ff;
+}
+
+
+.civicai-notification-button i {
+    font-size: 17px;
+}
+
+
+.civicai-notification-count {
+    position: absolute;
+
+    top: -1px;
+    right: -1px;
+
+    min-width: 19px;
+    height: 19px;
+
+    padding: 0 5px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    color: var(--civicai-primary);
+
+    background: #eeecff;
+
+    font-size: 9px;
+
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   PROFILE WRAPPER
+   ========================================================= */
+
+.civicai-profile-wrapper {
+    position: relative;
+}
+
+
+/* =========================================================
+   PROFILE BUTTON
+   ========================================================= */
+
+.civicai-profile-button {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 4px 0;
+
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   PROFILE AVATAR
+   ========================================================= */
+
+.civicai-profile-avatar {
+    width: 39px;
+    height: 39px;
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #5b4be7,
+        #3478ed
+    );
+
+    border: 2px solid #ffffff;
+
+    box-shadow:
+        0 3px 10px rgba(60, 78, 150, 0.15);
+
+    font-size: 11px;
+
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   PROFILE INFORMATION
+   ========================================================= */
+
+.civicai-profile-info {
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 95px;
+}
+
+
+.civicai-profile-name {
+    color: #26345d;
+
+    font-size: 10px;
+
+    line-height: 1.3;
+
+    font-weight: 750;
+
+    white-space: nowrap;
+}
+
+
+.civicai-profile-location {
+    margin-top: 1px;
+
+    color: #8a94ae;
+
+    font-size: 7px;
+
+    line-height: 1.3;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PROFILE ARROW
+   ========================================================= */
+
+.civicai-profile-arrow {
+    margin-left: 2px;
+
+    color: #8791aa;
+
+    font-size: 8px;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.civicai-profile-button[aria-expanded="true"]
+.civicai-profile-arrow {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   PROFILE DROPDOWN
+   ========================================================= */
+
+.civicai-profile-dropdown {
+    position: absolute;
+
+    top: calc(100% + 12px);
+
+    right: 0;
+
+    width: 245px;
+
+    padding: 9px;
+
+    border-radius: 13px;
+
+    background: #ffffff;
+
+    border: 1px solid #edf0f7;
+
+    box-shadow:
+        0 16px 40px rgba(40, 52, 100, 0.13);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(-7px)
+        scale(0.98);
+
+    transform-origin: top right;
+
+    transition:
+        opacity 0.18s ease,
+        visibility 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+.civicai-profile-dropdown.civicai-profile-dropdown-open {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* =========================================================
+   DROPDOWN HEADER
+   ========================================================= */
+
+.civicai-profile-dropdown-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 7px 7px 10px;
+}
+
+
+.civicai-profile-dropdown-avatar {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #5b4be7,
+        #3478ed
+    );
+
+    font-size: 10px;
+
+    font-weight: 750;
+}
+
+
+.civicai-profile-dropdown-header div {
+    min-width: 0;
+}
+
+
+.civicai-profile-dropdown-header strong {
+    display: block;
+
+    overflow: hidden;
+
+    color: #26345d;
+
+    font-size: 10px;
+
+    font-weight: 750;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+.civicai-profile-dropdown-header span {
+    display: block;
+
+    margin-top: 3px;
+
+    overflow: hidden;
+
+    color: #8a94ae;
+
+    font-size: 7px;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   DROPDOWN DIVIDER
+   ========================================================= */
+
+.civicai-profile-dropdown-divider {
+    height: 1px;
+
+    margin: 4px 0;
+
+    background: #eef1f7;
+}
+
+
+/* =========================================================
+   DROPDOWN LINKS
+   ========================================================= */
+
+.civicai-profile-dropdown-link {
+    width: 100%;
+
+    min-height: 37px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 9px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    color: #53607e;
+
+    background: transparent;
+
+    font-family: inherit;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        background 0.18s ease,
+        color 0.18s ease;
+}
+
+
+.civicai-profile-dropdown-link:hover {
+    color: var(--civicai-primary);
+
+    background: #f5f4ff;
+}
+
+
+.civicai-profile-dropdown-link i {
+    width: 16px;
+
+    color: #8a94ae;
+
+    text-align: center;
+
+    font-size: 11px;
+}
+
+
+.civicai-profile-dropdown-link:hover i {
+    color: var(--civicai-primary);
+}
+
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+.civicai-profile-logout {
+    color: #dc4b5b;
+}
+
+
+.civicai-profile-logout i {
+    color: #dc4b5b;
+}
+
+
+.civicai-profile-logout:hover {
+    color: #c93748;
+
+    background: #fff3f4;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.civicai-mobile-menu-trigger {
+    display: none;
+
+    width: 38px;
+    height: 38px;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e5e8f1;
+
+    border-radius: 9px;
+
+    color: #26345d;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .civicai-header-container {
+        width: min(calc(100% - 32px), 1260px);
+
+        gap: 18px;
+    }
+
+
+    .civicai-primary-navigation {
+        gap: 17px;
+    }
+
+
+    .civicai-navigation-link {
+        font-size: 10px;
+    }
+
+
+    .civicai-profile-info {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .civicai-header-container {
+        min-height: 68px;
+    }
+
+
+    .civicai-primary-navigation {
+        position: absolute;
+
+        top: 68px;
+
+        left: 16px;
+        right: 16px;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 8px;
+
+        border-radius: 12px;
+
+        background: #ffffff;
+
+        border: 1px solid #edf0f7;
+
+        box-shadow:
+            0 15px 35px rgba(40, 52, 100, 0.12);
+    }
+
+
+    .civicai-primary-navigation.civicai-mobile-navigation-open {
+        display: flex;
+    }
+
+
+    .civicai-navigation-link {
+        padding: 13px 12px;
+
+        border-radius: 8px;
+
+        font-size: 10px;
+    }
+
+
+    .civicai-navigation-link:hover {
+        background: #f5f4ff;
+    }
+
+
+    .civicai-navigation-link-active::after {
+        display: none;
+    }
+
+
+    .civicai-header-actions {
+        margin-left: auto;
+
+        gap: 8px;
+    }
+
+
+    .civicai-mobile-menu-trigger {
+        display: flex;
+    }
+
+
+    .civicai-profile-dropdown {
+        right: -5px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .civicai-header-container {
+        width: calc(100% - 24px);
+    }
+
+
+    .civicai-brand-tagline {
+        display: none;
+    }
+
+
+    .civicai-brand-name {
+        font-size: 18px;
+    }
+
+
+    .civicai-brand-logo {
+        width: 38px;
+        height: 43px;
+    }
+
+
+    .civicai-notification-button {
+        width: 32px;
+        height: 32px;
+    }
+
+
+    .civicai-profile-avatar {
+        width: 35px;
+        height: 35px;
+    }
+
 }

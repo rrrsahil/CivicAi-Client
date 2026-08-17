@@ -26,6 +26,8 @@
     ====================================================== -->
 
     <link rel="stylesheet" href="./css/faqs.css" />
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
   </head>
 
   <body>
@@ -911,11 +913,377 @@
         </div>
       </section>
     </main>
-    <!-- =====================================================
-         FOOTER
-         Existing footer.html is used separately.
-    ====================================================== -->
+
+    <footer class="civicai-main-footer" id="civicai-main-footer">
+      <div class="civicai-footer-container">
+        <!-- Brand Column -->
+        <section class="civicai-footer-brand">
+          <a href="index.html" class="civicai-footer-brand-link">
+            <span class="civicai-footer-logo" aria-hidden="true">
+              <span class="civicai-footer-logo-shape"></span>
+            </span>
+
+            <span class="civicai-footer-brand-name"> CivicAI </span>
+          </a>
+
+          <p class="civicai-footer-description">
+            Empowering citizens and transforming governance through
+            AI and
+            technology.
+          </p>
+
+          <div class="civicai-footer-socials">
+            <a
+              href="#"
+              class="civicai-footer-social-link"
+              aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a
+              href="#"
+              class="civicai-footer-social-link"
+              aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a
+              href="#"
+              class="civicai-footer-social-link"
+              aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a
+              href="#"
+              class="civicai-footer-social-link"
+              aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </section>
+
+        <!-- Platform -->
+        <section class="civicai-footer-column">
+          <h3 class="civicai-footer-heading">Platform</h3>
+
+          <ul class="civicai-footer-links">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+
+            <li>
+              <a href="#civicai-features">Features</a>
+            </li>
+
+            <li>
+              <a href="#civicai-how-it-works"> How It Works </a>
+            </li>
+
+            <li>
+              <a href="#civicai-departments"> Departments </a>
+            </li>
+
+            <li>
+              <a href="ai-assistant.html"> AI Assistant </a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Resources -->
+        <section class="civicai-footer-column">
+          <h3 class="civicai-footer-heading">Resources</h3>
+
+          <ul class="civicai-footer-links">
+            <li>
+              <a href="contact.html"> Help Center </a>
+            </li>
+
+            <li>
+              <a href="faqs.html"> FAQs </a>
+            </li>
+
+            <li>
+              <a href="user-guide.html"> User Guide </a>
+            </li>
+
+            <li>
+              <a href="#"> API Status </a>
+            </li>
+
+            <li>
+              <a href="privacy-policy.html"> Privacy Policy </a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Company -->
+        <section class="civicai-footer-column">
+          <h3 class="civicai-footer-heading">Company</h3>
+
+          <ul class="civicai-footer-links">
+            <li>
+              <a href="#civicai-about"> About Us </a>
+            </li>
+
+            <li>
+              <a href="#"> Careers </a>
+            </li>
+
+            <li>
+              <a href="news-updates.html"> News &amp; Updates </a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Contact Us </a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Contact -->
+        <section class="civicai-footer-column civicai-footer-contact">
+          <h3 class="civicai-footer-heading">Contact Us</h3>
+
+          <a href="tel:18001234567"
+            class="civicai-footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+
+            <span>1800-123-4567</span>
+          </a>
+
+          <a
+            href="mailto:support@civicai.gov.in"
+            class="civicai-footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+
+            <span>support@civicai.gov.in</span>
+          </a>
+
+          <div class="civicai-footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+
+            <span>
+              123, Civic Center,<br />
+              New Delhi - 110001, India
+            </span>
+          </div>
+        </section>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="civicai-footer-bottom">
+        <div class="civicai-footer-bottom-container">
+          <p class="civicai-footer-copyright">
+            © 2024 CivicAI. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
 
     <!-- footer.html -->
   </body>
+
+  <script>
+      /*
+       * =========================================================
+       * CIVICAI PROFILE DROPDOWN
+       * =========================================================
+       */
+
+      const civicaiProfileButton = document.getElementById(
+        "civicaiProfileButton",
+      );
+
+      const civicaiProfileDropdown = document.getElementById(
+        "civicaiProfileDropdown",
+      );
+
+      const civicaiLogoutButton = document.getElementById(
+        "civicaiLogoutButton",
+      );
+
+      const civicaiMobileMenuTrigger = document.getElementById(
+        "civicaiMobileMenuTrigger",
+      );
+
+      const civicaiPrimaryNavigation = document.querySelector(
+        ".civicai-primary-navigation",
+      );
+
+      /*
+       * =========================================================
+       * GET CURRENT USER
+       * =========================================================
+       */
+
+      function getCivicAICurrentUser() {
+        let user = null;
+
+        const localUser = localStorage.getItem("civicai_current_user");
+
+        const sessionUser = sessionStorage.getItem("civicai_current_user");
+
+        try {
+          if (localUser) {
+            user = JSON.parse(localUser);
+          } else if (sessionUser) {
+            user = JSON.parse(sessionUser);
+          }
+        } catch (error) {
+          console.error("Unable to read current CivicAI user:", error);
+        }
+
+        return user;
+      }
+
+      /*
+       * =========================================================
+       * INITIALIZE PROFILE
+       * =========================================================
+       */
+
+      function initializeCivicAIProfile() {
+        const user = getCivicAICurrentUser();
+
+        /*
+         * Default profile
+         */
+        let name = user?.fullName || "Rakesh Sharma";
+
+        let email = user?.email || "user@example.com";
+
+        /*
+         * Generate initials
+         */
+        const initials = name
+          .trim()
+          .split(/\s+/)
+          .slice(0, 2)
+          .map((word) => word.charAt(0).toUpperCase())
+          .join("");
+
+        /*
+         * Header profile
+         */
+        const profileName = document.getElementById("civicaiProfileName");
+
+        const profileAvatar = document.getElementById("civicaiProfileAvatar");
+
+        /*
+         * Dropdown profile
+         */
+        const dropdownName = document.getElementById("civicaiDropdownName");
+
+        const dropdownEmail = document.getElementById("civicaiDropdownEmail");
+
+        const dropdownAvatar = document.getElementById("civicaiDropdownAvatar");
+
+        if (profileName) {
+          profileName.textContent = name;
+        }
+
+        if (profileAvatar) {
+          profileAvatar.textContent = initials || "CA";
+        }
+
+        if (dropdownName) {
+          dropdownName.textContent = name;
+        }
+
+        if (dropdownEmail) {
+          dropdownEmail.textContent = email;
+        }
+
+        if (dropdownAvatar) {
+          dropdownAvatar.textContent = initials || "CA";
+        }
+      }
+
+      initializeCivicAIProfile();
+
+      /*
+       * =========================================================
+       * OPEN / CLOSE PROFILE
+       * =========================================================
+       */
+
+      civicaiProfileButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+
+        const isOpen =
+          civicaiProfileButton.getAttribute("aria-expanded") === "true";
+
+        civicaiProfileButton.setAttribute("aria-expanded", String(!isOpen));
+
+        civicaiProfileDropdown.classList.toggle(
+          "civicai-profile-dropdown-open",
+          !isOpen,
+        );
+      });
+
+      /*
+       * =========================================================
+       * CLOSE PROFILE WHEN CLICKING OUTSIDE
+       * =========================================================
+       */
+
+      document.addEventListener("click", function (event) {
+        const clickedInsideProfile = event.target.closest(
+          ".civicai-profile-wrapper",
+        );
+
+        if (!clickedInsideProfile) {
+          civicaiProfileButton.setAttribute("aria-expanded", "false");
+
+          civicaiProfileDropdown.classList.remove(
+            "civicai-profile-dropdown-open",
+          );
+        }
+      });
+
+      /*
+       * =========================================================
+       * LOGOUT
+       * =========================================================
+       */
+
+      civicaiLogoutButton.addEventListener("click", function () {
+        /*
+         * Remove logged-in user
+         */
+        localStorage.removeItem("civicai_current_user");
+
+        sessionStorage.removeItem("civicai_current_user");
+
+        /*
+         * Redirect to login
+         */
+        window.location.href = "login.html";
+      });
+
+      /*
+       * =========================================================
+       * MOBILE MENU
+       * =========================================================
+       */
+
+      civicaiMobileMenuTrigger.addEventListener("click", function () {
+        civicaiPrimaryNavigation.classList.toggle(
+          "civicai-mobile-navigation-open",
+        );
+      });
+
+      /*
+       * Close mobile menu after clicking link
+       */
+      document
+        .querySelectorAll(".civicai-navigation-link")
+        .forEach(function (link) {
+          link.addEventListener("click", function () {
+            civicaiPrimaryNavigation.classList.remove(
+              "civicai-mobile-navigation-open",
+            );
+          });
+        });
+    </script>
 </html>

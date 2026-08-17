@@ -21,14 +21,19 @@
 
   <body>
     <main class="auth-page auth-login">
+
       <!-- LEFT SIDE -->
       <section class="auth-visual">
         <div class="auth-visual-content">
-          <span class="auth-eyebrow"> CIVICAI PLATFORM </span>
+          <span class="auth-eyebrow">
+            CIVICAI PLATFORM
+          </span>
 
           <h1>Welcome Back!</h1>
 
-          <p class="auth-subtitle">Login to your account to continue</p>
+          <p class="auth-subtitle">
+            Login to your account to continue
+          </p>
 
           <p class="auth-description">
             Access your dashboard, track complaints and stay updated with the
@@ -40,21 +45,28 @@
           <div class="auth-cloud cloud-one"></div>
           <div class="auth-cloud cloud-two"></div>
 
-          <img src="assets/img.jpg" alt="CivicAI city illustration" />
+          <img
+            src="assets/img.jpg"
+            alt="CivicAI city illustration"
+          />
         </div>
       </section>
 
       <!-- RIGHT SIDE -->
       <section class="auth-form-side">
         <div class="auth-card">
+
           <div class="auth-card-header">
             <h2>Login to Your Account</h2>
           </div>
 
-          <form class="auth-form">
-            <!-- Email -->
+          <form class="auth-form" id="loginForm">
+
+            <!-- Email / Mobile -->
             <div class="form-group">
-              <label for="login-email"> Email Address / Mobile Number </label>
+              <label for="login-email">
+                Email Address / Mobile Number
+              </label>
 
               <div class="input-wrapper">
                 <i class="fa-regular fa-user"></i>
@@ -64,13 +76,16 @@
                   id="login-email"
                   placeholder="Enter email or mobile number"
                   autocomplete="username"
+                  required
                 />
               </div>
             </div>
 
             <!-- Password -->
             <div class="form-group">
-              <label for="login-password"> Password </label>
+              <label for="login-password">
+                Password
+              </label>
 
               <div class="input-wrapper">
                 <i class="fa-solid fa-lock"></i>
@@ -80,9 +95,13 @@
                   id="login-password"
                   placeholder="Enter your password"
                   autocomplete="current-password"
+                  required
                 />
 
-                <span class="password-icon">
+                <span
+                  class="password-icon"
+                  onclick="togglePassword()"
+                >
                   <i class="fa-regular fa-eye-slash"></i>
                 </span>
               </div>
@@ -90,29 +109,53 @@
 
             <!-- Remember -->
             <div class="form-options">
-              <label class="remember-option">
-                <input type="checkbox" name="remember" />
 
-                <span> Remember me </span>
+              <label class="remember-option">
+                <input
+                  type="checkbox"
+                  name="remember"
+                  id="remember"
+                />
+
+                <span>
+                  Remember me
+                </span>
               </label>
 
-              <a href="./forgot-password.html"> Forgot Password? </a>
+              <a href="./forgot-password.html">
+                Forgot Password?
+              </a>
+
             </div>
 
+            <!-- Login Message -->
+            <p
+              id="loginMessage"
+              style="display: none;"
+            ></p>
+
             <!-- Login -->
-            <button type="submit" class="auth-submit">Login</button>
+            <button
+              type="submit"
+              class="auth-submit"
+            >
+              Login
+            </button>
 
             <!-- Divider -->
             <div class="auth-divider">
               <span></span>
 
-              <small> or continue with </small>
+              <small>
+                or continue with
+              </small>
 
               <span></span>
             </div>
 
             <!-- Social -->
             <div class="social-login">
+
               <button type="button">
                 <i class="fa-brands fa-google"></i>
                 Google
@@ -122,17 +165,313 @@
                 <i class="fa-brands fa-facebook"></i>
                 Facebook
               </button>
+
             </div>
 
             <!-- Register -->
             <p class="auth-bottom-text">
               Don't have an account?
 
-              <a href="register.html"> Register Now </a>
+              <a href="register.html">
+                Register Now
+              </a>
             </p>
+
           </form>
         </div>
       </section>
+
     </main>
+
+
+    <script>
+      /*
+       * ==========================================
+       * CIVICAI LOCAL LOGIN
+       * ==========================================
+       */
+
+      const loginForm =
+        document.getElementById("loginForm");
+
+      const loginMessage =
+        document.getElementById("loginMessage");
+
+
+      /*
+       * Get registered users
+       */
+      function getUsers() {
+        const users =
+          localStorage.getItem("civicai_users");
+
+        if (!users) {
+          return [];
+        }
+
+        try {
+          return JSON.parse(users);
+        } catch (error) {
+          console.error(
+            "Unable to read users:",
+            error
+          );
+
+          return [];
+        }
+      }
+
+
+      /*
+       * Show login message
+       */
+      function showLoginMessage(message, type) {
+        loginMessage.textContent = message;
+
+        loginMessage.style.display = "block";
+
+        if (type === "success") {
+          loginMessage.style.color = "green";
+        } else {
+          loginMessage.style.color = "red";
+        }
+      }
+
+
+      /*
+       * Login
+       */
+      loginForm.addEventListener(
+        "submit",
+        function (event) {
+
+          event.preventDefault();
+
+
+          /*
+           * Get input values
+           */
+          const loginValue =
+            document
+              .getElementById("login-email")
+              .value
+              .trim()
+              .toLowerCase();
+
+          const password =
+            document
+              .getElementById("login-password")
+              .value;
+
+          const remember =
+            document
+              .getElementById("remember")
+              .checked;
+
+
+          /*
+           * Basic validation
+           */
+          if (!loginValue || !password) {
+
+            showLoginMessage(
+              "Please enter your email/mobile number and password.",
+              "error"
+            );
+
+            return;
+          }
+
+
+          /*
+           * Get users
+           */
+          const users = getUsers();
+
+
+          /*
+           * Find matching user
+           *
+           * Current register page stores:
+           * - fullName
+           * - email
+           * - password
+           *
+           * Mobile support is included if a future
+           * registration field stores `mobile`.
+           */
+          const user = users.find(
+            function (registeredUser) {
+
+              const email =
+                registeredUser.email
+                  ?.toLowerCase();
+
+              const mobile =
+                registeredUser.mobile
+                  ?.toLowerCase();
+
+              return (
+                email === loginValue ||
+                mobile === loginValue
+              );
+            }
+          );
+
+
+          /*
+           * User does not exist
+           */
+          if (!user) {
+
+            showLoginMessage(
+              "No account found with this email or mobile number.",
+              "error"
+            );
+
+            return;
+          }
+
+
+          /*
+           * Password verification
+           */
+          if (user.password !== password) {
+
+            showLoginMessage(
+              "Incorrect password. Please try again.",
+              "error"
+            );
+
+            return;
+          }
+
+
+          /*
+           * Logged-in user object
+           *
+           * Do NOT store the password here.
+           */
+          const currentUser = {
+            id: user.id,
+            fullName: user.fullName,
+            email: user.email,
+            mobile: user.mobile || null,
+            loggedInAt: new Date().toISOString()
+          };
+
+
+          /*
+           * Remember Me
+           *
+           * Checked:
+           * localStorage
+           *
+           * Unchecked:
+           * sessionStorage
+           */
+          if (remember) {
+
+            localStorage.setItem(
+              "civicai_current_user",
+              JSON.stringify(currentUser)
+            );
+
+            /*
+             * Remove previous session login
+             */
+            sessionStorage.removeItem(
+              "civicai_current_user"
+            );
+
+          } else {
+
+            sessionStorage.setItem(
+              "civicai_current_user",
+              JSON.stringify(currentUser)
+            );
+
+            /*
+             * Remove previous remembered login
+             */
+            localStorage.removeItem(
+              "civicai_current_user"
+            );
+          }
+
+
+          /*
+           * Success
+           */
+          showLoginMessage(
+            "Login successful! Redirecting...",
+            "success"
+          );
+
+
+          /*
+           * Redirect to dashboard
+           *
+           * Change this filename if your
+           * dashboard file has another name.
+           */
+          setTimeout(function () {
+
+            window.location.href =
+              "dashboard.html";
+
+          }, 800);
+
+        }
+      );
+
+
+      /*
+       * ==========================================
+       * PASSWORD SHOW / HIDE
+       * ==========================================
+       */
+      function togglePassword() {
+
+        const passwordInput =
+          document.getElementById(
+            "login-password"
+          );
+
+        const icon =
+          document.querySelector(
+            ".password-icon i"
+          );
+
+
+        if (
+          passwordInput.type === "password"
+        ) {
+
+          passwordInput.type = "text";
+
+          icon.classList.remove(
+            "fa-eye-slash"
+          );
+
+          icon.classList.add(
+            "fa-eye"
+          );
+
+        } else {
+
+          passwordInput.type = "password";
+
+          icon.classList.remove(
+            "fa-eye"
+          );
+
+          icon.classList.add(
+            "fa-eye-slash"
+          );
+        }
+      }
+    </script>
+
   </body>
 </html>

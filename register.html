@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
 
     <title>Create Account | CivicAI</title>
 
@@ -12,20 +14,22 @@
 
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   </head>
 
   <body>
     <main class="auth-page auth-register">
+
       <!-- LEFT -->
       <section class="auth-visual">
         <div class="auth-visual-content">
-          <span class="auth-eyebrow"> JOIN CIVICAI </span>
+          <span class="auth-eyebrow">JOIN CIVICAI</span>
 
           <h1>Create Account</h1>
 
-          <p class="auth-subtitle">Join CivicAI community today!</p>
+          <p class="auth-subtitle">
+            Join CivicAI community today!
+          </p>
 
           <p class="auth-description">
             Create your account to raise complaints, track status and get
@@ -37,21 +41,27 @@
           <div class="auth-cloud cloud-one"></div>
           <div class="auth-cloud cloud-two"></div>
 
-          <img src="assets/img.jpg" alt="CivicAI city illustration" />
+          <img
+            src="assets/img.jpg"
+            alt="CivicAI city illustration" />
         </div>
       </section>
 
       <!-- RIGHT -->
       <section class="auth-form-side">
         <div class="auth-card register-card">
+
           <div class="auth-card-header">
             <h2>Create Your Account</h2>
           </div>
 
-          <form class="auth-form">
+          <form class="auth-form" id="registerForm">
+
             <!-- Full Name -->
             <div class="form-group">
-              <label for="full-name"> Full Name </label>
+              <label for="full-name">
+                Full Name
+              </label>
 
               <div class="input-wrapper">
                 <i class="fa-regular fa-user"></i>
@@ -61,13 +71,15 @@
                   id="full-name"
                   placeholder="Enter your full name"
                   autocomplete="name"
-                />
+                  required />
               </div>
             </div>
 
             <!-- Email -->
             <div class="form-group">
-              <label for="register-email"> Email Address </label>
+              <label for="register-email">
+                Email Address
+              </label>
 
               <div class="input-wrapper">
                 <i class="fa-regular fa-envelope"></i>
@@ -77,13 +89,15 @@
                   id="register-email"
                   placeholder="Enter your email address"
                   autocomplete="email"
-                />
+                  required />
               </div>
             </div>
 
             <!-- Password -->
             <div class="form-group">
-              <label for="register-password"> Password </label>
+              <label for="register-password">
+                Password
+              </label>
 
               <div class="input-wrapper">
                 <i class="fa-solid fa-lock"></i>
@@ -93,9 +107,11 @@
                   id="register-password"
                   placeholder="Create a password"
                   autocomplete="new-password"
-                />
+                  required />
 
-                <span class="password-icon">
+                <span
+                  class="password-icon"
+                  onclick="togglePassword('register-password', this)">
                   <i class="fa-regular fa-eye-slash"></i>
                 </span>
               </div>
@@ -103,7 +119,9 @@
 
             <!-- Confirm -->
             <div class="form-group">
-              <label for="confirm-password"> Confirm Password </label>
+              <label for="confirm-password">
+                Confirm Password
+              </label>
 
               <div class="input-wrapper">
                 <i class="fa-solid fa-lock"></i>
@@ -113,9 +131,11 @@
                   id="confirm-password"
                   placeholder="Confirm your password"
                   autocomplete="new-password"
-                />
+                  required />
 
-                <span class="password-icon">
+                <span
+                  class="password-icon"
+                  onclick="togglePassword('confirm-password', this)">
                   <i class="fa-regular fa-eye-slash"></i>
                 </span>
               </div>
@@ -123,51 +143,316 @@
 
             <!-- Terms -->
             <label class="terms-option">
-              <input type="checkbox" required />
+              <input
+                type="checkbox"
+                id="terms"
+                required />
 
               <span>
                 I agree to the
-                <a href="terms.html"> Terms of Service </a>
+                <a href="terms.html">
+                  Terms of Service
+                </a>
                 and
-                <a href="privacy-policy.html"> Privacy Policy </a>
+                <a href="privacy-policy.html">
+                  Privacy Policy
+                </a>
               </span>
             </label>
 
+            <!-- Error / Success Message -->
+            <p
+              id="registerMessage"
+              style="display: none;"></p>
+
             <!-- Register -->
-            <button type="submit" class="auth-submit">Register</button>
+            <button
+              type="submit"
+              class="auth-submit">
+              Register
+            </button>
 
             <!-- Divider -->
             <div class="auth-divider">
               <span></span>
 
-              <small> or continue with </small>
+              <small>or continue with</small>
 
               <span></span>
             </div>
 
             <!-- Social -->
             <div class="social-login">
+
               <button type="button">
                 <i class="fa-brands fa-google"></i>
-
                 Google
               </button>
 
               <button type="button">
                 <i class="fa-brands fa-facebook"></i>
-
                 Facebook
               </button>
+
             </div>
 
             <p class="auth-bottom-text">
               Already have an account?
 
-              <a href="login.html"> Login Now </a>
+              <a href="login.html">
+                Login Now
+              </a>
             </p>
+
           </form>
         </div>
       </section>
+
     </main>
+
+    <script>
+      /*
+       * ==========================================
+       * LOCAL REGISTRATION
+       * ==========================================
+       */
+
+      const registerForm = document.getElementById("registerForm");
+      const registerMessage =
+        document.getElementById("registerMessage");
+
+
+      /*
+       * Get existing users from localStorage
+       */
+      function getUsers() {
+        const users = localStorage.getItem("civicai_users");
+
+        if (!users) {
+          return [];
+        }
+
+        try {
+          return JSON.parse(users);
+        } catch (error) {
+          console.error("Unable to read registered users:", error);
+          return [];
+        }
+      }
+
+
+      /*
+       * Save users to localStorage
+       */
+      function saveUsers(users) {
+        localStorage.setItem(
+          "civicai_users",
+          JSON.stringify(users)
+        );
+      }
+
+
+      /*
+       * Show registration message
+       */
+      function showMessage(message, type) {
+        registerMessage.textContent = message;
+
+        registerMessage.style.display = "block";
+
+        if (type === "success") {
+          registerMessage.style.color = "green";
+        } else {
+          registerMessage.style.color = "red";
+        }
+      }
+
+
+      /*
+       * Register User
+       */
+      registerForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const fullName =
+          document
+            .getElementById("full-name")
+            .value
+            .trim();
+
+        const email =
+          document
+            .getElementById("register-email")
+            .value
+            .trim()
+            .toLowerCase();
+
+        const password =
+          document
+            .getElementById("register-password")
+            .value;
+
+        const confirmPassword =
+          document
+            .getElementById("confirm-password")
+            .value;
+
+
+        /*
+         * Basic validation
+         */
+        if (!fullName || !email || !password || !confirmPassword) {
+          showMessage(
+            "Please fill in all required fields.",
+            "error"
+          );
+
+          return;
+        }
+
+
+        /*
+         * Password confirmation
+         */
+        if (password !== confirmPassword) {
+          showMessage(
+            "Passwords do not match.",
+            "error"
+          );
+
+          return;
+        }
+
+
+        /*
+         * Minimum password length
+         */
+        if (password.length < 6) {
+          showMessage(
+            "Password must contain at least 6 characters.",
+            "error"
+          );
+
+          return;
+        }
+
+
+        /*
+         * Get existing users
+         */
+        const users = getUsers();
+
+
+        /*
+         * Check duplicate email
+         */
+        const existingUser = users.find(
+          user => user.email === email
+        );
+
+        if (existingUser) {
+          showMessage(
+            "An account with this email already exists.",
+            "error"
+          );
+
+          return;
+        }
+
+
+        /*
+         * Create new user
+         */
+        const newUser = {
+          id: Date.now(),
+          fullName: fullName,
+          email: email,
+          password: password,
+          createdAt: new Date().toISOString()
+        };
+
+
+        /*
+         * Add user
+         */
+        users.push(newUser);
+
+
+        /*
+         * Save user locally
+         */
+        saveUsers(users);
+
+
+        /*
+         * Save currently registered user
+         * This can be used by the login/dashboard pages.
+         */
+        localStorage.setItem(
+          "civicai_last_registered_email",
+          email
+        );
+
+
+        /*
+         * Success message
+         */
+        showMessage(
+          "Account created successfully! Redirecting to login...",
+          "success"
+        );
+
+
+        /*
+         * Reset form
+         */
+        registerForm.reset();
+
+
+        /*
+         * Redirect to Login
+         */
+        setTimeout(function () {
+          window.location.href = "login.html";
+        }, 1200);
+      });
+
+
+      /*
+       * ==========================================
+       * PASSWORD SHOW / HIDE
+       * ==========================================
+       */
+      function togglePassword(inputId, iconContainer) {
+        const input =
+          document.getElementById(inputId);
+
+        const icon =
+          iconContainer.querySelector("i");
+
+        if (input.type === "password") {
+          input.type = "text";
+
+          icon.classList.remove(
+            "fa-eye-slash"
+          );
+
+          icon.classList.add(
+            "fa-eye"
+          );
+        } else {
+          input.type = "password";
+
+          icon.classList.remove(
+            "fa-eye"
+          );
+
+          icon.classList.add(
+            "fa-eye-slash"
+          );
+        }
+      }
+    </script>
+
   </body>
 </html>
